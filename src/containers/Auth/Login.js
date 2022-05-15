@@ -31,7 +31,7 @@ class Login extends Component {
                             <input type="password" className="form-control" placeholder="Enter your password" />
                         </div>
                         <div className="col-12">
-                            <button>Login</button>
+                            <button className="btn-login">Log in</button>
                         </div>
 
                         <div className="col-12">
