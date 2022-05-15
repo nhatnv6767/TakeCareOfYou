@@ -35,10 +35,14 @@ class Login extends Component {
                         </div>
 
                         <div className="col-12">
-                            <span>Forgot your password?</span>
+                            <span className="forgot-password">Forgot your password?</span>
                         </div>
-                        <div className="col-12">
-
+                        <div className="col-12 text-center">
+                            <span>Or Login with:</span>
+                        </div>
+                        <div className="col-12 social-login">
+                            <i className="fab fa-google-plus-g"></i>
+                            <i className="fab fa-facebook-f"></i>
                         </div>
                     </div>
                 </div>
