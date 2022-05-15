@@ -40,6 +40,39 @@
             .forgot-password {
                 font-size: 12px;
             }
+
+            .social-login {
+                display        : flex;
+                text-align     : center;
+                justify-content: center;
+                margin-top     : 10px;
+
+                .google {
+                    font-size      : 30px;
+                    background     : #c32424;
+                    border-radius  : 50%;
+                    height         : 50px;
+                    width          : 50px;
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+                    color          : white;
+                    margin-right   : 10px;
+                }
+
+                .facebook {
+                    font-size      : 30px;
+                    background     : #307aff;
+                    border-radius  : 50%;
+                    height         : 50px;
+                    width          : 50px;
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+                    color          : white;
+                }
+
+            }
         }
     }
 }

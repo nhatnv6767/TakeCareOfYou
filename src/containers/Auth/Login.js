@@ -37,12 +37,12 @@ class Login extends Component {
                         <div className="col-12">
                             <span className="forgot-password">Forgot your password?</span>
                         </div>
-                        <div className="col-12 text-center">
-                            <span>Or Login with:</span>
+                        <div className="col-12 text-center mt-3">
+                            <span className="text-other-login">Or Login with:</span>
                         </div>
                         <div className="col-12 social-login">
-                            <i className="fab fa-google-plus-g"></i>
-                            <i className="fab fa-facebook-f"></i>
+                            <i className="fab fa-google-plus-g google"></i>
+                            <i className="fab fa-facebook-f facebook"></i>
                         </div>
                     </div>
                 </div>
