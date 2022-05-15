@@ -30,7 +30,10 @@ class Login extends Component {
                             <label>Password:</label>
                             <input type="password" className="form-control" />
                         </div>
-                        <button>Login</button>
+                        <div className="col-12">
+                            <button>Login</button>
+                        </div>
+
                         <div className="col-12">
                             <span>Forgot your password?</span>
                         </div>
