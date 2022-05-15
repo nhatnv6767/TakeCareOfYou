@@ -18,7 +18,13 @@ class Login extends Component {
     render() {
 
         return (
-            <div>Hello login</div>
+            <div className="login-background">
+                <div className="login-container">
+                    <div className="login-content">
+                        abc
+                    </div>
+                </div>
+            </div>
         )
     }
 }
