@@ -22,13 +22,13 @@ class Login extends Component {
                 <div className="login-container">
                     <div className="login-content row">
                         <div className="col-12 text-login">Login</div>
-                        <div className="col-12 form-group">
+                        <div className="col-12 form-group login-input">
                             <label>Username:</label>
-                            <input type="text" className="form-control" />
+                            <input type="text" className="form-control" placeholder="Enter your username" />
                         </div>
-                        <div className="col-12 form-group">
+                        <div className="col-12 form-group login-input">
                             <label>Password:</label>
-                            <input type="password" className="form-control" />
+                            <input type="password" className="form-control" placeholder="Enter your password" />
                         </div>
                         <div className="col-12">
                             <button>Login</button>
