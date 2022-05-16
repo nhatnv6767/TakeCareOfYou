@@ -15,12 +15,15 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: 'bhnone55',
-            password: '123456',
+            username: '',
+            password: '',
         }
     }
 
     handleOnChangeInput = (event) => {
+        this.setState({
+            username: event.target.value
+        })
         console.log(event.target.value)
     }
 
