@@ -20,11 +20,16 @@ class Login extends Component {
         }
     }
 
-    handleOnChangeInput = (event) => {
+    handleOnChangeUsername = (event) => {
         this.setState({
             username: event.target.value
         })
-        console.log(event.target.value)
+    }
+
+    handleOnChangePassword = (event) => {
+        this.setState({
+            password: event.target.value
+        })
     }
 
     render() {
@@ -41,15 +46,20 @@ class Login extends Component {
                                 className="form-control"
                                 placeholder="Enter your username"
                                 value={this.state.username}
-                                onChange={(event) => this.handleOnChangeInput(event)}
+                                onChange={(event) => this.handleOnChangeUsername(event)}
                             />
                         </div>
                         <div className="col-12 form-group login-input">
                             <label>Password:</label>
-                            <input type="password" className="form-control" placeholder="Enter your password" />
+                            <input
+                                type="password"
+                                className="form-control"
+                                placeholder="Enter your password"
+                                onChange={(event) => this.handleOnChangePassword(event)}
+                            />
                         </div>
                         <div className="col-12">
-                            <button className="btn-login">Log in</button>
+                            <button className="btn-login" onClick={() => { this.handleLogin() }}>Login</button>
                         </div>
 
                         <div className="col-12">
