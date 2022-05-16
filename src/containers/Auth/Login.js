@@ -32,6 +32,11 @@ class Login extends Component {
         })
     }
 
+    handleLogin = () => {
+        console.log('username: ' + this.state.username)
+        console.log('password: ' + this.state.password)
+    }
+
     render() {
 
         return (
