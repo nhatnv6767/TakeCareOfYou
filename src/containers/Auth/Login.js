@@ -15,11 +15,14 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: 'bhnone',
+            username: 'bhnone55',
             password: '123456',
         }
     }
 
+    handleOnChangeInput = (event) => {
+        console.log(event.target.value)
+    }
 
     render() {
 
@@ -35,6 +38,7 @@ class Login extends Component {
                                 className="form-control"
                                 placeholder="Enter your username"
                                 value={this.state.username}
+                                onChange={(event) => this.handleOnChangeInput(event)}
                             />
                         </div>
                         <div className="col-12 form-group login-input">
