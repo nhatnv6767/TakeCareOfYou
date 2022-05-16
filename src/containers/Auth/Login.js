@@ -10,8 +10,14 @@ import { FormattedMessage } from 'react-intl';
 
 
 class Login extends Component {
+    // chạy trước render
+    // nếu như Login này được truyền props xuống thì nó có thể kế thừa được
     constructor(props) {
         super(props);
+        this.state = {
+            username: 'bhnone',
+            password: '123456',
+        }
     }
 
 
@@ -24,7 +30,12 @@ class Login extends Component {
                         <div className="col-12 text-login">Login</div>
                         <div className="col-12 form-group login-input">
                             <label>Username:</label>
-                            <input type="text" className="form-control" placeholder="Enter your username" />
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Enter your username"
+                                value={this.state.username}
+                            />
                         </div>
                         <div className="col-12 form-group login-input">
                             <label>Password:</label>
