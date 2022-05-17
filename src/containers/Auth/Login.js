@@ -56,9 +56,10 @@ class Login extends Component {
                         </div>
                         <div className="col-12 form-group login-input">
                             <label>Password:</label>
-                            <div className="form-control">
+                            <div className="custom-input-password">
                                 <input
                                     type="password"
+                                    className="form-control"
                                     placeholder="Enter your password"
                                     onChange={(event) => this.handleOnChangePassword(event)}
                                 />
