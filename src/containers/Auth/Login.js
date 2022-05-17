@@ -56,12 +56,16 @@ class Login extends Component {
                         </div>
                         <div className="col-12 form-group login-input">
                             <label>Password:</label>
-                            <input
-                                type="password"
-                                className="form-control"
-                                placeholder="Enter your password"
-                                onChange={(event) => this.handleOnChangePassword(event)}
-                            />
+                            <div className="form-control">
+                                <input
+                                    type="password"
+                                    placeholder="Enter your password"
+                                    onChange={(event) => this.handleOnChangePassword(event)}
+                                />
+                                <i class="far fa-eye"></i>
+                            </div>
+
+
                         </div>
                         <div className="col-12">
                             <button className="btn-login" onClick={() => { this.handleLogin() }}>Login</button>
