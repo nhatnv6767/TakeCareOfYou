@@ -37,6 +37,10 @@ class Login extends Component {
         console.log('password: ' + this.state.password)
     }
 
+    handleShowHidePassword = () => {
+        alert('Click me')
+    }
+
     render() {
 
         return (
