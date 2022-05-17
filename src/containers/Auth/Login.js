@@ -63,7 +63,12 @@ class Login extends Component {
                                     placeholder="Enter your password"
                                     onChange={(event) => this.handleOnChangePassword(event)}
                                 />
-                                <i class="far fa-eye"></i>
+                                <span
+                                    onClick={() => { this.handleShowHidePassword() }}
+                                >
+                                    <i class="far fa-eye"></i>
+                                </span>
+
                             </div>
 
 
@@ -84,7 +89,7 @@ class Login extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }
