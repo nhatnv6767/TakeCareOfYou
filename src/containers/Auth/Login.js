@@ -39,7 +39,9 @@ class Login extends Component {
     }
 
     handleShowHidePassword = () => {
-        alert('Click me')
+        this.setState({
+            isShowPassword: !this.state.isShowPassword
+        })
     }
 
     render() {
