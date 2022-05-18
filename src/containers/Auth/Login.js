@@ -35,9 +35,6 @@ class Login extends Component {
     }
 
     handleLogin = async () => {
-        console.log('username: ' + this.state.username)
-        console.log('password: ' + this.state.password)
-
         try {
             await handleLoginApi(this.state.username, this.state.password)
         } catch (e) {
@@ -87,6 +84,9 @@ class Login extends Component {
                             </div>
 
 
+                        </div>
+                        <div className="col-12" style={{ color: 'red' }}>
+                            {this.state.errMessage}
                         </div>
                         <div className="col-12">
                             <button className="btn-login" onClick={() => { this.handleLogin() }}>Login</button>
