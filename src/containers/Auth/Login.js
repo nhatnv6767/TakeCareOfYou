@@ -19,6 +19,7 @@ class Login extends Component {
             username: '',
             password: '',
             isShowPassword: false,
+            errMessage: '',
         }
     }
 
@@ -35,10 +36,16 @@ class Login extends Component {
     }
 
     handleLogin = async () => {
+        this.setState({
+            errMessage: ''
+        })
         try {
             await handleLoginApi(this.state.username, this.state.password)
         } catch (e) {
             console.log(e)
+            this.setState({
+                errMessage: e.message
+            })
         }
 
     }
