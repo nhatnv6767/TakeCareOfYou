@@ -1,8 +1,8 @@
 import axios from '../axios'
 
-const handleLoginApi = (email, password) => {
+const handleLoginApi = (userEmail, userPassword) => {
     //goi den server Nodejs
-    return axios.post('/api/login', { email, password })
+    return axios.post('/api/login', { email: userEmail, password: userPassword })
 }
 
 export { handleLoginApi }
