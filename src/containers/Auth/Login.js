@@ -7,7 +7,7 @@ import * as actions from "../../store/actions";
 
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
-import userService from '../../services/userService'
+import { handleLoginApi } from '../../services/userService'
 
 
 class Login extends Component {
@@ -38,7 +38,7 @@ class Login extends Component {
         console.log('username: ' + this.state.username)
         console.log('password: ' + this.state.password)
 
-        await userService.handleLogin(this.state.username, this.state.password)
+        await handleLoginApi(this.state.username, this.state.password)
     }
 
     handleShowHidePassword = () => {
