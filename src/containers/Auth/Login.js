@@ -38,7 +38,7 @@ class Login extends Component {
         console.log('username: ' + this.state.username)
         console.log('password: ' + this.state.password)
 
-        await userService.handleLogin()
+        await userService.handleLogin(this.state.username, this.state.password)
     }
 
     handleShowHidePassword = () => {
