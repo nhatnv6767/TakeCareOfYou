@@ -38,7 +38,12 @@ class Login extends Component {
         console.log('username: ' + this.state.username)
         console.log('password: ' + this.state.password)
 
-        await handleLoginApi(this.state.username, this.state.password)
+        try {
+            await handleLoginApi(this.state.username, this.state.password)
+        } catch (e) {
+            console.log(e)
+        }
+
     }
 
     handleShowHidePassword = () => {
