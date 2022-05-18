@@ -41,14 +41,11 @@ class Login extends Component {
         })
         try {
             let data = await handleLoginApi(this.state.username, this.state.password)
-            console.log("check log", data.data)
-            if (data.data.errCode !== 0) {
-                this.setState({
-                    errMessage: data.data.message
+                .then(res => {
+                    console.log("check log", res)
                 })
-            } else {
-                return
-            }
+
+
         } catch (err) {
 
             if (err.response) {
