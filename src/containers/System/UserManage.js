@@ -15,6 +15,12 @@ class UserManage extends Component {
 
     }
 
+    /** Life cycle
+     *  Run component
+     * 1. Run constructor -> init state
+     * 2. Didmount
+     * 3. Render
+     */
 
     render() {
         return (
