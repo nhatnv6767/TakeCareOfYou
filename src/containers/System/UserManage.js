@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss'
+import { getAllUsers } from '../../services/userService'
+
 class UserManage extends Component {
 
     constructor(props) {
@@ -12,8 +14,9 @@ class UserManage extends Component {
         }
     }
 
-    componentDidMount() {
-
+    async componentDidMount() {
+        let response = await getAllUsers('ALL')
+        console.log('componentDidMount: ', response)
     }
 
     /** Life cycle
