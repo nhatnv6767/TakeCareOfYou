@@ -40,6 +40,7 @@ class UserManage extends Component {
      */
 
     render() {
+        console.log('Check render ', this.state)
         return (
             <div className="users-container">
                 <div className="title text-center">Manage users</div>
