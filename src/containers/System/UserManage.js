@@ -21,10 +21,13 @@ class UserManage extends Component {
             this.setState({
                 arrUsers: response.users
             }, () => {
-                console.log('test bat dong bo In: ', this.state.users)
+                // tức là sau khi hoàn thành xong việc setState sẽ 
+                // chạy ở đây, áp dụng với các trường hợp dữ liệu nhiều, 
+
+                console.log('test bat dong bo In: ', this.state.arrUsers)
             })
 
-            console.log('test bat dong bo Out: ', this.state.users)
+            console.log('test bat dong bo Out: ', this.state.arrUsers)
         }
         console.log('componentDidMount: ', response)
     }
