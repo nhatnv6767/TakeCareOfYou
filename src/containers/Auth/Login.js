@@ -49,7 +49,7 @@ class Login extends Component {
             if (data && data.errCode === 0) {
                 // to do when succeed
                 // save client to redux
-                userLoginSuccess(data.user)
+                this.props.userLoginSuccess(data.user)
                 console.log("login succeed")
             }
 
