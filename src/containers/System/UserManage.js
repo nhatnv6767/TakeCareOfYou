@@ -30,9 +30,11 @@ class UserManage extends Component {
                 <div className="users-table mt-3 mx-1">
                     <table id="customers">
                         <tr>
-                            <th>Company</th>
-                            <th>Contact</th>
-                            <th>Country</th>
+                            <th>Email</th>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Address</th>
+                            <th>Action</th>
                         </tr>
                         <tr>
                             <td>Alfreds Futterkiste</td>
