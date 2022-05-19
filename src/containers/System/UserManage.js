@@ -10,12 +10,20 @@ class UserManage extends Component {
         super(props);
         // khởi tạo những biến muốn dùng với thằng class này
         this.state = {
-
+            arrUsers: [],
         }
     }
 
     async componentDidMount() {
         let response = await getAllUsers('ALL')
+        if (response && response.errCode == 0) {
+            // hàm this.setState luôn là 1 hàm bất đồng bộ
+            this.setState({
+                arrUsers: response.users
+            })
+
+            console.log('test bat dong bo', this.state.users)
+        }
         console.log('componentDidMount: ', response)
     }
 
