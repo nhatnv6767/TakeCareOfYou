@@ -51,22 +51,23 @@ class UserManage extends Component {
                             <th>Address</th>
                             <th>Action</th>
                         </tr>
-                        { }
-                        <tr>
-                            {arrUsers && arrUsers.map((item, index) => {
-                                return (
-                                    <>
+
+                        {arrUsers && arrUsers.map((item, index) => {
+                            return (
+                                <>
+                                    <tr>
                                         <td>Alfreds Futterkiste</td>
                                         <td>Maria Anders</td>
                                         <td>Germany</td>
                                         <td>Germany</td>
                                         <td>Germany</td>
-                                    </>
-                                )
-                            })
-                            }
+                                    </tr>
+                                </>
+                            )
+                        })
+                        }
 
-                        </tr>
+
 
                     </table>
                 </div>
