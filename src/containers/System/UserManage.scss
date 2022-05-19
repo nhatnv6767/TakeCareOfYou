@@ -39,3 +39,18 @@
         color           : orange !important;
     }
 }
+
+
+.btn-delete {
+    width     : 50px;
+    border    : none;
+    outline   : none;
+    background: transparent;
+    color     : rgb(235, 15, 15);
+
+    // khi di chuot vao 
+    &:hover {
+        background-color: transparent !important;
+        color           : rgb(235, 15, 15) !important;
+    }
+}
