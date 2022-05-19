@@ -54,15 +54,13 @@ class UserManage extends Component {
 
                         {arrUsers && arrUsers.map((item, index) => {
                             return (
-                                <>
-                                    <tr>
-                                        <td>Alfreds Futterkiste</td>
-                                        <td>Maria Anders</td>
-                                        <td>Germany</td>
-                                        <td>Germany</td>
-                                        <td>Germany</td>
-                                    </tr>
-                                </>
+                                <tr>
+                                    <td>{item.email}</td>
+                                    <td>{item.firstName}</td>
+                                    <td>{item.lastName}</td>
+                                    <td>{item.address}</td>
+                                    <td>{item.address}</td>
+                                </tr>
                             )
                         })
                         }
