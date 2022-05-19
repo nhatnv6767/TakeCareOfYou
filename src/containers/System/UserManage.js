@@ -18,13 +18,15 @@ class UserManage extends Component {
     /** Life cycle
      *  Run component
      * 1. Run constructor -> init state
-     * 2. Didmount
+     * 2. Didmount ( set state)
      * 3. Render
      */
 
     render() {
         return (
-            <div className="text-center">Manage users in system</div>
+            <div className="users-container">
+                <div className="title text-center">Manage users</div>
+            </div>
         );
     }
 
