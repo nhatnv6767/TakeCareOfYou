@@ -25,3 +25,17 @@
     background-color: #04AA6D;
     color           : white;
 }
+
+.btn-edit {
+    width     : 50px;
+    border    : none;
+    outline   : none;
+    background: transparent;
+    color     : orange;
+
+    // khi di chuot vao 
+    &:hover {
+        background-color: transparent !important;
+        color           : orange !important;
+    }
+}
