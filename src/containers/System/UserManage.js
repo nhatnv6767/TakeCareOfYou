@@ -37,7 +37,6 @@ class UserManage extends Component {
      */
 
     render() {
-        console.log('Check render ', this.state)
         let arrUsers = this.state.arrUsers
         return (
             <div className="users-container">
@@ -54,7 +53,7 @@ class UserManage extends Component {
 
                         {arrUsers && arrUsers.map((item, index) => {
                             return (
-                                <tr>
+                                <tr key={index}>
                                     <td>{item.email}</td>
                                     <td>{item.firstName}</td>
                                     <td>{item.lastName}</td>
