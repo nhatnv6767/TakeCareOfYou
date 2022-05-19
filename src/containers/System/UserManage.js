@@ -27,7 +27,7 @@ class UserManage extends Component {
         return (
             <div className="users-container">
                 <div className="title text-center">Manage users</div>
-                <div className="users-table">
+                <div className="users-table mt-3 mx-1">
                     <table id="customers">
                         <tr>
                             <th>Company</th>
