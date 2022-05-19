@@ -20,9 +20,11 @@ class UserManage extends Component {
             // hàm this.setState luôn là 1 hàm bất đồng bộ
             this.setState({
                 arrUsers: response.users
+            }, () => {
+                console.log('test bat dong bo In: ', this.state.users)
             })
 
-            console.log('test bat dong bo', this.state.users)
+            console.log('test bat dong bo Out: ', this.state.users)
         }
         console.log('componentDidMount: ', response)
     }
