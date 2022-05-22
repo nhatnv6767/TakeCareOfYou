@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss'
-import { getAllUsers, createNewUserService } from '../../services/userService'
+import { getAllUsers, createNewUserService, deleteUserService } from '../../services/userService'
 import ModalUser from './ModalUser';
 
 class UserManage extends Component {
@@ -64,8 +64,13 @@ class UserManage extends Component {
 
     }
 
-    handleDeleteUser = (user) => {
-        console.log(user)
+    handleDeleteUser = async (user) => {
+        try {
+            let response = await deleteUserService(user.id)
+            console.log(response)
+        } catch (e) {
+            console.log(e)
+        }
     }
 
     /** Life cycle
