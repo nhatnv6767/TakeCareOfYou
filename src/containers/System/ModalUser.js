@@ -52,7 +52,7 @@ class ModalUser extends Component {
                             <input type="text" />
                         </div>
 
-                        <div className="input-container">
+                        <div className="input-container max-width-input">
                             <label>Address</label>
                             <input type="text" />
                         </div>
