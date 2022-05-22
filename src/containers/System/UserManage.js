@@ -43,6 +43,10 @@ class UserManage extends Component {
         })
     }
 
+    createNewUser = () => {
+        alert('Call me')
+    }
+
     /** Life cycle
      *  Run component
      * 1. Run constructor -> init state
@@ -57,7 +61,7 @@ class UserManage extends Component {
                 <ModalUser
                     isOpen={this.state.isOpenModalUser}
                     toggleFromParent={this.toggleUserModal}
-                    test={'abc'}
+                    createNewUser={this.createNewUser}
                 />
                 <div className="title text-center">Manage users</div>
                 <div className="mx-1">

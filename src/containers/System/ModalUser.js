@@ -69,6 +69,7 @@ class ModalUser extends Component {
         let isValid = this.checkValidateInput();
         if (isValid) {
             // call api create modal
+            this.props.createNewUser();
             console.log('Call API: ', this.state)
         }
 
