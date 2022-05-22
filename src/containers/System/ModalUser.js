@@ -23,6 +23,9 @@ class ModalUser extends Component {
         this.props.toggleFromParent();
     }
 
+    handleOnChangeInput = (event) => {
+        console.log(event.target.value)
+    }
 
     render() {
         console.log('Check child props', this.props)
@@ -40,7 +43,7 @@ class ModalUser extends Component {
                     <div className="modal-user-body">
                         <div className="input-container">
                             <label>Email</label>
-                            <input type="text" />
+                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event) }} />
                         </div>
                         <div className="input-container">
                             <label>Password</label>
