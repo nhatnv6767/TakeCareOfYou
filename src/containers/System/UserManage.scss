@@ -62,7 +62,11 @@
 
         input {
             border-radius: 3px;
+            border       : 1px solid grey;
+            // Khi click vao input luon co 1 cai vien den bao quanh
+            outline      : none;
             height       : 30px;
+            padding      : 0 10px;
         }
     }
 }
