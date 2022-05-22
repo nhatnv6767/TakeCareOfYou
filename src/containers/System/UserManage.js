@@ -37,6 +37,12 @@ class UserManage extends Component {
         })
     }
 
+    toggleUserModal = () => {
+        this.setState({
+            isOpenModalUser: !this.state.isOpenModalUser,
+        })
+    }
+
     /** Life cycle
      *  Run component
      * 1. Run constructor -> init state
@@ -50,6 +56,7 @@ class UserManage extends Component {
             <div className="users-container">
                 <ModalUser
                     isOpen={this.state.isOpenModalUser}
+                    toggleFromParent={this.state.toggleUserModal}
                     test={'abc'}
                 />
                 <div className="title text-center">Manage users</div>
