@@ -135,7 +135,7 @@ class ModalEditUser extends Component {
               this.handleAddNewUser();
             }}
           >
-            Add new
+            Save changes
           </Button>{" "}
           <Button
             color="secondary"

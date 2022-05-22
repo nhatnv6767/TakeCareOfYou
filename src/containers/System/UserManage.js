@@ -86,6 +86,9 @@ class UserManage extends Component {
 
   handleEditUser = async (user) => {
     console.log(user);
+    this.setState({
+      isOpenModalEditUser: true,
+    });
   };
 
   /** Life cycle
