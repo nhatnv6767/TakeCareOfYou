@@ -19,6 +19,7 @@ class UserManage extends Component {
       arrUsers: [],
       isOpenModalUser: false,
       isOpenModalEditUser: false,
+      userEdit: {},
     };
   }
 
@@ -94,6 +95,7 @@ class UserManage extends Component {
     console.log(user);
     this.setState({
       isOpenModalEditUser: true,
+      userEdit: user,
     });
   };
 
@@ -121,6 +123,7 @@ class UserManage extends Component {
         <ModalEditUser
           isOpen={this.state.isOpenModalEditUser}
           toggleFromParent={this.toggleUserEditModal}
+          currentUser={this.state.userEdit}
           //   createNewUser={this.createNewUser}
         />
         <div className="title text-center">Manage users</div>
