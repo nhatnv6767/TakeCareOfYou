@@ -101,7 +101,6 @@ class UserManage extends Component {
 
   doEditUser = async (user) => {
     let response = await editUserService(user);
-    console.log("RESPONSE: ", response);
   };
 
   /** Life cycle
