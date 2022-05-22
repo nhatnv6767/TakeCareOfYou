@@ -16,7 +16,7 @@ class ModalUser extends Component {
     }
 
     toggle = () => {
-        alert('Toggle toggle');
+        this.props.toggleFromParent();
     }
 
 

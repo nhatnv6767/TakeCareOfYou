@@ -56,7 +56,7 @@ class UserManage extends Component {
             <div className="users-container">
                 <ModalUser
                     isOpen={this.state.isOpenModalUser}
-                    toggleFromParent={this.state.toggleUserModal}
+                    toggleFromParent={this.toggleUserModal}
                     test={'abc'}
                 />
                 <div className="title text-center">Manage users</div>
