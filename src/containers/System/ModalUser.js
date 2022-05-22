@@ -23,13 +23,11 @@ class ModalUser extends Component {
         this.props.toggleFromParent();
     }
 
-    handleOnChangeInput = (event) => {
-        console.log(event.target.value)
+    handleOnChangeInput = (event, id) => {
+        console.log(event.target.value, id)
     }
 
     render() {
-        console.log('Check child props', this.props)
-        console.log('Check child open modal', this.props.isOpen)
         return (
             <Modal
                 isOpen={this.props.isOpen}
@@ -43,25 +41,25 @@ class ModalUser extends Component {
                     <div className="modal-user-body">
                         <div className="input-container">
                             <label>Email</label>
-                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event) }} />
+                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'email') }} />
                         </div>
                         <div className="input-container">
                             <label>Password</label>
-                            <input type="password" />
+                            <input type="password" onChange={(event) => { this.handleOnChangeInput(event, 'password') }/>
                         </div>
 
                         <div className="input-container">
                             <label>First name</label>
-                            <input type="text" />
+                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'firstName') }/>
                         </div>
                         <div className="input-container">
                             <label>Last name</label>
-                            <input type="text" />
+                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'lastName') }/>
                         </div>
 
                         <div className="input-container max-width-input">
                             <label>Address</label>
-                            <input type="text" />
+                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'address') }/>
                         </div>
                     </div>
                 </ModalBody>
