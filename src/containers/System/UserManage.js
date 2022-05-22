@@ -64,6 +64,10 @@ class UserManage extends Component {
 
     }
 
+    handleDeleteUser = () => {
+        alert('Deleteeeeee')
+    }
+
     /** Life cycle
      *  Run component
      * 1. Run constructor -> init state
@@ -117,7 +121,10 @@ class UserManage extends Component {
                                             <button className="btn-edit">
                                                 <i className="fas fa-pencil-alt"></i>
                                             </button>
-                                            <button className="btn-delete">
+                                            <button
+                                                className="btn-delete"
+                                                onClick={() => { this.handleDeleteUser() }}
+                                            >
                                                 <i className="fas fa-trash"></i>
                                             </button>
                                         </td>
