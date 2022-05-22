@@ -49,7 +49,21 @@ class ModalUser extends Component {
         })
     }
 
+    checkValidateInput = () => {
+        let isValid = true;
+        let arrInput = ['email', 'password', 'firstName', 'lastName', 'address']
+        for (let i = 0; i < arrInput.length; i++) {
+            if (this.state[arrInput[i]]) {
+                isValid = false;
+                alert('Missing parameter: ' + arrInput[i])
+                break;
+            }
+
+        }
+        return isValid;
+    }
     handleAddNewUser = () => {
+        this.checkValidateInput();
         console.log('add new user: ', this.state)
     }
 
@@ -68,7 +82,7 @@ class ModalUser extends Component {
                         <div className="input-container">
                             <label>Email</label>
                             <input
-                                type="text"
+                                type="email"
                                 onChange={(event) => { this.handleOnChangeInput(event, 'email') }}
                                 value={this.state.email}
                             />
