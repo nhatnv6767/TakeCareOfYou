@@ -12,6 +12,7 @@ class UserManage extends Component {
         // khởi tạo những biến muốn dùng với thằng class này
         this.state = {
             arrUsers: [],
+            isOpenModalUser: false,
         }
     }
 
@@ -45,7 +46,9 @@ class UserManage extends Component {
         let arrUsers = this.state.arrUsers
         return (
             <div className="users-container">
-                <ModalUser />
+                <ModalUser
+                    isOpen={this.state.isOpenModalUser}
+                />
                 <div className="title text-center">Manage users</div>
                 <div className="mx-1">
                     <button
