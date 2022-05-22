@@ -53,7 +53,10 @@ class ModalUser extends Component {
         let isValid = true;
         let arrInput = ['email', 'password', 'firstName', 'lastName', 'address']
         for (let i = 0; i < arrInput.length; i++) {
-            if (this.state[arrInput[i]]) {
+            // nghĩa là khi ta ko điền 1 trường nào đó
+            // nó sẽ ko có giá trị, đồng nghĩa với việc ! <phủ định>
+            // lập tức set về false, và trả ra trường bị thiếu đó
+            if (!this.state[arrInput[i]]) {
                 isValid = false;
                 alert('Missing parameter: ' + arrInput[i])
                 break;
@@ -63,8 +66,12 @@ class ModalUser extends Component {
         return isValid;
     }
     handleAddNewUser = () => {
-        this.checkValidateInput();
-        console.log('add new user: ', this.state)
+        let isValid = this.checkValidateInput();
+        if (isValid) {
+            // call api create modal
+            console.log('Call API: ', this.state)
+        }
+
     }
 
     render() {
