@@ -21,6 +21,8 @@ class ModalUser extends Component {
 
 
     render() {
+        console.log('Check child props', this.props)
+        console.log('Check child open modal', this.props.isOpen)
         return (
             <Modal isOpen={true} toggle={() => { this.toggle() }} className="abcClassName">
                 <ModalHeader toggle={() => { this.toggle() }}>Create a new user</ModalHeader>

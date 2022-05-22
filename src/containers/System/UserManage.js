@@ -48,6 +48,7 @@ class UserManage extends Component {
             <div className="users-container">
                 <ModalUser
                     isOpen={this.state.isOpenModalUser}
+                    test={'abc'}
                 />
                 <div className="title text-center">Manage users</div>
                 <div className="mx-1">
