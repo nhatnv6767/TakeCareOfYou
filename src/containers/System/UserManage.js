@@ -17,6 +17,10 @@ class UserManage extends Component {
     }
 
     async componentDidMount() {
+        await this.getAllUsersFromReact()
+    }
+
+    getAllUsersFromReact = async () => {
         let response = await getAllUsers('ALL')
         if (response && response.errCode == 0) {
             // hàm this.setState luôn là 1 hàm bất đồng bộ
