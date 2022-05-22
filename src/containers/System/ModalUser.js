@@ -3,6 +3,7 @@ import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
+import { emitter } from '../../utils/emitter'
 class ModalUser extends Component {
 
     constructor(props) {
@@ -14,6 +15,13 @@ class ModalUser extends Component {
             lastName: '',
             address: '',
         }
+        this.listenToEmitter()
+    }
+
+    listenToEmitter() {
+        emitter.on('EVENT_CLEAR_MODAL_DATA', data => {
+            console.log('Listen emitter from parent: ', data);
+        })
     }
 
     componentDidMount() {
