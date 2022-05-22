@@ -64,8 +64,8 @@ class UserManage extends Component {
 
     }
 
-    handleDeleteUser = () => {
-        alert('Deleteeeeee')
+    handleDeleteUser = (user) => {
+        console.log(user)
     }
 
     /** Life cycle
@@ -123,7 +123,7 @@ class UserManage extends Component {
                                             </button>
                                             <button
                                                 className="btn-delete"
-                                                onClick={() => { this.handleDeleteUser() }}
+                                                onClick={() => { this.handleDeleteUser(item) }}
                                             >
                                                 <i className="fas fa-trash"></i>
                                             </button>
