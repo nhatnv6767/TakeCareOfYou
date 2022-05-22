@@ -32,7 +32,9 @@ class UserManage extends Component {
     }
 
     handleAddNewUser = () => {
-        alert("Add new user")
+        this.setState({
+            isOpenModalUser: true,
+        })
     }
 
     /** Life cycle
