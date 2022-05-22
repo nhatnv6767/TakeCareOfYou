@@ -18,6 +18,7 @@ class UserManage extends Component {
     this.state = {
       arrUsers: [],
       isOpenModalUser: false,
+      isOpenModalEditUser: false,
     };
   }
 
@@ -83,6 +84,10 @@ class UserManage extends Component {
     }
   };
 
+  handleEditUser = async (user) => {
+    console.log(user);
+  };
+
   /** Life cycle
    *  Run component
    * 1. Run constructor -> init state
@@ -105,7 +110,7 @@ class UserManage extends Component {
           createNewUser={this.createNewUser}
         />
         <ModalEditUser
-          isOpen={true}
+          isOpen={this.state.isOpenModalEditUser}
           //   toggleFromParent={this.toggleUserModal}
           //   createNewUser={this.createNewUser}
         />
@@ -139,7 +144,12 @@ class UserManage extends Component {
                       <td>{item.lastName}</td>
                       <td>{item.address}</td>
                       <td>
-                        <button className="btn-edit">
+                        <button
+                          className="btn-edit"
+                          onClick={() => {
+                            this.handleEditUser(item);
+                          }}
+                        >
                           <i className="fas fa-pencil-alt"></i>
                         </button>
                         <button
