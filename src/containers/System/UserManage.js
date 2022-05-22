@@ -30,7 +30,7 @@ class UserManage extends Component {
     }
 
     handleAddNewUser = () => {
-
+        alert("Add new user")
     }
 
     /** Life cycle
