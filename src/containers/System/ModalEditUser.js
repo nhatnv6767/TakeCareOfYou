@@ -14,22 +14,6 @@ class ModalEditUser extends Component {
       lastName: "",
       address: "",
     };
-    this.listenToEmitter();
-  }
-
-  listenToEmitter() {
-    // muốn hứng event thì dùng on
-    // muốn truyền event thì dùng emit (fire)
-    emitter.on("EVENT_CLEAR_MODAL_DATA", () => {
-      // reset state
-      this.setState({
-        email: "",
-        password: "",
-        firstName: "",
-        lastName: "",
-        address: "",
-      });
-    });
   }
 
   componentDidMount() {}
@@ -39,24 +23,6 @@ class ModalEditUser extends Component {
   };
 
   handleOnChangeInput = (event, id) => {
-    //bad code. modify state
-    // should not modify directly state
-    /**
-     * this.state = {
-     *  email: '',
-     *  password: '',
-     *
-     * }
-     * this.state.email == this.state['email']
-     */
-    // this.state[id] = event.target.value;
-    // this.setState({
-    //     ...this.state
-    // }, () => {
-    //     console.log('Check bad state', this.state);
-    // })
-
-    // good code - modify gián tiếp
     let copyState = { ...this.state };
     copyState[id] = event.target.value;
     this.setState({
