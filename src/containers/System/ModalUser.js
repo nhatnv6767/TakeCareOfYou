@@ -8,7 +8,11 @@ class ModalUser extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            email: '',
+            password: '',
+            firstName: '',
+            lastName: '',
+            address: '',
         }
     }
 
@@ -59,7 +63,7 @@ class ModalUser extends Component {
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" className="px-3" onClick={() => { this.toggle() }}>Save changes</Button>{' '}
+                    <Button color="primary" className="px-3" onClick={() => { this.toggle() }}>Add new</Button>{' '}
                     <Button color="secondary" className="px-3" onClick={() => { this.toggle() }}>Close</Button>
                 </ModalFooter>
             </Modal>
