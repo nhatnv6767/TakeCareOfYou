@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss'
-import { getAllUsers } from '../../services/userService'
+import { getAllUsers, createNewUserService } from '../../services/userService'
 import ModalUser from './ModalUser';
 
 class UserManage extends Component {
@@ -47,8 +47,14 @@ class UserManage extends Component {
         })
     }
 
-    createNewUser = (data) => {
-        console.log('check data from child at parent', data)
+    createNewUser = async (data) => {
+        try {
+            let response = await createNewUserService(data)
+            console.log('response create user: ', response)
+        } catch (e) {
+            console.log(e)
+        }
+
     }
 
     /** Life cycle
