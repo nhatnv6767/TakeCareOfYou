@@ -4,6 +4,8 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { emitter } from "../../utils/emitter";
+import _ from "lodash";
+
 class ModalEditUser extends Component {
   constructor(props) {
     super(props);
@@ -17,6 +19,17 @@ class ModalEditUser extends Component {
   }
 
   componentDidMount() {
+    // let { currentUser } = this.stateprops;
+    let user = this.props.currentUser;
+    if (user && !_.isEmpty(user)) {
+      this.setState({
+        email: user.email,
+        password: "user.password",
+        firstName: user.firstName,
+        lastName: user.lastName,
+        address: user.address,
+      });
+    }
     console.log("Did mount edit modal", this.props.currentUser);
   }
 
