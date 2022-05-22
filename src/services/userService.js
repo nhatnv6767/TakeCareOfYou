@@ -28,4 +28,10 @@ const editUserService = (inputData) => {
   });
 };
 
-export { handleLoginApi, getAllUsers, createNewUserService, deleteUserService };
+export {
+  handleLoginApi,
+  getAllUsers,
+  createNewUserService,
+  deleteUserService,
+  editUserService,
+};

@@ -6,6 +6,7 @@ import {
   getAllUsers,
   createNewUserService,
   deleteUserService,
+  editUserService,
 } from "../../services/userService";
 import ModalUser from "./ModalUser";
 import { emitter } from "../../utils/emitter";
@@ -92,7 +93,6 @@ class UserManage extends Component {
   };
 
   handleEditUser = async (user) => {
-    console.log(user);
     this.setState({
       isOpenModalEditUser: true,
       userEdit: user,
@@ -100,7 +100,8 @@ class UserManage extends Component {
   };
 
   doEditUser = async (user) => {
-    console.log("Click save user: ", user);
+    let response = await editUserService(user);
+    console.log("RESPONSE: ", response);
   };
 
   /** Life cycle
