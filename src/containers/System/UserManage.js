@@ -47,7 +47,6 @@ class UserManage extends Component {
         })
     }
 
-    // => check to fix in Node server
     createNewUser = async (data) => {
         try {
             let response = await createNewUserService(data)
@@ -55,6 +54,9 @@ class UserManage extends Component {
                 alert(response.errMessage)
             } else {
                 await this.getAllUsersFromReact()
+                this.setState({
+                    isOpenModalUser: false,
+                })
             }
         } catch (e) {
             console.log(e)
