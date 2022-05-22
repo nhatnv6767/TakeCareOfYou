@@ -54,6 +54,12 @@ class UserManage extends Component {
     });
   };
 
+  toggleUserEditModal = () => {
+    this.setState({
+      isOpenModalEditUser: !this.state.isOpenModalEditUser,
+    });
+  };
+
   createNewUser = async (data) => {
     try {
       let response = await createNewUserService(data);
@@ -114,7 +120,7 @@ class UserManage extends Component {
         />
         <ModalEditUser
           isOpen={this.state.isOpenModalEditUser}
-          //   toggleFromParent={this.toggleUserModal}
+          toggleFromParent={this.toggleUserEditModal}
           //   createNewUser={this.createNewUser}
         />
         <div className="title text-center">Manage users</div>
