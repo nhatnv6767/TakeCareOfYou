@@ -58,7 +58,7 @@ class UserManage extends Component {
                 this.setState({
                     isOpenModalUser: false,
                 })
-                emitter.emit('EVENT_CLEAR_MODAL_DATA', { 'id': 'your id' })
+                emitter.emit('EVENT_CLEAR_MODAL_DATA')
             }
         } catch (e) {
             console.log(e)
