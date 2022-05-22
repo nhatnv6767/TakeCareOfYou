@@ -24,6 +24,16 @@ class ModalUser extends Component {
     }
 
     handleOnChangeInput = (event, id) => {
+        //bad code. modify state
+        this.state[id] = event.target.value;
+        this.setState({
+            ...this.state
+        }, () => {
+            console.log('Check bad state', this.state);
+        })
+
+        // good code
+
         console.log(event.target.value, id)
     }
 
@@ -45,21 +55,21 @@ class ModalUser extends Component {
                         </div>
                         <div className="input-container">
                             <label>Password</label>
-                            <input type="password" onChange={(event) => { this.handleOnChangeInput(event, 'password') }/>
+                            <input type="password" onChange={(event) => { this.handleOnChangeInput(event, 'password') }} />
                         </div>
 
                         <div className="input-container">
                             <label>First name</label>
-                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'firstName') }/>
+                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'firstName') }} />
                         </div>
                         <div className="input-container">
                             <label>Last name</label>
-                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'lastName') }/>
+                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'lastName') }} />
                         </div>
 
                         <div className="input-container max-width-input">
                             <label>Address</label>
-                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'address') }/>
+                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'address') }} />
                         </div>
                     </div>
                 </ModalBody>
