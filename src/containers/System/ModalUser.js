@@ -33,16 +33,16 @@ class ModalUser extends Component {
             >
                 <ModalHeader toggle={() => { this.toggle() }}>Create a new user</ModalHeader>
                 <ModalBody>
-
-                    <div className="input-container">
-                        <label>Email</label>
-                        <input type="text" />
+                    <div className="modal-user-body">
+                        <div className="input-container">
+                            <label>Email</label>
+                            <input type="text" />
+                        </div>
+                        <div className="input-container">
+                            <label>Password</label>
+                            <input type="password" />
+                        </div>
                     </div>
-                    <div className="input-container">
-                        <label>Password</label>
-                        <input type="password" />
-                    </div>
-
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={() => { this.toggle() }}>Do Something</Button>{' '}
