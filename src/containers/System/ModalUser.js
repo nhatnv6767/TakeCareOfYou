@@ -46,11 +46,11 @@ class ModalUser extends Component {
         copyState[id] = event.target.value;
         this.setState({
             ...copyState
-        }, () => {
-            // call back de tranh bat dong bo
-            console.log('Check good state: ', this.state);
         })
+    }
 
+    handleAddNewUser = () => {
+        console.log('add new user: ', this.state)
     }
 
     render() {
@@ -67,31 +67,64 @@ class ModalUser extends Component {
                     <div className="modal-user-body">
                         <div className="input-container">
                             <label>Email</label>
-                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'email') }} />
+                            <input
+                                type="text"
+                                onChange={(event) => { this.handleOnChangeInput(event, 'email') }}
+                                value={this.state.email}
+                            />
                         </div>
                         <div className="input-container">
                             <label>Password</label>
-                            <input type="password" onChange={(event) => { this.handleOnChangeInput(event, 'password') }} />
+                            <input
+                                type="password"
+                                onChange={(event) => { this.handleOnChangeInput(event, 'password') }}
+                                value={this.state.password}
+                            />
                         </div>
 
                         <div className="input-container">
                             <label>First name</label>
-                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'firstName') }} />
+                            <input
+                                type="text"
+                                onChange={(event) => { this.handleOnChangeInput(event, 'firstName') }}
+                                value={this.state.firstName}
+                            />
                         </div>
                         <div className="input-container">
                             <label>Last name</label>
-                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'lastName') }} />
+                            <input
+                                type="text"
+                                onChange={(event) => { this.handleOnChangeInput(event, 'lastName') }}
+                                value={this.state.lastName}
+                            />
                         </div>
 
                         <div className="input-container max-width-input">
                             <label>Address</label>
-                            <input type="text" onChange={(event) => { this.handleOnChangeInput(event, 'address') }} />
+                            <input
+                                type="text"
+                                onChange={(event) => { this.handleOnChangeInput(event, 'address') }}
+                                value={this.state.address}
+                            />
                         </div>
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" className="px-3" onClick={() => { this.toggle() }}>Add new</Button>{' '}
-                    <Button color="secondary" className="px-3" onClick={() => { this.toggle() }}>Close</Button>
+                    <Button
+                        color="primary"
+                        className="px-3"
+                        onClick={() => { this.handleAddNewUser() }}
+
+                    >
+                        Add new
+                    </Button>{' '}
+                    <Button
+                        color="secondary"
+                        className="px-3"
+                        onClick={() => { this.toggle() }}
+                    >
+                        Close
+                    </Button>
                 </ModalFooter>
             </Modal>
         )
