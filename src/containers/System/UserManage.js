@@ -120,12 +120,15 @@ class UserManage extends Component {
           // => không viết () ở đây
           createNewUser={this.createNewUser}
         />
-        <ModalEditUser
-          isOpen={this.state.isOpenModalEditUser}
-          toggleFromParent={this.toggleUserEditModal}
-          currentUser={this.state.userEdit}
-          //   createNewUser={this.createNewUser}
-        />
+
+        {this.state.isOpenModalEditUser && (
+          <ModalEditUser
+            isOpen={this.state.isOpenModalEditUser}
+            toggleFromParent={this.toggleUserEditModal}
+            currentUser={this.state.userEdit}
+            //   createNewUser={this.createNewUser}
+          />
+        )}
         <div className="title text-center">Manage users</div>
         <div className="mx-1">
           <button
