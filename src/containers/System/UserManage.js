@@ -47,6 +47,7 @@ class UserManage extends Component {
         })
     }
 
+    // => check to fix in Node server
     createNewUser = async (data) => {
         try {
             let response = await createNewUserService(data)
