@@ -16,7 +16,9 @@ class ModalEditUser extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    console.log("Did mount edit modal", this.props.currentUser);
+  }
 
   toggle = () => {
     this.props.toggleFromParent();
@@ -54,6 +56,7 @@ class ModalEditUser extends Component {
   };
 
   render() {
+    console.log("Check props from parent at child", this.props);
     return (
       <Modal
         isOpen={this.props.isOpen}
