@@ -43,8 +43,8 @@ class UserManage extends Component {
         })
     }
 
-    createNewUser = () => {
-        alert('Call me')
+    createNewUser = (data) => {
+        console.log('check data from child at parent', data)
     }
 
     /** Life cycle
@@ -61,6 +61,11 @@ class UserManage extends Component {
                 <ModalUser
                     isOpen={this.state.isOpenModalUser}
                     toggleFromParent={this.toggleUserModal}
+                    // lưu ý nhỏ khi viết ở đây, 
+                    // không thêm dấu (), nếu thêm vào thì React mặc định
+                    // sẽ gọi lúc vừa bắt đầu mount, và về cơ bản thì thằng cha
+                    // không biết được thằng con sẽ truyền cái gì lên cho mình
+                    // => không viết () ở đây
                     createNewUser={this.createNewUser}
                 />
                 <div className="title text-center">Manage users</div>
@@ -70,7 +75,7 @@ class UserManage extends Component {
                         onClick={() => this.handleAddNewUser()}
                     >
                         <i className="fas fa-plus"></i>
-                        Add new users
+                        Add new user
                     </button>
                 </div>
                 <div className="users-table mt-3 mx-1">
