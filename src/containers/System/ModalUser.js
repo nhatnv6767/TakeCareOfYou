@@ -42,6 +42,20 @@ class ModalUser extends Component {
                             <label>Password</label>
                             <input type="password" />
                         </div>
+
+                        <div className="input-container">
+                            <label>First name</label>
+                            <input type="text" />
+                        </div>
+                        <div className="input-container">
+                            <label>Last name</label>
+                            <input type="text" />
+                        </div>
+
+                        <div className="input-container">
+                            <label>Address</label>
+                            <input type="text" />
+                        </div>
                     </div>
                 </ModalBody>
                 <ModalFooter>
