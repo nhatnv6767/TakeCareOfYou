@@ -91,7 +91,7 @@ class UserManage extends Component {
                                             <i className="fas fa-pencil-alt"></i>
                                         </button>
                                         <button className="btn-delete">
-                                            <i class="fas fa-trash"></i>
+                                            <i className="fas fa-trash"></i>
                                         </button>
                                     </td>
                                 </tr>
