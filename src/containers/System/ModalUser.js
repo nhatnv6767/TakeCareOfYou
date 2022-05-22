@@ -41,9 +41,12 @@ class ModalUser extends Component {
         //     console.log('Check bad state', this.state);
         // })
 
-        // good code
+        // good code - modify gián tiếp
+        let copyState = { ...this.state }
+        copyState[id] = event.target.value;
+        this.setState({ ...copyState })
+        console.log('copyState', copyState)
 
-        console.log(event.target.value, id)
     }
 
     render() {
