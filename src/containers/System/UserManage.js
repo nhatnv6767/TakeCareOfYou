@@ -105,7 +105,7 @@ class UserManage extends Component {
           createNewUser={this.createNewUser}
         />
         <ModalEditUser
-          isOpen={this.state.isOpenModalUser}
+          isOpen={true}
           //   toggleFromParent={this.toggleUserModal}
           //   createNewUser={this.createNewUser}
         />

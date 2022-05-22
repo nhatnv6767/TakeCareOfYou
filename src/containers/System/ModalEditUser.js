@@ -69,7 +69,7 @@ class ModalEditUser extends Component {
             this.toggle();
           }}
         >
-          Create a new user
+          Edit an user
         </ModalHeader>
         <ModalBody>
           <div className="modal-user-body">
