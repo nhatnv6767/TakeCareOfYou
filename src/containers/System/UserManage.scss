@@ -56,6 +56,15 @@
 }
 
 .modal-user-container {
+    .modal-content {
+        .modal-header {
+            button {
+                background-color: transparent !important;
+            }
+        }
+    }
+
+
     .modal-user-body {
         display  : flex;
         // Quy dinh khoang cach cua cac thang con ben trong (flex)
