@@ -57,7 +57,12 @@
 
 .modal-user-container {
     .modal-user-body {
+        display: flex;
+        // Quy dinh khoang cach cua cac thang con ben trong (flex)
+        gap    : 10px;
+
         .input-container {
+            width         : 50%;
             display       : flex;
             flex-direction: column;
 
