@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { emitter } from "../../utils/emitter";
-class ModalUser extends Component {
+class ModalEditUser extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -194,4 +194,4 @@ const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ModalUser);
+export default connect(mapStateToProps, mapDispatchToProps)(ModalEditUser);

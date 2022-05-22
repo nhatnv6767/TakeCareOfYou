@@ -118,7 +118,7 @@ class UserManage extends Component {
                                 <th>First name</th>
                                 <th>Last name</th>
                                 <th>Address</th>
-                                <th>Action</th>
+                                <th>Actions</th>
                             </tr>
 
                             {arrUsers && arrUsers.map((item, index) => {
