@@ -19,6 +19,8 @@ class ModalUser extends Component {
     }
 
     listenToEmitter() {
+        // muốn hứng event thì dùng on
+        // muốn truyền event thì dùng emit
         emitter.on('EVENT_CLEAR_MODAL_DATA', data => {
             console.log('Listen emitter from parent: ', data);
         })
