@@ -69,7 +69,6 @@ class ModalEditUser extends Component {
   };
 
   render() {
-    console.log("Check props from parent at child", this.props);
     return (
       <Modal
         isOpen={this.props.isOpen}
@@ -97,6 +96,7 @@ class ModalEditUser extends Component {
                   this.handleOnChangeInput(event, "email");
                 }}
                 value={this.state.email}
+                disabled
               />
             </div>
             <div className="input-container">
@@ -107,6 +107,7 @@ class ModalEditUser extends Component {
                   this.handleOnChangeInput(event, "password");
                 }}
                 value={this.state.password}
+                disabled
               />
             </div>
 
