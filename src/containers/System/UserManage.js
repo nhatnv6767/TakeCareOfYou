@@ -99,6 +99,10 @@ class UserManage extends Component {
     });
   };
 
+  doEditUser = async (user) => {
+    console.log("Click save user: ", user);
+  };
+
   /** Life cycle
    *  Run component
    * 1. Run constructor -> init state
@@ -126,7 +130,7 @@ class UserManage extends Component {
             isOpen={this.state.isOpenModalEditUser}
             toggleFromParent={this.toggleUserEditModal}
             currentUser={this.state.userEdit}
-            //   createNewUser={this.createNewUser}
+            editUser={this.doEditUser}
           />
         )}
         <div className="title text-center">Manage users</div>

@@ -24,7 +24,7 @@ class ModalEditUser extends Component {
     if (user && !_.isEmpty(user)) {
       this.setState({
         email: user.email,
-        password: "user.password",
+        password: "*^^^^*",
         firstName: user.firstName,
         lastName: user.lastName,
         address: user.address,
