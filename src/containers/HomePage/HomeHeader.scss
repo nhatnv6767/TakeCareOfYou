@@ -59,62 +59,62 @@
     background-repeat  : no-repeat;
     background-size    : cover;
     background-position: center;
-    padding            : 15px 0;
     display            : flex;
     flex-direction     : column;
 
     .content-up {
         border: 1px solid red;
         height: 50%;
+
+        .title1 {
+            text-align   : center;
+            font-size    : 30px;
+            text-shadow  : 1px 1px 1px #333;
+            margin-bottom: 5px;
+            color        : white;
+            margin-top   : 30px;
+        }
+
+        .title2 {
+            text-align   : center;
+            font-size    : 30px;
+            text-shadow  : 1px 1px 1px #333;
+            color        : white;
+            margin-bottom: 15px;
+        }
+
+        .search {
+            width          : fit-content;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            margin         : 0 auto;
+            padding        : 10px;
+            border-radius  : 25px;
+            background     : #f7d800;
+
+
+            i {
+                margin: 0 5px;
+
+            }
+
+            input {
+                height    : 30px;
+                width     : 360px;
+                background: transparent;
+                border    : none;
+                outline   : none;
+            }
+
+        }
     }
 
     .content-down {
         border: 1px solid green;
         height: 50%;
+
+        .options {}
     }
 
-    .title1 {
-        text-align   : center;
-        font-size    : 30px;
-        text-shadow  : 1px 1px 1px #333;
-        margin-bottom: 5px;
-        color        : white;
-        margin-top   : 30px;
-    }
-
-    .title2 {
-        text-align   : center;
-        font-size    : 30px;
-        text-shadow  : 1px 1px 1px #333;
-        color        : white;
-        margin-bottom: 15px;
-    }
-
-    .search {
-        width          : fit-content;
-        display        : flex;
-        justify-content: center;
-        align-items    : center;
-        margin         : 0 auto;
-        padding        : 10px;
-        border-radius  : 25px;
-        background     : #f7d800;
-
-
-        i {
-            margin: 0 5px;
-
-        }
-
-        input {
-            height    : 30px;
-            width     : 360px;
-            background: transparent;
-            border    : none;
-            outline   : none;
-        }
-
-    }
-
-    .options {}
 }
