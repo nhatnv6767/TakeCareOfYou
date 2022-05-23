@@ -115,7 +115,24 @@
         border: 1px solid green;
         height: 50%;
 
-        .options {}
+        .options {
+            .option-child {
+                width     : 100px;
+                border    : 1px solid red;
+                text-align: center;
+
+                .icon-child {
+                    background   : green;
+                    width        : fit-content;
+                    padding      : 10px;
+                    border-radius: 50%;
+
+                    i {}
+                }
+
+                .text-child {}
+            }
+        }
     }
 
 }
