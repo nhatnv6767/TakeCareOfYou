@@ -6,7 +6,11 @@ class HomeHeader extends Component {
   render() {
     return (
       <div className="home-header-container">
-        <div className="home-header-content"></div>
+        <div className="home-header-content">
+          <div className="left-content"></div>
+          <div className="center-content"></div>
+          <div className="right-content"></div>
+        </div>
       </div>
     );
   }
