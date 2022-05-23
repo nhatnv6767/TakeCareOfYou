@@ -52,3 +52,19 @@
         }
     }
 }
+
+.home-header-banner {
+    background         : url('../../assets/header-background.jpg');
+    height             : 600px;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center;
+
+    .title1 {}
+
+    .title2 {}
+
+    .search {}
+
+    .options {}
+}
