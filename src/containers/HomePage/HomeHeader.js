@@ -68,6 +68,41 @@ class HomeHeader extends Component {
                 </div>
                 <div className="text-child">Khám chuyên khoa</div>
               </div>
+
+              <div className="option-child">
+                <div className="icon-child">
+                  <i className="far fa-hospital"></i>
+                </div>
+                <div className="text-child">Khám từ xa</div>
+              </div>
+
+              <div className="option-child">
+                <div className="icon-child">
+                  <i className="far fa-hospital"></i>
+                </div>
+                <div className="text-child">Khám tổng quát</div>
+              </div>
+
+              <div className="option-child">
+                <div className="icon-child">
+                  <i className="far fa-hospital"></i>
+                </div>
+                <div className="text-child">Xét nghiệm y học</div>
+              </div>
+
+              <div className="option-child">
+                <div className="icon-child">
+                  <i className="far fa-hospital"></i>
+                </div>
+                <div className="text-child">Sức khoẻ tinh thần</div>
+              </div>
+
+              <div className="option-child">
+                <div className="icon-child">
+                  <i className="far fa-hospital"></i>
+                </div>
+                <div className="text-child">Khám nha khoa</div>
+              </div>
             </div>
           </div>
         </div>
