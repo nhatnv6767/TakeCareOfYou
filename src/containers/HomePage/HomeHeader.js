@@ -52,13 +52,17 @@ class HomeHeader extends Component {
         </div>
 
         <div className="home-header-banner">
-          <div className="title1">NỀN TẢNG Y TẾ</div>
-          <div className="title2">CHĂM SÓC SỨC KHOẺ TOÀN DIỆN</div>
-          <div className="search">
-            <i className="fas fa-search"></i>
-            <input type="text" placeholder="Tìm chuyên khoa khám bệnh" />
+          <div className="content-up">
+            <div className="title1">NỀN TẢNG Y TẾ</div>
+            <div className="title2">CHĂM SÓC SỨC KHOẺ TOÀN DIỆN</div>
+            <div className="search">
+              <i className="fas fa-search"></i>
+              <input type="text" placeholder="Tìm chuyên khoa khám bệnh" />
+            </div>
           </div>
-          <div className="options"></div>
+          <div className="content-down">
+            <div className="options"></div>
+          </div>
         </div>
       </React.Fragment>
     );

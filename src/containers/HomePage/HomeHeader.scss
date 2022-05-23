@@ -60,6 +60,18 @@
     background-size    : cover;
     background-position: center;
     padding            : 15px 0;
+    display            : flex;
+    flex-direction     : column;
+
+    .content-up {
+        border: 1px solid red;
+        height: 50%;
+    }
+
+    .content-down {
+        border: 1px solid green;
+        height: 50%;
+    }
 
     .title1 {
         text-align   : center;
