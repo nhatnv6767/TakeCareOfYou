@@ -52,8 +52,8 @@ class HomeHeader extends Component {
         </div>
 
         <div className="home-header-banner">
-          <div className="title1"></div>
-          <div className="title2"></div>
+          <div className="title1">NỀN TẢNG Y TẾ</div>
+          <div className="title2">CHĂM SÓC SỨC KHOẺ TOÀN DIỆN</div>
           <div className="search"></div>
           <div className="options"></div>
         </div>

@@ -59,10 +59,22 @@
     background-repeat  : no-repeat;
     background-size    : cover;
     background-position: center;
+    padding            : 15px 0;
 
-    .title1 {}
+    .title1 {
+        text-align   : center;
+        font-size    : 30px;
+        text-shadow  : 1px 1px 1px #333;
+        margin-bottom: 15px;
+        color        : white;
+    }
 
-    .title2 {}
+    .title2 {
+        text-align : center;
+        font-size  : 30px;
+        text-shadow: 1px 1px 1px #333;
+        color      : white;
+    }
 
     .search {}
 
