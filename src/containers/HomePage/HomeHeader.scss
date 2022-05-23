@@ -10,6 +10,10 @@
         .left-content {
             width : 25%;
             border: 1px solid green;
+
+            .header-logo {
+                background: url('../../assets/logo.svg') center center no-repeat
+            }
         }
 
         .center-content {
