@@ -122,10 +122,13 @@
                 text-align: center;
 
                 .icon-child {
-                    background   : green;
-                    width        : fit-content;
+                    background   : white;
+                    width        : 40px;
+                    height       : 40px;
                     padding      : 10px;
                     border-radius: 50%;
+                    text-align   : center;
+                    margin       : 0 auto;
 
                     i {}
                 }
