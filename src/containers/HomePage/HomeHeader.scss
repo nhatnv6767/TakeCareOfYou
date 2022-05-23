@@ -116,10 +116,11 @@
         height: 50%;
 
         .options {
+            width     : 100px;
+            text-align: center;
+
             .option-child {
-                width     : 100px;
-                border    : 1px solid red;
-                text-align: center;
+                border: 1px solid red;
 
                 .icon-child {
                     background   : white;
@@ -130,7 +131,10 @@
                     text-align   : center;
                     margin       : 0 auto;
 
-                    i {}
+                    i {
+                        font-size: 20px;
+                        color    : #49bce2;
+                    }
                 }
 
                 .text-child {}
