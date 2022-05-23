@@ -112,17 +112,21 @@
     }
 
     .content-down {
-        border: 1px solid green;
-        height: 50%;
+        border    : 1px solid green;
+        height    : 50%;
+        // padding: 0 50px;
 
         .options {
 
-            text-align: center;
-            display   : flex;
+            text-align     : center;
+            display        : flex;
+            grid-gap       : 50px;
+            justify-content: center;
 
             .option-child {
                 border: 1px solid red;
-                width : 100px;
+                width : 125px;
+
 
                 .icon-child {
                     background   : white;

@@ -85,7 +85,7 @@ class HomeHeader extends Component {
 
               <div className="option-child">
                 <div className="icon-child">
-                  <i className="fas fa-microscope"></i>
+                  <i className="fa fa-snowflake-o" aria-hidden="true"></i>
                 </div>
                 <div className="text-child">Xét nghiệm y học</div>
               </div>
