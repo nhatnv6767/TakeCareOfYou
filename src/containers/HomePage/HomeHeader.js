@@ -71,35 +71,35 @@ class HomeHeader extends Component {
 
               <div className="option-child">
                 <div className="icon-child">
-                  <i className="far fa-hospital"></i>
+                  <i className="fas fa-mobile-alt"></i>
                 </div>
                 <div className="text-child">Khám từ xa</div>
               </div>
 
               <div className="option-child">
                 <div className="icon-child">
-                  <i className="far fa-hospital"></i>
+                  <i className="fas fa-procedures"></i>
                 </div>
                 <div className="text-child">Khám tổng quát</div>
               </div>
 
               <div className="option-child">
                 <div className="icon-child">
-                  <i className="far fa-hospital"></i>
+                  <i className="fas fa-microscope"></i>
                 </div>
                 <div className="text-child">Xét nghiệm y học</div>
               </div>
 
               <div className="option-child">
                 <div className="icon-child">
-                  <i className="far fa-hospital"></i>
+                  <i className="fas fa-user-md"></i>
                 </div>
                 <div className="text-child">Sức khoẻ tinh thần</div>
               </div>
 
               <div className="option-child">
                 <div className="icon-child">
-                  <i className="far fa-hospital"></i>
+                  <i className="fas fa-tooth"></i>
                 </div>
                 <div className="text-child">Khám nha khoa</div>
               </div>
