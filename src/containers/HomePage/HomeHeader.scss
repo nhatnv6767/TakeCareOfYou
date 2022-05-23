@@ -77,7 +77,16 @@
         color      : white;
     }
 
-    .search {}
+    .search {
+        border         : 1px solid red;
+        width          : fit-content;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        margin         : 0 auto;
+        padding        : 10px;
+
+    }
 
     .options {}
 }
