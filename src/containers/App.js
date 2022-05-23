@@ -19,7 +19,6 @@ import Header from "./Header/Header";
 import System from "../routes/System";
 
 import { CustomToastCloseButton } from "../components/CustomToast";
-import ConfirmModal from "../components/ConfirmModal";
 
 class App extends Component {
   handlePersistorState = () => {
@@ -46,7 +45,6 @@ class App extends Component {
         <Router history={history}>
           <div className="main-container">
             {this.props.isLoggedIn && <Header />}
-
             <span className="content-container">
               <Switch>
                 <Route path={path.HOME} exact component={Home} />
@@ -58,6 +56,7 @@ class App extends Component {
                   path={path.SYSTEM}
                   component={userIsAuthenticated(System)}
                 />
+                <Route path={path.HOMEPAGE} component={HomePage} />
               </Switch>
             </span>
 
