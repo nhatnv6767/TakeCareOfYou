@@ -54,7 +54,10 @@ class HomeHeader extends Component {
         <div className="home-header-banner">
           <div className="title1">NỀN TẢNG Y TẾ</div>
           <div className="title2">CHĂM SÓC SỨC KHOẺ TOÀN DIỆN</div>
-          <div className="search"></div>
+          <div className="search">
+            <i className="fas fa-search"></i>
+            <input type="text" className="" />
+          </div>
           <div className="options"></div>
         </div>
       </React.Fragment>
