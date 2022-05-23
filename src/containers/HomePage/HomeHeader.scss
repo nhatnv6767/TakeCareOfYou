@@ -93,8 +93,10 @@
         }
 
         input {
-            height: 30px;
-            width : 360px;
+            height    : 30px;
+            width     : 360px;
+            background: transparent;
+            border    : none;
         }
 
     }
