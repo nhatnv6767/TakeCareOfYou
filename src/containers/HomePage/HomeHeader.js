@@ -56,7 +56,7 @@ class HomeHeader extends Component {
           <div className="title2">CHĂM SÓC SỨC KHOẺ TOÀN DIỆN</div>
           <div className="search">
             <i className="fas fa-search"></i>
-            <input type="text" className="" />
+            <input type="text" placeholder="Tìm chuyên khoa khám bệnh" />
           </div>
           <div className="options"></div>
         </div>
