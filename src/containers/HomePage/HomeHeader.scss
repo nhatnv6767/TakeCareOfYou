@@ -29,8 +29,9 @@
         }
 
         .center-content {
-            width : 50%;
-            border: 1px solid orange;
+            width  : 50%;
+            border : 1px solid orange;
+            display: flex;
         }
 
         .right-content {
