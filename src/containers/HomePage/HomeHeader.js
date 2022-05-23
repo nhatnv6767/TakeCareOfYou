@@ -51,7 +51,12 @@ class HomeHeader extends Component {
           </div>
         </div>
 
-        <div className="home-header-banner"></div>
+        <div className="home-header-banner">
+          <div className="title1"></div>
+          <div className="title2"></div>
+          <div className="search"></div>
+          <div className="options"></div>
+        </div>
       </React.Fragment>
     );
   }
