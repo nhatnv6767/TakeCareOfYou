@@ -8,11 +8,14 @@
         display: flex;
 
         .left-content {
-            width : 25%;
-            border: 1px solid green;
+            width  : 25%;
+            display: flex;
+            border : 1px solid green;
 
             .header-logo {
-                background: url('../../assets/logo.svg') center center no-repeat
+                background: url('../../assets/logo.svg') center center no-repeat;
+                height    : 100%;
+                width     : 100%;
             }
         }
 
