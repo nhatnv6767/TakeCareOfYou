@@ -116,11 +116,13 @@
         height: 50%;
 
         .options {
-            width     : 100px;
+
             text-align: center;
+            display   : flex;
 
             .option-child {
                 border: 1px solid red;
+                width : 100px;
 
                 .icon-child {
                     background   : white;
