@@ -63,8 +63,9 @@
     flex-direction     : column;
 
     .content-up {
-        border: 1px solid red;
-        height: 50%;
+        border     : 1px solid red;
+        height     : 50%;
+        padding-top: 15px;
 
         .title1 {
             text-align   : center;

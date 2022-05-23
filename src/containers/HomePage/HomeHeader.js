@@ -61,7 +61,12 @@ class HomeHeader extends Component {
             </div>
           </div>
           <div className="content-down">
-            <div className="options"></div>
+            <div className="options">
+              <div className="option-child">
+                <div className="icon-child"></div>
+                <div className="text-child"></div>
+              </div>
+            </div>
           </div>
         </div>
       </React.Fragment>
