@@ -4,7 +4,11 @@ import "./HomeHeader.scss";
 
 class HomeHeader extends Component {
   render() {
-    return <div className="home-header-container"></div>;
+    return (
+      <div className="home-header-container">
+        <div className="home-header-content"></div>
+      </div>
+    );
   }
 }
 
