@@ -40,7 +40,13 @@ class HomeHeader extends Component {
               <div className="subs-title">Khám sức khoẻ tổng quát</div>
             </div>
           </div>
-          <div className="right-content"></div>
+          <div className="right-content">
+            <div className="support">
+              <i className="fas fa-question-circle"></i>
+              Hỗ trợ
+            </div>
+            <div className="flag">VN</div>
+          </div>
         </div>
       </div>
     );
