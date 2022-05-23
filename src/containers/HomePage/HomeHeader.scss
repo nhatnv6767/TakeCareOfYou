@@ -78,13 +78,24 @@
     }
 
     .search {
-        border         : 1px solid red;
         width          : fit-content;
         display        : flex;
         justify-content: center;
         align-items    : center;
         margin         : 0 auto;
         padding        : 10px;
+        border-radius  : 25px;
+        background     : #f7d800;
+
+        i {
+            margin: 0 5px;
+
+        }
+
+        input {
+            height: 30px;
+            width : 360px;
+        }
 
     }
 
