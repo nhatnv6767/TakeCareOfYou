@@ -44,8 +44,11 @@
         }
 
         .right-content {
-            width : 25%;
-            border: 1px solid grey;
+            width          : 25%;
+            border         : 1px solid grey;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
         }
     }
 }
