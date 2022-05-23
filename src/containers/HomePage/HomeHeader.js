@@ -7,7 +7,9 @@ class HomeHeader extends Component {
     return (
       <div className="home-header-container">
         <div className="home-header-content">
-          <div className="left-content"></div>
+          <div className="left-content">
+            <i className="fas fa-bars"></i>
+          </div>
           <div className="center-content"></div>
           <div className="right-content"></div>
         </div>
