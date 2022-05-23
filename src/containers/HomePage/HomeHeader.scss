@@ -34,6 +34,13 @@
             display        : flex;
             justify-content: space-between;
             align-items    : center;
+
+            .child-content {
+                .subs-title {
+                    font-weight: 400;
+                    font-size  : 12px;
+                }
+            }
         }
 
         .right-content {
