@@ -137,7 +137,15 @@
                     }
                 }
 
-                .text-child {}
+                .text-child {
+                    font-size  : 17px;
+                    font-weight: 500;
+                    cursor     : pointer;
+
+                    &:hover {
+                        color: #49bce2;
+                    }
+                }
             }
         }
     }
