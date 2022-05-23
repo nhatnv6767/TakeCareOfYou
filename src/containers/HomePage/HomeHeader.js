@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-class Header extends Component {
+class HomeHeader extends Component {
   render() {
-    return <div>Home Page -- Header</div>;
+    return <div>Home Page -- HomeHeader</div>;
   }
 }
 
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);
