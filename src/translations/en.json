@@ -10,6 +10,18 @@
     "check-health": "General health check",
     "support": "Support"
   },
+
+  "banner": {
+    "title1": "MEDICAL BACKGROUND",
+    "title2": "COMPREHENSIVE HEALTH CARE",
+    "child1": "Specialized medical examination",
+    "child2": "Remote examination",
+    "child3": "General examination",
+    "child4": "Medical test",
+    "child5": "Mental health",
+    "child6": "Dental examination"
+  },
+
   "common": {
     "add": "Add",
     "edit": "Edit",
