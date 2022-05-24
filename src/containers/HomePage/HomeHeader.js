@@ -6,6 +6,9 @@ import { FormattedMessage } from "react-intl";
 import { LANGUAGES } from "../../utils";
 
 class HomeHeader extends Component {
+  changeLanguage = (language) => {
+    alert(language);
+  };
   render() {
     return (
       <React.Fragment>
