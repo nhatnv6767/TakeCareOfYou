@@ -47,8 +47,12 @@
         .right-content {
             width          : 25%;
             display        : flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items    : center;
+
+            .support {
+                padding-right: 50px;
+            }
         }
     }
 }
