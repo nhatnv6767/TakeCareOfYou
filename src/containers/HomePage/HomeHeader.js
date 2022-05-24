@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./HomeHeader.scss";
 import logo from "../../assets/logo.svg";
+import { FormattedMessage } from "react-intl";
 
 class HomeHeader extends Component {
   render() {
@@ -16,9 +17,13 @@ class HomeHeader extends Component {
             <div className="center-content">
               <div className="child-content">
                 <div>
-                  <b>Chuyên khoa</b>
+                  <b>
+                    <FormattedMessage id="homeheader.speciality" />
+                  </b>
                 </div>
-                <div className="subs-title">Tìm bác sĩ theo chuyên khoa</div>
+                <div className="subs-title">
+                  <FormattedMessage id="homeheader.searchdoctor" />
+                </div>
               </div>
 
               <div className="child-content">
