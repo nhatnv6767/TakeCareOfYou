@@ -7,7 +7,7 @@ import { LANGUAGES } from "../../utils";
 
 class HomeHeader extends Component {
   changeLanguage = (language) => {
-    alert(language);
+    // fire redux event : actions
   };
   render() {
     return (
