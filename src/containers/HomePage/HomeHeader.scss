@@ -49,6 +49,7 @@
             display        : flex;
             justify-content: flex-end;
             align-items    : center;
+            cursor         : pointer;
 
             .support {
                 padding-right: 50px;
@@ -63,11 +64,19 @@
 
             .language-vi {
                 cursor: pointer;
+
+                &.active {
+                    color: orange;
+                }
             }
 
             .language-en {
                 margin: 0 10px;
                 cursor: pointer;
+
+                &.active {
+                    color: blue;
+                }
             }
         }
     }
