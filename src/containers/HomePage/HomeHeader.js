@@ -5,6 +5,8 @@ import logo from "../../assets/logo.svg";
 import { FormattedMessage } from "react-intl";
 import { LANGUAGES } from "../../utils";
 
+import { changeLanguageApp } from "../../store/actions";
+
 class HomeHeader extends Component {
   changeLanguage = (language) => {
     // fire redux event : actions
