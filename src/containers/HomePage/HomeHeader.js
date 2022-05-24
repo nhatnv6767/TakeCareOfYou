@@ -28,29 +28,41 @@ class HomeHeader extends Component {
 
               <div className="child-content">
                 <div>
-                  <b>Cơ sở y tế</b>
+                  <b>
+                    <FormattedMessage id="homeheader.health-facility" />
+                  </b>
                 </div>
-                <div className="subs-title">Chọn bệnh viện phòng khám</div>
+                <div className="subs-title">
+                  <FormattedMessage id="homeheader.select-room" />
+                </div>
               </div>
 
               <div className="child-content">
                 <div>
-                  <b>Bác sĩ</b>
+                  <b>
+                    <FormattedMessage id="homeheader.doctor" />
+                  </b>
                 </div>
-                <div className="subs-title">Chọn bác sĩ giỏi</div>
+                <div className="subs-title">
+                  <FormattedMessage id="homeheader.select-doctor" />
+                </div>
               </div>
 
               <div className="child-content">
                 <div>
-                  <b>Gói khám</b>
+                  <b>
+                    <FormattedMessage id="homeheader.fee" />
+                  </b>
                 </div>
-                <div className="subs-title">Khám sức khoẻ tổng quát</div>
+                <div className="subs-title">
+                  <FormattedMessage id="homeheader.check-health" />
+                </div>
               </div>
             </div>
             <div className="right-content">
               <div className="support">
                 <i className="fas fa-question-circle"></i>
-                Hỗ trợ
+                <FormattedMessage id="homeheader.support" />
               </div>
               <div className="language-vi">VN</div>
               <div className="language-en">EN</div>

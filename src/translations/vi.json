@@ -1,7 +1,14 @@
 {
   "homeheader": {
     "speciality": "Chuyên khoa",
-    "searchdoctor": "Tìm bác sĩ theo chuyên khoa"
+    "searchdoctor": "Tìm bác sĩ theo chuyên khoa",
+    "health-facility": "Cơ sở y tế",
+    "select-room": "Chọn bệnh viện phòng khám",
+    "doctor": "Bác sĩ",
+    "select-doctor": "Chọn bác sĩ giỏi",
+    "fee": "Gói khám",
+    "check-health": "Khám sức khoẻ tổng quát",
+    "support": "Hỗ trợ"
   },
 
   "common": {
