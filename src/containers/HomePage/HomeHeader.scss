@@ -52,6 +52,22 @@
 
             .support {
                 padding-right: 50px;
+                display      : flex;
+                align-items  : center;
+
+                i {
+                    font-size   : 15px;
+                    margin-right: 5px;
+                }
+            }
+
+            .language-vi {
+                cursor: pointer;
+            }
+
+            .language-en {
+                margin: 0 10px;
+                cursor: pointer;
             }
         }
     }
