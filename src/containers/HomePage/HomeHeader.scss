@@ -114,12 +114,13 @@
     }
 
     .content-down {
-        border         : 1px solid green;
-        height         : 35%;
+        border          : 1px solid green;
+        height          : 35%;
         // padding: 0 50px;
-        display        : flex;
-        align-items    : flex-end;
-        justify-content: center;
+        display         : flex;
+        align-items     : flex-end;
+        justify-content : center;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
 
         .options {
 
