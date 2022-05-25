@@ -63,9 +63,12 @@
             }
 
             .language-vi {
-                cursor: pointer;
+                cursor : pointer;
+                opacity: 0.4;
 
                 &.active {
+                    opacity: 1;
+
                     span {
                         color: orange;
                     }
@@ -74,10 +77,13 @@
             }
 
             .language-en {
-                margin: 0 10px;
-                cursor: pointer;
+                margin : 0 10px;
+                cursor : pointer;
+                opacity: 0.4;
 
                 &.active {
+                    opacity: 1;
+
                     span {
                         color: blue;
                     }
