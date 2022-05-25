@@ -19,22 +19,22 @@ class Specialty extends Component {
       <div className="section-specialty">
         <div className="specialty-content">
           <Slider {...settings}>
-            <div>
+            <div className="img-customize">
               <h3>1</h3>
             </div>
-            <div>
+            <div className="img-customize">
               <h3>2</h3>
             </div>
-            <div>
+            <div className="img-customize">
               <h3>3</h3>
             </div>
-            <div>
+            <div className="img-customize">
               <h3>4</h3>
             </div>
-            <div>
+            <div className="img-customize">
               <h3>5</h3>
             </div>
-            <div>
+            <div className="img-customize">
               <h3>6</h3>
             </div>
           </Slider>
