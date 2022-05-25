@@ -36,6 +36,7 @@ const appReducer = (state = initialState, action) => {
       console.log("CHECK redux action: ", action);
       return {
         ...state,
+        language: action.language,
       };
     default:
       return state;
