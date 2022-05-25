@@ -74,6 +74,10 @@
                     }
 
                 }
+
+                &:hover {
+                    opacity: 1;
+                }
             }
 
             .language-en {
@@ -88,6 +92,10 @@
                         color: blue;
                     }
 
+                }
+
+                &:hover {
+                    opacity: 1;
                 }
             }
         }
