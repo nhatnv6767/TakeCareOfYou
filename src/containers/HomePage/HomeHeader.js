@@ -13,6 +13,8 @@ class HomeHeader extends Component {
     this.props.changeLanguageAppRedux(language);
   };
   render() {
+    // props.language => lấy từ trong redux ra
+    let language = this.props.language;
     return (
       <React.Fragment>
         <div className="home-header-container">
@@ -71,12 +73,24 @@ class HomeHeader extends Component {
                 <i className="fas fa-question-circle"></i>
                 <FormattedMessage id="homeheader.support" />
               </div>
-              <div className="language-vi">
+              <div
+                className={
+                  language === LANGUAGES.VI
+                    ? "language-vi action"
+                    : "language-vi"
+                }
+              >
                 <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>
                   VI
                 </span>
               </div>
-              <div className="language-en">
+              <div
+                className={
+                  language === LANGUAGES.EN
+                    ? "language-en action"
+                    : "language-en"
+                }
+              >
                 <span onClick={() => this.changeLanguage(LANGUAGES.EN)}>
                   EN
                 </span>
