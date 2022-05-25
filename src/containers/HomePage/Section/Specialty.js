@@ -5,7 +5,11 @@ import { FormattedMessage } from "react-intl";
 
 class Specialty extends Component {
   render() {
-    return <div>Specialty</div>;
+    return (
+      <div className="section-specialty">
+        <div className="specialty-content">Specialty</div>
+      </div>
+    );
   }
 }
 
