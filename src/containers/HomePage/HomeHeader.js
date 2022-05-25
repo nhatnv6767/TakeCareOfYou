@@ -76,7 +76,7 @@ class HomeHeader extends Component {
               <div
                 className={
                   language === LANGUAGES.VI
-                    ? "language-vi action"
+                    ? "language-vi active"
                     : "language-vi"
                 }
               >
@@ -87,7 +87,7 @@ class HomeHeader extends Component {
               <div
                 className={
                   language === LANGUAGES.EN
-                    ? "language-en action"
+                    ? "language-en active"
                     : "language-en"
                 }
               >
