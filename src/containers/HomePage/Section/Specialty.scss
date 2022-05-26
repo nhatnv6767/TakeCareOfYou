@@ -25,12 +25,17 @@
 // reset slick slider css
 
 .slick-prev {
-    border    : 1px solid orange !important;
-    left      : -10px !important;
-    z-index   : 1000 !important;
-    height    : 48px !important;
-    width     : 44px !important;
-    background: green !important;
+    left   : -10px !important;
+    z-index: 1000 !important;
+    height : 48px !important;
+    width  : 44px !important;
+
+    background: #fff !important;
+    border    : 2px solid #d7d7d7 !important;
+
+    &:hover {
+        background-color: #d7d7d7 !important;
+    }
 }
 
 .slick-prev::before {
