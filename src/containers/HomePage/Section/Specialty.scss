@@ -4,8 +4,15 @@
     border    : 1px solid red;
 
     .specialty-container {
-        height: 100%;
-        margin: 0 50px;
+        height        : 100%;
+        margin        : 0 50px;
+        display       : flex;
+        flex-direction: column;
+
+        .specialty-header {
+            height: 60px;
+            border: 1px solid green;
+        }
     }
 
     .img-customize {

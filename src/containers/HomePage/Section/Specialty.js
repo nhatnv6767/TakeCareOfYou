@@ -19,6 +19,10 @@ class Specialty extends Component {
     return (
       <div className="section-specialty">
         <div className="specialty-container">
+          <div className="specialty-header">
+            <span>Chuyên khoa phổ biến</span>
+            <button>Xem thêm</button>
+          </div>
           <Slider {...settings}>
             <div className="specialty-body">
               <img src={specialtyImg} />
