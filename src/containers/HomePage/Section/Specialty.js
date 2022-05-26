@@ -13,7 +13,7 @@ function SampleNextArrow(props) {
       className={className}
       style={{ ...style, display: "block", background: "red" }}
       onClick={onClick}
-    />
+    ></div>
   );
 }
 
@@ -24,7 +24,7 @@ function SamplePrevArrow(props) {
       className={className}
       style={{ ...style, display: "block", background: "green" }}
       onClick={onClick}
-    />
+    ></div>
   );
 }
 
@@ -36,8 +36,6 @@ class Specialty extends Component {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
     };
     return (
       <div className="section-specialty">
