@@ -5,28 +5,7 @@ import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    ></div>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    ></div>
-  );
-}
+import specialtyImg from "../../../assets/specialty/co-xuong-khop.jpeg";
 
 class Specialty extends Component {
   render() {
@@ -41,23 +20,29 @@ class Specialty extends Component {
       <div className="section-specialty">
         <div className="specialty-content">
           <Slider {...settings}>
-            <div className="img-customize">
-              <h3>1</h3>
+            <div className="specialty-body">
+              <img src={specialtyImg} />
+              <div>Cơ xương khớp 1</div>
             </div>
-            <div className="img-customize">
-              <h3>2</h3>
+            <div className="specialty-body">
+              <img src={specialtyImg} />
+              <div>Cơ xương khớp 2</div>
             </div>
-            <div className="img-customize">
-              <h3>3</h3>
+            <div className="specialty-body">
+              <img src={specialtyImg} />
+              <div>Cơ xương khớp 3</div>
             </div>
-            <div className="img-customize">
-              <h3>4</h3>
+            <div className="specialty-body">
+              <img src={specialtyImg} />
+              <div>Cơ xương khớp 4</div>
             </div>
-            <div className="img-customize">
-              <h3>5</h3>
+            <div className="specialty-body">
+              <img src={specialtyImg} />
+              <div>Cơ xương khớp 5</div>
             </div>
-            <div className="img-customize">
-              <h3>6</h3>
+            <div className="specialty-body">
+              <img src={specialtyImg} />
+              <div>Cơ xương khớp 6</div>
             </div>
           </Slider>
         </div>
