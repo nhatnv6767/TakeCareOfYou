@@ -23,32 +23,34 @@ class Specialty extends Component {
             <span>Chuyên khoa phổ biến</span>
             <button>Xem thêm</button>
           </div>
-          <Slider {...settings}>
-            <div className="specialty-body">
-              <img src={specialtyImg} />
-              <div>Cơ xương khớp 1</div>
-            </div>
-            <div className="specialty-body">
-              <img src={specialtyImg} />
-              <div>Cơ xương khớp 2</div>
-            </div>
-            <div className="specialty-body">
-              <img src={specialtyImg} />
-              <div>Cơ xương khớp 3</div>
-            </div>
-            <div className="specialty-body">
-              <img src={specialtyImg} />
-              <div>Cơ xương khớp 4</div>
-            </div>
-            <div className="specialty-body">
-              <img src={specialtyImg} />
-              <div>Cơ xương khớp 5</div>
-            </div>
-            <div className="specialty-body">
-              <img src={specialtyImg} />
-              <div>Cơ xương khớp 6</div>
-            </div>
-          </Slider>
+          <div className="specialty-body">
+            <Slider {...settings}>
+              <div className="img-customize">
+                <img src={specialtyImg} />
+                <div>Cơ xương khớp 1</div>
+              </div>
+              <div className="img-customize">
+                <img src={specialtyImg} />
+                <div>Cơ xương khớp 2</div>
+              </div>
+              <div className="img-customize">
+                <img src={specialtyImg} />
+                <div>Cơ xương khớp 3</div>
+              </div>
+              <div className="img-customize">
+                <img src={specialtyImg} />
+                <div>Cơ xương khớp 4</div>
+              </div>
+              <div className="img-customize">
+                <img src={specialtyImg} />
+                <div>Cơ xương khớp 5</div>
+              </div>
+              <div className="img-customize">
+                <img src={specialtyImg} />
+                <div>Cơ xương khớp 6</div>
+              </div>
+            </Slider>
+          </div>
         </div>
       </div>
     );
