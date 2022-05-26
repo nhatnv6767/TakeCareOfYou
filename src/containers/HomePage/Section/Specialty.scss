@@ -5,6 +5,7 @@
 
     .specialty-content {
         height: 100%;
+        margin: 0 50px;
     }
 
     .img-customize {
@@ -24,9 +25,8 @@
 // reset slick slider css
 
 .slick-prev {
-    border  : 1px solid green !important;
-    position: relative !important;
-    left    : 0 !important;
+    border: 1px solid green !important;
+    left  : 0 !important;
 }
 
 .slick-next {
