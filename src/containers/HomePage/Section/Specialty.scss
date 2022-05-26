@@ -20,17 +20,25 @@
             }
 
             .btn-section {
-                float  : right;
-                padding: 10px 15px;
-                border : none;
-                outline: none;
-                display: block;
+                float         : right;
+                padding       : 10px 15px;
+                border        : none;
+                outline       : none;
+                display       : block;
+                background    : #ebebeb;
+                color         : black;
+                cursor        : pointer;
+                text-transform: uppercase;
+
+                &:hover {
+                    color     : #fff;
+                    background: #f7d800;
+                }
 
             }
         }
 
         .specialty-body {
-            border: 1px solid black;
 
             .specialty-customize {
                 .bg-image {
