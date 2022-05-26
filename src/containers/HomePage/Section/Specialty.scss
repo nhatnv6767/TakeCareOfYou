@@ -17,6 +17,16 @@
         .specialty-body {
             border: 1px solid black;
 
+            .specialty-customize {
+                .bg-image {
+                    background         : url('../../../assets/specialty/co-xuong-khop.jpeg');
+                    background-position: center center;
+                    background-repeat  : no-repeat;
+                    background-size    : cover;
+                    background-color   : #eee;
+                }
+            }
+
             // reset slick slider css
 
             .slick-prev {
