@@ -18,7 +18,7 @@ class Specialty extends Component {
     };
     return (
       <div className="section-specialty">
-        <div className="specialty-content">
+        <div className="specialty-container">
           <Slider {...settings}>
             <div className="specialty-body">
               <img src={specialtyImg} />
