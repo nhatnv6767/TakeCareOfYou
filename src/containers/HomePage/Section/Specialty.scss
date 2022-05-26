@@ -13,6 +13,20 @@
             height       : 60px;
             margin-bottom: 20px;
             padding-top  : 20px;
+
+            .title-section {
+                font-size  : 22px;
+                font-weight: 600;
+            }
+
+            .btn-section {
+                float  : right;
+                padding: 10px 15px;
+                border : none;
+                outline: none;
+                display: block;
+
+            }
         }
 
         .specialty-body {
