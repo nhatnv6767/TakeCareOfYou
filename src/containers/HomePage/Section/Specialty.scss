@@ -5,13 +5,14 @@
 
     .specialty-container {
         height        : 100%;
-        margin        : 0 50px;
+        margin        : 0 170px;
         display       : flex;
         flex-direction: column;
 
         .specialty-header {
-            height: 60px;
-            border: 1px solid green;
+            height       : 60px;
+            margin-bottom: 20px;
+            padding-top  : 20px;
         }
 
         .specialty-body {
