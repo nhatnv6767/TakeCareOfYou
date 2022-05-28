@@ -1,32 +1,22 @@
-import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
-import { connect } from 'react-redux';
-class ProductManage extends Component {
+import React, { Component } from "react";
+import { FormattedMessage } from "react-intl";
+import { connect } from "react-redux";
+class UserRedux extends Component {
+  state = {};
 
-    state = {
+  componentDidMount() {}
 
-    }
-
-    componentDidMount() {
-    }
-
-
-    render() {
-        return (
-            <div className="text-center" >Manage products</div>
-        )
-    }
-
+  render() {
+    return <div className="text-center">User Redux</div>;
+  }
 }
 
-const mapStateToProps = state => {
-    return {
-    };
+const mapStateToProps = (state) => {
+  return {};
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-    };
+const mapDispatchToProps = (dispatch) => {
+  return {};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductManage);
+export default connect(mapStateToProps, mapDispatchToProps)(UserRedux);
