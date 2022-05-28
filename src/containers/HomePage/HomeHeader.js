@@ -16,10 +16,6 @@ class HomeHeader extends Component {
     // props.language => lấy từ trong redux ra
     let language = this.props.language;
 
-    if (this.props.userInfo) {
-      console.log("Check user info: ", this.props.userInfo);
-    }
-
     return (
       <React.Fragment>
         <div className="home-header-container">
