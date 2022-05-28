@@ -13,7 +13,7 @@ class Header extends Component {
     this.props.changeLanguageAppRedux(language);
   };
   render() {
-    const { processLogout } = this.props;
+    const { processLogout, language } = this.props;
 
     return (
       <div className="header-container">
@@ -24,13 +24,17 @@ class Header extends Component {
 
         <div className="languages">
           <span
-            className="language-vi"
+            className={
+              language === LANGUAGES.VI ? "language-vi active" : "language-vi"
+            }
             onClick={() => this.handleChangeLanguage(LANGUAGES.VI)}
           >
             VI
           </span>
           <span
-            className="language-en"
+            className={
+              language === LANGUAGES.EN ? "language-en active" : "language-en"
+            }
             onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}
           >
             EN
