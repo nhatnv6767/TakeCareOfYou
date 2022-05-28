@@ -23,6 +23,7 @@ class Header extends Component {
         </div>
 
         <div className="languages">
+          <span className="welcome">Welcome, Admin !</span>
           <span
             className={
               language === LANGUAGES.VI ? "language-vi active" : "language-vi"
