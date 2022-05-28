@@ -23,4 +23,26 @@
             font-size: $base-size + 1px;
         }
     }
+
+    .languages {
+        .language-en {
+            cursor      : pointer;
+            margin-right: 15px;
+            margin-left : 10px;
+
+            &.active {
+                opacity: 1;
+                color  : rgb(12, 189, 74);
+            }
+        }
+
+        .language-vi {
+            cursor: pointer;
+
+            &.active {
+                opacity: 1;
+                color  : orange;
+            }
+        }
+    }
 }
