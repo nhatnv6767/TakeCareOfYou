@@ -33,4 +33,15 @@ export const adminMenu = [
       },
     ],
   },
+
+  {
+    //Quản lý phòng khám
+    name: "menu.admin.manage-user",
+    menus: [
+      {
+        name: "menu.admin.crud",
+        link: "/system/user-manage",
+      },
+    ],
+  },
 ];
