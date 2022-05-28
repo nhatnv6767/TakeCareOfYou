@@ -24,18 +24,6 @@
   },
 
   "menu": {
-    "system": {
-      "header": "Hệ thống",
-      "system-administrator": {
-        "header": "Quản trị hệ thống",
-        "user-manage": "Quản lý người sử dụng",
-        "user-redux": "Quản lý User Redux",
-        "register-package-group-or-account": "Đăng ký gói dịch vụ cho nhóm/tài khoản"
-      },
-      "system-parameter": {
-        "header": "Tham số hệ thống"
-      }
-    },
     "admin": {
       "manage-user": "Người dùng",
       "manage-doctor": "Quản lý bác sĩ",
