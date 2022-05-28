@@ -4,7 +4,14 @@ import { FormattedMessage } from "react-intl";
 
 class HomeFooter extends Component {
   render() {
-    return <div className="home-footer">Home Footer</div>;
+    return (
+      <div className="home-footer">
+        <p>
+          &copy; 2022 RapidTables.com{" "}
+          <a href="#">More information, please visit my youtube channel</a>
+        </p>
+      </div>
+    );
   }
 }
 
