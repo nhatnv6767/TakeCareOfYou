@@ -14,8 +14,7 @@ class Header extends Component {
     this.props.changeLanguageAppRedux(language);
   };
   render() {
-    const { processLogout, language } = this.props;
-    console.log("Check user info: ", this.props.userInfo);
+    const { processLogout, language, userInfo } = this.props;
 
     return (
       <div className="header-container">
@@ -26,7 +25,8 @@ class Header extends Component {
 
         <div className="languages">
           <span className="welcome">
-            <FormattedMessage id="homeheader.welcome" />, Admin !
+            <FormattedMessage id="homeheader.welcome" />,{" "}
+            {userInfo && userInfo.firstName ? userInfo.firstName : ""} !
           </span>
           <span
             className={
