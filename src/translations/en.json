@@ -43,7 +43,11 @@
       "crud": "CRUD Users",
       "crud-redux": "CRUD Users Redux",
       "clinic": "Clinics",
-      "manage-clinic": "Manage Clinics"
+      "manage-clinic": "Manage Clinics",
+      "specialty": "Specialties",
+      "manage-specialty": "Manage Specialties",
+      "handbook": "Handbook",
+      "manage-handbook": "Manage Handbook"
     }
   }
 }

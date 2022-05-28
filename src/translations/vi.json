@@ -43,7 +43,11 @@
       "crud": "CRUD người dùng",
       "crud-redux": "CRUD người dùng Redux",
       "clinic": "Phòng khám",
-      "manage-clinic": "Quản lý phòng khám"
+      "manage-clinic": "Quản lý phòng khám",
+      "specialty": "Chuyên khoa",
+      "manage-specialty": "Quản lý chuyên khoa",
+      "handbook": "Cẩm nang",
+      "manage-handbook": "Quản lý cẩm nang"
     }
   }
 }
