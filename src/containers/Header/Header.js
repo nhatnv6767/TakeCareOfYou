@@ -8,6 +8,9 @@ import "./Header.scss";
 import { LANGUAGES } from "../../utils";
 
 class Header extends Component {
+  handleChangeLanguage = (language) => {
+    alert("Language: ", language);
+  };
   render() {
     const { processLogout } = this.props;
 
@@ -21,13 +24,13 @@ class Header extends Component {
         <div className="languages">
           <span
             className="language-vi"
-            onClick={() => handleChangeLanguage(LANGUAGES.VI)}
+            onClick={() => this.handleChangeLanguage(LANGUAGES.VI)}
           >
             VI
           </span>
           <span
             className="language-en"
-            onClick={() => handleChangeLanguage(LANGUAGES.EN)}
+            onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}
           >
             EN
           </span>
