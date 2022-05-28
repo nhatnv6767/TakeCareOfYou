@@ -42,6 +42,7 @@
       "manage-admin": "Manage Admins",
       "crud": "CRUD Users",
       "crud-redux": "CRUD Users Redux",
+      "clinic": "Clinics",
       "manage-clinic": "Manage Clinics"
     }
   }

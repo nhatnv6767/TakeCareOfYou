@@ -42,6 +42,7 @@
       "manage-admin": "Quản lý admin",
       "crud": "CRUD người dùng",
       "crud-redux": "CRUD người dùng Redux",
+      "clinic": "Phòng khám",
       "manage-clinic": "Quản lý phòng khám"
     }
   }
