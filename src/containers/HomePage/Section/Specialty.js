@@ -14,7 +14,7 @@ class Specialty extends Component {
             <button className="btn-section">Xem thêm</button>
           </div>
           <div className="section-body">
-            <Slider {...settings}>
+            <Slider {...this.props.settings}>
               <div className="specialty-customize">
                 <div className="bg-image" />
                 <div>Cơ xương khớp 1</div>
