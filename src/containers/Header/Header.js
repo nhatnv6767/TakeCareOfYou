@@ -5,6 +5,7 @@ import * as actions from "../../store/actions";
 import Navigator from "../../components/Navigator";
 import { adminMenu } from "./menuApp";
 import "./Header.scss";
+import { LANGUAGES } from "../../utils";
 
 class Header extends Component {
   render() {
@@ -18,8 +19,18 @@ class Header extends Component {
         </div>
 
         <div className="languages">
-          <span className="language-vi">VI</span>
-          <span className="language-en">EN</span>
+          <span
+            className="language-vi"
+            onClick={() => handleChangeLanguage(LANGUAGES.VI)}
+          >
+            VI
+          </span>
+          <span
+            className="language-en"
+            onClick={() => handleChangeLanguage(LANGUAGES.EN)}
+          >
+            EN
+          </span>
           {/* nút logout */}
           <div
             className="btn btn-logout"
