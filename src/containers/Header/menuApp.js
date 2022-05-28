@@ -36,11 +36,11 @@ export const adminMenu = [
 
   {
     //Quản lý phòng khám
-    name: "menu.admin.manage-user",
+    name: "menu.admin.manage-clinic",
     menus: [
       {
-        name: "menu.admin.crud",
-        link: "/system/user-manage",
+        name: "menu.admin.manage-clinic",
+        link: "/system/manage-clinic",
       },
     ],
   },

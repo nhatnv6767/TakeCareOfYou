@@ -41,7 +41,8 @@
       "manage-doctor": "Quản lý bác sĩ",
       "manage-admin": "Quản lý admin",
       "crud": "CRUD người dùng",
-      "crud-redux": "CRUD người dùng Redux"
+      "crud-redux": "CRUD người dùng Redux",
+      "manage-clinic": "Quản lý phòng khám"
     }
   }
 }
