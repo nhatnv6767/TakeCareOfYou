@@ -16,27 +16,27 @@ class Specialty extends Component {
           <div className="section-body">
             <Slider {...this.props.settings}>
               <div className="specialty-customize">
-                <div className="bg-image" />
+                <div className="bg-image section-specialty" />
                 <div>Cơ xương khớp 1</div>
               </div>
               <div className="specialty-customize">
-                <div className="bg-image" />
+                <div className="bg-image section-specialty" />
                 <div>Cơ xương khớp 2</div>
               </div>
               <div className="specialty-customize">
-                <div className="bg-image" />
+                <div className="bg-image section-specialty" />
                 <div>Cơ xương khớp 3</div>
               </div>
               <div className="specialty-customize">
-                <div className="bg-image" />
+                <div className="bg-image section-specialty" />
                 <div>Cơ xương khớp 4</div>
               </div>
               <div className="specialty-customize">
-                <div className="bg-image" />
+                <div className="bg-image section-specialty" />
                 <div>Cơ xương khớp 5</div>
               </div>
               <div className="specialty-customize">
-                <div className="bg-image" />
+                <div className="bg-image section-specialty" />
                 <div>Cơ xương khớp 6</div>
               </div>
             </Slider>
