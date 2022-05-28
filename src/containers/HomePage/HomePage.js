@@ -9,11 +9,18 @@ import "slick-carousel/slick/slick-theme.css";
 
 class HomePage extends Component {
   render() {
+    let settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+    };
     return (
       <div>
         <HomeHeader />
-        <Specialty />
-        <MedicalFacility />
+        <Specialty {...settings} />
+        <MedicalFacility {...settings} />
       </div>
     );
   }
