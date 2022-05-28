@@ -48,7 +48,7 @@
                 width              : 278px;
                 height             : 150px;
                 background-position: center center;
-                background-repeat  : no-repeat;
+                background-repeat  : no-repeat !important;
                 background-size    : cover;
                 background-color   : #eee;
 
@@ -59,8 +59,6 @@
                 &.section-medical-facility {
                     background: url('../../assets/medical-facility/benh-vien-narita.jpeg');
                 }
-
-                ////assets/outstanding-doctor/outstanding-doctor.jpeg
 
                 &.section-outstanding-doctor {
                     background: url('../../assets/outstanding-doctor/outstanding-doctor.jpeg');

@@ -18,6 +18,21 @@ class OutStandingDoctor extends Component {
                 <div className="bg-image section-outstanding-doctor" />
                 <div>Trần Mike Fence 1</div>
               </div>
+
+              <div className="section-customize">
+                <div className="bg-image section-outstanding-doctor" />
+                <div>Trần Mike Fence 1</div>
+              </div>
+
+              <div className="section-customize">
+                <div className="bg-image section-outstanding-doctor" />
+                <div>Trần Mike Fence 1</div>
+              </div>
+
+              <div className="section-customize">
+                <div className="bg-image section-outstanding-doctor" />
+                <div>Trần Mike Fence 1</div>
+              </div>
             </Slider>
           </div>
         </div>
