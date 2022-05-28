@@ -15,6 +15,7 @@ class Header extends Component {
   };
   render() {
     const { processLogout, language } = this.props;
+    console.log("Check user info: ", this.props.userInfo);
 
     return (
       <div className="header-container">
@@ -60,6 +61,7 @@ class Header extends Component {
 const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.user.isLoggedIn,
+    userInfo: state.user.userInfo,
     language: state.app.language,
   };
 };
