@@ -53,15 +53,15 @@
                 background-color   : #eee;
 
                 &.section-specialty {
-                    background: url('../../assets/specialty/co-xuong-khop.jpeg');
+                    background-image: url('../../assets/specialty/co-xuong-khop.jpeg');
                 }
 
                 &.section-medical-facility {
-                    background: url('../../assets/medical-facility/benh-vien-narita.jpeg');
+                    background-image: url('../../assets/medical-facility/benh-vien-narita.jpeg');
                 }
 
                 &.section-outstanding-doctor {
-                    background: url('../../assets/outstanding-doctor/outstanding-doctor.jpeg');
+                    background-image: url('../../assets/outstanding-doctor/outstanding-doctor.jpeg');
                 }
             }
         }
