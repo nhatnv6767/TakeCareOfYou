@@ -6,6 +6,7 @@ import Slider from "react-slick";
 
 class Specialty extends Component {
   render() {
+    let settings = this.props.settings;
     return (
       <div className="section-share section-specialty">
         <div className="section-container">
@@ -14,7 +15,7 @@ class Specialty extends Component {
             <button className="btn-section">Xem thêm</button>
           </div>
           <div className="section-body">
-            <Slider {...this.props.settings}>
+            <Slider {...settings}>
               <div className="specialty-customize">
                 <div className="bg-image" />
                 <div>Cơ xương khớp 1</div>
