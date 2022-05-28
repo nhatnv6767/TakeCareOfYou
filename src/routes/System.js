@@ -8,29 +8,28 @@ import Header from "../containers/Header/Header";
 
 class System extends Component {
   render() {
-    {
-      /* {this.props.isLoggedIn && <Header />} */
-    }
-
-    const { systemMenuPath } = this.props;
+    const { systemMenuPath, isLoggedIn } = this.props;
     return (
-      <div className="system-container">
-        <div className="system-list">
-          <Switch>
-            <Route path="/system/user-manage" component={UserManage} />
-            <Route path="/system/product-manage" component={ProductManage} />
-            <Route
-              path="/system/register-package-group-or-account"
-              component={RegisterPackageGroupOrAcc}
-            />
-            <Route
-              component={() => {
-                return <Redirect to={systemMenuPath} />;
-              }}
-            />
-          </Switch>
+      <React.Fragment>
+        {isLoggedIn && <Header />}
+        <div className="system-container">
+          <div className="system-list">
+            <Switch>
+              <Route path="/system/user-manage" component={UserManage} />
+              <Route path="/system/product-manage" component={ProductManage} />
+              <Route
+                path="/system/register-package-group-or-account"
+                component={RegisterPackageGroupOrAcc}
+              />
+              <Route
+                component={() => {
+                  return <Redirect to={systemMenuPath} />;
+                }}
+              />
+            </Switch>
+          </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
@@ -38,6 +37,7 @@ class System extends Component {
 const mapStateToProps = (state) => {
   return {
     systemMenuPath: state.app.systemMenuPath,
+    isLoggedIn: state.user.isLoggedIn,
   };
 };
 
