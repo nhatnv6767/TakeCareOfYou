@@ -1,15 +1,14 @@
 .section-specialty {
     height    : 330px;
     background: #f5f5f5;
-    border    : 1px solid red;
 
-    .specialty-container {
+    .section-container {
         height        : 100%;
         margin        : 0 170px;
         display       : flex;
         flex-direction: column;
 
-        .specialty-header {
+        .section-header {
             height       : 60px;
             margin-bottom: 20px;
             padding-top  : 20px;
@@ -38,9 +37,9 @@
             }
         }
 
-        .specialty-body {
+        .section-body {
 
-            .specialty-customize {
+            .section-customize {
                 .bg-image {
                     width              : 278px;
                     height             : 150px;
