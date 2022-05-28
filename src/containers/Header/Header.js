@@ -20,11 +20,14 @@ class Header extends Component {
         <div className="languages">
           <span className="language-vi">VI</span>
           <span className="language-en">EN</span>
-        </div>
-
-        {/* nút logout */}
-        <div className="btn btn-logout" onClick={processLogout} title="Log out">
-          <i className="fas fa-sign-out-alt"></i>
+          {/* nút logout */}
+          <div
+            className="btn btn-logout"
+            onClick={processLogout}
+            title="Log out"
+          >
+            <i className="fas fa-sign-out-alt"></i>
+          </div>
         </div>
       </div>
     );
