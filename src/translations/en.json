@@ -35,6 +35,9 @@
       "system-parameter": {
         "header": "System-parameter"
       }
+    },
+    "admin": {
+      "manage-user": "Manage User"
     }
   }
 }
