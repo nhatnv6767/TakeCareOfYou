@@ -6,6 +6,7 @@ import Navigator from "../../components/Navigator";
 import { adminMenu } from "./menuApp";
 import "./Header.scss";
 import { LANGUAGES } from "../../utils";
+import { FormattedMessage } from "react-intl";
 
 class Header extends Component {
   handleChangeLanguage = (language) => {
@@ -23,7 +24,9 @@ class Header extends Component {
         </div>
 
         <div className="languages">
-          <span className="welcome">Welcome, Admin !</span>
+          <span className="welcome">
+            <FormattedMessage id="homeheader.welcome" />, Admin !
+          </span>
           <span
             className={
               language === LANGUAGES.VI ? "language-vi active" : "language-vi"

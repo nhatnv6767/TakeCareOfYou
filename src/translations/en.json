@@ -8,7 +8,8 @@
     "select-doctor": "Choose a good doctor",
     "fee": "Checkup package",
     "check-health": "General health check",
-    "support": "Support"
+    "support": "Support",
+    "welcome": "Welcome"
   },
 
   "banner": {
