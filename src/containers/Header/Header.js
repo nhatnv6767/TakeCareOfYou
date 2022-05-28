@@ -9,7 +9,8 @@ import { LANGUAGES } from "../../utils";
 
 class Header extends Component {
   handleChangeLanguage = (language) => {
-    alert("Language: ", language);
+    // fire redux event : actions
+    this.props.changeLanguageAppRedux(language);
   };
   render() {
     const { processLogout } = this.props;
@@ -51,12 +52,15 @@ class Header extends Component {
 const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.user.isLoggedIn,
+    language: state.app.language,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     processLogout: () => dispatch(actions.processLogout()),
+    changeLanguageAppRedux: (language) =>
+      dispatch(actions.changeLanguageApp(language)),
   };
 };
 
