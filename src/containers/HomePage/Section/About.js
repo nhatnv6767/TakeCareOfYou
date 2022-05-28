@@ -21,7 +21,14 @@ class About extends Component {
               allowfullscreen
             ></iframe>
           </div>
-          <div className="content-right"></div>
+          <div className="content-right">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+              ea illum eligendi deleniti. Numquam incidunt deleniti, nisi, enim
+              corporis hic expedita unde nesciunt excepturi repudiandae cum
+              impedit pariatur consequatur recusandae.
+            </p>
+          </div>
         </div>
       </div>
     );
