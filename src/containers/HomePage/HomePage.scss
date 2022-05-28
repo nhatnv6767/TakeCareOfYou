@@ -47,7 +47,6 @@
             .bg-image {
                 width              : 278px;
                 height             : 150px;
-                background         : url('../../assets/specialty/co-xuong-khop.jpeg');
                 background-position: center center;
                 background-repeat  : no-repeat;
                 background-size    : cover;
@@ -56,6 +55,11 @@
                 &.section-specialty {
                     background: url('../../assets/specialty/co-xuong-khop.jpeg');
                 }
+
+                &.section-medical-facility {
+                    background: url('../../assets/medical-facility/benh-vien-narita.jpeg');
+                }
+
             }
         }
 
