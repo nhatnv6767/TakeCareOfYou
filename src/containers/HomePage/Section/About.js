@@ -7,10 +7,20 @@ class About extends Component {
     return (
       <div className="section-share section-about">
         <div className="section-about-header">
-          Truyền thông nói về Booking Care
+          Truyền thông nói về chúng tôi
         </div>
         <div className="section-about-content">
-          <div className="content-left"></div>
+          <div className="content-left">
+            <iframe
+              width="50%"
+              height="400px"
+              src="https://www.youtube.com/embed/Y2LrrsEivEc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
           <div className="content-right"></div>
         </div>
       </div>
