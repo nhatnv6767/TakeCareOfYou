@@ -19,8 +19,8 @@ class HomePage extends Component {
     return (
       <div>
         <HomeHeader />
-        <Specialty {...settings} />
-        <MedicalFacility {...settings} />
+        <Specialty settings={settings} />
+        <MedicalFacility settings={settings} />
       </div>
     );
   }
