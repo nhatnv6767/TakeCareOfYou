@@ -16,7 +16,7 @@ class Specialty extends Component {
       slidesToScroll: 1,
     };
     return (
-      <div className="section-share">
+      <div className="section-share section-specialty">
         <div className="section-container">
           <div className="section-header">
             <span className="title-section">Chuyên khoa phổ biến</span>
