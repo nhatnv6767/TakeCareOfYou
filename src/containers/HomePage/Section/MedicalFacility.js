@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import "./MedicalFacility.scss";
 
 class MedicalFacility extends Component {
   render() {
-    return <div></div>;
+    return <div>MedicalFacility</div>;
   }
 }
 
