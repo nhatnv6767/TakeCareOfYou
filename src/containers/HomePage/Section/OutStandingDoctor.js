@@ -15,52 +15,62 @@ class OutStandingDoctor extends Component {
           <div className="section-body">
             <Slider {...this.props.settings}>
               <div className="section-customize">
-                <div className="outer-bg">
-                  <div className="bg-image section-outstanding-doctor" />
-                </div>
-                <div className="position text-center">
-                  <div>Giáo sư, Tiến sĩ Trần Mike Fence 1</div>
-                  <div>Nha khoa</div>
-                </div>
-              </div>
-
-              <div className="section-customize">
-                <div className="outer-bg">
-                  <div className="bg-image section-outstanding-doctor" />
-                </div>
-                <div className="position text-center">
-                  <div>Giáo sư, Tiến sĩ Trần Mike Fence 2</div>
-                  <div>Nha khoa</div>
+                <div className="customize-border">
+                  <div className="outer-bg">
+                    <div className="bg-image section-outstanding-doctor" />
+                  </div>
+                  <div className="position text-center">
+                    <div>Giáo sư, Tiến sĩ Trần Mike Fence 1</div>
+                    <div>Nha khoa</div>
+                  </div>
                 </div>
               </div>
 
               <div className="section-customize">
-                <div className="outer-bg">
-                  <div className="bg-image section-outstanding-doctor" />
-                </div>
-                <div className="position text-center">
-                  <div>Giáo sư, Tiến sĩ Trần Mike Fence 3</div>
-                  <div>Nha khoa</div>
-                </div>
-              </div>
-
-              <div className="section-customize">
-                <div className="outer-bg">
-                  <div className="bg-image section-outstanding-doctor" />
-                </div>
-                <div className="position text-center">
-                  <div>Giáo sư, Tiến sĩ Trần Mike Fence 4</div>
-                  <div>Nha khoa</div>
+                <div className="customize-border">
+                  <div className="outer-bg">
+                    <div className="bg-image section-outstanding-doctor" />
+                  </div>
+                  <div className="position text-center">
+                    <div>Giáo sư, Tiến sĩ Trần Mike Fence 2</div>
+                    <div>Nha khoa</div>
+                  </div>
                 </div>
               </div>
 
               <div className="section-customize">
-                <div className="outer-bg">
-                  <div className="bg-image section-outstanding-doctor" />
+                <div className="customize-border">
+                  <div className="outer-bg">
+                    <div className="bg-image section-outstanding-doctor" />
+                  </div>
+                  <div className="position text-center">
+                    <div>Giáo sư, Tiến sĩ Trần Mike Fence 3</div>
+                    <div>Nha khoa</div>
+                  </div>
                 </div>
-                <div className="position text-center">
-                  <div>Giáo sư, Tiến sĩ Trần Mike Fence 5</div>
-                  <div>Nha khoa</div>
+              </div>
+
+              <div className="section-customize">
+                <div className="customize-border">
+                  <div className="outer-bg">
+                    <div className="bg-image section-outstanding-doctor" />
+                  </div>
+                  <div className="position text-center">
+                    <div>Giáo sư, Tiến sĩ Trần Mike Fence 4</div>
+                    <div>Nha khoa</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="section-customize">
+                <div className="customize-border">
+                  <div className="outer-bg">
+                    <div className="bg-image section-outstanding-doctor" />
+                  </div>
+                  <div className="position text-center">
+                    <div>Giáo sư, Tiến sĩ Trần Mike Fence 5</div>
+                    <div>Nha khoa</div>
+                  </div>
                 </div>
               </div>
             </Slider>

@@ -68,6 +68,7 @@
                     background-image: url('../../assets/outstanding-doctor/outstanding-doctor.jpeg');
                     width           : 120px;
                     height          : 120px;
+                    border-radius   : 50%;
                 }
 
                 &.section-handbook {
@@ -127,5 +128,7 @@
     .outer-bg {
         display        : flex;
         justify-content: center;
+        margin-bottom  : 10px;
+
     }
 }
