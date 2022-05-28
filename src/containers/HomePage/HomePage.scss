@@ -129,6 +129,13 @@
         display        : flex;
         justify-content: center;
         margin-bottom  : 10px;
+    }
 
+    .section-customize {
+        padding: 5px;
+
+        .customize-border {
+            border: 1px solid grey;
+        }
     }
 }
