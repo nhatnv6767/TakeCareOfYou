@@ -169,5 +169,14 @@
     .section-about-content {
         display: flex;
         gap    : 15px;
+        width  : 100%;
+
+        .content-left {
+            width: 60%;
+        }
+
+        .content-right {
+            width: 40%;
+        }
     }
 }
