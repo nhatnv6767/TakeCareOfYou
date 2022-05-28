@@ -177,6 +177,12 @@
 
         .content-right {
             width: 40%;
+
+            p {
+                text-align : justify;
+                font-style : italic;
+                padding-top: 15px;
+            }
         }
     }
 }
