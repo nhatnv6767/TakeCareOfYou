@@ -6,6 +6,7 @@ import MedicalFacility from "./Section/MedicalFacility";
 import "./HomePage.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import OutStandingDoctor from "./Section/OutStandingDoctor";
 
 class HomePage extends Component {
   render() {
@@ -21,6 +22,7 @@ class HomePage extends Component {
         <HomeHeader />
         <Specialty settings={settings} />
         <MedicalFacility settings={settings} />
+        <OutStandingDoctor settings={settings} />
       </div>
     );
   }
