@@ -45,8 +45,9 @@
     }
 
     &.section-about {
-        border: 1px solid red;
-        height: 500px !important;
+        height       : 500px !important;
+        border-top   : 1px solid #f5f5f5;
+        border-bottom: 1px solid #f5f5f5
     }
 
 
@@ -156,7 +157,12 @@
 
 }
 
-.section-about-header {
-    padding  : 20px 10px;
-    font-size: 20px;
+.section-about {
+    margin: 0 100px;
+
+    .section-about-header {
+        padding    : 20px 10px;
+        font-size  : 22px;
+        font-weight: 600;
+    }
 }

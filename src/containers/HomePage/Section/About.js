@@ -12,7 +12,7 @@ class About extends Component {
         <div className="section-about-content">
           <div className="content-left">
             <iframe
-              width="50%"
+              width="60%"
               height="400px"
               src="https://www.youtube.com/embed/Y2LrrsEivEc"
               title="YouTube video player"
