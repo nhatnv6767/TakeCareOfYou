@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 
 class HomeFooter extends Component {
   render() {
-    return <div className="section-share section-about">About Us</div>;
+    return <div className="home-footer">Home Footer</div>;
   }
 }
 
