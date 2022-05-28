@@ -14,7 +14,7 @@ class OutStandingDoctor extends Component {
           </div>
           <div className="section-body">
             <Slider {...this.props.settings}>
-              <div className="specialty-customize">
+              <div className="section-customize">
                 <div className="bg-image section-outstanding-doctor" />
                 <div>Trần Mike Fence 1</div>
               </div>
