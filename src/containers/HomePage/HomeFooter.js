@@ -7,10 +7,10 @@ class HomeFooter extends Component {
     return (
       <div className="home-footer">
         <p>
-          &copy; 2022 RapidTables.com{" "}
-          <a href="#">
-            More information, please visit my youtube channel. &#8594; Click
-            here &#8592;
+          &copy; 2022 RapidTables.com. More information, please visit my youtube
+          channel
+          <a target="_blank" href="https://www.youtube.com/">
+            &#8594; Click here &#8592;
           </a>
         </p>
       </div>
