@@ -37,9 +37,10 @@
       }
     },
     "admin": {
-      "manage-user": "Quản lý người dùng",
+      "manage-user": "Người dùng",
       "manage-doctor": "Quản lý bác sĩ",
-      "manage-admin": "Quản lý admin"
+      "manage-admin": "Quản lý admin",
+      "crud": "CRUD người dùng"
     }
   }
 }

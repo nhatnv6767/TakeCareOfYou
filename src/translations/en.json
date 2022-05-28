@@ -37,9 +37,10 @@
       }
     },
     "admin": {
-      "manage-user": "Manage User",
+      "manage-user": "Users",
       "manage-doctor": "Manage Doctors",
-      "manage-admin": "Manage Admins"
+      "manage-admin": "Manage Admins",
+      "crud": "CRUD Users"
     }
   }
 }
