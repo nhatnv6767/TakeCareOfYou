@@ -22,6 +22,7 @@ class UserRedux extends Component {
   }
 
   render() {
+    console.log("Check state", this.state);
     return (
       <div className="user-redux-container">
         <div className="title text-center">User Redux</div>
