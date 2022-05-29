@@ -167,8 +167,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getGenderStart: () => dispatch(actions.fetchGenderStart()),
 
-    getPositionSuccess: () => dispatch(actions.fetchPositionSuccess()),
-    getRoleSuccess: () => dispatch(actions.fetchRoleSuccess()),
+    getPositionStart: () => dispatch(actions.fetchPositionStart()),
+    getRoleStart: () => dispatch(actions.fetchRoleStart()),
     // processLogout: () => dispatch(actions.processLogout()),
     // changeLanguageAppRedux: (language) =>
     //   dispatch(actions.changeLanguageApp(language)),
