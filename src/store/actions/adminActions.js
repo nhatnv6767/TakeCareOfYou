@@ -38,18 +38,18 @@ export const fetchPositionStart = () => {
   return async (dispatch, getState) => {
     try {
       dispatch({
-        type: actionTypes.FETCH_GENDER_START,
+        type: actionTypes.FETCH_POSITION_START,
       });
 
-      let res = await getAllCodeService("GENDER");
+      let res = await getAllCodeService("POSITION");
       if (res && res.errCode === 0) {
-        dispatch(fetchGenderSuccess(res.data));
+        dispatch(fetchPositionSuccess(res.data));
       } else {
-        dispatch(fetchGenderFailed());
+        dispatch(fetchPositionFailed());
       }
     } catch (e) {
-      dispatch(fetchGenderFailed());
-      console.log("FetchGenderStart error: ", e);
+      dispatch(fetchPositionFailed());
+      console.log("FetchPositionStart error: ", e);
     }
   };
 };
@@ -62,6 +62,26 @@ export const fetchPositionSuccess = (positionData) => ({
 export const fetchPositionFailed = () => ({
   type: actionTypes.FETCH_POSITION_FAILED,
 });
+
+export const fetchRoleStart = () => {
+  return async (dispatch, getState) => {
+    try {
+      dispatch({
+        type: actionTypes.FETCH_ROLE_START,
+      });
+
+      let res = await getAllCodeService("ROLE");
+      if (res && res.errCode === 0) {
+        dispatch(fetchRoleSuccess(res.data));
+      } else {
+        dispatch(fetchRoleFailed());
+      }
+    } catch (e) {
+      dispatch(fetchRoleFailed());
+      console.log("FetchRoleStart error: ", e);
+    }
+  };
+};
 
 export const fetchRoleSuccess = (roleData) => ({
   type: actionTypes.FETCH_ROLE_SUCCESS,
