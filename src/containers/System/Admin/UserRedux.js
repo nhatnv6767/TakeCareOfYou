@@ -14,7 +14,9 @@ class UserRedux extends Component {
   }
 
   async componentDidMount() {
-    this.props.getGenderStart();
+    // this.props.getGenderStart();
+
+    this.props.dispatch(actions.fetchGenderStart());
 
     // try {
     //   let res = await getAllCodeService("gender");
