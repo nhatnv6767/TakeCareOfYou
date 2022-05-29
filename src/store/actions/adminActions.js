@@ -10,12 +10,12 @@ export const fetchGenderStart = () => {
     try {
       let res = await getAllCodeService("GENDER");
       if (res && res.errCode === 0) {
-        fetchGenderSuccess(res.data);
+        dispatch(fetchGenderSuccess(res.data));
       } else {
-        fetchGenderFailed();
+        dispatch(fetchGenderFailed());
       }
     } catch (e) {
-      fetchGenderFailed();
+      dispatch(fetchGenderFailed());
       console.log("FetchGenderStart error: ", e);
     }
   };
