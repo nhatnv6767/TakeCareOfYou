@@ -21,61 +21,92 @@ class UserRedux extends Component {
               </div>
 
               <div className="col-3">
-                <label>Email </label>
+                <label>
+                  <FormattedMessage id="manage-user.email" />{" "}
+                </label>
                 <input className="form-control" type="email" />
               </div>
               <div className="col-3">
-                <label>Password </label>
+                <label>
+                  <FormattedMessage id="manage-user.password" />{" "}
+                </label>
                 <input className="form-control" type="password" />
               </div>
               <div className="col-3">
-                <label>First name </label>
+                <label>
+                  <FormattedMessage id="manage-user.first-name" />{" "}
+                </label>
                 <input className="form-control" type="text" />
               </div>
               <div className="col-3">
-                <label>Last name </label>
+                <label>
+                  <FormattedMessage id="manage-user.last-name" />{" "}
+                </label>
                 <input className="form-control" type="text" />
               </div>
               <div className="col-3">
-                <label>Phone number</label>
+                <label>
+                  <FormattedMessage id="manage-user.phone-number" />
+                </label>
                 <input className="form-control" type="text" />
               </div>
               <div className="col-9">
-                <label>Address </label>
+                <label>
+                  <FormattedMessage id="manage-user.address" />{" "}
+                </label>
                 <input className="form-control" type="text" />
               </div>
 
               <div className="col-3">
-                <label>Gender </label>
+                <label>
+                  <FormattedMessage id="manage-user.gender" />{" "}
+                </label>
                 <select class="form-control">
-                  <option selected>Choose...</option>
+                  <option selected>
+                    <FormattedMessage id="manage-user.choose" />
+                    ...
+                  </option>
                   <option>...</option>
                 </select>
               </div>
 
               <div className="col-3">
-                <label>Position </label>
+                <label>
+                  <FormattedMessage id="manage-user.position" />{" "}
+                </label>
                 <select class="form-control">
-                  <option selected>Choose...</option>
+                  <option selected>
+                    <FormattedMessage id="manage-user.choose" />
+                    ...
+                  </option>
                   <option>...</option>
                 </select>
               </div>
 
               <div className="col-3">
-                <label>RoleID </label>
+                <label>
+                  <FormattedMessage id="manage-user.role-id" />{" "}
+                </label>
                 <select class="form-control">
-                  <option selected>Choose...</option>
+                  <option selected>
+                    <FormattedMessage id="manage-user.choose" />
+                    ...
+                  </option>
                   <option>...</option>
                 </select>
               </div>
 
               <div className="col-3">
-                <label>Image </label>
+                <label>
+                  <FormattedMessage id="manage-user.image" />{" "}
+                </label>
                 <input type="text" className="form-control" />
               </div>
 
               <div className="col-12">
-                <button className="btn btn-primary">Save</button>
+                <button className="btn btn-primary">
+                  <FormattedMessage id="manage-user.save" />
+                </button>
               </div>
             </div>
           </div>
