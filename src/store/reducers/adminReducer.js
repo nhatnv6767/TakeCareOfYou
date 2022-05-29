@@ -9,6 +9,16 @@ const adminReducer = (state = initialState, action) => {
         ...state,
       };
 
+    case actionTypes.FETCH_GENDER_SUCCESS:
+      return {
+        ...state,
+      };
+
+    case actionTypes.FETCH_GENDER_FAILED:
+      return {
+        ...state,
+      };
+
     default:
       return state;
   }
