@@ -157,7 +157,8 @@ class UserRedux extends Component {
                 <label>
                   <FormattedMessage id="manage-user.image" />{" "}
                 </label>
-                <input type="text" className="form-control" />
+                <input type="file" />
+                <div className="preview-image"></div>
               </div>
 
               <div className="col-12 mt-3">
