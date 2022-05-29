@@ -28,6 +28,14 @@ class UserRedux extends Component {
     if (prevProps.genderRedux !== this.props.genderRedux) {
       this.setState({ genderArr: this.props.genderRedux });
     }
+
+    if (prevProps.positionRedux !== this.props.positionRedux) {
+      this.setState({ positionArr: this.props.positionRedux });
+    }
+
+    if (prevProps.roleRedux !== this.props.roleRedux) {
+      this.setState({ roleArr: this.props.roleRedux });
+    }
   }
 
   render() {
