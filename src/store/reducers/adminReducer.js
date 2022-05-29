@@ -11,24 +11,28 @@ const adminReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_GENDER_START:
       let copyStateStart = { ...state };
-      copyState.isLoadingGender = true;
+      copyStateStart.isLoadingGender = true;
       console.log("Fire fetch gender start: ", action);
       return {
         ...copyStateStart,
       };
 
     case actionTypes.FETCH_GENDER_SUCCESS:
-      let copyState = { ...state };
-      copyState.genders = action.data;
-      console.log("Fire fetch gender success: ", copyState);
+      let copyStateSuccess = { ...state };
+      copyStateSuccess.genders = action.data;
+      copyStateSuccess.isLoadingGender = false;
+      console.log("Fire fetch gender success: ", copyStateSuccess);
       return {
-        ...copyState,
+        ...copyStateSuccess,
       };
 
     case actionTypes.FETCH_GENDER_FAILED:
+      let copyStateFailed = { ...state };
+      copyStateFailed.genders = [];
+      copyStateFailed.isLoadingGender = false;
       console.log("Fire fetch gender failed: ", action);
       return {
-        ...state,
+        ...copyStateFailed,
       };
 
     default:
