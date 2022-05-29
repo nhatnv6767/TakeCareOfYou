@@ -38,11 +38,15 @@ class UserRedux extends Component {
   render() {
     let genders = this.state.genderArr;
     let language = this.props.language;
+    let isGetGenders = this.props.isLoadingGender;
 
     console.log("Check props from redux: ", this.props.genderRedux);
     return (
       <div className="user-redux-container">
         <div className="title text-center">User Redux</div>
+
+        <div>{isGetGenders === true ? "Loading genders" : ""}</div>
+
         <div className="user-redux-body">
           <div className="container">
             <div className="row">
