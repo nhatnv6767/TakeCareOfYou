@@ -150,6 +150,8 @@ const mapStateToProps = (state) => {
     // truyền state gender lưu bên trong redux vào bên trong react
     // "map" state của thằng redux vào bên trong props cho thằng react
     genderRedux: state.admin.genders,
+    positionRedux: state.admin.positions,
+    roleRedux: state.admin.roles,
     isLoadingGender: state.admin.isLoadingGender,
   };
 };
