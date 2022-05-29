@@ -48,7 +48,7 @@
     "address": "Address",
     "gender": "Gender",
     "position": "Position",
-    "role-id": "Role ID",
+    "role-id": "Role",
     "image": "Avatar",
     "save": "Save"
   }
