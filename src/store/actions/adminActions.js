@@ -9,7 +9,7 @@ export const fetchGenderStart = async (dispatch, getState) => {
   try {
     let res = await getAllCodeService("GENDER");
     if (res && res.errCode === 0) {
-      fetchGenderSuccess();
+      fetchGenderSuccess(res.data);
     } else {
       fetchGenderFailed();
     }
@@ -19,8 +19,9 @@ export const fetchGenderStart = async (dispatch, getState) => {
   }
 };
 
-export const fetchGenderSuccess = () => ({
+export const fetchGenderSuccess = (genderData) => ({
   type: actionTypes.FETCH_GENDER_SUCCESS,
+  data: genderData,
 });
 
 export const fetchGenderFailed = () => ({
