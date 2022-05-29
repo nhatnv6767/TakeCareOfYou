@@ -14,9 +14,9 @@ class UserRedux extends Component {
   }
 
   async componentDidMount() {
-    // this.props.getGenderStart();
+    this.props.getGenderStart();
 
-    this.props.dispatch(actions.fetchGenderStart());
+    // this.props.dispatch(actions.fetchGenderStart());
 
     // try {
     //   let res = await getAllCodeService("gender");
@@ -166,6 +166,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getGenderStart: () => dispatch(actions.fetchGenderStart()),
+
+    getPositionSuccess: () => dispatch(actions.fetchPositionSuccess()),
+    getRoleSuccess: () => dispatch(actions.fetchRoleSuccess()),
     // processLogout: () => dispatch(actions.processLogout()),
     // changeLanguageAppRedux: (language) =>
     //   dispatch(actions.changeLanguageApp(language)),
