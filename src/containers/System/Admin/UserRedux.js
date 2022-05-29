@@ -38,6 +38,12 @@ class UserRedux extends Component {
     }
   }
 
+  handleOnChangeImage = (event) => {
+    let data = event.target.files;
+    let file = data[0];
+    console.log("Check image file data: ", file);
+  };
+
   render() {
     let genders = this.state.genderArr;
     let positions = this.state.positionArr;
