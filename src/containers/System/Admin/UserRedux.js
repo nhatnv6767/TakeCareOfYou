@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { LANGUAGES } from "../../../utils";
 import * as actions from "../../../store/actions";
 import "./UserRedux.scss";
+import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 
 class UserRedux extends Component {
@@ -205,11 +206,12 @@ class UserRedux extends Component {
             </div>
           </div>
         </div>
-
-        <Lightbox
-          mainSrc={images[photoIndex]}
-          onCloseRequest={() => this.setState({ isOpen: false })}
-        />
+        {this.state.isOpen && (
+          <Lightbox
+            mainSrc={this.state.previewImgURL}
+            onCloseRequest={() => this.setState({ isOpen: false })}
+          />
+        )}
       </div>
     );
   }
