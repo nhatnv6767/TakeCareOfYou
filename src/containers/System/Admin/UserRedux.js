@@ -41,7 +41,8 @@ class UserRedux extends Component {
   handleOnChangeImage = (event) => {
     let data = event.target.files;
     let file = data[0];
-    console.log("Check image file data: ", file);
+    let objectUrl = URL.createObjectURL(file);
+    console.log("Check image file data: ", objectUrl);
   };
 
   render() {
