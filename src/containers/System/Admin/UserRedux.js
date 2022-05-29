@@ -22,7 +22,7 @@ class UserRedux extends Component {
   }
 
   render() {
-    console.log("Check state", this.state);
+    let genders = this.state.genderArr;
     return (
       <div className="user-redux-container">
         <div className="title text-center">User Redux</div>
@@ -75,7 +75,12 @@ class UserRedux extends Component {
                   <FormattedMessage id="manage-user.gender" />{" "}
                 </label>
                 <select class="form-control">
-                  <option selected>Choose ...</option>
+                  {genders &&
+                    genders.length > 0 &&
+                    genders.map((item, index) => {
+                      return <option selected>Choose ...</option>;
+                    })}
+
                   <option>...</option>
                 </select>
               </div>
