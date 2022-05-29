@@ -29,6 +29,8 @@ class UserRedux extends Component {
   render() {
     let genders = this.state.genderArr;
     let language = this.props.language;
+
+    console.log("Check props from redux: ", this.props.genderRedux);
     return (
       <div className="user-redux-container">
         <div className="title text-center">User Redux</div>
