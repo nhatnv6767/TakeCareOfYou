@@ -39,7 +39,8 @@ class UserRedux extends Component {
   }
 
   render() {
-    let genders = this.state.genderArr;
+    let { genders, positions, roles } = this.state;
+
     let language = this.props.language;
     let isGetGenders = this.props.isLoadingGender;
 
@@ -118,8 +119,17 @@ class UserRedux extends Component {
                   <FormattedMessage id="manage-user.position" />{" "}
                 </label>
                 <select class="form-control">
-                  <option selected>Choose ...</option>
-                  <option>...</option>
+                  {positions &&
+                    positions.length > 0 &&
+                    positions.map((item, index) => {
+                      return (
+                        <option key={index}>
+                          {language === LANGUAGES.VI
+                            ? item.valueVi
+                            : item.valueEn}
+                        </option>
+                      );
+                    })}
                 </select>
               </div>
 
@@ -128,8 +138,17 @@ class UserRedux extends Component {
                   <FormattedMessage id="manage-user.role-id" />{" "}
                 </label>
                 <select class="form-control">
-                  <option selected>Choose ...</option>
-                  <option>...</option>
+                  {roles &&
+                    roles.length > 0 &&
+                    roles.map((item, index) => {
+                      return (
+                        <option key={index}>
+                          {language === LANGUAGES.VI
+                            ? item.valueVi
+                            : item.valueEn}
+                        </option>
+                      );
+                    })}
                 </select>
               </div>
 
