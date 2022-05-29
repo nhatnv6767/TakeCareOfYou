@@ -27,6 +27,9 @@ class UserRedux extends Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
+    //render => didUpdate
+    // hiện tại (this) và quá khứ (previous)
+    // quá khứ rỗng [] vs hiện tại đã load xong [3 phần tử]
     if (prevProps.genderRedux !== this.props.genderRedux) {
       this.setState({ genderArr: this.props.genderRedux });
     }
