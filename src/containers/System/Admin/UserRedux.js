@@ -51,7 +51,7 @@ class UserRedux extends Component {
               <div className="col-12 my-3">
                 <FormattedMessage id="manage-user.add" />
               </div>
-              <div className="col-12 my-3">
+              <div className="col-12">
                 {isGetGenders === true ? "Loading genders" : ""}
               </div>
               <div className="col-3">
