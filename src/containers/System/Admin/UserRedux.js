@@ -158,7 +158,7 @@ class UserRedux extends Component {
                   <FormattedMessage id="manage-user.image" />{" "}
                 </label>
                 <div>
-                  <input type="file" id="previewImg" />
+                  <input type="file" id="previewImg" hidden />
                   <label htmlFor="previewImg">Tải ảnh</label>
                   <div className="preview-image"></div>
                 </div>
