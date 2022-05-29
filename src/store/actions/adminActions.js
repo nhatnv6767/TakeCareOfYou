@@ -9,7 +9,7 @@ export const fetchGenderStart = () => {
   return async (dispatch, getState) => {
     try {
       dispatch({
-        type: FETCH_GENDER_START,
+        type: actionTypes.FETCH_GENDER_START,
       });
 
       let res = await getAllCodeService("GENDER");
