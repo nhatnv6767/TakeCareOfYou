@@ -10,6 +10,8 @@ class UserRedux extends Component {
     super(props);
     this.state = {
       genderArr: [],
+      positionArr: [],
+      roleArr: [],
     };
   }
 
