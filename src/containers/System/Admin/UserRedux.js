@@ -39,7 +39,9 @@ class UserRedux extends Component {
   }
 
   render() {
-    let { genders, positions, roles } = this.state;
+    let genders = this.state.genderArr;
+    let positions = this.state.positionArr;
+    let roles = this.state.roleArr;
 
     let language = this.props.language;
     let isGetGenders = this.props.isLoadingGender;
