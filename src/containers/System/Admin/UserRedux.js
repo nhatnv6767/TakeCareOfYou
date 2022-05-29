@@ -158,7 +158,12 @@ class UserRedux extends Component {
                   <FormattedMessage id="manage-user.image" />{" "}
                 </label>
                 <div className="preview-img-container">
-                  <input type="file" id="previewImg" hidden />
+                  <input
+                    type="file"
+                    id="previewImg"
+                    hidden
+                    onChange={(event) => this.handleOnChangeImage(event)}
+                  />
                   <label htmlFor="previewImg" className="label-upload">
                     Tải ảnh <i className="fas fa-upload"></i>
                   </label>
