@@ -140,7 +140,11 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    processLogout: () => dispatch(actions.processLogout()),
+    changeLanguageAppRedux: (language) =>
+      dispatch(actions.changeLanguageApp(language)),
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserRedux);
