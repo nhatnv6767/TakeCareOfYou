@@ -16,7 +16,7 @@ class UserRedux extends Component {
         <div className="user-redux-body">
           <div className="container">
             <div className="row">
-              <div className="col-12">
+              <div className="col-12 my-3">
                 <FormattedMessage id="manage-user.add" />
               </div>
 
@@ -94,7 +94,7 @@ class UserRedux extends Component {
                 <input type="text" className="form-control" />
               </div>
 
-              <div className="col-12">
+              <div className="col-12 mt-3">
                 <button className="btn btn-primary">
                   <FormattedMessage id="manage-user.save" />
                 </button>
