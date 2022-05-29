@@ -34,4 +34,22 @@ export const fetchGenderFailed = () => ({
   type: actionTypes.FETCH_GENDER_FAILED,
 });
 
+export const fetchPositionSuccess = (genderData) => ({
+  type: actionTypes.FETCH_POSITION_SUCCESS,
+  data: genderData,
+});
+
+export const fetchPositionFailed = () => ({
+  type: actionTypes.FETCH_POSITION_FAILED,
+});
+
+export const fetchRoleSuccess = (genderData) => ({
+  type: actionTypes.FETCH_ROLE_SUCCESS,
+  data: genderData,
+});
+
+export const fetchRoleFailed = () => ({
+  type: actionTypes.FETCH_ROLE_FAILED,
+});
+
 // start doing end
