@@ -5,21 +5,20 @@ import { getAllCodeService } from "../../services/userService";
 //   type: actionTypes.FETCH_GENDER_START,
 // });
 
-export const fetchGenderStart = async (dispatch, getState) => {
-    return () => {
-        try {
-            let res = await getAllCodeService("GENDER");
-            if (res && res.errCode === 0) {
-              fetchGenderSuccess(res.data);
-            } else {
-              fetchGenderFailed();
-            }
-          } catch (e) {
-            fetchGenderFailed();
-            console.log("FetchGenderStart error: ", e);
-          }
+export const fetchGenderStart = () => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await getAllCodeService("GENDER");
+      if (res && res.errCode === 0) {
+        fetchGenderSuccess(res.data);
+      } else {
+        fetchGenderFailed();
+      }
+    } catch (e) {
+      fetchGenderFailed();
+      console.log("FetchGenderStart error: ", e);
     }
-  
+  };
 };
 
 export const fetchGenderSuccess = (genderData) => ({
