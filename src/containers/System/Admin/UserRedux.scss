@@ -1,10 +1,12 @@
-.label-upload {
-    padding      : 5px;
-    border-radius: 3px;
-    background   : #ddd;
-    cursor       : pointer;
+.preview-img-container {
+    .label-upload {
+        padding      : 5px;
+        border-radius: 3px;
+        background   : #ddd;
+        cursor       : pointer;
 
-    &:hover {
-        opacity: 0.85;
+        &:hover {
+            opacity: 0.85;
+        }
     }
 }
