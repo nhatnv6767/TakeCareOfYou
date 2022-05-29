@@ -14,6 +14,7 @@ class UserRedux extends Component {
       positionArr: [],
       roleArr: [],
       previewImgURL: "",
+      isOpen: false,
     };
   }
 
@@ -49,6 +50,12 @@ class UserRedux extends Component {
         previewImgURL: objectUrl,
       });
     }
+  };
+
+  openPreviewImage = () => {
+    this.setState({
+      isOpen: true,
+    });
   };
 
   render() {
@@ -185,6 +192,7 @@ class UserRedux extends Component {
                     style={{
                       backgroundImage: `url(${this.state.previewImgURL})`,
                     }}
+                    onClick={() => this.openPreviewImage()}
                   ></div>
                 </div>
               </div>
