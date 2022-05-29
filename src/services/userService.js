@@ -27,7 +27,7 @@ const editUserService = (inputData) => {
 };
 
 const getAllCodeService = (inputType) => {
-  return axios.get(`/allcode?type=${inputType}`);
+  return axios.get(`/api/allcode?type=${inputType}`);
 };
 
 export {
