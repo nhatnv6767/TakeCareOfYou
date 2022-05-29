@@ -171,3 +171,5 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserRedux);
+
+/// setTimeout at Node to test
