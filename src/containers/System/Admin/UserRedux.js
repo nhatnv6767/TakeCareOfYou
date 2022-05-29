@@ -26,6 +26,8 @@ class UserRedux extends Component {
     // }
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {}
+
   render() {
     let genders = this.state.genderArr;
     let language = this.props.language;
