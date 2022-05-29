@@ -160,7 +160,7 @@ class UserRedux extends Component {
                 <div>
                   <input type="file" id="previewImg" hidden />
                   <label htmlFor="previewImg">
-                    <i className="fas fa-upload"></i>
+                    Tải ảnh <i className="fas fa-upload"></i>
                   </label>
                   <div className="preview-image"></div>
                 </div>
