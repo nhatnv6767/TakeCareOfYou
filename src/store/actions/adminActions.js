@@ -10,7 +10,7 @@ export const fetchGenderStart = () => {
     try {
       let res = await getAllCodeService("GENDER");
       if (res && res.errCode === 0) {
-        console.log("CHECK GETSTATE IN ADMIN ACTIONS: ", getState);
+        // console.log("CHECK GETSTATE IN ADMIN ACTIONS: ", getState);
         dispatch(fetchGenderSuccess(res.data));
       } else {
         dispatch(fetchGenderFailed());
@@ -24,7 +24,7 @@ export const fetchGenderStart = () => {
 
 export const fetchGenderSuccess = (genderData) => ({
   type: actionTypes.FETCH_GENDER_SUCCESS,
-  data: genderData,
+  dataHere: genderData,
 });
 
 export const fetchGenderFailed = () => ({
