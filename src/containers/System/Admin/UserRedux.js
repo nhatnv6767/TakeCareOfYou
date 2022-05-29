@@ -78,10 +78,12 @@ class UserRedux extends Component {
                   {genders &&
                     genders.length > 0 &&
                     genders.map((item, index) => {
-                      return <option selected>Choose ...</option>;
+                      return (
+                        <option selected key={index}>
+                          {item.valueVi}
+                        </option>
+                      );
                     })}
-
-                  <option>...</option>
                 </select>
               </div>
 
