@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
-import { getAllCodeService } from "../../../services/userService";
 import { LANGUAGES } from "../../../utils";
 import * as actions from "../../../store/actions";
+import "./UserRedux.scss";
 
 class UserRedux extends Component {
   constructor(props) {
@@ -159,7 +159,7 @@ class UserRedux extends Component {
                 </label>
                 <div>
                   <input type="file" id="previewImg" hidden />
-                  <label htmlFor="previewImg">
+                  <label htmlFor="previewImg" className="label-upload">
                     Tải ảnh <i className="fas fa-upload"></i>
                   </label>
                   <div className="preview-image"></div>
