@@ -32,6 +32,19 @@ class UserRedux extends Component {
                 <label>Last name </label>
                 <input className="form-control" type="text" />
               </div>
+              <div className="col-3">
+                <label>Phone number</label>
+                <input className="form-control" type="text" />
+              </div>
+              <div className="col-9">
+                <label>Address </label>
+                <input className="form-control" type="text" />
+              </div>
+
+              <div className="col-3">
+                <label>Gender </label>
+                <input className="form-control" type="text" />
+              </div>
             </div>
           </div>
         </div>
