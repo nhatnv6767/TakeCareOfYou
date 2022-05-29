@@ -1,4 +1,6 @@
 .preview-img-container {
+    display: flex;
+
     .label-upload {
         padding      : 5px;
         border-radius: 3px;
@@ -8,5 +10,10 @@
         &:hover {
             opacity: 0.85;
         }
+    }
+
+    .preview-image {
+        width : 50px;
+        border: 1px solid red;
     }
 }
