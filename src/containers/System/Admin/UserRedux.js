@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
+import { getAllCodeService } from "../../../services/userService";
 class UserRedux extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
-  componentDidMount() {}
+  async componentDidMount() {
+    try {
+      let res = await getAllCodeService("gender");
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
+  }
 
   render() {
     return (
