@@ -1,6 +1,10 @@
 import actionTypes from "../actions/actionTypes";
 
-const initialState = {};
+const initialState = {
+  genders: [],
+  roles: [],
+  position: [],
+};
 
 const adminReducer = (state = initialState, action) => {
   switch (action.type) {
