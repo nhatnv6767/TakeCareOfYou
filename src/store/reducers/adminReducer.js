@@ -4,11 +4,9 @@ const initialState = {};
 
 const adminReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.USER_LOGIN_SUCCESS:
+    case actionTypes.FETCH_GENDER_START:
       return {
         ...state,
-        isLoggedIn: true,
-        userInfo: action.userInfo,
       };
 
     default:
