@@ -45,15 +45,15 @@ class UserRedux extends Component {
       <div className="user-redux-container">
         <div className="title text-center">User Redux</div>
 
-        <div>{isGetGenders === true ? "Loading genders" : ""}</div>
-
         <div className="user-redux-body">
           <div className="container">
             <div className="row">
               <div className="col-12 my-3">
                 <FormattedMessage id="manage-user.add" />
               </div>
-
+              <div className="col-12 my-3">
+                {isGetGenders === true ? "Loading genders" : ""}
+              </div>
               <div className="col-3">
                 <label>
                   <FormattedMessage id="manage-user.email" />{" "}
