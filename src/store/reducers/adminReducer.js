@@ -38,3 +38,6 @@ const adminReducer = (state = initialState, action) => {
 };
 
 export default adminReducer;
+
+// Không nên modify trực tiếp như thế này đối với react, còn redux thì
+// vẫn có thể làm đc
