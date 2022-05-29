@@ -179,7 +179,12 @@ class UserRedux extends Component {
                   <label htmlFor="previewImg" className="label-upload">
                     Tải ảnh <i className="fas fa-upload"></i>
                   </label>
-                  <div className="preview-image"></div>
+                  <div
+                    className="preview-image"
+                    style={{
+                      backgroundImage: `url(${this.state.previewImgURL})`,
+                    }}
+                  ></div>
                 </div>
               </div>
 
