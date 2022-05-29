@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { LANGUAGES } from "../../../utils";
 import * as actions from "../../../store/actions";
 import "./UserRedux.scss";
+import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 
 class UserRedux extends Component {
   constructor(props) {
@@ -196,6 +197,11 @@ class UserRedux extends Component {
             </div>
           </div>
         </div>
+
+        <Lightbox
+          mainSrc={images[photoIndex]}
+          onCloseRequest={() => this.setState({ isOpen: false })}
+        />
       </div>
     );
   }
