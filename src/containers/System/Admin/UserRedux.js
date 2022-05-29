@@ -46,7 +46,6 @@ class UserRedux extends Component {
     let language = this.props.language;
     let isGetGenders = this.props.isLoadingGender;
 
-    console.log("Check state from redux: ", this.state);
     return (
       <div className="user-redux-container">
         <div className="title text-center">User Redux</div>
