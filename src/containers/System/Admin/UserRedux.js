@@ -5,13 +5,17 @@ import { getAllCodeService } from "../../../services/userService";
 class UserRedux extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      genderArr: [],
+    };
   }
 
   async componentDidMount() {
     try {
       let res = await getAllCodeService("gender");
-      console.log(res);
+      if (res && res.errCode === 0) {
+        this.setState({ genderArr: res.data });
+      }
     } catch (e) {
       console.log(e);
     }
