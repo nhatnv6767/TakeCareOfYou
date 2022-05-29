@@ -16,6 +16,8 @@ class UserRedux extends Component {
         <div className="user-redux-body">
           <div className="container">
             <div className="row">
+              <div className="col-12">Thêm mới người dùng</div>
+
               <div className="col-3">
                 <label>Email </label>
                 <input className="form-control" type="email" />
@@ -68,6 +70,10 @@ class UserRedux extends Component {
               <div className="col-3">
                 <label>Image </label>
                 <input type="text" className="form-control" />
+              </div>
+
+              <div className="col-12">
+                <button className="btn btn-primary">Save</button>
               </div>
             </div>
           </div>
