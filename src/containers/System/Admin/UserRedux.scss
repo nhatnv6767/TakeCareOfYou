@@ -3,4 +3,8 @@
     border-radius: 3px;
     background   : #ddd;
     cursor       : pointer;
+
+    &:hover {
+        opacity: 0.85;
+    }
 }
