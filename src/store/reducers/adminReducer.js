@@ -17,7 +17,7 @@ const adminReducer = (state = initialState, action) => {
     case actionTypes.FETCH_GENDER_SUCCESS:
       let copyState = { ...state };
       copyState.genders = action.data;
-      console.log("Fire fetch gender success: ", action);
+      console.log("Fire fetch gender success: ", copyState);
       return {
         ...copyState,
       };

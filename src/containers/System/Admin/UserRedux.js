@@ -138,6 +138,10 @@ class UserRedux extends Component {
 const mapStateToProps = (state) => {
   return {
     language: state.app.language,
+    // admin ở đây mình đã khai báo nó ở rootReducer
+    // truyền state gender lưu bên trong redux vào bên trong react
+    // "map" state của thằng redux vào bên trong props cho thằng react
+    genderRedux: state.admin.genders,
   };
 };
 
