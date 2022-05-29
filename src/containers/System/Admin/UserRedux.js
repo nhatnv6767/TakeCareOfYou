@@ -16,7 +16,9 @@ class UserRedux extends Component {
         <div className="user-redux-body">
           <div className="container">
             <div className="row">
-              <div className="col-12">Thêm mới người dùng</div>
+              <div className="col-12">
+                <FormattedMessage id="manage-user.add" />
+              </div>
 
               <div className="col-3">
                 <label>Email </label>
