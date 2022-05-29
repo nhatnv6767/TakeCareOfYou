@@ -47,10 +47,9 @@
     "phone-number": "Phone number",
     "address": "Address",
     "gender": "Gender",
-    "choose": "Choose",
     "position": "Position",
     "role-id": "Role ID",
-    "image": "Image",
+    "image": "Avatar",
     "save": "Save"
   }
 }

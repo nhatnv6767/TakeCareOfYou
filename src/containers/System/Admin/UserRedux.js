@@ -62,10 +62,7 @@ class UserRedux extends Component {
                   <FormattedMessage id="manage-user.gender" />{" "}
                 </label>
                 <select class="form-control">
-                  <option selected>
-                    <FormattedMessage id="manage-user.choose" />
-                    ...
-                  </option>
+                  <option selected>Choose ...</option>
                   <option>...</option>
                 </select>
               </div>
@@ -75,10 +72,7 @@ class UserRedux extends Component {
                   <FormattedMessage id="manage-user.position" />{" "}
                 </label>
                 <select class="form-control">
-                  <option selected>
-                    <FormattedMessage id="manage-user.choose" />
-                    ...
-                  </option>
+                  <option selected>Choose ...</option>
                   <option>...</option>
                 </select>
               </div>
@@ -88,10 +82,7 @@ class UserRedux extends Component {
                   <FormattedMessage id="manage-user.role-id" />{" "}
                 </label>
                 <select class="form-control">
-                  <option selected>
-                    <FormattedMessage id="manage-user.choose" />
-                    ...
-                  </option>
+                  <option selected>Choose ...</option>
                   <option>...</option>
                 </select>
               </div>

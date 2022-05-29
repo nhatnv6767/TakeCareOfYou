@@ -42,15 +42,14 @@
     "add": "Thêm mới người dùng",
     "email": "Email",
     "password": "Mật khẩu",
-    "first-name": "Họ",
-    "last-name": "Tên",
+    "first-name": "Tên",
+    "last-name": "Họ",
     "phone-number": "Số điện thoại",
     "address": "Địa chỉ",
     "gender": "Giới tính",
-    "choose": "Lựa chọn",
-    "position": "Chức vụ",
-    "role-id": "Role ID",
-    "image": "Hình ảnh",
-    "save": "Lưu"
+    "position": "Chức danh",
+    "role-id": "Vai trò",
+    "image": "Ảnh đại diện",
+    "save": "Lưu "
   }
 }
