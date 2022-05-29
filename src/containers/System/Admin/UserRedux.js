@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { getAllCodeService } from "../../../services/userService";
+import { LANGUAGES } from "../../../utils";
 class UserRedux extends Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,7 @@ class UserRedux extends Component {
 
   render() {
     let genders = this.state.genderArr;
+    let language = this.props.language;
     return (
       <div className="user-redux-container">
         <div className="title text-center">User Redux</div>
@@ -79,8 +81,10 @@ class UserRedux extends Component {
                     genders.length > 0 &&
                     genders.map((item, index) => {
                       return (
-                        <option selected key={index}>
-                          {item.valueVi}
+                        <option key={index}>
+                          {language === LANGUAGES.VI
+                            ? item.valueVi
+                            : item.valueEn}
                         </option>
                       );
                     })}
@@ -128,7 +132,9 @@ class UserRedux extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    language: state.app.language,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
