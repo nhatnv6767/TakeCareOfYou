@@ -15,17 +15,8 @@ class UserRedux extends Component {
 
   async componentDidMount() {
     this.props.getGenderStart();
-
-    // this.props.dispatch(actions.fetchGenderStart());
-
-    // try {
-    //   let res = await getAllCodeService("gender");
-    //   if (res && res.errCode === 0) {
-    //     this.setState({ genderArr: res.data });
-    //   }
-    // } catch (e) {
-    //   console.log(e);
-    // }
+    this.props.getPositionStart();
+    this.props.getRoleStart();
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
