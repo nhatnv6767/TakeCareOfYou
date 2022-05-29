@@ -48,6 +48,27 @@ class UserRedux extends Component {
                   <option>...</option>
                 </select>
               </div>
+
+              <div className="col-3">
+                <label>Position </label>
+                <select class="form-control">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+
+              <div className="col-3">
+                <label>RoleID </label>
+                <select class="form-control">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+
+              <div className="col-3">
+                <label>Image </label>
+                <input type="text" className="form-control" />
+              </div>
             </div>
           </div>
         </div>
