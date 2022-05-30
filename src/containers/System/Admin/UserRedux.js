@@ -124,25 +124,53 @@ class UserRedux extends Component {
                 <label>
                   <FormattedMessage id="manage-user.email" />{" "}
                 </label>
-                <input className="form-control" type="email" />
+                <input
+                  className="form-control"
+                  type="email"
+                  value={email}
+                  onChange={(event) => {
+                    this.onChangeInput(event, "email");
+                  }}
+                />
               </div>
               <div className="col-3">
                 <label>
                   <FormattedMessage id="manage-user.password" />{" "}
                 </label>
-                <input className="form-control" type="password" />
+                <input
+                  className="form-control"
+                  type="password"
+                  value={password}
+                  onChange={(event) => {
+                    this.onChangeInput(event, "password");
+                  }}
+                />
               </div>
               <div className="col-3">
                 <label>
                   <FormattedMessage id="manage-user.first-name" />{" "}
                 </label>
-                <input className="form-control" type="text" />
+                <input
+                  className="form-control"
+                  type="text"
+                  value={firstName}
+                  onChange={(event) => {
+                    this.onChangeInput(event, "firstName");
+                  }}
+                />
               </div>
               <div className="col-3">
                 <label>
                   <FormattedMessage id="manage-user.last-name" />{" "}
                 </label>
-                <input className="form-control" type="text" />
+                <input
+                  className="form-control"
+                  type="text"
+                  value={lastName}
+                  onChange={(event) => {
+                    this.onChangeInput(event, "lastName");
+                  }}
+                />
               </div>
               <div className="col-3">
                 <label>
