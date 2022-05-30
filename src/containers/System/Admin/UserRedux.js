@@ -200,7 +200,10 @@ class UserRedux extends Component {
               </div>
 
               <div className="col-12 mt-3">
-                <button className="btn btn-primary">
+                <button
+                  className="btn btn-primary"
+                  onClick={() => this.handleSaveUser()}
+                >
                   <FormattedMessage id="manage-user.save" />
                 </button>
               </div>
