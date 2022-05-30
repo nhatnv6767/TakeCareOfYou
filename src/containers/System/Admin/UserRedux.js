@@ -73,6 +73,19 @@ class UserRedux extends Component {
 
   handleSaveUser = () => {};
 
+  onChangeInput = () => {
+    // email: "",
+    //   password: "",
+    //   firstName: "",
+    //   lastName: "",
+    //   phonenumber: "",
+    //   address: "",
+    //   gender: "",
+    //   position: "",
+    //   role: "",
+    //   avatar: "",
+  };
+
   render() {
     let genders = this.state.genderArr;
     let positions = this.state.positionArr;
@@ -80,6 +93,19 @@ class UserRedux extends Component {
 
     let language = this.props.language;
     let isGetGenders = this.props.isLoadingGender;
+
+    let {
+      email,
+      password,
+      firstName,
+      lastName,
+      phonenumber,
+      address,
+      gender,
+      position,
+      role,
+      avatar,
+    } = this.state;
 
     return (
       <div className="user-redux-container">
