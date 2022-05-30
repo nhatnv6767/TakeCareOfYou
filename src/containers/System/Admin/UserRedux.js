@@ -16,6 +16,17 @@ class UserRedux extends Component {
       roleArr: [],
       previewImgURL: "",
       isOpen: false,
+
+      email: "",
+      password: "",
+      firstName: "",
+      lastName: "",
+      phonenumber: "",
+      address: "",
+      gender: "",
+      position: "",
+      role: "",
+      avatar: "",
     };
   }
 
@@ -59,6 +70,8 @@ class UserRedux extends Component {
       isOpen: true,
     });
   };
+
+  handleSaveUser = () => {};
 
   render() {
     let genders = this.state.genderArr;
