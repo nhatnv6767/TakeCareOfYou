@@ -89,6 +89,27 @@ class UserRedux extends Component {
     console.log("Before submit check state: ", this.state);
   };
 
+  checkValidateInput = () => {
+    let isValid = true;
+    let arrCheck = [
+      "email",
+      "password",
+      "firstName",
+      "lastName",
+      "phoneNumber",
+      "address",
+    ];
+    for (let i = 0; i < arrCheck.length; i++) {
+      if (!this.state[arrCheck[i]]) {
+        isValid = false;
+        alert(`Please enter your ${arrCheck[i]}`);
+        break;
+      }
+    }
+
+    return { isValid };
+  };
+
   onChangeInput = (event, id) => {
     let copyState = { ...this.state };
 
