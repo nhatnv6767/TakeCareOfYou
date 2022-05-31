@@ -86,6 +86,7 @@ class UserRedux extends Component {
   };
 
   handleSaveUser = () => {
+    this.checkValidateInput();
     console.log("Before submit check state: ", this.state);
   };
 
