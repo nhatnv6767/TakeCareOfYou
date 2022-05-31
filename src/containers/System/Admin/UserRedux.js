@@ -41,15 +41,28 @@ class UserRedux extends Component {
     // hiện tại (this) và quá khứ (previous)
     // quá khứ rỗng [] vs hiện tại đã load xong [3 phần tử]
     if (prevProps.genderRedux !== this.props.genderRedux) {
-      this.setState({ genderArr: this.props.genderRedux });
+      let arrGenders = this.props.genderRedux;
+      this.setState({
+        genderArr: arrGenders,
+        gender: arrGenders && arrGenders.length > 0 ? arrGenders[0].key : "",
+      });
     }
 
     if (prevProps.positionRedux !== this.props.positionRedux) {
-      this.setState({ positionArr: this.props.positionRedux });
+      let arrPositions = this.props.positionRedux;
+      this.setState({
+        positionArr: arrPositions,
+        position:
+          arrPositions && arrPositions.length > 0 ? arrPositions[0].key : "",
+      });
     }
 
     if (prevProps.roleRedux !== this.props.roleRedux) {
-      this.setState({ roleArr: this.props.roleRedux });
+      let arrRoles = this.props.roleRedux;
+      this.setState({
+        roleArr: arrRoles,
+        role: arrRoles && arrRoles.length > 0 ? arrRoles[0].key : "",
+      });
     }
   }
 
