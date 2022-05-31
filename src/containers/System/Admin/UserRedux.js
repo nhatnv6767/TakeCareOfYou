@@ -79,9 +79,14 @@ class UserRedux extends Component {
 
     copyState[id] = event.target.value;
 
-    this.setState({
-      ...copyState,
-    });
+    this.setState(
+      {
+        ...copyState,
+      },
+      () => {
+        console.log("Check input onchange: ", this.state);
+      }
+    );
   };
 
   render() {
