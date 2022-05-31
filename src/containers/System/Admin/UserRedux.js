@@ -85,7 +85,9 @@ class UserRedux extends Component {
     });
   };
 
-  handleSaveUser = () => {};
+  handleSaveUser = () => {
+    console.log("Before submit check state: ", this.state);
+  };
 
   onChangeInput = (event, id) => {
     let copyState = { ...this.state };
@@ -97,7 +99,7 @@ class UserRedux extends Component {
         ...copyState,
       },
       () => {
-        console.log("Check input onchange: ", this.state);
+        // console.log("Check input onchange: ", this.state);
       }
     );
   };
