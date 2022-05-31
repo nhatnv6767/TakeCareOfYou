@@ -90,6 +90,8 @@ class UserRedux extends Component {
     if (!isValid) return;
 
     // fire redux action
+
+    this.props.createUserStart({});
   };
 
   checkValidateInput = () => {
