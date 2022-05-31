@@ -60,6 +60,7 @@ class UserRedux extends Component {
       let objectUrl = URL.createObjectURL(file);
       this.setState({
         previewImgURL: objectUrl,
+        avatar: file,
       });
     }
   };
@@ -73,7 +74,8 @@ class UserRedux extends Component {
 
   handleSaveUser = () => {};
 
-  onChangeInput = () => {
+  onChangeInput = (event, id) => {
+    let copyState = { ...this.state };
     // email: "",
     //   password: "",
     //   firstName: "",
