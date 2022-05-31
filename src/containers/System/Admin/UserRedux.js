@@ -378,6 +378,7 @@ const mapDispatchToProps = (dispatch) => {
 
     getPositionStart: () => dispatch(actions.fetchPositionStart()),
     getRoleStart: () => dispatch(actions.fetchRoleStart()),
+    createUserStart: (data) => dispatch(actions.createUserStart(data)),
     // processLogout: () => dispatch(actions.processLogout()),
     // changeLanguageAppRedux: (language) =>
     //   dispatch(actions.changeLanguageApp(language)),
