@@ -103,8 +103,10 @@ export const createUserStart = (data) => {
       });
 
       let res = await createNewUserService(data);
+
       if (res && res.errCode === 0) {
         dispatch(createUserSuccess());
+        console.log("Check log save res: ", res);
       } else {
         dispatch(createUserFailed());
       }
