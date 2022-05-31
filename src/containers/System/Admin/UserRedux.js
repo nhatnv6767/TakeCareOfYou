@@ -86,8 +86,10 @@ class UserRedux extends Component {
   };
 
   handleSaveUser = () => {
-    this.checkValidateInput();
-    console.log("Before submit check state: ", this.state);
+    let isValid = this.checkValidateInput();
+    if (!isValid) return;
+
+    // fire redux action
   };
 
   checkValidateInput = () => {
