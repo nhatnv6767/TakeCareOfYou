@@ -22,18 +22,13 @@ class TableManageUser extends Component {
             <th>Actions</th>
           </tr>
 
-          {arrUsers &&
-            arrUsers.map((item, index) => {
-              return (
-                <tr key={index}>
-                  <td>{item.email}</td>
-                  <td>{item.firstName}</td>
-                  <td>{item.lastName}</td>
-                  <td>{item.address}</td>
-                  <td></td>
-                </tr>
-              );
-            })}
+          <tr key={index}>
+            <td>{item.email}</td>
+            <td>{item.firstName}</td>
+            <td>{item.lastName}</td>
+            <td>{item.address}</td>
+            <td></td>
+          </tr>
         </tbody>
       </table>
     );
