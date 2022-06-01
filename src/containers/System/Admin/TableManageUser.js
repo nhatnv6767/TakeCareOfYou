@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import "./TableManageUser.scss";
+import * as actions from "../../../store/actions";
 
 class TableManageUser extends Component {
   constructor(props) {
@@ -52,7 +53,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    fetchUserRedux: () => dispatch(actions.fetchAllUsersStart()),
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TableManageUser);
