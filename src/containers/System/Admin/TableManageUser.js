@@ -6,9 +6,14 @@ import "./TableManageUser.scss";
 class TableManageUser extends Component {
   constructor(props) {
     super(props);
-    // khởi tạo những biến muốn dùng với thằng class này
-    this.state = {};
+
+    this.state = {
+      //mảng lưu trữ các giá trị của user được lấy từ redux về
+      usersRedux: [],
+    };
   }
+
+  componentDidMount() {}
 
   render() {
     return (
