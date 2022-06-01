@@ -19,6 +19,7 @@ class TableManageUser extends Component {
   }
 
   render() {
+    console.log("Check all users: ", this.props.listUsers);
     return (
       <table id="tableManagerUser">
         <tbody>
