@@ -30,24 +30,7 @@ class TableManageUser extends Component {
                   <td>{item.firstName}</td>
                   <td>{item.lastName}</td>
                   <td>{item.address}</td>
-                  <td>
-                    <button
-                      className="btn-edit"
-                      onClick={() => {
-                        this.handleEditUser(item);
-                      }}
-                    >
-                      <i className="fas fa-pencil-alt"></i>
-                    </button>
-                    <button
-                      className="btn-delete"
-                      onClick={() => {
-                        this.handleDeleteUser(item);
-                      }}
-                    >
-                      <i className="fas fa-trash"></i>
-                    </button>
-                  </td>
+                  <td></td>
                 </tr>
               );
             })}
