@@ -135,7 +135,7 @@ export const fetchAllUsersStart = () => {
 
       let res = await getAllUsers("ALL");
       if (res && res.errCode === 0) {
-        dispatch(fetchAllUsersSuccess(res.data));
+        dispatch(fetchAllUsersSuccess(res.users));
       } else {
         dispatch(fetchAllUsersFailed());
       }
