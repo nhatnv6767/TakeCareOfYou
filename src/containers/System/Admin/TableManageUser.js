@@ -12,7 +12,7 @@ class TableManageUser extends Component {
 
   render() {
     return (
-      <table id="customers">
+      <table>
         <tbody>
           <tr>
             <th>Email</th>
