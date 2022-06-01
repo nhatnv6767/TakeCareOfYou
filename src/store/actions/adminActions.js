@@ -147,12 +147,12 @@ export const fetchAllUsersStart = () => {
 };
 
 export const fetchAllUsersSuccess = (data) => ({
-  type: actionTypes.FETCH_ROLE_SUCCESS,
+  type: actionTypes.FETCH_ALL_USERS_SUCCESS,
   users: data,
 });
 
 export const fetchAllUsersFailed = () => ({
-  type: actionTypes.FETCH_ROLE_FAILED,
+  type: actionTypes.FETCH_ALL_USERS_FAILED,
 });
 
 // start doing end
