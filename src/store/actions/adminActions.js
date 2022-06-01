@@ -2,6 +2,7 @@ import actionTypes from "./actionTypes";
 import {
   getAllCodeService,
   createNewUserService,
+  getAllUsers,
 } from "../../services/userService";
 
 // export const fetchGenderStart = () => ({
@@ -132,7 +133,7 @@ export const fetchAllUsersStart = () => {
         type: actionTypes.FETCH_ALL_USERS_START,
       });
 
-      let res = await getAllCodeService("ROLE");
+      let res = await getAllUsers("ALL");
       if (res && res.errCode === 0) {
         dispatch(fetchAllUsersSuccess(res.data));
       } else {
