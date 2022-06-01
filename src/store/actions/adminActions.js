@@ -125,4 +125,33 @@ export const createUserFailed = () => ({
   type: actionTypes.CREATE_USER_FAILED,
 });
 
+export const fetchAllUsersStart = () => {
+  return async (dispatch, getState) => {
+    try {
+      dispatch({
+        type: actionTypes.FETCH_ALL_USERS_START,
+      });
+
+      let res = await getAllCodeService("ROLE");
+      if (res && res.errCode === 0) {
+        dispatch(fetchAllUsersSuccess(res.data));
+      } else {
+        dispatch(fetchAllUsersFailed());
+      }
+    } catch (e) {
+      dispatch(fetchAllUsersFailed());
+      console.log("FetchAllUsersStart error: ", e);
+    }
+  };
+};
+
+export const fetchAllUsersSuccess = (roleData) => ({
+  type: actionTypes.FETCH_ROLE_SUCCESS,
+  data: roleData,
+});
+
+export const fetchAllUsersFailed = () => ({
+  type: actionTypes.FETCH_ROLE_FAILED,
+});
+
 // start doing end
