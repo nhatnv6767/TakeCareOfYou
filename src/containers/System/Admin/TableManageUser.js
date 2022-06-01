@@ -14,7 +14,9 @@ class TableManageUser extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.fetchUserRedux();
+  }
 
   render() {
     return (
@@ -49,7 +51,10 @@ class TableManageUser extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    // state redux adminReducer
+    listUsers: state.admin.users,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
