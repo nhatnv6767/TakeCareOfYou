@@ -43,11 +43,11 @@ class TableManageUser extends Component {
             arrUsers.length > 0 &&
             arrUsers.map((item, index) => {
               return (
-                <tr>
-                  <td>{"item.email"}</td>
-                  <td>{"item.firstName"}</td>
-                  <td>{"item.lastName"}</td>
-                  <td>{"item.address"}</td>
+                <tr key={index}>
+                  <td>{item.email}</td>
+                  <td>{item.firstName}</td>
+                  <td>{item.lastName}</td>
+                  <td>{item.address}</td>
                   <td>
                     <button className="btn-edit">
                       <i className="fas fa-pencil-alt"></i>
