@@ -146,9 +146,9 @@ export const fetchAllUsersStart = () => {
   };
 };
 
-export const fetchAllUsersSuccess = (roleData) => ({
+export const fetchAllUsersSuccess = (data) => ({
   type: actionTypes.FETCH_ROLE_SUCCESS,
-  data: roleData,
+  users: data,
 });
 
 export const fetchAllUsersFailed = () => ({
