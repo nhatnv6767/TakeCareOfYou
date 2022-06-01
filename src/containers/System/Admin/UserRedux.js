@@ -350,7 +350,7 @@ class UserRedux extends Component {
                 </div>
               </div>
 
-              <div className="col-12 mt-3">
+              <div className="col-12 my-3">
                 <button
                   className="btn btn-primary"
                   onClick={() => this.handleSaveUser()}
@@ -358,11 +358,14 @@ class UserRedux extends Component {
                   <FormattedMessage id="manage-user.save" />
                 </button>
               </div>
+
+              <div className="col-12">
+                <TableManageUser />
+              </div>
             </div>
           </div>
         </div>
 
-        <TableManageUser />
         {this.state.isOpen && (
           <Lightbox
             mainSrc={this.state.previewImgURL}
