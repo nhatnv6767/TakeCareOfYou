@@ -361,6 +361,8 @@ class UserRedux extends Component {
             </div>
           </div>
         </div>
+
+        <TableManageUser />
         {this.state.isOpen && (
           <Lightbox
             mainSrc={this.state.previewImgURL}
