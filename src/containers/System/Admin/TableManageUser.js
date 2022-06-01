@@ -22,12 +22,11 @@ class TableManageUser extends Component {
             <th>Actions</th>
           </tr>
 
-          <tr key={index}>
-            <td>{item.email}</td>
-            <td>{item.firstName}</td>
-            <td>{item.lastName}</td>
-            <td>{item.address}</td>
-            <td></td>
+          <tr>
+            <td>{"item.email"}</td>
+            <td>{"item.firstName"}</td>
+            <td>{"item.lastName"}</td>
+            <td>{"item.address"}</td>
           </tr>
         </tbody>
       </table>
