@@ -103,6 +103,16 @@ class UserRedux extends Component {
       roleId: this.state.role,
       positionId: this.state.position,
     });
+
+    /****
+     * khi fire hàm này, nó sẽ chạy vào adminReducer
+     * chạy vào case fetch-user-sucess
+     * và sẽ cập nhật biến users
+     * khi biến users được cập nhật bên file TableManageUser, ở file TableManageUser
+     * sẽ chạy vào componentDidUpdate -> sẽ triggle lại hàm setState
+     * và hàm render của nó sẽ đc gọi lại
+     */
+    this.props.fetchUserRedux();
   };
 
   checkValidateInput = () => {
