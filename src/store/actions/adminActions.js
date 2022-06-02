@@ -199,25 +199,25 @@ export const deleteUserFailed = () => ({
 
 // EDIT USER
 
-export const editUserStart = (userId) => {
+export const editUserStart = (data) => {
   return async (dispatch, getState) => {
     try {
       dispatch({
         type: actionTypes.EDIT_USERS_START,
       });
 
-      let res = await editUserService(userId);
+      let res = await editUserService(data);
 
       if (res && res.errCode === 0) {
-        toast.success("Edit user succeed");
+        toast.success("Update the user succeed");
         dispatch(editUserSuccess());
         dispatch(fetchAllUsersStart());
       } else {
-        toast.error("Edit user error");
+        toast.error("Update the user error");
         dispatch(editUserFailed());
       }
     } catch (e) {
-      toast.error("Edit user error");
+      toast.error("Update the user error");
       dispatch(editUserFailed());
       console.log("editUserStart error: ", e);
     }
