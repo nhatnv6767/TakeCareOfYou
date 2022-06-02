@@ -70,24 +70,19 @@ class UserRedux extends Component {
       let arrGenders = this.props.genderRedux;
       let arrPositions = this.props.positionRedux;
       let arrRoles = this.props.roleRedux;
-      this.setState(
-        {
-          email: "",
-          password: "",
-          firstName: "",
-          lastName: "",
-          phoneNumber: "",
-          address: "",
-          avatar: "",
-          gender: arrGenders && arrGenders.length > 0 ? arrGenders[0].key : "",
-          position:
-            arrPositions && arrPositions.length > 0 ? arrPositions[0].key : "",
-          role: arrRoles && arrRoles.length > 0 ? arrRoles[0].key : "",
-        },
-        () => {
-          console.log("Check call back check state: ", this.state);
-        }
-      );
+      this.setState({
+        email: "",
+        password: "",
+        firstName: "",
+        lastName: "",
+        phoneNumber: "",
+        address: "",
+        avatar: "",
+        gender: arrGenders && arrGenders.length > 0 ? arrGenders[0].key : "",
+        position:
+          arrPositions && arrPositions.length > 0 ? arrPositions[0].key : "",
+        role: arrRoles && arrRoles.length > 0 ? arrRoles[0].key : "",
+      });
     }
   }
 
@@ -296,6 +291,7 @@ class UserRedux extends Component {
                   onChange={(event) => {
                     this.onChangeInput(event, "gender");
                   }}
+                  value={gender}
                 >
                   {genders &&
                     genders.length > 0 &&
@@ -320,6 +316,7 @@ class UserRedux extends Component {
                   onChange={(event) => {
                     this.onChangeInput(event, "position");
                   }}
+                  value={position}
                 >
                   {positions &&
                     positions.length > 0 &&
@@ -344,6 +341,7 @@ class UserRedux extends Component {
                   onChange={(event) => {
                     this.onChangeInput(event, "role");
                   }}
+                  value={role}
                 >
                   {roles &&
                     roles.length > 0 &&
