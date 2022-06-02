@@ -1,5 +1,5 @@
 class CommonUtils {
-  static getBase64 = (fileName) => {
+  static getBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
