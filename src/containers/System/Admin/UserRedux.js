@@ -85,7 +85,7 @@ class UserRedux extends Component {
         position:
           arrPositions && arrPositions.length > 0 ? arrPositions[0].key : "",
         role: arrRoles && arrRoles.length > 0 ? arrRoles[0].key : "",
-        actions: CRUD_ACTIONS.CREATE,
+        action: CRUD_ACTIONS.CREATE,
       });
     }
   }
