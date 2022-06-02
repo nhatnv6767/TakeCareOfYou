@@ -30,6 +30,7 @@ class UserRedux extends Component {
       avatar: "",
 
       action: "",
+      userEditId: "",
     };
   }
 
@@ -131,7 +132,19 @@ class UserRedux extends Component {
     }
     if (action === CRUD_ACTIONS.EDIT) {
       // fire redux edit user
-      this.props.editUserRedux({});
+      this.props.editUserRedux({
+        id: "",
+        email: this.state.email,
+        password: this.state.password,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        address: this.state.address,
+        phonenumber: this.state.phoneNumber,
+        gender: this.state.gender,
+        roleId: this.state.role,
+        positionId: this.state.position,
+        // avatar: this.state.avatar,
+      });
     }
   };
 
@@ -184,6 +197,7 @@ class UserRedux extends Component {
       position: user.positionId,
       role: user.roleId,
       action: CRUD_ACTIONS.EDIT,
+      userEditId: user.id,
     });
   };
 
