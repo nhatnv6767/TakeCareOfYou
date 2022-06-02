@@ -170,7 +170,18 @@ class UserRedux extends Component {
   };
 
   handleEditUserFromParent = (user) => {
-    console.log("handleEditUserFromParent: ", user);
+    this.setState({
+      email: user.email,
+      password: "HASHCODE",
+      firstName: user.firstName,
+      lastName: user.lastName,
+      phoneNumber: user.phonenumber,
+      address: user.address,
+      avatar: "",
+      gender: user.gender,
+      position: user.positionId,
+      role: user.roleId,
+    });
   };
 
   render() {
