@@ -107,7 +107,7 @@ export const createUserStart = (data) => {
 
       if (res && res.errCode === 0) {
         dispatch(createUserSuccess());
-        console.log("Check log save res: ", res);
+        await fetchAllUsersStart();
       } else {
         dispatch(createUserFailed());
       }
