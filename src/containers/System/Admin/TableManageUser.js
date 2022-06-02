@@ -73,6 +73,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchUserRedux: () => dispatch(actions.fetchAllUsersStart()),
+    deleteUserRedux: (id) => dispatch(actions.deleteUserStart(id)),
   };
 };
 
