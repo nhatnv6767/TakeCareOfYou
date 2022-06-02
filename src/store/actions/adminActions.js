@@ -158,4 +158,37 @@ export const fetchAllUsersFailed = () => ({
   type: actionTypes.FETCH_ALL_USERS_FAILED,
 });
 
+// DELETE USER
+
+export const deleteUserStart = (data) => {
+  return async (dispatch, getState) => {
+    try {
+      dispatch({
+        type: actionTypes.DELETE_USERS_START,
+      });
+
+      let res = await deleteNewUserService(data);
+
+      if (res && res.errCode === 0) {
+        toast.success("Delete user succeed");
+        dispatch(deleteUserSuccess());
+        dispatch(fetchAllUsersStart());
+      } else {
+        dispatch(deleteUserFailed());
+      }
+    } catch (e) {
+      dispatch(deleteUserFailed());
+      console.log("createUserStart error: ", e);
+    }
+  };
+};
+
+export const deleteUserSuccess = () => ({
+  type: actionTypes.DELETE_USERS_SUCCESS,
+});
+
+export const deleteUserFailed = () => ({
+  type: actionTypes.DELETE_USERS_FAILED,
+});
+
 // start doing end
