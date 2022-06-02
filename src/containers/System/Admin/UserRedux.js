@@ -401,7 +401,11 @@ class UserRedux extends Component {
 
               <div className="col-12 my-3">
                 <button
-                  className="btn btn-primary"
+                  className={
+                    this.state.action === CRUD_ACTIONS.EDIT
+                      ? "btn btn-warning"
+                      : "btn btn-primary"
+                  }
                   onClick={() => this.handleSaveUser()}
                 >
                   <FormattedMessage id="manage-user.save" />
@@ -412,6 +416,7 @@ class UserRedux extends Component {
                 <TableManageUser
                   // tên của biến props muốn truy cập
                   handleEditUserFromParent={this.handleEditUserFromParent}
+                  action={this.state.action}
                 />
               </div>
             </div>
