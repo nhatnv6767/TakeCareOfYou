@@ -3,6 +3,7 @@ import {
   getAllCodeService,
   createNewUserService,
   getAllUsers,
+  deleteUserService,
 } from "../../services/userService";
 
 import { toast } from "react-toastify";
@@ -140,9 +141,11 @@ export const fetchAllUsersStart = () => {
       if (res && res.errCode === 0) {
         dispatch(fetchAllUsersSuccess(res.users.reverse()));
       } else {
+        toast.error("Fetch all users error");
         dispatch(fetchAllUsersFailed());
       }
     } catch (e) {
+      toast.error("Fetch all users error");
       dispatch(fetchAllUsersFailed());
       console.log("FetchAllUsersStart error: ", e);
     }
@@ -160,23 +163,25 @@ export const fetchAllUsersFailed = () => ({
 
 // DELETE USER
 
-export const deleteUserStart = (data) => {
+export const deleteUserStart = (userId) => {
   return async (dispatch, getState) => {
     try {
       dispatch({
         type: actionTypes.DELETE_USERS_START,
       });
 
-      let res = await deleteNewUserService(data);
+      let res = await deleteUserService(userId);
 
       if (res && res.errCode === 0) {
         toast.success("Delete user succeed");
         dispatch(deleteUserSuccess());
         dispatch(fetchAllUsersStart());
       } else {
+        toast.error("Delete user error");
         dispatch(deleteUserFailed());
       }
     } catch (e) {
+      toast.error("Delete user error");
       dispatch(deleteUserFailed());
       console.log("createUserStart error: ", e);
     }
