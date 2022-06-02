@@ -133,7 +133,7 @@ class UserRedux extends Component {
     if (action === CRUD_ACTIONS.EDIT) {
       // fire redux edit user
       this.props.editUserRedux({
-        id: "",
+        id: this.state.userEditId,
         email: this.state.email,
         password: this.state.password,
         firstName: this.state.firstName,
