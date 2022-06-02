@@ -74,9 +74,6 @@ class UserRedux extends Component {
         lastName: "",
         phoneNumber: "",
         address: "",
-        gender: "",
-        position: "",
-        role: "",
         avatar: "",
       });
     }
