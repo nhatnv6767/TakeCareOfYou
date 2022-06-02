@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
-import { LANGUAGES } from "../../../utils";
+import { LANGUAGES, CRUD_ACTIONS } from "../../../utils";
 import * as actions from "../../../store/actions";
 import "./UserRedux.scss";
 import Lightbox from "react-image-lightbox";
@@ -28,6 +28,8 @@ class UserRedux extends Component {
       position: "",
       role: "",
       avatar: "",
+
+      action: "",
     };
   }
 
