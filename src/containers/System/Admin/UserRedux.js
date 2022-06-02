@@ -169,6 +169,10 @@ class UserRedux extends Component {
     );
   };
 
+  handleEditUserFromParent = (user) => {
+    console.log("handleEditUserFromParent: ", user);
+  };
+
   render() {
     let genders = this.state.genderArr;
     let positions = this.state.positionArr;
