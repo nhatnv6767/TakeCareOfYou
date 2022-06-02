@@ -5,6 +5,8 @@ import {
   getAllUsers,
 } from "../../services/userService";
 
+import { toast } from "react-toastify";
+
 // export const fetchGenderStart = () => ({
 //   type: actionTypes.FETCH_GENDER_START,
 // });
@@ -106,6 +108,7 @@ export const createUserStart = (data) => {
       let res = await createNewUserService(data);
 
       if (res && res.errCode === 0) {
+        toast.success("Create a new user succeed");
         dispatch(createUserSuccess());
         dispatch(fetchAllUsersStart());
       } else {
