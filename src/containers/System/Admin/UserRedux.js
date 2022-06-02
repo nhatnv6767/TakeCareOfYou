@@ -183,6 +183,7 @@ class UserRedux extends Component {
       gender: user.gender,
       position: user.positionId,
       role: user.roleId,
+      action: CRUD_ACTIONS.EDIT,
     });
   };
 
