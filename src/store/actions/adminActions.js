@@ -4,6 +4,7 @@ import {
   createNewUserService,
   getAllUsers,
   deleteUserService,
+  editUserService,
 } from "../../services/userService";
 
 import { toast } from "react-toastify";
