@@ -112,9 +112,6 @@ class UserRedux extends Component {
      * sẽ chạy vào componentDidUpdate -> sẽ triggle lại hàm setState
      * và hàm render của nó sẽ đc gọi lại
      */
-    // setTimeout(() => {
-    //   this.props.fetchUserRedux();
-    // }, 1000);
   };
 
   checkValidateInput = () => {
@@ -399,6 +396,7 @@ const mapStateToProps = (state) => {
     positionRedux: state.admin.positions,
     roleRedux: state.admin.roles,
     isLoadingGender: state.admin.isLoadingGender,
+    listUsers: state.admin.users,
   };
 };
 
