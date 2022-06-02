@@ -395,7 +395,10 @@ class UserRedux extends Component {
               </div>
 
               <div className="col-12 mb-5">
-                <TableManageUser />
+                <TableManageUser
+                  // tên của biến props muốn truy cập
+                  handleEditUserFromParent={this.handleEditUserFromParent}
+                />
               </div>
             </div>
           </div>
