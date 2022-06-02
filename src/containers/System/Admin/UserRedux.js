@@ -112,7 +112,9 @@ class UserRedux extends Component {
      * sẽ chạy vào componentDidUpdate -> sẽ triggle lại hàm setState
      * và hàm render của nó sẽ đc gọi lại
      */
-    this.props.fetchUserRedux();
+    setTimeout(() => {
+      this.props.fetchUserRedux();
+    }, 1000);
   };
 
   checkValidateInput = () => {
