@@ -25,7 +25,7 @@ class TableManageUser extends Component {
   }
 
   handleDeleteUser = (user) => {
-    console.log("handleDeleteUser: ", user);
+    this.props.deleteUserRedux(user.id);
   };
 
   render() {
