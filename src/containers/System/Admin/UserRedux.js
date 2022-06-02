@@ -112,28 +112,27 @@ class UserRedux extends Component {
     let isValid = this.checkValidateInput();
     if (!isValid) return;
 
-    // fire redux action
+    let { action } = this.state;
 
-    this.props.createUserStart({
-      email: this.state.email,
-      password: this.state.password,
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      address: this.state.address,
-      phonenumber: this.state.phoneNumber,
-      gender: this.state.gender,
-      roleId: this.state.role,
-      positionId: this.state.position,
-    });
+    // fire redux create user
 
-    /****
-     * khi fire hàm này, nó sẽ chạy vào adminReducer
-     * chạy vào case fetch-user-sucess
-     * và sẽ cập nhật biến users
-     * khi biến users được cập nhật bên file TableManageUser, ở file TableManageUser
-     * sẽ chạy vào componentDidUpdate -> sẽ triggle lại hàm setState
-     * và hàm render của nó sẽ đc gọi lại
-     */
+    if (action === CRUD_ACTIONS.CREATE) {
+      this.props.createUserStart({
+        email: this.state.email,
+        password: this.state.password,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        address: this.state.address,
+        phonenumber: this.state.phoneNumber,
+        gender: this.state.gender,
+        roleId: this.state.role,
+        positionId: this.state.position,
+      });
+    }
+    if (action === CRUD_ACTIONS.EDIT) {
+      // fire redux edit user
+      console.log("EDIT USER DONE");
+    }
   };
 
   checkValidateInput = () => {
