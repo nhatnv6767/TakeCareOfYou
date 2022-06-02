@@ -131,7 +131,7 @@ class UserRedux extends Component {
     }
     if (action === CRUD_ACTIONS.EDIT) {
       // fire redux edit user
-      console.log("EDIT USER DONE");
+      this.props.editUserRedux({});
     }
   };
 
@@ -460,6 +460,7 @@ const mapDispatchToProps = (dispatch) => {
     getRoleStart: () => dispatch(actions.fetchRoleStart()),
     createUserStart: (data) => dispatch(actions.createUserStart(data)),
     fetchUserRedux: () => dispatch(actions.fetchAllUsersStart()),
+    editUserRedux: (data) => dispatch(actions.editUserStart(data)),
     // processLogout: () => dispatch(actions.processLogout()),
     // changeLanguageAppRedux: (language) =>
     //   dispatch(actions.changeLanguageApp(language)),
