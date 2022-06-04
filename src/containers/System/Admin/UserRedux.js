@@ -187,10 +187,10 @@ class UserRedux extends Component {
   };
 
   handleEditUserFromParent = (user) => {
+    let imageBase64 = "";
     if (user.image) {
       const imageBuffer = Buffer.from(JSON.stringify(user.image));
-      const imageBase64 = imageBuffer.toString("base64");
-      setImage(imageBase64);
+      imageBase64 = imageBuffer.toString("base64");
     }
 
     this.setState({
@@ -200,7 +200,7 @@ class UserRedux extends Component {
       lastName: user.lastName,
       phoneNumber: user.phonenumber,
       address: user.address,
-      avatar: "",
+      avatar: imageBase64,
       gender: user.gender,
       position: user.positionId,
       role: user.roleId,
