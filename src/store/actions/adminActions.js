@@ -5,6 +5,7 @@ import {
   getAllUsers,
   deleteUserService,
   editUserService,
+  getTopDoctorHomeService,
 } from "../../services/userService";
 
 import { toast } from "react-toastify";
@@ -139,6 +140,8 @@ export const fetchAllUsersStart = () => {
       });
 
       let res = await getAllUsers("ALL");
+      let res1 = await getTopDoctorHomeService("");
+      console.log("Check top doctor", res1);
       if (res && res.errCode === 0) {
         dispatch(fetchAllUsersSuccess(res.users.reverse()));
       } else {
