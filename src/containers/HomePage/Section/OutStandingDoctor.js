@@ -26,6 +26,7 @@ class OutStandingDoctor extends Component {
 
   render() {
     let arrDoctors = this.state.arrDoctors;
+    let { language } = this.props;
     arrDoctors = arrDoctors.concat(arrDoctors).concat(arrDoctors);
     console.log("Check arrDoctors", arrDoctors);
     return (
@@ -40,6 +41,11 @@ class OutStandingDoctor extends Component {
               {arrDoctors &&
                 arrDoctors.length > 0 &&
                 arrDoctors.map((item, index) => {
+                  if (index === 0) {
+                    console.log("Check item: ", item);
+                  }
+                  let nameVi = `${item.positionData.valueVi}, ${item.firstName} ${item.lastName}`;
+                  let nameEn = `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`;
                   return (
                     <div className="section-customize">
                       <div className="customize-border">
@@ -66,6 +72,7 @@ const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.user.isLoggedIn,
     topDoctorsRedux: state.admin.topDoctors,
+    language: state.app.language,
   };
 };
 
