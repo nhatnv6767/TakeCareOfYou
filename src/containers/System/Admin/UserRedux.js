@@ -190,7 +190,7 @@ class UserRedux extends Component {
     let imageBase64 = "";
     if (user.image) {
       const imageBuffer = Buffer.from(JSON.stringify(user.image));
-      imageBase64 = imageBuffer.toString("base64");
+      imageBase64 = `data:image/jpeg;base64,` + imageBuffer.toString("base64");
     }
 
     this.setState(
@@ -202,6 +202,7 @@ class UserRedux extends Component {
         phoneNumber: user.phonenumber,
         address: user.address,
         avatar: imageBase64,
+        previewImgURL: imageBase64,
         gender: user.gender,
         position: user.positionId,
         role: user.roleId,
