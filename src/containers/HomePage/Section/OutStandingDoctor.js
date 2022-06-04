@@ -25,7 +25,7 @@ class OutStandingDoctor extends Component {
   }
 
   render() {
-    let allDoctors = this.state.arrDoctors;
+    let arrDoctors = this.state.arrDoctors;
     return (
       <div className="section-share section-outstanding-doctor">
         <div className="section-container">
@@ -42,54 +42,6 @@ class OutStandingDoctor extends Component {
                   </div>
                   <div className="position text-center">
                     <div>Giáo sư, Tiến sĩ Trần Mike Fence 1</div>
-                    <div>Nha khoa</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-bg">
-                    <div className="bg-image section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Giáo sư, Tiến sĩ Trần Mike Fence 2</div>
-                    <div>Nha khoa</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-bg">
-                    <div className="bg-image section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Giáo sư, Tiến sĩ Trần Mike Fence 3</div>
-                    <div>Nha khoa</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-bg">
-                    <div className="bg-image section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Giáo sư, Tiến sĩ Trần Mike Fence 4</div>
-                    <div>Nha khoa</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-bg">
-                    <div className="bg-image section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Giáo sư, Tiến sĩ Trần Mike Fence 5</div>
                     <div>Nha khoa</div>
                   </div>
                 </div>
