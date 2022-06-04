@@ -242,17 +242,19 @@ export const fetchTopDoctorStart = () => {
   return async (dispatch, getState) => {
     try {
       dispatch({
-        // type: actionTypes.FETCH_ALL_USERS_START,
+        type: actionTypes.FETCH_TOP_DOCTORS_START,
       });
+      let res = await getTopDoctorHomeService("3");
+      console.log("Check res top doctor: ", res);
     } catch (e) {}
   };
 };
 
 export const fetchTopDoctorSuccess = (data) => ({
-  // type: actionTypes.FETCH_ALL_USERS_SUCCESS,
+  // type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
   // users: data,
 });
 
 export const fetchTopDoctorFailed = () => ({
-  // type: actionTypes.FETCH_ALL_USERS_FAILED,
+  // type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
 });
