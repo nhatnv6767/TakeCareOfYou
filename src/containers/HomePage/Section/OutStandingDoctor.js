@@ -57,7 +57,7 @@ class OutStandingDoctor extends Component {
                           <div>
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                           </div>
-                          <div>Nha khoa</div>
+                          <div>Nha khoa fix after</div>
                         </div>
                       </div>
                     </div>
