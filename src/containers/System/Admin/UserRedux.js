@@ -202,7 +202,7 @@ class UserRedux extends Component {
         phoneNumber: user.phonenumber,
         address: user.address,
         avatar: "",
-        previewImgURL: user.image ? imageBase64 : "",
+        previewImgURL: imageBase64,
         gender: user.gender,
         position: user.positionId,
         role: user.roleId,
