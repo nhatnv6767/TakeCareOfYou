@@ -244,7 +244,7 @@ export const fetchTopDoctorStart = () => {
       dispatch({
         type: actionTypes.FETCH_TOP_DOCTORS_START,
       });
-      let res = await getTopDoctorHomeService("4");
+      let res = await getTopDoctorHomeService("");
       if (res && res.errCode === 0) {
         dispatch({
           type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
