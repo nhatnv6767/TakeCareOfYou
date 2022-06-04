@@ -189,30 +189,24 @@ class UserRedux extends Component {
   handleEditUserFromParent = (user) => {
     let imageBase64 = "";
     if (user.image) {
-      const imageBuffer = Buffer.from(JSON.stringify(user.image));
-      imageBase64 = `data:image/png;base64,${imageBuffer.toString("base64")}`;
+      imageBase64 = new Buffer(user.image, "base64").toString("binary");
     }
 
-    this.setState(
-      {
-        email: user.email,
-        password: "HASHCODE",
-        firstName: user.firstName,
-        lastName: user.lastName,
-        phoneNumber: user.phonenumber,
-        address: user.address,
-        avatar: "",
-        previewImgURL: imageBase64,
-        gender: user.gender,
-        position: user.positionId,
-        role: user.roleId,
-        action: CRUD_ACTIONS.EDIT,
-        userEditId: user.id,
-      },
-      () => {
-        console.log("Check base64: ", this.state);
-      }
-    );
+    this.setState({
+      email: user.email,
+      password: "HASHCODE",
+      firstName: user.firstName,
+      lastName: user.lastName,
+      phoneNumber: user.phonenumber,
+      address: user.address,
+      avatar: "",
+      previewImgURL: imageBase64,
+      gender: user.gender,
+      position: user.positionId,
+      role: user.roleId,
+      action: CRUD_ACTIONS.EDIT,
+      userEditId: user.id,
+    });
   };
 
   render() {
