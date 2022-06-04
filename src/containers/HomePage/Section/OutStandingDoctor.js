@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
 import * as actions from "../../../store/actions";
+import { LANGUAGES } from "../../../utils";
 
 class OutStandingDoctor extends Component {
   constructor(props) {
@@ -53,7 +54,9 @@ class OutStandingDoctor extends Component {
                           <div className="bg-image section-outstanding-doctor" />
                         </div>
                         <div className="position text-center">
-                          <div>Giáo sư, Tiến sĩ Trần Mike Fence 1</div>
+                          <div>
+                            {language === LANGUAGES.VI ? nameVi : nameEn}
+                          </div>
                           <div>Nha khoa</div>
                         </div>
                       </div>
