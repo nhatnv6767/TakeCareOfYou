@@ -35,17 +35,23 @@ class OutStandingDoctor extends Component {
           </div>
           <div className="section-body">
             <Slider {...this.props.settings}>
-              <div className="section-customize">
-                <div className="customize-border">
-                  <div className="outer-bg">
-                    <div className="bg-image section-outstanding-doctor" />
-                  </div>
-                  <div className="position text-center">
-                    <div>Giáo sư, Tiến sĩ Trần Mike Fence 1</div>
-                    <div>Nha khoa</div>
-                  </div>
-                </div>
-              </div>
+              {arrDoctors &&
+                arrDoctors.length > 0 &&
+                arrDoctors.map((item, index) => {
+                  return (
+                    <div className="section-customize">
+                      <div className="customize-border">
+                        <div className="outer-bg">
+                          <div className="bg-image section-outstanding-doctor" />
+                        </div>
+                        <div className="position text-center">
+                          <div>Giáo sư, Tiến sĩ Trần Mike Fence 1</div>
+                          <div>Nha khoa</div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
             </Slider>
           </div>
         </div>
