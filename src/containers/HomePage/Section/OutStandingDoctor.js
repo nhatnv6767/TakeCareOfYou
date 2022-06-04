@@ -28,7 +28,7 @@ class OutStandingDoctor extends Component {
   render() {
     let arrDoctors = this.state.arrDoctors;
     let { language } = this.props;
-    console.log("Check arrDoctors", arrDoctors);
+    // console.log("Check arrDoctors", arrDoctors);
     return (
       <div className="section-share section-outstanding-doctor">
         <div className="section-container">
