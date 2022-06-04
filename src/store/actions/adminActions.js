@@ -244,9 +244,23 @@ export const fetchTopDoctorStart = () => {
       dispatch({
         type: actionTypes.FETCH_TOP_DOCTORS_START,
       });
-      let res = await getTopDoctorHomeService("3");
-      console.log("Check res top doctor: ", res);
-    } catch (e) {}
+      let res = await getTopDoctorHomeService("4");
+      if (res && res.errCode === 0) {
+        dispatch({
+          type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
+          dataDoctors: res.data,
+        });
+      } else {
+        dispatch({
+          type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
+        });
+      }
+    } catch (e) {
+      console.log("FETCH_TOP_DOCTORS_FAILED: ", e);
+      dispatch({
+        type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
+      });
+    }
   };
 };
 
