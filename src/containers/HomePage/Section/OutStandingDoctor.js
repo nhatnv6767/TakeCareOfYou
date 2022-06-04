@@ -5,15 +5,26 @@ import Slider from "react-slick";
 import * as actions from "../../../store/actions";
 
 class OutStandingDoctor extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      arrDoctors: [],
+    };
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevProps.topDoctorsRedux !== this.props.topDoctorsRedux) {
+      this.setState({
+        arrDoctors: this.props.topDoctorsRedux,
+      });
+    }
+  }
+
   componentDidMount() {
     this.props.loadTopDoctors();
   }
 
   render() {
-    console.log(
-      "Top Doctors At OutStandingDoctor: ",
-      this.props.topDoctorsRedux
-    );
     return (
       <div className="section-share section-outstanding-doctor">
         <div className="section-container">
