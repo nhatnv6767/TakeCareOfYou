@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
+import * as actions from "../../../store/actions";
 
 class OutStandingDoctor extends Component {
+  componentDidMount() {}
+
   render() {
     return (
       <div className="section-share section-outstanding-doctor">
@@ -88,7 +91,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    loadTopDoctors: () => dispatch(actions.fetchTopDoctorStart()),
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor);
