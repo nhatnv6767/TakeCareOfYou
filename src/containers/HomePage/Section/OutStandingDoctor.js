@@ -5,7 +5,9 @@ import Slider from "react-slick";
 import * as actions from "../../../store/actions";
 
 class OutStandingDoctor extends Component {
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.loadTopDoctors();
+  }
 
   render() {
     return (
