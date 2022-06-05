@@ -61,7 +61,7 @@ class ManageDoctor extends Component {
           <div className="content-right form-group">
             <label>Chọn bác sĩ</label>
             <Select
-              value={selectedOption}
+              value={this.state.selectedOption}
               onChange={this.handleChange}
               options={options}
               className="form-control"
