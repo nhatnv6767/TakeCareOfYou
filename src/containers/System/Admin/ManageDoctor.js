@@ -15,7 +15,10 @@ class ManageDoctor extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      contentMarkdown: "",
+      contentHTML: "",
+    };
   }
 
   componentDidMount() {}
@@ -37,6 +40,7 @@ class ManageDoctor extends Component {
             onChange={this.handleEditorChange}
           />
         </div>
+        <button className="save-content-doctor">Lưu thông tin</button>
       </div>
     );
   }
