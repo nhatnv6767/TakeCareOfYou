@@ -272,3 +272,40 @@ export const fetchTopDoctorSuccess = (data) => ({
 export const fetchTopDoctorFailed = () => ({
   // type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
 });
+
+// FETCH ALL DOCTORS
+
+export const fetchAllDoctorsStart = () => {
+  return async (dispatch, getState) => {
+    try {
+      dispatch({
+        type: actionTypes.FETCH_ALL_DOCTORS_START,
+      });
+      let res = await getAllDoctorsService();
+      if (res && res.errCode === 0) {
+        dispatch({
+          type: actionTypes.FETCH_ALL_DOCTORS_SUCCESS,
+          dataDoctors: res.data,
+        });
+      } else {
+        dispatch({
+          type: actionTypes.FETCH_ALL_DOCTORS_FAILED,
+        });
+      }
+    } catch (e) {
+      console.log("FETCH_ALL_DOCTORS_FAILED: ", e);
+      dispatch({
+        type: actionTypes.FETCH_ALL_DOCTORS_FAILED,
+      });
+    }
+  };
+};
+
+export const fetchAllDoctorsSuccess = (data) => ({
+  // type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
+  // users: data,
+});
+
+export const fetchAllDoctorsFailed = () => ({
+  // type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
+});
