@@ -51,14 +51,16 @@ class ManageDoctor extends Component {
   render() {
     let arrUsers = this.state.usersRedux;
     return (
-      <>
-        <div>Tạo thêm thông tin cho bác sĩ</div>
-        <MdEditor
-          style={{ height: "500px" }}
-          renderHTML={(text) => mdParser.render(text)}
-          onChange={handleEditorChange}
-        />
-      </>
+      <div className="manage-doctor-container">
+        <div className="manage-doctor-title">Tạo thêm thông tin cho bác sĩ</div>
+        <div className="manage-doctor-editor">
+          <MdEditor
+            style={{ height: "500px" }}
+            renderHTML={(text) => mdParser.render(text)}
+            onChange={handleEditorChange}
+          />
+        </div>
+      </div>
     );
   }
 }
