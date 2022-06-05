@@ -1,6 +1,6 @@
 {
   "homeheader": {
-    "speciality": "Medical specialty",
+    "speciality": "Medical speciality",
     "searchdoctor": "Find a doctor by specialty",
     "health-facility": "Health facilities",
     "select-room": "Choose hospital clinic",
@@ -13,7 +13,7 @@
   },
 
   "banner": {
-    "title1": "MEDICAL BACKGROUND",
+    "title1": "MEDICAL PLATFORM",
     "title2": "COMPREHENSIVE HEALTH CARE",
     "child1": "Specialized examination",
     "child2": "Remote examination",
@@ -54,7 +54,7 @@
     "edit": "Edit user "
   },
   "homepage": {
-    "out-standing-doctor": "Out standing doctors",
+    "out-standing-doctor": "Last week's outstanding Doctors",
     "more-infor": "More information"
   }
 }
