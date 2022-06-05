@@ -310,3 +310,40 @@ export const fetchAllDoctorsSuccess = (data) => ({
 export const fetchAllDoctorsFailed = () => ({
   // type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
 });
+
+// SAVE DETAIL DOCTOR
+
+export const saveDetailDoctorStart = () => {
+  return async (dispatch, getState) => {
+    try {
+      dispatch({
+        type: actionTypes.SAVE_DETAIL_DOCTOR_START,
+      });
+      let res = await getAllDoctorsService();
+      if (res && res.errCode === 0) {
+        dispatch({
+          type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,
+          dataDoctors: res.data,
+        });
+      } else {
+        dispatch({
+          type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
+        });
+      }
+    } catch (e) {
+      console.log("SAVE_DETAIL_DOCTOR_FAILED: ", e);
+      dispatch({
+        type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
+      });
+    }
+  };
+};
+
+export const saveDetailDoctorSuccess = (data) => ({
+  // type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
+  // users: data,
+});
+
+export const saveDetailDoctorFailed = () => ({
+  // type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
+});
