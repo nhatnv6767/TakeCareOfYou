@@ -313,13 +313,13 @@ export const fetchAllDoctorsFailed = () => ({
 
 // SAVE DETAIL DOCTOR
 
-export const saveDetailDoctorStart = () => {
+export const saveDetailDoctorStart = (data) => {
   return async (dispatch, getState) => {
     try {
       dispatch({
         type: actionTypes.SAVE_DETAIL_DOCTOR_START,
       });
-      let res = await getAllDoctorsService();
+      let res = await saveDetailDoctorService(data);
       if (res && res.errCode === 0) {
         dispatch({
           type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,
