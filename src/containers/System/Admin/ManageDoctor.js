@@ -25,7 +25,8 @@ class ManageDoctor extends Component {
     this.state = {
       contentMarkdown: "",
       contentHTML: "",
-      selectedOption: "",
+      selectedDoctor: "",
+      description: "",
     };
   }
 
@@ -44,9 +45,9 @@ class ManageDoctor extends Component {
     console.log("Check state: ", this.state);
   };
 
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption }, () =>
-      console.log(`Option selected:`, this.state.selectedOption)
+  handleChange = (selectedDoctor) => {
+    this.setState({ selectedDoctor }, () =>
+      console.log(`Option selected:`, this.state.selectedDoctor)
     );
   };
 
@@ -58,14 +59,19 @@ class ManageDoctor extends Component {
           <div className="content-left form-group">
             <label>Chọn bác sĩ</label>
             <Select
-              value={this.state.selectedOption}
+              value={this.state.selectedDoctor}
               onChange={this.handleChange}
               options={options}
             />
           </div>
           <div className="content-right form-group">
             <label>Thông tin giới thiệu:</label>
-            <textarea className="form-control" rows="4">
+            <textarea
+              className="form-control"
+              rows="4"
+              onChange={() => this.handleOnChangeDesc()}
+              value={this.state.description}
+            >
               TEXT AREA
             </textarea>
           </div>
