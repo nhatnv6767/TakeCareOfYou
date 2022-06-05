@@ -15,41 +15,22 @@ import "react-markdown-editor-lite/lib/index.css";
 // Initialize a markdown parser
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 
-// Finish!
-function handleEditorChange({ html, text }) {
-  console.log("handleEditorChange", html, text);
-}
-
 class ManageDoctor extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      //mảng lưu trữ các giá trị của user được lấy từ redux về
-      usersRedux: [],
-    };
+    this.state = {};
   }
 
-  componentDidMount() {
-    this.props.fetchUserRedux();
+  componentDidMount() {}
+
+  componentDidUpdate(prevProps, prevState, snapshot) {}
+  // Finish!
+  handleEditorChange({ html, text }) {
+    console.log("handleEditorChange", html, text);
   }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    if (prevProps.listUsers !== this.props.listUsers) {
-      this.setState({ usersRedux: this.props.listUsers });
-    }
-  }
-
-  handleDeleteUser = (user) => {
-    this.props.deleteUserRedux(user.id);
-  };
-
-  handleEditUser = (user) => {
-    this.props.handleEditUserFromParent(user);
-  };
 
   render() {
-    let arrUsers = this.state.usersRedux;
     return (
       <div className="manage-doctor-container">
         <div className="manage-doctor-title">Tạo thêm thông tin cho bác sĩ</div>
