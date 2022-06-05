@@ -29,6 +29,10 @@ class ManageDoctor extends Component {
     console.log("handleEditorChange", html, text);
   }
 
+  handleSaveContentMarkdown = () => {
+    alert("Saving....");
+  };
+
   render() {
     return (
       <div className="manage-doctor-container">
@@ -40,7 +44,12 @@ class ManageDoctor extends Component {
             onChange={this.handleEditorChange}
           />
         </div>
-        <button className="save-content-doctor">Lưu thông tin</button>
+        <button
+          className="save-content-doctor"
+          onClick={() => this.handleSaveContentMarkdown()}
+        >
+          Lưu thông tin
+        </button>
       </div>
     );
   }
