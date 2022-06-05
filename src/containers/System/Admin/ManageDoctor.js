@@ -53,19 +53,18 @@ class ManageDoctor extends Component {
         <div className="manage-doctor-title">Tạo thêm thông tin cho bác sĩ</div>
         <div className="more-infor">
           <div className="content-left form-group">
-            <label>Thông tin giới thiệu:</label>
-            <textarea className="form-control" rows="4">
-              TEXT AREA
-            </textarea>
-          </div>
-          <div className="content-right form-group">
             <label>Chọn bác sĩ</label>
             <Select
               value={this.state.selectedOption}
               onChange={this.handleChange}
               options={options}
-              className="form-control"
             />
+          </div>
+          <div className="content-right form-group">
+            <label>Thông tin giới thiệu:</label>
+            <textarea className="form-control" rows="4">
+              TEXT AREA
+            </textarea>
           </div>
         </div>
         <div className="manage-doctor-editor">
