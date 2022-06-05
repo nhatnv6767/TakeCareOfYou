@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
-import "./TableManageUser.scss";
+import "./ManageDoctor.scss";
 import * as actions from "../../../store/actions";
 
 import MarkdownIt from "markdown-it";
@@ -34,7 +34,7 @@ class ManageDoctor extends Component {
           <MdEditor
             style={{ height: "500px" }}
             renderHTML={(text) => mdParser.render(text)}
-            onChange={() => this.handleEditorChange}
+            onChange={this.handleEditorChange}
           />
         </div>
       </div>
