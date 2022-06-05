@@ -10,12 +10,6 @@ import "react-markdown-editor-lite/lib/index.css";
 import Select from "react-select";
 import { LANGUAGES, CRUD_ACTIONS, CommonUtils } from "../../../utils";
 
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
-
 // Initialize a markdown parser
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 
@@ -38,8 +32,9 @@ class ManageDoctor extends Component {
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevProps.allDoctors !== this.props.allDoctors) {
+      let dataSelect = this.buildDataInputSelect(this.props.allDoctors);
       this.setState({
-        listDoctors: this.props.allDoctors,
+        listDoctors: dataSelect,
       });
     }
   }
@@ -73,8 +68,8 @@ class ManageDoctor extends Component {
     if (inputData && inputData.length > 0) {
       inputData.map((item, index) => {
         let object = {};
-        let labelVi = `${item.lastName} ${item.firstName}`;
-        let labelEn = `${item.firstName} ${item.lastName}`;
+        let labelEn = `${item.lastName} ${item.firstName}`;
+        let labelVi = `${item.firstName} ${item.lastName}`;
         object.label = language === LANGUAGES.VI ? labelVi : labelEn;
         object.value = item.id;
         result.push(object);
@@ -95,7 +90,7 @@ class ManageDoctor extends Component {
             <Select
               value={this.state.selectedOption}
               onChange={this.handleChange}
-              options={options}
+              options={this.state.listDoctors}
             />
           </div>
           <div className="content-right form-group">
