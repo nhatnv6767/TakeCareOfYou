@@ -30,7 +30,9 @@ class ManageDoctor extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.fetchAllDoctorsStart();
+  }
 
   componentDidUpdate(prevProps, prevState, snapshot) {}
   // Finish!
@@ -109,8 +111,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchUserRedux: () => dispatch(actions.fetchAllUsersStart()),
-    deleteUserRedux: (id) => dispatch(actions.deleteUserStart(id)),
+    fetchAllDoctorsStart: () => dispatch(actions.fetchAllDoctorsStart()),
   };
 };
 
