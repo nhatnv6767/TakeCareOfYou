@@ -7,6 +7,7 @@ import {
   editUserService,
   getTopDoctorHomeService,
   getAllDoctorsService,
+  saveDetailDoctorService,
 } from "../../services/userService";
 
 import { toast } from "react-toastify";
@@ -321,16 +322,18 @@ export const saveDetailDoctorStart = (data) => {
       });
       let res = await saveDetailDoctorService(data);
       if (res && res.errCode === 0) {
+        toast.success("Saving succeed");
         dispatch({
           type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,
-          dataDoctors: res.data,
         });
       } else {
+        toast.error("Saving error...");
         dispatch({
           type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
         });
       }
     } catch (e) {
+      toast.error("Saving error...");
       console.log("SAVE_DETAIL_DOCTOR_FAILED: ", e);
       dispatch({
         type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
