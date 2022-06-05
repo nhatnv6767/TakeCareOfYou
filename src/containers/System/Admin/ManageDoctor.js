@@ -51,6 +51,12 @@ class ManageDoctor extends Component {
     );
   };
 
+  handleOnChangeDesc = (event) => {
+    this.setState({
+      description: event.target.value,
+    });
+  };
+
   render() {
     return (
       <div className="manage-doctor-container">
@@ -69,7 +75,7 @@ class ManageDoctor extends Component {
             <textarea
               className="form-control"
               rows="4"
-              onChange={() => this.handleOnChangeDesc()}
+              onChange={(event) => this.handleOnChangeDesc(event)}
               value={this.state.description}
             >
               TEXT AREA
