@@ -27,6 +27,7 @@ class ManageDoctor extends Component {
       contentHTML: "",
       selectedOption: "",
       description: "",
+      listDoctors: [],
     };
   }
 
@@ -34,7 +35,13 @@ class ManageDoctor extends Component {
     this.props.fetchAllDoctorsStart();
   }
 
-  componentDidUpdate(prevProps, prevState, snapshot) {}
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevProps.allDoctors !== this.props.allDoctors) {
+      this.setState({
+        listDoctors: this.props.allDoctors,
+      });
+    }
+  }
   // Finish!
   handleEditorChange = ({ html, text }) => {
     this.setState({
@@ -105,7 +112,7 @@ class ManageDoctor extends Component {
 const mapStateToProps = (state) => {
   return {
     // state redux adminReducer
-    listUsers: state.admin.users,
+    allDoctors: state.admin.allDoctors,
   };
 };
 
