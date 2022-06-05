@@ -25,7 +25,7 @@ class ManageDoctor extends Component {
     this.state = {
       contentMarkdown: "",
       contentHTML: "",
-      selectedDoctor: "",
+      selectedOption: "",
       description: "",
     };
   }
@@ -45,9 +45,9 @@ class ManageDoctor extends Component {
     console.log("Check state: ", this.state);
   };
 
-  handleChange = (selectedDoctor) => {
-    this.setState({ selectedDoctor }, () =>
-      console.log(`Option selected:`, this.state.selectedDoctor)
+  handleChange = (selectedOption) => {
+    this.setState({ selectedOption }, () =>
+      console.log(`Option selected:`, this.state.selectedOption)
     );
   };
 
@@ -65,8 +65,8 @@ class ManageDoctor extends Component {
           <div className="content-left form-group">
             <label>Chọn bác sĩ</label>
             <Select
-              value={this.state.selectedDoctor}
-              onChange={() => this.handleChange()}
+              value={this.state.selectedOption}
+              onChange={this.handleChange}
               options={options}
             />
           </div>
