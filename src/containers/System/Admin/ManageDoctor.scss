@@ -22,4 +22,17 @@
             opacity: 0.9;
         }
     }
+
+    .more-infor {
+        display: flex;
+        gap    : 15px;
+
+        .content-left {
+            width: 40%;
+        }
+
+        .content-right {
+            width: 60%;
+        }
+    }
 }
