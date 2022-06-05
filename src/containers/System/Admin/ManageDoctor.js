@@ -37,6 +37,9 @@ class ManageDoctor extends Component {
     return (
       <div className="manage-doctor-container">
         <div className="manage-doctor-title">Tạo thêm thông tin cho bác sĩ</div>
+        <div className="more-infor">
+          <textarea className="manage-">TEXT AREA</textarea>
+        </div>
         <div className="manage-doctor-editor">
           <MdEditor
             style={{ height: "500px" }}
