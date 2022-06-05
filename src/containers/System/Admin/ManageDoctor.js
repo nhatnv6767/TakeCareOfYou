@@ -34,12 +34,12 @@ class ManageDoctor extends Component {
 
   componentDidUpdate(prevProps, prevState, snapshot) {}
   // Finish!
-  handleEditorChange({ html, text }) {
+  handleEditorChange = ({ html, text }) => {
     this.setState({
       contentHTML: html,
       contentMarkdown: text,
     });
-  }
+  };
 
   handleSaveContentMarkdown = () => {
     console.log("Check state: ", this.state);
