@@ -25,6 +25,7 @@ class ManageDoctor extends Component {
     this.state = {
       contentMarkdown: "",
       contentHTML: "",
+      selectedOption: "",
     };
   }
 
@@ -38,6 +39,12 @@ class ManageDoctor extends Component {
 
   handleSaveContentMarkdown = () => {
     alert("Saving....");
+  };
+
+  handleChange = (selectedOption) => {
+    this.setState({ selectedOption }, () =>
+      console.log(`Option selected:`, this.state.selectedOption)
+    );
   };
 
   render() {
