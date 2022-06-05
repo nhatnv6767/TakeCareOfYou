@@ -42,7 +42,10 @@ class ManageDoctor extends Component {
             <label>Thông tin giới thiệu:</label>
             <textarea className="form-control">TEXT AREA</textarea>
           </div>
-          <div className="content-right form-group"></div>
+          <div className="content-right form-group">
+            <label>Chọn bác sĩ</label>
+            <input type="text" className="form-control" />
+          </div>
         </div>
         <div className="manage-doctor-editor">
           <MdEditor
