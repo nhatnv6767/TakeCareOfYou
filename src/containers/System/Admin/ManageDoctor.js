@@ -8,6 +8,7 @@ import MarkdownIt from "markdown-it";
 import MdEditor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
 import Select from "react-select";
+import { LANGUAGES, CRUD_ACTIONS, CommonUtils } from "../../../utils";
 
 const options = [
   { value: "chocolate", label: "Chocolate" },
@@ -66,7 +67,25 @@ class ManageDoctor extends Component {
     });
   };
 
+  buildDataInputSelect = (inputData) => {
+    let result = [];
+    let { language } = this.props;
+    if (inputData && inputData.length > 0) {
+      inputData.map((item, index) => {
+        let object = {};
+        let labelVi = `${item.lastName} ${item.firstName}`;
+        let labelEn = `${item.firstName} ${item.lastName}`;
+        object.label = language === LANGUAGES.VI ? labelVi : labelEn;
+        object.value = item.id;
+        result.push(object);
+      });
+    }
+
+    return result;
+  };
+
   render() {
+    console.log("Check state: ", this.state);
     return (
       <div className="manage-doctor-container">
         <div className="manage-doctor-title">Tạo thêm thông tin cho bác sĩ</div>
@@ -113,6 +132,7 @@ const mapStateToProps = (state) => {
   return {
     // state redux adminReducer
     allDoctors: state.admin.allDoctors,
+    language: state.app.language,
   };
 };
 
