@@ -53,7 +53,12 @@ class ManageDoctor extends Component {
           </div>
           <div className="content-right form-group">
             <label>Chọn bác sĩ</label>
-            <input type="text" className="form-control" />
+            <Select
+              value={selectedOption}
+              onChange={this.handleChange}
+              options={options}
+              className="form-control"
+            />
           </div>
         </div>
         <div className="manage-doctor-editor">
