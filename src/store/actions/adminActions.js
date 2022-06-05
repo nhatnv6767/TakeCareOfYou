@@ -6,6 +6,7 @@ import {
   deleteUserService,
   editUserService,
   getTopDoctorHomeService,
+  getAllDoctorsService,
 } from "../../services/userService";
 
 import { toast } from "react-toastify";
