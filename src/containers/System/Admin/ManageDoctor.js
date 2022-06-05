@@ -7,6 +7,13 @@ import * as actions from "../../../store/actions";
 import MarkdownIt from "markdown-it";
 import MdEditor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
+import Select from "react-select";
+
+const options = [
+  { value: "chocolate", label: "Chocolate" },
+  { value: "strawberry", label: "Strawberry" },
+  { value: "vanilla", label: "Vanilla" },
+];
 
 // Initialize a markdown parser
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -40,7 +47,9 @@ class ManageDoctor extends Component {
         <div className="more-infor">
           <div className="content-left form-group">
             <label>Thông tin giới thiệu:</label>
-            <textarea className="form-control">TEXT AREA</textarea>
+            <textarea className="form-control" rows="4">
+              TEXT AREA
+            </textarea>
           </div>
           <div className="content-right form-group">
             <label>Chọn bác sĩ</label>
