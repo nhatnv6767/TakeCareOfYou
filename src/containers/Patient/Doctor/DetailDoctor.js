@@ -6,7 +6,7 @@ import UserRedux from "../containers/System/Admin/UserRedux";
 import Header from "../containers/Header/Header";
 import ManageDoctor from "../containers/System/Admin/ManageDoctor";
 
-class System extends Component {
+class DetailDoctor extends Component {
   render() {
     const { systemMenuPath, isLoggedIn } = this.props;
     return (
@@ -42,4 +42,4 @@ const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(System);
+export default connect(mapStateToProps, mapDispatchToProps)(DetailDoctor);
