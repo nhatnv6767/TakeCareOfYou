@@ -68,7 +68,7 @@ class DetailDoctor extends Component {
                     <div className="schedule-doctor"></div>
                     <div className="detail-infor-doctor">
                         {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML &&
-                            <div>
+                            <div dangerouslySetInnerHTML={{__html: '<p>First &middot; Second</p>'}}>
                                 {detailDoctor.Markdown.contentHTML}
                             </div>
                         }
