@@ -31,7 +31,7 @@ class DetailDoctor extends Component {
 
     render() {
         console.log("Check log state: ", this.state);
-        let { detailDoctor } = this.state
+        let {detailDoctor} = this.state
         return (
             <>
                 <HomeHeader isShowBanner={false}/>
