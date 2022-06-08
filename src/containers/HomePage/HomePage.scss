@@ -79,6 +79,7 @@
                     width        : 120px;
                     height       : 120px;
                     border-radius: 50%;
+
                 }
 
                 &.section-handbook {
@@ -143,6 +144,7 @@
 
     .section-customize {
         padding: 5px;
+        cursor : pointer;
 
         .customize-border {
             border : 1px solid grey;

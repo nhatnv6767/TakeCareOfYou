@@ -4,8 +4,10 @@ import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
 import * as actions from "../../../store/actions";
 import { LANGUAGES } from "../../../utils";
+import { useHistory } from "react-router-dom";
 
 class OutStandingDoctor extends Component {
+  history = useHistory();
   constructor(props) {
     super(props);
     this.state = {
@@ -27,6 +29,7 @@ class OutStandingDoctor extends Component {
 
   handleViewDetailDoctor = (doctor) => {
     console.log("Check handleViewDetailDoctor: ", doctor);
+    history.push(`/users/:${doctor.id}`);
   };
 
   render() {
