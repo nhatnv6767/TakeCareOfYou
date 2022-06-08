@@ -7,7 +7,7 @@ class DetailDoctor extends Component {
     console.log(this.props.match.params.id);
     return (
       <div>
-        <HomeHeader />
+        <HomeHeader isShowBanner={false} />
       </div>
     );
   }
