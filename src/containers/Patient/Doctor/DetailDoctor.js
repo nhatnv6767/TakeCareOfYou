@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import HomeHeader from "../../HomePage/HomeHeader";
 import "./DetailDoctor.scss";
+import { getDetailInforDoctorService } from "../../../services/userService";
 
 class DetailDoctor extends Component {
   constructor(props) {
