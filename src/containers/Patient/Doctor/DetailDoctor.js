@@ -9,7 +9,14 @@ class DetailDoctor extends Component {
     this.setState({});
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    if (
+      this.props.match &&
+      this.props.match.params &&
+      this.props.match.params.id
+    ) {
+    }
+  }
 
   componentDidUpdate(prevProps, prevState, snapshot) {}
   render() {
