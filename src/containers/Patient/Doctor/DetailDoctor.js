@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import HomeHeader from "../../HomePage/HomeHeader";
 
 class DetailDoctor extends Component {
   render() {
     console.log(this.props.match.params.id);
-    return <div>Detail Doctor</div>;
+    return (
+      <div>
+        <HomeHeader />
+      </div>
+    );
   }
 }
 
