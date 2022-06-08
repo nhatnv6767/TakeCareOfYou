@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import HomeHeader from "../../HomePage/HomeHeader";
 import "./DetailDoctor.scss";
 import {getDetailInforDoctorService} from "../../../services/userService";
+import {LANGUAGES} from "../../../utils";
 
 class DetailDoctor extends Component {
     constructor(props) {
@@ -30,8 +31,14 @@ class DetailDoctor extends Component {
     }
 
     render() {
-        console.log("Check log state: ", this.state);
+        let {language} = this.props
         let {detailDoctor} = this.state
+        let nameVi = '', nameEn = '';
+        if (detailDoctor && detailDoctor.positionData) {
+            nameVi = `${detailDoctor.positionData.valueVi}, ${detailDoctor.lastName} ${detailDoctor.firstName}`;
+            nameEn = `${detailDoctor.positionData.valueEn}, ${detailDoctor.firstName} ${detailDoctor.lastName}`;
+        }
+
         return (
             <>
                 <HomeHeader isShowBanner={false}/>
@@ -46,7 +53,9 @@ class DetailDoctor extends Component {
 
                         </div>
                         <div className="content-right">
-                            <div className="up">Phó giáo sư Lê Văn A</div>
+                            <div className="up">
+                                {language === LANGUAGES.VI ? nameVi : nameEn}
+                            </div>
                             <div className="down">
                                 {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.description &&
                                     <span>
@@ -66,7 +75,9 @@ class DetailDoctor extends Component {
 }
 
 const mapStateToProps = (state) => {
-    return {};
+    return {
+        language: state.app.language,
+    };
 };
 
 const mapDispatchToProps = (dispatch) => {
