@@ -10,7 +10,10 @@ class DetailDoctor extends Component {
       <>
         <HomeHeader isShowBanner={false} />
         <div className="doctor-detail-container">
-          <div className="intro-doctor">// do here</div>
+          <div className="intro-doctor">
+            <div className="content-left"></div>
+            <div className="content-right"></div>
+          </div>
           <div className="schedule-doctor"></div>
           <div className="detail-infor-doctor">// do here</div>
           <div className="comment-doctor"></div>

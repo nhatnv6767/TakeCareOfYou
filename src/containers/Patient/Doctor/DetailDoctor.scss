@@ -1,4 +1,19 @@
 .doctor-detail-container {
     height: 500px;
     border: 1px solid red;
+
+    .intro-doctor {
+        display: flex;
+        height : 100px;
+
+        .content-left {
+            width : 40%;
+            border: 1px solid green;
+        }
+
+        .content-right {
+            width : 60%;
+            border: 1px solid gray;
+        }
+    }
 }
