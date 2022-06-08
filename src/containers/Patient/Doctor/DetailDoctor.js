@@ -4,6 +4,14 @@ import HomeHeader from "../../HomePage/HomeHeader";
 import "./DetailDoctor.scss";
 
 class DetailDoctor extends Component {
+  constructor(props) {
+    super(props);
+    this.setState({});
+  }
+
+  componentDidMount() {}
+
+  componentDidUpdate(prevProps, prevState, snapshot) {}
   render() {
     console.log(this.props.match.params.id);
     return (

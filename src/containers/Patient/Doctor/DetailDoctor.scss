@@ -17,13 +17,16 @@
             border        : 1px solid gray;
             display       : flex;
             flex-direction: column;
+            padding-left  : 10px;
 
             .up {
                 font-size  : 20px;
                 font-weight: 600;
             }
 
-            .down {}
+            .down {
+                padding-top: 10px;
+            }
         }
     }
 }
