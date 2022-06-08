@@ -7,9 +7,9 @@ import {getDetailInforDoctorService} from "../../../services/userService";
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
-        this.setState({
+        this.state = {
             detailDoctor: {}
-        });
+        }
     }
 
     async componentDidMount() {
@@ -31,7 +31,7 @@ class DetailDoctor extends Component {
 
     render() {
         console.log("Check log state: ", this.state);
-        let {detailDoctor} = this.state
+        let { detailDoctor } = this.state
         return (
             <>
                 <HomeHeader isShowBanner={false}/>
@@ -40,8 +40,9 @@ class DetailDoctor extends Component {
                         <div
                             className="content-left"
                             style={{
-                                backgroundImage: `url(${detailDoctor.image})`,
-                            }}>
+                                backgroundImage: `url(${detailDoctor.image})`
+                            }}
+                        >
 
                         </div>
                         <div className="content-right">
