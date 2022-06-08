@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import HomeHeader from "../../HomePage/HomeHeader";
+import "./DetailDoctor.scss";
 
 class DetailDoctor extends Component {
   render() {
     console.log(this.props.match.params.id);
     return (
-      <div>
+      <>
         <HomeHeader isShowBanner={false} />
-      </div>
+        <div className="doctor-detail-container">Doctor Detail</div>
+      </>
     );
   }
 }
