@@ -9,7 +9,12 @@ class DetailDoctor extends Component {
     return (
       <>
         <HomeHeader isShowBanner={false} />
-        <div className="doctor-detail-container">Doctor Detail</div>
+        <div className="doctor-detail-container">
+          <div className="intro-doctor">// do here</div>
+          <div className="schedule-doctor"></div>
+          <div className="detail-infor-doctor">// do here</div>
+          <div className="comment-doctor"></div>
+        </div>
       </>
     );
   }
