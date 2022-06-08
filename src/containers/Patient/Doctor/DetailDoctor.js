@@ -12,7 +12,15 @@ class DetailDoctor extends Component {
         <div className="doctor-detail-container">
           <div className="intro-doctor">
             <div className="content-left"></div>
-            <div className="content-right"></div>
+            <div className="content-right">
+              <div className="up">Phó giáo sư Lê Văn A</div>
+              <div className="down">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti, harum. Id, temporibus esse eaque non odio nam
+                doloribus praesentium enim alias velit ex debitis tempore
+                nostrum nobis nisi illo maiores?
+              </div>
+            </div>
           </div>
           <div className="schedule-doctor"></div>
           <div className="detail-infor-doctor">// do here</div>
