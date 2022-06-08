@@ -4,10 +4,9 @@ import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
 import * as actions from "../../../store/actions";
 import { LANGUAGES } from "../../../utils";
-import { useHistory } from "react-router-dom";
+import { withRouter } from "react-router";
 
 class OutStandingDoctor extends Component {
-  history = useHistory();
   constructor(props) {
     super(props);
     this.state = {
@@ -29,7 +28,7 @@ class OutStandingDoctor extends Component {
 
   handleViewDetailDoctor = (doctor) => {
     console.log("Check handleViewDetailDoctor: ", doctor);
-    history.push(`/users/:${doctor.id}`);
+    this.props.history.push(`/users/${doctor.id}`);
   };
 
   render() {
@@ -107,4 +106,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor);
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor)
+);

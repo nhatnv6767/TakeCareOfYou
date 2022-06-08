@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 class DetailDoctor extends Component {
   render() {
+    console.log(this.props.match.params.id);
     return <div>Detail Doctor</div>;
   }
 }
