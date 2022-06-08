@@ -10,12 +10,15 @@ class DetailDoctor extends Component {
     this.setState({});
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     if (
       this.props.match &&
       this.props.match.params &&
       this.props.match.params.id
     ) {
+      let id = this.props.match.params.id;
+      let res = await getDetailInforDoctorService(id)
+      console.log("Check res: ", res)
     }
   }
 
