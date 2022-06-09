@@ -11,7 +11,6 @@
     "support": "Support",
     "welcome": "Welcome"
   },
-
   "banner": {
     "title1": "MEDICAL PLATFORM",
     "title2": "COMPREHENSIVE HEALTH CARE",
@@ -22,7 +21,6 @@
     "child5": "Mental health",
     "child6": "Dental examination"
   },
-
   "menu": {
     "admin": {
       "manage-user": "Users System",
@@ -36,6 +34,9 @@
       "manage-specialty": "Manage Specialties",
       "handbook": "Handbook",
       "manage-handbook": "Manage Handbook"
+    },
+    "doctor": {
+      "manage-schedule": "Manage Doctor's schedule"
     }
   },
   "manage-user": {

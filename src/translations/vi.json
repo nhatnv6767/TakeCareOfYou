@@ -11,7 +11,6 @@
     "support": "Hỗ trợ",
     "welcome": "Xin chào"
   },
-
   "banner": {
     "title1": "NỀN TẢNG Y TẾ",
     "title2": "CHĂM SÓC SỨC KHOẺ TOÀN DIỆN",
@@ -22,7 +21,6 @@
     "child5": "Sức khoẻ tinh thần",
     "child6": "Khám nha khoa"
   },
-
   "menu": {
     "admin": {
       "manage-user": "Người dùng",
@@ -36,6 +34,9 @@
       "manage-specialty": "Quản lý chuyên khoa",
       "handbook": "Cẩm nang",
       "manage-handbook": "Quản lý cẩm nang"
+    },
+    "doctor": {
+      "manage-schedule": "Quản lý kế hoạch khám bệnh"
     }
   },
   "manage-user": {
