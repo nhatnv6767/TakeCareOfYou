@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Redirect, Route, Switch} from "react-router-dom";
+import Header from "../containers/Header/Header";
 
 class Doctor extends Component {
     render() {
-        const {systemMenuPath, isLoggedIn} = this.props;
+        const {isLoggedIn} = this.props;
         return (
             <React.Fragment>
                 {isLoggedIn && <Header/>}
@@ -12,7 +13,7 @@ class Doctor extends Component {
                     <div className="system-list">
                         <Switch>
                             <Route path="/system/user-manage" component={UserManage}/>
-                            
+
                         </Switch>
                     </div>
                 </div>
