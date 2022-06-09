@@ -133,6 +133,7 @@ class ManageDoctor extends Component {
                         style={{height: "500px"}}
                         renderHTML={(text) => mdParser.render(text)}
                         onChange={this.handleEditorChange}
+                        value={this.state.contentMarkdown}
                     />
                 </div>
                 <button
