@@ -69,6 +69,14 @@ class ManageDoctor extends Component {
         );
 
         let res = await getDetailInforDoctorService(selectedOption.value);
+        if (res && res.errCode === 0 && res.data && res.data.Markdown) {
+            let mardown = res.data.Markdown
+            this.setState({
+                contentHTML: mardown.contentHTML,
+                contentMarkdown: mardown.contentMarkdown,
+                description: mardown.description,
+            })
+        }
         console.log(`getDetailInforDoctorService:`, res)
     };
 
@@ -96,7 +104,6 @@ class ManageDoctor extends Component {
     };
 
     render() {
-        console.log("Check state: ", this.state);
         return (
             <div className="manage-doctor-container">
                 <div className="manage-doctor-title">Tạo thêm thông tin cho bác sĩ</div>
