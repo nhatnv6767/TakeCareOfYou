@@ -5,7 +5,7 @@ import * as actions from "../../store/actions";
 import Navigator from "../../components/Navigator";
 import {adminMenu, doctorMenu} from "./menuApp";
 import "./Header.scss";
-import {LANGUAGES} from "../../utils";
+import {LANGUAGES, USER_ROLE} from "../../utils";
 import {FormattedMessage} from "react-intl";
 import _ from "lodash";
 
@@ -24,11 +24,20 @@ class Header extends Component {
 
     componentDidMount() {
         let {userInfo} = this.props;
+        let menu = []
         if (userInfo && !_.isEmpty(userInfo)) {
             let role = userInfo.roleId;
-
+            if (role === USER_ROLE.ADMIN) {
+                menu = adminMenu
+            }
+            if (role === USER_ROLE.DOCTOR) {
+                menu = doctorMenu
+            }
         }
-        console.log("Userinfor: ", this.props.userInfo)
+
+        this.setState({
+            menuApp: menu
+        })
     }
 
     render() {
