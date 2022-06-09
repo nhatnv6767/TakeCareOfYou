@@ -1,17 +1,14 @@
 .doctor-detail-container {
   height: 500px;
-  border: 1px solid red;
   margin: 0 100px;
 
   .intro-doctor {
     display: flex;
-    border: 1px solid gray;
 
     .content-left {
       width: 20%;
       background-size: cover;
       background-position: top center;
-      //background: center center no-repeat;
       width: 120px;
       height: 120px;
       border-radius: 50%;
