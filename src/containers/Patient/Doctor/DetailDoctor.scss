@@ -1,9 +1,10 @@
 .doctor-detail-container {
   height: 500px;
-  margin: 0 100px;
+  //padding: 0 100px;
 
   .intro-doctor {
     display: flex;
+    margin: 0 100px;
 
     .content-left {
       width: 20%;
@@ -34,10 +35,9 @@
   }
 
   .detail-infor-doctor {
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+
     background: #ddd;
+    padding: 0 100px;
 
     h3 {
       font-size: 17px;
