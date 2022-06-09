@@ -76,6 +76,12 @@ class ManageDoctor extends Component {
                 contentMarkdown: mardown.contentMarkdown,
                 description: mardown.description,
             })
+        } else {
+            this.setState({
+                contentHTML: "",
+                contentMarkdown: "",
+                description: "",
+            })
         }
         console.log(`getDetailInforDoctorService:`, res)
     };
