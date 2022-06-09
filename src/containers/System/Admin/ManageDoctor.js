@@ -113,6 +113,7 @@ class ManageDoctor extends Component {
     };
 
     render() {
+        let {hasOldData} = this.state;
         return (
             <div className="manage-doctor-container">
                 <div className="manage-doctor-title">Tạo thêm thông tin cho bác sĩ</div>
@@ -146,10 +147,12 @@ class ManageDoctor extends Component {
                     />
                 </div>
                 <button
-                    className="save-content-doctor"
+                    className={hasOldData ? "save-content-doctor" : "create-content-doctor"}
                     onClick={() => this.handleSaveContentMarkdown()}
                 >
-                    Lưu thông tin
+                    {hasOldData ?
+                        <span>Lưu thông tin</span> : <span>Tạo thông tin</span>}
+
                 </button>
             </div>
         );
