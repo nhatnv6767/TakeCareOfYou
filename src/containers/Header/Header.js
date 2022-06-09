@@ -1,59 +1,64 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React, {Component} from "react";
+import {connect} from "react-redux";
 
 import * as actions from "../../store/actions";
 import Navigator from "../../components/Navigator";
-import { adminMenu } from "./menuApp";
+import {adminMenu, doctorMenu} from "./menuApp";
 import "./Header.scss";
-import { LANGUAGES } from "../../utils";
-import { FormattedMessage } from "react-intl";
+import {LANGUAGES} from "../../utils";
+import {FormattedMessage} from "react-intl";
 
 class Header extends Component {
   handleChangeLanguage = (language) => {
     // fire redux event : actions
     this.props.changeLanguageAppRedux(language);
   };
+
+  componentDidMount() {
+
+  }
+
   render() {
-    const { processLogout, language, userInfo } = this.props;
+    const {processLogout, language, userInfo} = this.props;
 
     return (
-      <div className="header-container">
-        {/* thanh navigator */}
-        <div className="header-tabs-container">
-          <Navigator menus={adminMenu} />
-        </div>
+        <div className="header-container">
+          {/* thanh navigator */}
+          <div className="header-tabs-container">
+            <Navigator menus={adminMenu}/>
+          </div>
 
-        <div className="languages">
+          <div className="languages">
           <span className="welcome">
-            <FormattedMessage id="homeheader.welcome" />,{" "}
+            <FormattedMessage id="homeheader.welcome"/>,{" "}
             {userInfo && userInfo.firstName ? userInfo.firstName : ""} !
           </span>
-          <span
-            className={
-              language === LANGUAGES.VI ? "language-vi active" : "language-vi"
-            }
-            onClick={() => this.handleChangeLanguage(LANGUAGES.VI)}
-          >
+            <span
+                className={
+                  language === LANGUAGES.VI ? "language-vi active" : "language-vi"
+                }
+                onClick={() => this.handleChangeLanguage(LANGUAGES.VI)}
+            >
             VI
           </span>
-          <span
-            className={
-              language === LANGUAGES.EN ? "language-en active" : "language-en"
-            }
-            onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}
-          >
+            <span
+                className={
+                  language === LANGUAGES.EN ? "language-en active" : "language-en"
+                }
+                onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}
+            >
             EN
           </span>
-          {/* nút logout */}
-          <div
-            className="btn btn-logout"
-            onClick={processLogout}
-            title="Log out"
-          >
-            <i className="fas fa-sign-out-alt"></i>
+            {/* nút logout */}
+            <div
+                className="btn btn-logout"
+                onClick={processLogout}
+                title="Log out"
+            >
+              <i className="fas fa-sign-out-alt"></i>
+            </div>
           </div>
         </div>
-      </div>
     );
   }
 }
@@ -70,7 +75,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     processLogout: () => dispatch(actions.processLogout()),
     changeLanguageAppRedux: (language) =>
-      dispatch(actions.changeLanguageApp(language)),
+        dispatch(actions.changeLanguageApp(language)),
   };
 };
 
