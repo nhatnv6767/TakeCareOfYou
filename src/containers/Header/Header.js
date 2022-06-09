@@ -10,6 +10,13 @@ import {FormattedMessage} from "react-intl";
 import _ from "lodash";
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            menuApp: [],
+        }
+    }
+
     handleChangeLanguage = (language) => {
         // fire redux event : actions
         this.props.changeLanguageAppRedux(language);
@@ -19,7 +26,7 @@ class Header extends Component {
         let {userInfo} = this.props;
         if (userInfo && !_.isEmpty(userInfo)) {
             let role = userInfo.roleId;
-            
+
         }
         console.log("Userinfor: ", this.props.userInfo)
     }
