@@ -24,6 +24,7 @@ class ManageDoctor extends Component {
             selectedOption: "",
             description: "",
             listDoctors: [],
+            hasOldData: false,
         };
     }
 
@@ -75,12 +76,14 @@ class ManageDoctor extends Component {
                 contentHTML: mardown.contentHTML,
                 contentMarkdown: mardown.contentMarkdown,
                 description: mardown.description,
+                hasOldData: true,
             })
         } else {
             this.setState({
                 contentHTML: "",
                 contentMarkdown: "",
                 description: "",
+                hasOldData: false,
             })
         }
         console.log(`getDetailInforDoctorService:`, res)
