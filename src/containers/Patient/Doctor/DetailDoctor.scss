@@ -32,4 +32,23 @@
       }
     }
   }
+
+  .detail-infor-doctor {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #ddd;
+
+    h3 {
+      font-size: 17px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .comment-doctor {
+    height: 50px;
+  }
 }
