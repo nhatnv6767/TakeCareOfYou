@@ -38,7 +38,7 @@ export const adminMenu = [
                 menus: [
                     {
                         name: "menu.doctor.schedule",
-                        link: "/system/user-manage",
+                        link: "/doctor/manage-schedule",
                     },
                 ],
             },
@@ -90,7 +90,7 @@ export const doctorMenu = [
                 menus: [
                     {
                         name: "menu.doctor.schedule",
-                        link: "/system/user-manage",
+                        link: "/doctor/manage-schedule",
                     },
                 ],
             },
