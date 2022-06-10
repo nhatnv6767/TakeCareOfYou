@@ -1,16 +1,16 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import './ManageSchedule.scss';
-
+import {FormattedMessage} from 'react-intl';
 
 class ManageSchedule extends Component {
     render() {
         return (
-            <React.Fragment>
-                <div>
-                    Manage Schedule
+            <div className="manage-schedule-container">
+                <div className="m-s-title">
+                    <FormattedMessage id=""/>
                 </div>
-            </React.Fragment>
+            </div>
         );
     }
 }
