@@ -10,6 +10,16 @@ class ManageSchedule extends Component {
                 <div className="m-s-title">
                     <FormattedMessage id="manage-schedule.title"/>
                 </div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-4">
+
+                        </div>
+                        <div className="col-4">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
