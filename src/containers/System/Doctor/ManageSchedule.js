@@ -62,6 +62,10 @@ class ManageSchedule extends Component {
 
     };
 
+    handleOnChangeDatePicker = () => {
+        
+    };
+
     render() {
         console.log("Manage Schedule check state: ", this.state);
         return (
@@ -82,7 +86,7 @@ class ManageSchedule extends Component {
                         <div className="col-6 form-group">
                             <label>Chọn ngày</label>
                             <DatePicker
-
+                                onChange={this.handleOnChangeDatePicker}
                             />
                         </div>
                         <div className="col-12 pick-hour-container">
