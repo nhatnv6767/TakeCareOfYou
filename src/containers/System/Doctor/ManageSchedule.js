@@ -61,7 +61,11 @@ class ManageSchedule extends Component {
                     <div className="row">
                         <div className="col-6 form-group">
                             <label>Chọn bác sĩ</label>
-                            <input className="form-control"/>
+                            <Select
+                                // value={this.state.selectedOption}
+                                // onChange={this.handleChangeSelect}
+                                options={this.state.listDoctors}
+                            />
                         </div>
                         <div className="col-6 form-group">
                             <label>Chọn ngày</label>
