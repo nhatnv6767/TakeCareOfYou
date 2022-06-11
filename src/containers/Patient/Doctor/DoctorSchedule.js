@@ -24,7 +24,7 @@ class DoctorSchedule extends Component {
 
     }
 
-    setArrDays = async (language) => {
+    setArrDays = (language) => {
         let allDays = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
@@ -38,7 +38,6 @@ class DoctorSchedule extends Component {
 
             allDays.push(object);
         }
-
 
         this.setState({
             allDays: allDays,
@@ -58,10 +57,10 @@ class DoctorSchedule extends Component {
             this.props.match.params.id
         ) {
             let doctorId = this.props.match.params.id;
-            let res = await getScheduleDoctorByDate(32, 1655132400000);
+            let date = event.target.value;
+            let res = await getScheduleDoctorByDate(doctorId, date);
             console.log("Check res getScheduleDoctorByDate", res);
         }
-        console.log("Everytime choose", event.target.value);
     };
 
     render() {
