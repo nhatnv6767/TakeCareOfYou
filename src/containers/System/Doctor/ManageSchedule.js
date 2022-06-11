@@ -13,10 +13,12 @@ class ManageSchedule extends Component {
     constructor(props) {
         // kế thừa các props từ cha truyền xuống
         super(props);
+        const currentDate = new Date;
+        currentDate.setHours(0, 0, 0, 0);
         this.state = {
             listDoctors: [],
             selectedDoctor: {},
-            currentDate: new Date(),
+            currentDate: currentDate,
         };
     }
 
