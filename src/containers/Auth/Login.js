@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { push } from "connected-react-router";
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {push} from "connected-react-router";
 
 // import * as actions from "../store/actions";
 import * as actions from "../../store/actions";
 
 import './Login.scss';
-import { FormattedMessage } from 'react-intl';
-import { handleLoginApi } from '../../services/userService'
+import {FormattedMessage} from 'react-intl';
+import {handleLoginApi} from '../../services/userService';
+import {KeyCodeUtils} from "../../utils";
 
 
 class Login extends Component {
@@ -20,37 +21,46 @@ class Login extends Component {
             password: '',
             isShowPassword: false,
             errMessage: '',
-        }
+        };
     }
 
     handleOnChangeUsername = (event) => {
         this.setState({
             username: event.target.value
-        })
-    }
+        });
+    };
 
     handleOnChangePassword = (event) => {
         this.setState({
             password: event.target.value
-        })
-    }
+        });
+    };
+
+    handlerKeyDown = (event) => {
+        const keyCode = event.which || event.keyCode;
+        if (keyCode === KeyCodeUtils.ENTER) {
+            event.preventDefault();
+            if (!this.btnLogin.current || this.btnLogin.current.disabled) return;
+            this.btnLogin.current.click();
+        }
+    };
 
     handleLogin = async () => {
         this.setState({
             errMessage: ''
-        })
+        });
         try {
-            let data = await handleLoginApi(this.state.username, this.state.password)
+            let data = await handleLoginApi(this.state.username, this.state.password);
             if (data && data.errCode !== 0) {
                 this.setState({
                     errMessage: data.message
-                })
+                });
             }
             if (data && data.errCode === 0) {
                 // to do when succeed
                 // save client to redux
-                this.props.userLoginSuccess(data.user)
-                console.log("login succeed")
+                this.props.userLoginSuccess(data.user);
+                console.log("login succeed");
             }
 
         } catch (err) {
@@ -59,20 +69,20 @@ class Login extends Component {
                 if (err.response.data) {
                     this.setState({
                         errMessage: err.response.data.message
-                    })
+                    });
                 }
             }
 
 
         }
 
-    }
+    };
 
     handleShowHidePassword = () => {
         this.setState({
             isShowPassword: !this.state.isShowPassword
-        })
-    }
+        });
+    };
 
     render() {
 
@@ -89,6 +99,7 @@ class Login extends Component {
                                 placeholder="Enter your username"
                                 value={this.state.username}
                                 onChange={(event) => this.handleOnChangeUsername(event)}
+                                onKeyDown={(event) => this.handlerKeyDown(event)}
                             />
                         </div>
                         <div className="col-12 form-group login-input">
@@ -99,9 +110,12 @@ class Login extends Component {
                                     className="form-control"
                                     placeholder="Enter your password"
                                     onChange={(event) => this.handleOnChangePassword(event)}
+                                    onKeyDown={(event) => this.handlerKeyDown(event)}
                                 />
                                 <span
-                                    onClick={() => { this.handleShowHidePassword() }}
+                                    onClick={() => {
+                                        this.handleShowHidePassword();
+                                    }}
                                 >
                                     <i className={this.state.isShowPassword ? "far fa-eye" : "far fa-eye-slash"}></i>
                                 </span>
@@ -110,11 +124,14 @@ class Login extends Component {
 
 
                         </div>
-                        <div className="col-12" style={{ color: 'red' }}>
+                        <div className="col-12" style={{color: 'red'}}>
                             {this.state.errMessage}
                         </div>
                         <div className="col-12">
-                            <button className="btn-login" onClick={() => { this.handleLogin() }}>Login</button>
+                            <button className="btn-login" onClick={() => {
+                                this.handleLogin();
+                            }}>Login
+                            </button>
                         </div>
 
                         <div className="col-12">
@@ -129,8 +146,8 @@ class Login extends Component {
                         </div>
                     </div>
                 </div>
-            </div >
-        )
+            </div>
+        );
     }
 }
 
