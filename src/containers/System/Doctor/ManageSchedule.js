@@ -18,6 +18,7 @@ class ManageSchedule extends Component {
             listDoctors: [],
             selectedDoctor: {},
             currentDate: '',
+            rangeTime: [],
         };
     }
 
@@ -31,6 +32,11 @@ class ManageSchedule extends Component {
             let dataSelect = this.buildDataInputSelect(this.props.allDoctors);
             this.setState({
                 listDoctors: dataSelect,
+            });
+        }
+        if (prevProps.allScheduleTime !== this.props.allScheduleTime) {
+            this.setState({
+                rangeTime: this.props.allScheduleTime
             });
         }
         // if (prevProps.language !== this.props.language) {
@@ -74,7 +80,6 @@ class ManageSchedule extends Component {
 
     render() {
         console.log("Manage Schedule check state: ", this.state);
-        console.log("Manage Schedule check props: ", this.props);
         return (
             <div className="manage-schedule-container">
                 <div className="m-s-title">
