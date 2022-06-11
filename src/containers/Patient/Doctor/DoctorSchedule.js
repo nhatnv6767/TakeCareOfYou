@@ -18,19 +18,31 @@ class DoctorSchedule extends Component {
     async componentDidMount() {
         let {language} = this.props;
 
-        console.log("moment VI", moment(new Date()).format('dddd - DD/MM'));
-        console.log("moment EN", moment(new Date()).locale('en').format('ddd - DD/MM'));
-
         this.setArrDays(language);
 
     }
+
+    capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+
+    titleCase = (str) => {
+        var splitStr = str.toLowerCase().split(' ');
+        for (var i = 0; i < splitStr.length; i++) {
+            // You do not need to check if i is larger than splitStr length, as your for does that for you
+            // Assign it back to the array
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+        }
+        // Directly return the joined string
+        return splitStr.join(' ');
+    };
 
     setArrDays = (language) => {
         let allDays = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
             if (language === LANGUAGES.VI) {
-                object.label = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
+                object.label = this.titleCase(moment(new Date()).add(i, 'days').format('dddd - DD/MM'));
             } else {
                 object.label = moment(new Date()).add(i, 'days').locale('en').format('ddd - DD/MM');
             }
