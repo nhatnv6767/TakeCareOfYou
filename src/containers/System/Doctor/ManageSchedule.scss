@@ -10,8 +10,14 @@
 
   .container {
     .pick-hour-container {
-      height: 150px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
       border: 1px solid red;
+
+      .btn-schedule {
+        border: 1px solid gray;
+      }
     }
   }
 }
