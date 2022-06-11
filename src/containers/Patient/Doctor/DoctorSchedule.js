@@ -20,6 +20,11 @@ class DoctorSchedule extends Component {
         console.log("moment VI", moment(new Date()).format('dddd - DD/MM'));
         console.log("moment EN", moment(new Date()).locale('en').format('ddd - DD/MM'));
 
+        this.setArrDays(language)
+
+    }
+
+    setArrDays = (language) => {
         let allDays = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
@@ -40,22 +45,7 @@ class DoctorSchedule extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
-            let allDays = [];
-            for (let i = 0; i < 7; i++) {
-                let object = {};
-                if (this.props.language === LANGUAGES.VI) {
-                    object.label = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
-                } else {
-                    object.label = moment(new Date()).add(i, 'days').locale('en').format('ddd - DD/MM');
-                }
-
-                object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
-
-                allDays.push(object);
-            }
-            this.setState({
-                allDays: allDays,
-            });
+            this.setArrDays(this.props.language)
         }
     }
 
