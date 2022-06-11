@@ -12,7 +12,8 @@ class ManageSchedule extends Component {
         // kế thừa các props từ cha truyền xuống
         super(props);
         this.state = {
-            listDoctors: []
+            listDoctors: [],
+            selectedDoctor: {}
         };
     }
 
@@ -61,6 +62,7 @@ class ManageSchedule extends Component {
     };
 
     render() {
+        console.log("Manage Schedule check state: ", this.state);
         return (
             <div className="manage-schedule-container">
                 <div className="m-s-title">
