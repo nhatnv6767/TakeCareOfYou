@@ -36,12 +36,9 @@ class Login extends Component {
         });
     };
 
-    handlerKeyDown = (event) => {
-        const keyCode = event.which || event.keyCode;
-        if (keyCode === KeyCodeUtils.ENTER) {
-            event.preventDefault();
-            if (!this.btnLogin.current || this.btnLogin.current.disabled) return;
-            this.btnLogin.current.click();
+    handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+            this.handleLogin();
         }
     };
 
@@ -99,7 +96,7 @@ class Login extends Component {
                                 placeholder="Enter your username"
                                 value={this.state.username}
                                 onChange={(event) => this.handleOnChangeUsername(event)}
-                                onKeyDown={(event) => this.handlerKeyDown(event)}
+                                onKeyDown={(event) => this.handleKeyDown(event)}
                             />
                         </div>
                         <div className="col-12 form-group login-input">
@@ -110,7 +107,7 @@ class Login extends Component {
                                     className="form-control"
                                     placeholder="Enter your password"
                                     onChange={(event) => this.handleOnChangePassword(event)}
-                                    onKeyDown={(event) => this.handlerKeyDown(event)}
+                                    onKeyDown={(event) => this.handleKeyDown(event)}
                                 />
                                 <span
                                     onClick={() => {
