@@ -23,7 +23,12 @@ class DoctorSchedule extends Component {
         let allDays = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
-            object.label = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
+            if(language === LANGUAGES.VI) {
+                object.label = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
+            } else {
+                object.label = moment(new Date()).add(i, 'days').locale('en').format('ddd - DD/MM'));
+            }
+            
             object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
 
             allDays.push(object);
