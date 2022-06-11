@@ -20,7 +20,7 @@ class DoctorSchedule extends Component {
         console.log("moment VI", moment(new Date()).format('dddd - DD/MM'));
         console.log("moment EN", moment(new Date()).locale('en').format('ddd - DD/MM'));
 
-        this.setArrDays(language)
+        this.setArrDays(language);
 
     }
 
@@ -41,11 +41,12 @@ class DoctorSchedule extends Component {
         this.setState({
             allDays: allDays,
         });
-    }
+    };
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
-            this.setArrDays(this.props.language)
+            this.setArrDays(this.props.language);
+            // -> go to Node write API
         }
     }
 
