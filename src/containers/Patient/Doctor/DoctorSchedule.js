@@ -1,12 +1,14 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import "./DoctorSchedule.scss";
-import Select from "react-select";
+import moment from "moment";
 
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            allDays: [],
+        };
     }
 
     async componentDidMount() {
