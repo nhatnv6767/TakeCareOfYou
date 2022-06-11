@@ -139,8 +139,12 @@ class ManageSchedule extends Component {
             formatedDate: formatedDate,
 
         });
-        console.log("Check saveBulkScheduleDoctor", res);
-        console.log("Check result", result);
+        if (res && res.errCode === 0) {
+            toast.success("Save information success!");
+        } else {
+            toast.error("Error when saving data!");
+            console.log("saveBulkScheduleDoctor Err: ", res);
+        }
 
     };
 
