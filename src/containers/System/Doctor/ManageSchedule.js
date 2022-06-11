@@ -114,6 +114,7 @@ class ManageSchedule extends Component {
 
         // let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
         // let formatedDate = moment(currentDate).unix();
+        // Go to NodeJS to fix duplicate data saving
         let formatedDate = new Date(currentDate).getTime();
         if (rangeTime && rangeTime.length > 0) {
             let selectedTime = rangeTime.filter(item => item.isSelected);
