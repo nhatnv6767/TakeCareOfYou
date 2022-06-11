@@ -66,7 +66,7 @@ class ManageSchedule extends Component {
 
     handleOnChangeDatePicker = (date) => {
         this.setState({
-            currentDate: date,
+            currentDate: date[0],
         });
     };
 
@@ -92,7 +92,7 @@ class ManageSchedule extends Component {
                             <DatePicker
                                 onChange={this.handleOnChangeDatePicker}
                                 className="form-control"
-                                value={this.state.currentDate[0]}
+                                value={this.state.currentDate}
                                 // get current date
                                 minDate={new Date()}
                             />
