@@ -115,6 +115,13 @@ class ManageSchedule extends Component {
         if (rangeTime && rangeTime.length > 0) {
             let selectedTime = rangeTime.filter(item => item.isSelected);
             if (selectedTime && selectedTime.length > 0) {
+                selectedTime.map(time => {
+                    let object = {};
+                    object.doctorId = selectedDoctor.value;
+                    object.date = formatedDate;
+                    object.time = time.keyMap;
+                    result.push(object);
+                });
 
             } else {
                 toast.error("Please select range time!");
