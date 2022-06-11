@@ -112,7 +112,8 @@ class ManageSchedule extends Component {
         }
 
 
-        let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
+        // let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
+        let formatedDate = moment(currentDate).unix();
         if (rangeTime && rangeTime.length > 0) {
             let selectedTime = rangeTime.filter(item => item.isSelected);
             if (selectedTime && selectedTime.length > 0) {
