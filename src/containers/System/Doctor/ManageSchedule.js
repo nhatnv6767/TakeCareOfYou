@@ -130,7 +130,9 @@ class ManageSchedule extends Component {
             }
         }
 
-        let res = await saveBulkScheduleDoctor(result)
+        let res = await saveBulkScheduleDoctor({
+            arrSchedule: result
+        });
         console.log("Check saveBulkScheduleDoctor", res);
         console.log("Check result", result);
 
