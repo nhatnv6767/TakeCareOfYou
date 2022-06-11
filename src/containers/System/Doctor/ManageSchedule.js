@@ -9,6 +9,7 @@ import DatePicker from "../../../components/Input/DatePicker";
 import moment from "moment";
 import {toast} from 'react-toastify';
 import _ from "lodash";
+import {saveBulkScheduleDoctor} from "../../../services/userService";
 
 class ManageSchedule extends Component {
     constructor(props) {
@@ -97,7 +98,7 @@ class ManageSchedule extends Component {
         }
     };
 
-    handleSaveSchedule = () => {
+    handleSaveSchedule = async () => {
         let {rangeTime, selectedDoctor, currentDate} = this.state;
         let result = [];
         if (!currentDate) {
@@ -128,6 +129,9 @@ class ManageSchedule extends Component {
                 return;
             }
         }
+
+        let res = await saveBulkScheduleDoctor(result)
+        console.log("Check saveBulkScheduleDoctor", res);
         console.log("Check result", result);
 
     };
