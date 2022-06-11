@@ -98,6 +98,14 @@ class ManageSchedule extends Component {
         }
     };
 
+    handleSaveSchedule = () => {
+        let {rangeTime} = this.state;
+        if (rangeTime && rangeTime.length > 0) {
+            console.log()
+        }
+
+    }
+
     render() {
         let {rangeTime} = this.state;
         let {language} = this.props;
@@ -147,7 +155,10 @@ class ManageSchedule extends Component {
                             }
                         </div>
                         <div className="col-12">
-                            <button className="btn btn-primary btn-save-schedule">
+                            <button
+                                className="btn btn-primary btn-save-schedule"
+                                onClick={() => this.handleSaveSchedule()}
+                            >
                                 <FormattedMessage id="manage-schedule.save-schedule"/>
                             </button>
                         </div>
