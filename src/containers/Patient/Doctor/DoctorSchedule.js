@@ -3,8 +3,8 @@ import {connect} from "react-redux";
 import "./DoctorSchedule.scss";
 import moment from "moment";
 import localization from "moment/locale/vi";
-
 import {LANGUAGES} from "../../../utils";
+import {getScheduleDoctorByDate} from "../../../services/userService";
 
 class DoctorSchedule extends Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class DoctorSchedule extends Component {
 
     }
 
-    setArrDays = (language) => {
+    setArrDays = async (language) => {
         let allDays = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
@@ -38,6 +38,9 @@ class DoctorSchedule extends Component {
 
             allDays.push(object);
         }
+
+        let res = await getScheduleDoctorByDate(32, 1655132400000);
+        console.log("Check res getScheduleDoctorByDate", res);
         this.setState({
             allDays: allDays,
         });
@@ -50,12 +53,18 @@ class DoctorSchedule extends Component {
         }
     }
 
+    handleOnChangeSelect = (event) => {
+        console.log("Everytime choose", event.target.value);
+    };
+
     render() {
         let {allDays} = this.state;
         return (
             <div className="doctor-schedule-container">
                 <div className="all-schedules">
-                    <select>
+                    <select
+                        onChange={(event) => this.handleOnChangeSelect(event)}
+                    >
                         {allDays && allDays.length > 0 &&
                             allDays.map((item, index) => {
                                 return (
