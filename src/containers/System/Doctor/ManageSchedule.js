@@ -2,8 +2,20 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import './ManageSchedule.scss';
 import {FormattedMessage} from 'react-intl';
+import Select from "react-select";
+import * as actions from "../../../store/actions";
 
 class ManageSchedule extends Component {
+    constructor(props) {
+        // kế thừa các props từ cha truyền xuống
+        super(props);
+        this.state = {};
+    }
+
+    componentDidMount() {
+        this.props.fetchAllDoctorsStart();
+    }
+
     render() {
         return (
             <div className="manage-schedule-container">
@@ -33,12 +45,18 @@ class ManageSchedule extends Component {
 
 const mapStateToProps = (state) => {
     return {
+        // state redux adminReducer
+        allDoctors: state.admin.allDoctors,
+        language: state.app.language,
+        
         isLoggedIn: state.user.isLoggedIn,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {};
+    return {
+        fetchAllDoctorsStart: () => dispatch(actions.fetchAllDoctorsStart()),
+    };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ManageSchedule);
