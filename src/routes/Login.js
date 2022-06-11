@@ -117,6 +117,7 @@ class Login extends Component {
                                 className="form-control"
                                 value={username}
                                 onChange={this.onUsernameChange}
+                                onKeyDown={() => this.handlerKeyDown}
                             />
                         </div>
 
@@ -130,6 +131,7 @@ class Login extends Component {
                                 className="form-control"
                                 value={password}
                                 onChange={this.onPasswordChange}
+                                onKeyDown={() => this.handlerKeyDown}
                             />
                         </div>
 
