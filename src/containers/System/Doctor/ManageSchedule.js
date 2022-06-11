@@ -92,8 +92,9 @@ class ManageSchedule extends Component {
                             <DatePicker
                                 onChange={this.handleOnChangeDatePicker}
                                 className="form-control"
-                                selected={this.state.currentDate}
-                                defaultValue={new Date()}
+                                value={this.state.currentDate[0]}
+                                // get current date
+                                minDate={new Date()}
                             />
                         </div>
                         <div className="col-12 pick-hour-container">
