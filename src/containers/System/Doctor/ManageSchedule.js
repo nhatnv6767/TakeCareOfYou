@@ -85,8 +85,15 @@ class ManageSchedule extends Component {
         });
     };
     handleClickBtnTime = (time) => {
-        console.log("Check handleClickBtnTime", time)
-    }
+        let {rangeTime} = this.state;
+        if (rangeTime && rangeTime.length > 0) {
+            rangeTime = rangeTime.map(item => {
+                if (item.id === time.id) item.isSelected = true;
+                return item;
+            });
+            console.log("Check rangeTime", rangeTime);
+        }
+    };
 
     render() {
         // console.log("Manage Schedule check state: ", this.state);
