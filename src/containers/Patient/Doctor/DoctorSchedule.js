@@ -20,29 +20,36 @@ class DoctorSchedule extends Component {
         console.log("moment VI", moment(new Date()).format('dddd - DD/MM'));
         console.log("moment EN", moment(new Date()).locale('en').format('ddd - DD/MM'));
 
-        let arrDate = [];
+        let allDays = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
             object.label = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
             object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
 
-            arrDate.push(object);
+            allDays.push(object);
         }
-        console.log(arrDate);
+        this.setState({
+            allDays: allDays,
+        });
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
     }
 
     render() {
+        let {allDays} = this.state;
         return (
             <div className="doctor-schedule-container">
                 <div className="all-schedules">
                     <select>
-                        <option value="">Thứ 2</option>
-                        <option value="">Thứ 3</option>
-                        <option value="">Thứ 4</option>
-                        <option value="">Thứ 5</option>
+                        {allDays && allDays.length > 0 &&
+                            allDays.map((item, index) => {
+                                return (
+                                    <option value="">{item}</option>
+                                );
+                            })
+                        }
+
                     </select>
                 </div>
                 <div className="all-available-times">
