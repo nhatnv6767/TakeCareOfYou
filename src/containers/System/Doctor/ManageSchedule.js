@@ -8,6 +8,7 @@ import {LANGUAGES, CRUD_ACTIONS} from "../../../utils";
 import {getDetailInforDoctorService} from "../../../services/userService";
 import DatePicker from "../../../components/Input/DatePicker";
 import moment from "moment";
+import {fetchAllScheduleTimeStart} from "../../../store/actions";
 
 class ManageSchedule extends Component {
     constructor(props) {
@@ -113,14 +114,15 @@ const mapStateToProps = (state) => {
         // state redux adminReducer
         allDoctors: state.admin.allDoctors,
         language: state.app.language,
-
         isLoggedIn: state.user.isLoggedIn,
+        allScheduleTime: state.admin.allScheduleTime,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchAllDoctorsStart: () => dispatch(actions.fetchAllDoctorsStart()),
+        fetchAllScheduleTimeStart: () => dispatch(actions.fetchAllScheduleTimeStart()),
     };
 };
 
