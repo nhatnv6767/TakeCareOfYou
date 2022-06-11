@@ -23,6 +23,7 @@ class ManageSchedule extends Component {
 
     componentDidMount() {
         this.props.fetchAllDoctorsStart();
+        this.props.fetchAllScheduleTimeStart();
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -73,6 +74,7 @@ class ManageSchedule extends Component {
 
     render() {
         console.log("Manage Schedule check state: ", this.state);
+        console.log("Manage Schedule check props: ", this.props);
         return (
             <div className="manage-schedule-container">
                 <div className="m-s-title">
