@@ -16,6 +16,21 @@ class ManageSchedule extends Component {
         this.props.fetchAllDoctorsStart();
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.allDoctors !== this.props.allDoctors) {
+            let dataSelect = this.buildDataInputSelect(this.props.allDoctors);
+            this.setState({
+                listDoctors: dataSelect,
+            });
+        }
+        if (prevProps.language !== this.props.language) {
+            let dataSelect = this.buildDataInputSelect(this.props.allDoctors);
+            this.setState({
+                listDoctors: dataSelect,
+            });
+        }
+    }
+
     render() {
         return (
             <div className="manage-schedule-container">
@@ -48,7 +63,7 @@ const mapStateToProps = (state) => {
         // state redux adminReducer
         allDoctors: state.admin.allDoctors,
         language: state.app.language,
-        
+
         isLoggedIn: state.user.isLoggedIn,
     };
 };
