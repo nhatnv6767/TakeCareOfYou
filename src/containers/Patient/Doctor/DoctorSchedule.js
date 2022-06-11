@@ -39,8 +39,7 @@ class DoctorSchedule extends Component {
             allDays.push(object);
         }
 
-        let res = await getScheduleDoctorByDate(32, 1655132400000);
-        console.log("Check res getScheduleDoctorByDate", res);
+
         this.setState({
             allDays: allDays,
         });
@@ -49,11 +48,19 @@ class DoctorSchedule extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
             this.setArrDays(this.props.language);
-            // -> go to Node write API
         }
     }
 
-    handleOnChangeSelect = (event) => {
+    handleOnChangeSelect = async (event) => {
+        if (
+            this.props.match &&
+            this.props.match.params &&
+            this.props.match.params.id
+        ) {
+            let doctorId = this.props.match.params.id;
+            let res = await getScheduleDoctorByDate(32, 1655132400000);
+            console.log("Check res getScheduleDoctorByDate", res);
+        }
         console.log("Everytime choose", event.target.value);
     };
 
