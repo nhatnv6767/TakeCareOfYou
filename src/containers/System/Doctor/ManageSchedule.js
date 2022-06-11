@@ -6,6 +6,7 @@ import Select from "react-select";
 import * as actions from "../../../store/actions";
 import {LANGUAGES, CRUD_ACTIONS} from "../../../utils";
 import {getDetailInforDoctorService} from "../../../services/userService";
+import DatePicker from "../../../components/Input/DatePicker";
 
 class ManageSchedule extends Component {
     constructor(props) {
@@ -80,7 +81,9 @@ class ManageSchedule extends Component {
                         </div>
                         <div className="col-6 form-group">
                             <label>Chọn ngày</label>
-                            <input className="form-control"/>
+                            <DatePicker
+
+                            />
                         </div>
                         <div className="col-12 pick-hour-container">
 
