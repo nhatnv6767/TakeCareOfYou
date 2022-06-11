@@ -111,13 +111,17 @@ class DoctorSchedule extends Component {
                         <i className="fas fa-calendar-alt"><span>Lịch khám</span></i>
                     </div>
                     <div className="time-content">
-                        {allAvailableTimes && allAvailableTimes.length > 0 &&
+                        {allAvailableTimes && allAvailableTimes.length > 0 ?
                             allAvailableTimes.map((item, index) => {
                                 let timeDisplay = language === LANGUAGES.VI ? item.timeTypeData.valueVi : item.timeTypeData.valueEn;
                                 return (
                                     <button key={index}>{timeDisplay}</button>
                                 );
                             })
+                            :
+                            <div>
+                                Không có lịch hẹn trong thời gian này, vui lòng chọn khoảng thời gian khác!
+                            </div>
                         }
 
                     </div>
