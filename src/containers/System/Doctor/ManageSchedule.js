@@ -16,7 +16,7 @@ class ManageSchedule extends Component {
         this.state = {
             listDoctors: [],
             selectedDoctor: {},
-            currentDate: '',
+            currentDate: new Date(),
         };
     }
 
@@ -93,6 +93,7 @@ class ManageSchedule extends Component {
                                 onChange={this.handleOnChangeDatePicker}
                                 className="form-control"
                                 selected={this.state.currentDate}
+                                defaultValue={new Date()}
                             />
                         </div>
                         <div className="col-12 pick-hour-container">
