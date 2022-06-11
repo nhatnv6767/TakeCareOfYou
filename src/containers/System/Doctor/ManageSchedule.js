@@ -42,9 +42,8 @@ class ManageSchedule extends Component {
                     ...item, isSelected: false
                 }));
             }
-            console.log("Check rangeTime", data);
             this.setState({
-                rangeTime: this.props.allScheduleTime
+                rangeTime: data
             });
         }
         // if (prevProps.language !== this.props.language) {
@@ -85,6 +84,9 @@ class ManageSchedule extends Component {
             currentDate: date[0],
         });
     };
+    handleClickBtnTime = (time) => {
+        console.log("Check handleClickBtnTime", time)
+    }
 
     render() {
         // console.log("Manage Schedule check state: ", this.state);
@@ -123,7 +125,11 @@ class ManageSchedule extends Component {
                             {rangeTime && rangeTime.length > 0 &&
                                 rangeTime.map((item, index) => {
                                     return (
-                                        <button className="btn btn-schedule" key={index}>
+                                        <button
+                                            className="btn btn-schedule"
+                                            key={index}
+                                            onClick={() => this.handleClickBtnTime(item)}
+                                        >
                                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
                                         </button>
                                     );
