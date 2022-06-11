@@ -174,7 +174,7 @@ class ManageSchedule extends Component {
                                 className="form-control"
                                 value={this.state.currentDate}
                                 // get current date
-                                minDate={moment(new Date()).subtract(1, 'days')}
+                                minDate={yesterday}
                             />
                         </div>
                         <div className="col-12 pick-hour-container">
