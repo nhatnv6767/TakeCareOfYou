@@ -17,17 +17,18 @@ class DoctorSchedule extends Component {
     async componentDidMount() {
         let {language} = this.props;
 
-        console.log(moment(new Date()).format('dddd - DD/MM'))
-        console.log(moment(new Date()).locale('en').format('ddd - DD/MM'))
+        console.log("moment VI", moment(new Date()).format('dddd - DD/MM'));
+        console.log("moment EN", moment(new Date()).locale('en').format('ddd - DD/MM'));
 
-        let arrDate = []
+        let arrDate = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
-            object.label = moment(new Date()).add(i, 'days').format('dddd - DD/MM')
-            object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf()
+            object.label = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
+            object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
 
-            arrDate.push(object)
+            arrDate.push(object);
         }
+        console.log(arrDate);
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
