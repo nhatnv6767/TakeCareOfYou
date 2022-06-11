@@ -12,11 +12,13 @@ class ManageSchedule extends Component {
                 </div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-4">
-
+                        <div className="col-6 form-group">
+                            <label>Chọn bác sĩ</label>
+                            <input className="form-control"/>
                         </div>
-                        <div className="col-4">
-
+                        <div className="col-6 form-group">
+                            <label>Chọn ngày</label>
+                            <input className="form-control"/>
                         </div>
                     </div>
                 </div>
