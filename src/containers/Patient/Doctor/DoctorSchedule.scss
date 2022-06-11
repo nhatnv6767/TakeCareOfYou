@@ -9,7 +9,17 @@
     }
 
     .time-content {
-      
+      display: flex;
+      gap: 15px;
+      //Khi không đủ không gian, tự động xuống hàng
+      flex-wrap: wrap;
+
+      button {
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        background-color: grey;
+      }
     }
   }
 }
