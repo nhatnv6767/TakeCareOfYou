@@ -147,6 +147,7 @@ class ManageSchedule extends Component {
     render() {
         let {rangeTime} = this.state;
         let {language} = this.props;
+        let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
         return (
             <div className="manage-schedule-container">
                 <div className="m-s-title">
@@ -173,7 +174,7 @@ class ManageSchedule extends Component {
                                 className="form-control"
                                 value={this.state.currentDate}
                                 // get current date
-                                minDate={moment(new Date()).add(1, 'days')}
+                                minDate={moment(new Date()).subtract(1, 'days')}
                             />
                         </div>
                         <div className="col-12 pick-hour-container">
