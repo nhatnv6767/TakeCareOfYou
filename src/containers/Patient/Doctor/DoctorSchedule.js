@@ -45,7 +45,12 @@ class DoctorSchedule extends Component {
                         {allDays && allDays.length > 0 &&
                             allDays.map((item, index) => {
                                 return (
-                                    <option value={item.value} key={index}>{item.label}</option>
+                                    <option
+                                        value={item.value}
+                                        key={index}
+                                    >
+                                        {item.label}
+                                    </option>
                                 );
                             })
                         }
