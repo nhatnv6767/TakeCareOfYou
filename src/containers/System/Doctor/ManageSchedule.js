@@ -88,17 +88,20 @@ class ManageSchedule extends Component {
         let {rangeTime} = this.state;
         if (rangeTime && rangeTime.length > 0) {
             rangeTime = rangeTime.map(item => {
-                if (item.id === time.id) item.isSelected = true;
+                if (item.id === time.id) item.isSelected = !item.isSelected;
                 return item;
             });
-            console.log("Check rangeTime", rangeTime);
+
+            this.setState({
+                rangeTime: rangeTime
+            });
         }
     };
 
     render() {
-        // console.log("Manage Schedule check state: ", this.state);
         let {rangeTime} = this.state;
         let {language} = this.props;
+        console.log("Manage Schedule check state: ", rangeTime);
         return (
             <div className="manage-schedule-container">
                 <div className="m-s-title">
