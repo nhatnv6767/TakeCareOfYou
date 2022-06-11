@@ -91,6 +91,12 @@ class DoctorSchedule extends Component {
                             <i className="fas fa-calendar-alt"> Lịch khám</i>
                         </span>
                     </div>
+                    <div className="time-content">
+                        <button>8-9</button>
+                        <button>8-9</button>
+                        <button>8-9</button>
+                        <button>8-9</button>
+                    </div>
                 </div>
             </div>
         );
