@@ -1,11 +1,15 @@
 .doctor-schedule-container {
+  border: 1px solid green;
+
   .all-schedules {
 
   }
 
   .all-available-times {
     .text-calendar {
-
+      span {
+        text-transform: uppercase;
+      }
     }
 
     .time-content {
