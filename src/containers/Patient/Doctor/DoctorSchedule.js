@@ -71,6 +71,7 @@ class DoctorSchedule extends Component {
 
     render() {
         let {allDays, allAvailableTimes} = this.state;
+        let {language} = this.props;
         return (
             <div className="doctor-schedule-container">
                 <div className="all-schedules">
@@ -99,8 +100,9 @@ class DoctorSchedule extends Component {
                     <div className="time-content">
                         {allAvailableTimes && allAvailableTimes.length > 0 &&
                             allAvailableTimes.map((item, index) => {
+                                let timeDisplay = language === LANGUAGES.VI ? item.timeTypeData.valueVi : item.timeTypeData.valueEn;
                                 return (
-                                    <button key={index}>{item.timeType}</button>
+                                    <button key={index}>{timeDisplay}</button>
                                 );
                             })
                         }
