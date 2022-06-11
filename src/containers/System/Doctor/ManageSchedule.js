@@ -53,28 +53,11 @@ class ManageSchedule extends Component {
     };
 
     handleChangeSelect = async (selectedOption) => {
-        this.setState({selectedOption}, () =>
+        this.setState({selectedDoctor: selectedOption}, () =>
             console.log(`Option selected:`, this.state.selectedOption)
         );
 
-        let res = await getDetailInforDoctorService(selectedOption.value);
-        if (res && res.errCode === 0 && res.data && res.data.Markdown) {
-            let mardown = res.data.Markdown;
-            this.setState({
-                contentHTML: mardown.contentHTML,
-                contentMarkdown: mardown.contentMarkdown,
-                description: mardown.description,
-                hasOldData: true,
-            });
-        } else {
-            this.setState({
-                contentHTML: "",
-                contentMarkdown: "",
-                description: "",
-                hasOldData: false,
-            });
-        }
-        console.log(`getDetailInforDoctorService:`, res);
+
     };
 
     render() {
