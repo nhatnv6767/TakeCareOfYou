@@ -7,6 +7,8 @@ import * as actions from "../../../store/actions";
 import {LANGUAGES, CRUD_ACTIONS} from "../../../utils";
 import {getDetailInforDoctorService} from "../../../services/userService";
 import DatePicker from "../../../components/Input/DatePicker";
+import moment from "moment";
+import FormattedDate from "../../../components/Formating/FormattedDate";
 
 class ManageSchedule extends Component {
     constructor(props) {
@@ -14,7 +16,8 @@ class ManageSchedule extends Component {
         super(props);
         this.state = {
             listDoctors: [],
-            selectedDoctor: {}
+            selectedDoctor: {},
+            currentDate: ''
         };
     }
 
@@ -62,8 +65,10 @@ class ManageSchedule extends Component {
 
     };
 
-    handleOnChangeDatePicker = () => {
-
+    handleOnChangeDatePicker = (date) => {
+        this.setState({
+            currentDate: date,
+        });
     };
 
     render() {
@@ -91,7 +96,7 @@ class ManageSchedule extends Component {
                             />
                         </div>
                         <div className="col-12 pick-hour-container">
-
+                            <FormattedDate value={this.state.currentDate}/>
                         </div>
                         <button className="btn btn-primary">Lưu thông tin</button>
                     </div>
