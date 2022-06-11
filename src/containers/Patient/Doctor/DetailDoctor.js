@@ -68,7 +68,9 @@ class DetailDoctor extends Component {
                     </div>
                     <div className="schedule-doctor">
                         <div className="content-left">
-                            <DoctorSchedule/>
+                            <DoctorSchedule
+                                detailDoctor={detailDoctor}
+                            />
                         </div>
                         <div className="content-right">
 
