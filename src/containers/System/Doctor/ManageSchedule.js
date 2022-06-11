@@ -63,7 +63,7 @@ class ManageSchedule extends Component {
     };
 
     handleOnChangeDatePicker = () => {
-        
+
     };
 
     render() {
@@ -87,6 +87,7 @@ class ManageSchedule extends Component {
                             <label>Chọn ngày</label>
                             <DatePicker
                                 onChange={this.handleOnChangeDatePicker}
+                                className="form-control"
                             />
                         </div>
                         <div className="col-12 pick-hour-container">
