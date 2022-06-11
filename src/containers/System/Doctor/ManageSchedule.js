@@ -5,11 +5,10 @@ import {FormattedMessage} from 'react-intl';
 import Select from "react-select";
 import * as actions from "../../../store/actions";
 import {LANGUAGES, CRUD_ACTIONS} from "../../../utils";
-import {getDetailInforDoctorService} from "../../../services/userService";
 import DatePicker from "../../../components/Input/DatePicker";
 import moment from "moment";
-import {fetchAllScheduleTimeStart} from "../../../store/actions";
-import button from "bootstrap/js/src/button";
+import {toast} from 'react-toastify';
+import _ from "lodash";
 
 class ManageSchedule extends Component {
     constructor(props) {
@@ -100,8 +99,13 @@ class ManageSchedule extends Component {
 
     handleSaveSchedule = () => {
         let {rangeTime, selectedDoctor, currentDate} = this.state;
-        console.log("Handle Save Schedule", this.state);
-        if (rangeTime && rangeTime.length > 0) {
+        console.log("Handle Save Schedule", moment(currentDate).format('DD/MM/YYYY'));
+        if (!currentDate) {
+            toast.error("Invalid Date");
+        }
+
+        if (selectedDoctor && _.isEmpty(selectedDoctor)) {
+            toast.error("Please select a doctor");
         }
 
     };
