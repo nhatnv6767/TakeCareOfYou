@@ -137,6 +137,7 @@ class ManageSchedule extends Component {
             arrSchedule: result,
             doctorId: selectedDoctor.value,
             formatedDate: "" + formatedDate,
+            // Go to Node to Fix
         });
         console.log("Check saveBulkScheduleDoctor", res);
         console.log("Check result", result);
