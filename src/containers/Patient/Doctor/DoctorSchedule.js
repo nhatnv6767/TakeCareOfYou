@@ -2,6 +2,9 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import "./DoctorSchedule.scss";
 import moment from "moment";
+import localization from "moment/locale/vi";
+
+import {LANGUAGES} from "../../../utils";
 
 class DoctorSchedule extends Component {
     constructor(props) {
@@ -12,7 +15,19 @@ class DoctorSchedule extends Component {
     }
 
     async componentDidMount() {
+        let {language} = this.props;
 
+        console.log(moment(new Date()).format('dddd - DD/MM'))
+        console.log(moment(new Date()).locale('en').format('ddd - DD/MM'))
+
+        let arrDate = []
+        for (let i = 0; i < 7; i++) {
+            let object = {};
+            object.label = moment(new Date()).add(i, 'days').format('dddd - DD/MM')
+            object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf()
+
+            arrDate.push(object)
+        }
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
