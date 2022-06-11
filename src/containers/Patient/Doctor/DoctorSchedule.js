@@ -1,12 +1,11 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import "./DetailDoctor.scss";
-import {LANGUAGES} from "../../../utils";
+import "./DoctorSchedule.scss";
 
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {};
     }
 
     async componentDidMount() {
