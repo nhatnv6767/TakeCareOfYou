@@ -4,7 +4,7 @@ import './ManageSchedule.scss';
 import {FormattedMessage} from 'react-intl';
 import Select from "react-select";
 import * as actions from "../../../store/actions";
-import {LANGUAGES, CRUD_ACTIONS} from "../../../utils";
+import {LANGUAGES, CRUD_ACTIONS, dateFormat} from "../../../utils";
 import DatePicker from "../../../components/Input/DatePicker";
 import moment from "moment";
 import {toast} from 'react-toastify';
@@ -99,13 +99,20 @@ class ManageSchedule extends Component {
 
     handleSaveSchedule = () => {
         let {rangeTime, selectedDoctor, currentDate} = this.state;
-        console.log("Handle Save Schedule", moment(currentDate).format('DD/MM/YYYY'));
         if (!currentDate) {
             toast.error("Invalid Date");
+            return;
         }
 
         if (selectedDoctor && _.isEmpty(selectedDoctor)) {
             toast.error("Please select a doctor");
+            return;
+        }
+
+        let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
+        if (rangeTime && rangeTime.length > 0) {
+            let selectedTime = rangeTime.filter(item => item.isSelected);
+            console.log("selected time: ", selectedTime);
         }
 
     };
