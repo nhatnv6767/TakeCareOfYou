@@ -42,7 +42,8 @@ class DoctorSchedule extends Component {
         for (let i = 0; i < 7; i++) {
             let object = {};
             if (language === LANGUAGES.VI) {
-                object.label = this.titleCase(moment(new Date()).add(i, 'days').format('dddd - DD/MM'));
+                let labelVi = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
+                object.label = this.titleCase(labelVi);
             } else {
                 object.label = moment(new Date()).add(i, 'days').locale('en').format('ddd - DD/MM');
             }

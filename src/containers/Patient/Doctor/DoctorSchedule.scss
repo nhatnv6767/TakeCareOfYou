@@ -3,7 +3,17 @@
   height: 100%;
 
   .all-schedules {
+    select {
+      border-bottom: 1px solid #ddd;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      cursor: pointer;
 
+      option {
+        cursor: pointer;
+      }
+    }
   }
 
   .all-available-times {
