@@ -136,8 +136,8 @@ class ManageSchedule extends Component {
         let res = await saveBulkScheduleDoctor({
             arrSchedule: result,
             doctorId: selectedDoctor.value,
-            formatedDate: "" + formatedDate,
-            // Go to Node to Fix
+            formatedDate: formatedDate,
+
         });
         console.log("Check saveBulkScheduleDoctor", res);
         console.log("Check result", result);
