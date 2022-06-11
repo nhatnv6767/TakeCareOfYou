@@ -18,7 +18,10 @@ class DoctorSchedule extends Component {
     async componentDidMount() {
         let {language} = this.props;
 
-        this.setArrDays(language);
+        let allDays = this.getArrDays(language);
+        this.setState({
+            allDays: allDays,
+        });
 
     }
 
@@ -37,7 +40,7 @@ class DoctorSchedule extends Component {
         return splitStr.join(' ');
     };
 
-    setArrDays = (language) => {
+    getArrDays = (language) => {
         let allDays = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
@@ -53,14 +56,15 @@ class DoctorSchedule extends Component {
             allDays.push(object);
         }
 
-        this.setState({
-            allDays: allDays,
-        });
+        return allDays;
     };
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
-            this.setArrDays(this.props.language);
+            let allDays = this.getArrDays(this.props.language);
+            this.setState({
+                allDays: allDays
+            });
         }
     }
 
