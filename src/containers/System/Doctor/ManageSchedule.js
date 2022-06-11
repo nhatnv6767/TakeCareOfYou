@@ -9,6 +9,7 @@ import {getDetailInforDoctorService} from "../../../services/userService";
 import DatePicker from "../../../components/Input/DatePicker";
 import moment from "moment";
 import {fetchAllScheduleTimeStart} from "../../../store/actions";
+import button from "bootstrap/js/src/button";
 
 class ManageSchedule extends Component {
     constructor(props) {
@@ -80,6 +81,7 @@ class ManageSchedule extends Component {
 
     render() {
         console.log("Manage Schedule check state: ", this.state);
+        let {rangeTime} = this.state;
         return (
             <div className="manage-schedule-container">
                 <div className="m-s-title">
@@ -106,7 +108,15 @@ class ManageSchedule extends Component {
                             />
                         </div>
                         <div className="col-12 pick-hour-container">
-
+                            {rangeTime && rangeTime.length > 0 &&
+                                rangeTime.map((item, index) => {
+                                    return (
+                                        <button className="btn" key="index">
+                                            {item.valueVi}
+                                        </button>
+                                    );
+                                })
+                            }
                         </div>
                         <button className="btn btn-primary">Lưu thông tin</button>
                     </div>
