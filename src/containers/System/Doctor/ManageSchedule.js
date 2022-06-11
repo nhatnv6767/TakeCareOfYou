@@ -20,6 +20,10 @@ class ManageSchedule extends Component {
                             <label>Chọn ngày</label>
                             <input className="form-control"/>
                         </div>
+                        <div className="col-12 pick-hour-container">
+
+                        </div>
+                        <button className="btn btn-primary">Lưu thông tin</button>
                     </div>
                 </div>
             </div>
