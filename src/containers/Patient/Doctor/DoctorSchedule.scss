@@ -1,5 +1,6 @@
 .doctor-schedule-container {
-  border: 1px solid green;
+  border-right: 1px solid green;
+  height: 100%;
 
   .all-schedules {
 
@@ -30,6 +31,7 @@
         min-width: 120px;
         border-radius: 3px;
         font-weight: 550;
+        color: #333;
 
         &:hover {
           background-color: #45c3d2;
