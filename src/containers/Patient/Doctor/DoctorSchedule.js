@@ -86,7 +86,11 @@ class DoctorSchedule extends Component {
                     </select>
                 </div>
                 <div className="all-available-times">
-
+                    <div className="text-calendar">
+                        <span>
+                            <i className="fas fa-calendar-alt"> Lịch khám</i>
+                        </span>
+                    </div>
                 </div>
             </div>
         );
