@@ -100,11 +100,11 @@ class DoctorSchedule extends Component {
                         {allAvailableTimes && allAvailableTimes.length > 0 &&
                             allAvailableTimes.map((item, index) => {
                                 return (
-                                    <button>8-9</button>
-                                )
+                                    <button key={index}>{item.timeType}</button>
+                                );
                             })
                         }
-                        
+
                     </div>
                 </div>
             </div>
