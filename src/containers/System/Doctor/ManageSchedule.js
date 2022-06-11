@@ -36,11 +36,10 @@ class ManageSchedule extends Component {
             });
         }
         if (prevProps.allScheduleTime !== this.props.allScheduleTime) {
-
             let data = this.props.allScheduleTime;
             if (data && data.length > 0) {
-                data.map(item => ({
-                    ...item, isSelected: "false"
+                data = data.map(item => ({
+                    ...item, isSelected: false
                 }));
             }
             console.log("Check rangeTime", data);
