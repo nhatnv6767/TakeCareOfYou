@@ -59,18 +59,18 @@ class DoctorSchedule extends Component {
             let doctorId = this.props.doctorIdFromParent;
             let date = event.target.value;
             let res = await getScheduleDoctorByDate(doctorId, date);
-            let allTime = [];
+
             if (res && res.errCode === 0) {
-                allTime = res.data;
-            } else {
-                
+                this.setState({
+                    allAvailableTimes: res.data ? res.data : []
+                });
             }
             console.log("Check res getScheduleDoctorByDate", res);
         }
     };
 
     render() {
-        let {allDays} = this.state;
+        let {allDays, allAvailableTimes} = this.state;
         return (
             <div className="doctor-schedule-container">
                 <div className="all-schedules">
@@ -97,10 +97,14 @@ class DoctorSchedule extends Component {
                         <i className="fas fa-calendar-alt"><span>Lịch khám</span></i>
                     </div>
                     <div className="time-content">
-                        <button>8-9</button>
-                        <button>8-9</button>
-                        <button>8-9</button>
-                        <button>8-9</button>
+                        {allAvailableTimes && allAvailableTimes.length > 0 &&
+                            allAvailableTimes.map((item, index) => {
+                                return (
+                                    <button>8-9</button>
+                                )
+                            })
+                        }
+                        
                     </div>
                 </div>
             </div>
