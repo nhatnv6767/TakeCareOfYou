@@ -99,17 +99,16 @@ class ManageSchedule extends Component {
     };
 
     handleSaveSchedule = () => {
-        let {rangeTime} = this.state;
+        let {rangeTime, selectedDoctor, currentDate} = this.state;
+        console.log("Handle Save Schedule", this.state);
         if (rangeTime && rangeTime.length > 0) {
-            console.log()
         }
 
-    }
+    };
 
     render() {
         let {rangeTime} = this.state;
         let {language} = this.props;
-        console.log("Manage Schedule check state: ", rangeTime);
         return (
             <div className="manage-schedule-container">
                 <div className="m-s-title">
