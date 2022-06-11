@@ -39,10 +39,9 @@ class ManageSchedule extends Component {
 
             let data = this.props.allScheduleTime;
             if (data && data.length > 0) {
-                data = data.map(item => {
-                    item.isSelected = false;
-                    return item;
-                });
+                data.map(item => ({
+                    ...item, isSelected: "false"
+                }));
             }
             console.log("Check rangeTime", data);
             this.setState({
@@ -89,7 +88,7 @@ class ManageSchedule extends Component {
     };
 
     render() {
-        console.log("Manage Schedule check state: ", this.state);
+        // console.log("Manage Schedule check state: ", this.state);
         let {rangeTime} = this.state;
         let {language} = this.props;
         return (
