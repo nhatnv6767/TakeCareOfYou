@@ -4,12 +4,15 @@ import './ManageSchedule.scss';
 import {FormattedMessage} from 'react-intl';
 import Select from "react-select";
 import * as actions from "../../../store/actions";
+import {LANGUAGES} from "../../../utils";
 
 class ManageSchedule extends Component {
     constructor(props) {
         // kế thừa các props từ cha truyền xuống
         super(props);
-        this.state = {};
+        this.state = {
+            listDoctors: []
+        };
     }
 
     componentDidMount() {
@@ -23,13 +26,30 @@ class ManageSchedule extends Component {
                 listDoctors: dataSelect,
             });
         }
-        if (prevProps.language !== this.props.language) {
-            let dataSelect = this.buildDataInputSelect(this.props.allDoctors);
-            this.setState({
-                listDoctors: dataSelect,
+        // if (prevProps.language !== this.props.language) {
+        //     let dataSelect = this.buildDataInputSelect(this.props.allDoctors);
+        //     this.setState({
+        //         listDoctors: dataSelect,
+        //     });
+        // }
+    }
+
+    buildDataInputSelect = (inputData) => {
+        let result = [];
+        let {language} = this.props;
+        if (inputData && inputData.length > 0) {
+            inputData.map((item, index) => {
+                let object = {};
+                let labelVi = `${item.lastName} ${item.firstName}`;
+                let labelEn = `${item.firstName} ${item.lastName}`;
+                object.label = language === LANGUAGES.VI ? labelVi : labelEn;
+                object.value = item.id;
+                result.push(object);
             });
         }
-    }
+
+        return result;
+    };
 
     render() {
         return (
