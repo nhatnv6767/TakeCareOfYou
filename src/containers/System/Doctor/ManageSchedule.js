@@ -82,6 +82,7 @@ class ManageSchedule extends Component {
     render() {
         console.log("Manage Schedule check state: ", this.state);
         let {rangeTime} = this.state;
+        let {language} = this.props;
         return (
             <div className="manage-schedule-container">
                 <div className="m-s-title">
@@ -111,8 +112,8 @@ class ManageSchedule extends Component {
                             {rangeTime && rangeTime.length > 0 &&
                                 rangeTime.map((item, index) => {
                                     return (
-                                        <button className="btn" key="index">
-                                            {item.valueVi}
+                                        <button className="btn btn-info" key={index}>
+                                            {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
                                         </button>
                                     );
                                 })
