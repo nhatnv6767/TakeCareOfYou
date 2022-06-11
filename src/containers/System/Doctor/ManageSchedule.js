@@ -4,7 +4,8 @@ import './ManageSchedule.scss';
 import {FormattedMessage} from 'react-intl';
 import Select from "react-select";
 import * as actions from "../../../store/actions";
-import {LANGUAGES} from "../../../utils";
+import {LANGUAGES, CRUD_ACTIONS} from "../../../utils";
+import {getDetailInforDoctorService} from "../../../services/userService";
 
 class ManageSchedule extends Component {
     constructor(props) {
@@ -51,6 +52,31 @@ class ManageSchedule extends Component {
         return result;
     };
 
+    handleChangeSelect = async (selectedOption) => {
+        this.setState({selectedOption}, () =>
+            console.log(`Option selected:`, this.state.selectedOption)
+        );
+
+        let res = await getDetailInforDoctorService(selectedOption.value);
+        if (res && res.errCode === 0 && res.data && res.data.Markdown) {
+            let mardown = res.data.Markdown;
+            this.setState({
+                contentHTML: mardown.contentHTML,
+                contentMarkdown: mardown.contentMarkdown,
+                description: mardown.description,
+                hasOldData: true,
+            });
+        } else {
+            this.setState({
+                contentHTML: "",
+                contentMarkdown: "",
+                description: "",
+                hasOldData: false,
+            });
+        }
+        console.log(`getDetailInforDoctorService:`, res);
+    };
+
     render() {
         return (
             <div className="manage-schedule-container">
@@ -62,8 +88,8 @@ class ManageSchedule extends Component {
                         <div className="col-6 form-group">
                             <label>Chọn bác sĩ</label>
                             <Select
-                                // value={this.state.selectedOption}
-                                // onChange={this.handleChangeSelect}
+                                value={this.state.selectedDoctor}
+                                onChange={this.handleChangeSelect}
                                 options={this.state.listDoctors}
                             />
                         </div>
