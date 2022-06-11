@@ -99,6 +99,7 @@ class ManageSchedule extends Component {
 
     handleSaveSchedule = () => {
         let {rangeTime, selectedDoctor, currentDate} = this.state;
+        let result = [];
         if (!currentDate) {
             toast.error("Invalid Date");
             return;
@@ -109,11 +110,18 @@ class ManageSchedule extends Component {
             return;
         }
 
+
         let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
         if (rangeTime && rangeTime.length > 0) {
             let selectedTime = rangeTime.filter(item => item.isSelected);
-            console.log("selected time: ", selectedTime);
+            if (selectedTime && selectedTime.length > 0) {
+
+            } else {
+                toast.error("Please select range time!");
+                return;
+            }
         }
+        console.log("Check result", result);
 
     };
 
