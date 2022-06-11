@@ -14,12 +14,16 @@
       gap: 20px;
       flex-wrap: wrap;
       border: 1px solid red;
-      padding-top: 20px;
+      padding: 20px;
 
       .btn-schedule {
         padding: 5px 17px;
         border: 1px solid gray;
       }
+    }
+
+    .btn-save-schedule {
+      margin-top: 20px;
     }
   }
 }

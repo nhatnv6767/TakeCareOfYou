@@ -120,7 +120,7 @@ class ManageSchedule extends Component {
                             }
                         </div>
                         <div className="col-12">
-                            <button className="btn btn-primary">Lưu thông tin</button>
+                            <button className="btn btn-primary btn-save-schedule">Lưu thông tin</button>
                         </div>
                     </div>
                 </div>
