@@ -69,6 +69,8 @@ class DetailDoctor extends Component {
                     <div className="schedule-doctor">
                         <div className="content-left">
                             <DoctorSchedule
+                                // nếu đúng điều kiện thì trả về id,
+                                // không đúng thì trả về 1 giá trị đặc biệt <không có>
                                 doctorIdFromParent={detailDoctor && detailDoctor.id ?
                                     detailDoctor.id : -1
                                 }

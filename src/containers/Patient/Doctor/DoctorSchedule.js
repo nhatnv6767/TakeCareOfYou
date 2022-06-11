@@ -52,11 +52,10 @@ class DoctorSchedule extends Component {
 
     handleOnChangeSelect = async (event) => {
         if (
-            this.props.match &&
-            this.props.match.params &&
-            this.props.match.params.id
+            this.props.doctorIdFromParent &&
+            this.props.doctorIdFromParent !== -1
         ) {
-            let doctorId = this.props.match.params.id;
+            let doctorId = this.props.doctorIdFromParent;
             let date = event.target.value;
             let res = await getScheduleDoctorByDate(doctorId, date);
             console.log("Check res getScheduleDoctorByDate", res);
