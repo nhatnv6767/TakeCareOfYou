@@ -55,7 +55,7 @@ const getScheduleDoctorByDate = (doctorId, date) => {
 };
 
 const getExtraInforDoctorById = (doctorId) => {
-    return axios.get(`/api/get-extra-infor-doctor-by-id=${doctorId}`);
+    return axios.get(`/api/get-extra-infor-doctor-by-id?doctorId=${doctorId}`);
 };
 
 export {
