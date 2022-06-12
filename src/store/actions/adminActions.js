@@ -423,7 +423,7 @@ export const fetchRequiredDoctorInforStart = () => {
 
 export const fetchRequiredDoctorInforSuccess = (allRequiredData) => ({
     type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS,
-    dataRequired: allRequiredData,
+    allRequiredData: allRequiredData,
 });
 
 export const fetchRequiredDoctorInforFailed = () => ({

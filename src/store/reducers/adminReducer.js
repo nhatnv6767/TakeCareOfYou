@@ -137,9 +137,7 @@ const adminReducer = (state = initialState, action) => {
             };
 
         case actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS:
-            state.allRequiredDoctorInfor = action.dataRequired;
-
-            console.log("Check fetch required doctor data action: ", action)
+            state.allRequiredDoctorInfor = action.allRequiredData;
             return {
                 ...state,
             };

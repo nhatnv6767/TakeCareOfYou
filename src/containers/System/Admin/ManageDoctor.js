@@ -221,6 +221,7 @@ const mapStateToProps = (state) => {
         // state redux adminReducer
         allDoctors: state.admin.allDoctors,
         language: state.app.language,
+        allRequiredDoctorInfor: state.admin.allRequiredDoctorInfor,
     };
 };
 
