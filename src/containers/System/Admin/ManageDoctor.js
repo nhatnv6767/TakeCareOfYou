@@ -181,7 +181,7 @@ class ManageDoctor extends Component {
                         <Select
                             // value={this.state.selectedOption}
                             onChange={this.handleChangeSelect}
-                            options={this.state.listDoctors}
+                            options={this.state.listPrice}
                             placeholder={"Chọn giá"}
                         />
                     </div>
@@ -191,7 +191,7 @@ class ManageDoctor extends Component {
                         <Select
                             // value={this.state.selectedOption}
                             onChange={this.handleChangeSelect}
-                            options={this.state.listDoctors}
+                            options={this.state.listPayment}
                             placeholder={"Chọn phương thức thanh toán"}
                         />
                     </div>
@@ -201,7 +201,7 @@ class ManageDoctor extends Component {
                         <Select
                             // value={this.state.selectedOption}
                             onChange={this.handleChangeSelect}
-                            options={this.state.listDoctors}
+                            options={this.state.listProvince}
                             placeholder={"Chọn tỉnh thành"}
                         />
                     </div>
