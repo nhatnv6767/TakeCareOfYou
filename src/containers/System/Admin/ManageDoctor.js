@@ -113,8 +113,10 @@ class ManageDoctor extends Component {
         });
     };
 
+
     handleChangeSelect = async (selectedOption) => {
         this.setState({selectedOption});
+        let {listPayment, listPrice, listProvince} = this.state;
 
         let res = await getDetailInforDoctorService(selectedOption.value);
         if (res && res.errCode === 0 && res.data && res.data.Markdown) {
@@ -122,6 +124,12 @@ class ManageDoctor extends Component {
             let doctorInforData = res.data.Doctor_Infor;
             let addressClinic = "", nameClinic = "", note = "",
                 paymentId = "", priceId = "", provinceId = "";
+
+            let findItem = listPayment.find(item => {
+                if (item.value === paymentId) return item
+            })
+
+            console.log("Check findItem Payment: ", findItem, listPayment)
 
             if (doctorInforData) {
                 addressClinic = doctorInforData.addressClinic;
