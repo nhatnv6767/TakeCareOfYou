@@ -79,4 +79,7 @@ here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-b
 
 https://docs.google.com/spreadsheets/d/175ts9y-bJGAwEUtVEFojJQ4nFCH_lIU0poA0wVjM_lk/edit#gid=466017350
 
-- start edit with node server #76 API NODEJS
+- start edit with node server
+
+// fix allcodes database
+https://www.dropbox.com/s/z1tpqrvfqc6580w/%2378.xlsx?dl=0
