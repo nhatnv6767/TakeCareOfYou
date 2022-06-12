@@ -123,7 +123,9 @@ class ManageDoctor extends Component {
             let mardown = res.data.Markdown;
             let doctorInforData = res.data.Doctor_Infor;
             let addressClinic = "", nameClinic = "", note = "",
-                paymentId = "", priceId = "", provinceId = "";
+                paymentId = "", priceId = "", provinceId = "",
+                selectedPayment = "", selectedProvince = "",
+                selectedPrice = "";
 
 
             if (doctorInforData) {
@@ -134,15 +136,15 @@ class ManageDoctor extends Component {
                 priceId = doctorInforData.priceId;
                 provinceId = doctorInforData.provinceId;
 
-                let selectedPayment = listPayment.find(item => {
+                selectedPayment = listPayment.find(item => {
                     return item && item.value === paymentId;
                 });
 
-                let selectedProvince = listProvince.find(item => {
+                selectedProvince = listProvince.find(item => {
                     return item && item.value === provinceId;
                 });
 
-                let selectedPrice = listPrice.find(item => {
+                selectedPrice = listPrice.find(item => {
                     return item && item.value === priceId;
                 });
 
@@ -160,9 +162,7 @@ class ManageDoctor extends Component {
                 selectedPayment: selectedPayment,
                 selectedPrice: selectedPrice,
                 selectedProvince: selectedProvince,
-                // selectedPayment: selectedPayment,
-                // priceId: priceId,
-                // provinceId: provinceId,
+
             });
         } else {
             this.setState({
@@ -174,9 +174,9 @@ class ManageDoctor extends Component {
                 addressClinic: "",
                 nameClinic: "",
                 note: "",
-                // paymentId: "",
-                // priceId: "",
-                // provinceId: "",
+                selectedPayment: "",
+                selectedPrice: "",
+                selectedProvince: "",
             });
         }
         console.log(`getDetailInforDoctorService:`, res);
