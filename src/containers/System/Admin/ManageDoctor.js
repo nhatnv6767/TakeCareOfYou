@@ -102,7 +102,14 @@ class ManageDoctor extends Component {
             contentMarkdown: this.state.contentMarkdown,
             description: this.state.description,
             doctorId: this.state.selectedOption.value,
-            action: hasOldData ? CRUD_ACTIONS.EDIT : CRUD_ACTIONS.CREATE
+            action: hasOldData ? CRUD_ACTIONS.EDIT : CRUD_ACTIONS.CREATE,
+
+            selectedPrice: this.state.selectedPrice.value,
+            selectedPayment: this.state.selectedPayment.value,
+            selectedProvince: this.state.selectedProvince.value,
+            nameClinic: this.state.nameClinic,
+            addressClinic: this.state.addressClinic,
+            note: this.state.note,
         });
     };
 
@@ -140,7 +147,7 @@ class ManageDoctor extends Component {
     };
 
     handleOnChangeText = (event, id) => {
-        let stateCopy = {...this.state}
+        let stateCopy = {...this.state};
         stateCopy[id] = event.target.value;
 
         this.setState({
