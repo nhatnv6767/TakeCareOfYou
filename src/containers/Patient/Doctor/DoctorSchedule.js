@@ -47,6 +47,13 @@ class DoctorSchedule extends Component {
         for (let i = 0; i < 7; i++) {
             let object = {};
             if (language === LANGUAGES.VI) {
+
+                if (i === 0) {
+                    let labelViTempt = moment(new Date()).add(i, 'days').format('DD/MM')
+                    let today = `Hôm nay - ${labelViTempt}`
+                    console.log(today)
+                }
+
                 let labelVi = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
                 object.label = this.titleCase(labelVi);
             } else {
