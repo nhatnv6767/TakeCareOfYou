@@ -160,7 +160,7 @@ class ManageDoctor extends Component {
                             value={this.state.selectedOption}
                             onChange={this.handleChangeSelect}
                             options={this.state.listDoctors}
-                            placeholder={"Chọn bác sĩ"}
+                            placeholder={<FormattedMessage id="admin.manage-doctor.choose-doctor"/>}
                         />
                     </div>
                     <div className="content-right form-group">
@@ -182,7 +182,7 @@ class ManageDoctor extends Component {
                             // value={this.state.selectedOption}
                             // onChange={this.handleChangeSelect}
                             options={this.state.listPrice}
-                            placeholder={"Chọn giá"}
+                            placeholder={<FormattedMessage id="admin.manage-doctor.price"/>}
                         />
                     </div>
 
@@ -192,7 +192,7 @@ class ManageDoctor extends Component {
                             // value={this.state.selectedOption}
                             // onChange={this.handleChangeSelect}
                             options={this.state.listPayment}
-                            placeholder={"Chọn phương thức thanh toán"}
+                            placeholder={<FormattedMessage id="admin.manage-doctor.payment"/>}
                         />
                     </div>
 
@@ -202,7 +202,7 @@ class ManageDoctor extends Component {
                             // value={this.state.selectedOption}
                             // onChange={this.handleChangeSelect}
                             options={this.state.listProvince}
-                            placeholder={"Chọn tỉnh thành"}
+                            placeholder={<FormattedMessage id="admin.manage-doctor.province"/>}
                         />
                     </div>
 
