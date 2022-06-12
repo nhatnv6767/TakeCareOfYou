@@ -79,9 +79,9 @@
       "introduce": "Thông tin giới thiệu:",
       "save-infor": "Lưu thông tin",
       "create-infor": "Tạo thông tin",
-      "price": "Chọn giá",
-      "payment": "Chọn phương thức thanh toán",
-      "province": "Chọn tỉnh thành",
+      "price": "Giá khám bệnh",
+      "payment": "Phương thức thanh toán",
+      "province": "Tỉnh thành",
       "clinic-name": "Tên phòng khám",
       "clinic-address": "Địa chỉ phòng khám",
       "note": "Ghi chú"

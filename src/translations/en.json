@@ -79,11 +79,11 @@
       "introduce": "Introduction Information:",
       "save-infor": "Save information",
       "create-infor": "Create information",
-      "price": "Choose a price",
-      "payment": "Choose a payment",
-      "province": "Choose a province",
-      "clinic-name": "Clinic Name",
-      "clinic-address": "Clinic Address",
+      "price": "Price",
+      "payment": "Payment",
+      "province": "Province",
+      "clinic-name": "Clinic's name",
+      "clinic-address": "Clinic's address",
       "note": "Note"
     }
   }
