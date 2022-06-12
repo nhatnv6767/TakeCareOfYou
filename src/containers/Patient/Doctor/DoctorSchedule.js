@@ -23,7 +23,7 @@ class DoctorSchedule extends Component {
 
             this.setState({
                 allDays: allDays,
-                allAvailableTimes: res.data
+                allAvailableTimes: res.data ? res.data : []
             });
         }
 
