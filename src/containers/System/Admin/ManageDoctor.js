@@ -9,7 +9,7 @@ import MdEditor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
 import Select from "react-select";
 import {LANGUAGES, CRUD_ACTIONS, CommonUtils} from "../../../utils";
-import {getDetailInforDoctorService} from "../../../services/userService"
+import {getDetailInforDoctorService} from "../../../services/userService";
 
 // Initialize a markdown parser
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -73,22 +73,22 @@ class ManageDoctor extends Component {
 
         let res = await getDetailInforDoctorService(selectedOption.value);
         if (res && res.errCode === 0 && res.data && res.data.Markdown) {
-            let mardown = res.data.Markdown
+            let mardown = res.data.Markdown;
             this.setState({
                 contentHTML: mardown.contentHTML,
                 contentMarkdown: mardown.contentMarkdown,
                 description: mardown.description,
                 hasOldData: true,
-            })
+            });
         } else {
             this.setState({
                 contentHTML: "",
                 contentMarkdown: "",
                 description: "",
                 hasOldData: false,
-            })
+            });
         }
-        console.log(`getDetailInforDoctorService:`, res)
+        console.log(`getDetailInforDoctorService:`, res);
     };
 
     handleOnChangeDesc = (event) => {
@@ -118,7 +118,9 @@ class ManageDoctor extends Component {
         let {hasOldData} = this.state;
         return (
             <div className="manage-doctor-container">
-                <div className="manage-doctor-title">Tạo thêm thông tin cho bác sĩ</div>
+                <div className="manage-doctor-title">
+                    <FormattedMessage id="admin.manage-doctor.title"/>
+                </div>
                 <div className="more-infor">
                     <div className="content-left form-group">
                         <label>Chọn bác sĩ</label>

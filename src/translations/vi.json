@@ -71,5 +71,10 @@
       "choose": "Chọn ",
       "and-set-free": " và đặt (miễn phí)"
     }
+  },
+  "admin": {
+    "manage-doctor": {
+      "title": "Tạo thêm thông tin cho bác sĩ"
+    }
   }
 }

@@ -71,5 +71,10 @@
       "choose": "Choose ",
       "and-set-free": " and booking (free)"
     }
+  },
+  "admin": {
+    "manage-doctor": {
+      "title": "Create more information for doctors"
+    }
   }
 }
