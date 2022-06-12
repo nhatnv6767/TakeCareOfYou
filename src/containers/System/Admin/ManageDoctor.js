@@ -64,8 +64,8 @@ class ManageDoctor extends Component {
 
             let {resPrice, resPayment, resProvince} = this.props.allRequiredDoctorInfor;
             let dataSelectPrice = this.buildDataInputSelect(resPrice, "PRICE");
-            let dataSelectPayment = this.buildDataInputSelect(resPayment);
-            let dataSelectProvince = this.buildDataInputSelect(resProvince);
+            let dataSelectPayment = this.buildDataInputSelect(resPayment, "PAYMENT");
+            let dataSelectProvince = this.buildDataInputSelect(resProvince, "PROVINCE");
 
             console.log(`DATA: Price`, dataSelectPrice, "----------------");
             console.log(`DATA: Payment`, dataSelectPayment, "----------------");
@@ -152,8 +152,15 @@ class ManageDoctor extends Component {
                 });
             }
 
-            if (type === 'PRICE') {
-                console.log("CHECK INPUT DATA PRICE: ", inputData);
+            if (type === 'PRICE' || type === 'PAYMENT' || type === 'PROVINCE') {
+                inputData.map((item, index) => {
+                    let object = {};
+                    let labelVi = `${item.valueVi}`;
+                    let labelEn = `${item.valueEn}`;
+                    object.label = language === LANGUAGES.VI ? labelVi : labelEn;
+                    object.value = item.keyMap;
+                    result.push(object);
+                });
             }
 
         }
