@@ -10,6 +10,7 @@ import "react-markdown-editor-lite/lib/index.css";
 import Select from "react-select";
 import {LANGUAGES, CRUD_ACTIONS, CommonUtils} from "../../../utils";
 import {getDetailInforDoctorService} from "../../../services/userService";
+import {fetchRequiredDoctorInforStart} from "../../../store/actions";
 
 // Initialize a markdown parser
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -42,6 +43,7 @@ class ManageDoctor extends Component {
 
     componentDidMount() {
         this.props.fetchAllDoctorsStart();
+        this.props.fetchRequiredDoctorInforStart();
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
