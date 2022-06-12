@@ -145,19 +145,22 @@ class DoctorSchedule extends Component {
                     <div className="time-content">
                         {allAvailableTimes && allAvailableTimes.length > 0 ?
                             <>
-                                {
-                                    allAvailableTimes.map((item, index) => {
-                                        let timeDisplay = language === LANGUAGES.VI ? item.timeTypeData.valueVi : item.timeTypeData.valueEn;
-                                        return (
-                                            <button
-                                                key={index}
-                                                className={language === LANGUAGES.VI ? "btn-vie" : "btn-en"}
-                                            >
-                                                {timeDisplay}
-                                            </button>
-                                        );
-                                    })
-                                }
+                                <div className="time-content-btns">
+                                    {
+                                        allAvailableTimes.map((item, index) => {
+                                            let timeDisplay = language === LANGUAGES.VI ? item.timeTypeData.valueVi : item.timeTypeData.valueEn;
+                                            return (
+                                                <button
+                                                    key={index}
+                                                    className={language === LANGUAGES.VI ? "btn-vie" : "btn-en"}
+                                                >
+                                                    {timeDisplay}
+                                                </button>
+                                            );
+                                        })
+                                    }
+                                </div>
+
                                 <div className="book-free">
                                     <span>
                                         Chọn <i className="far fa-hand-point-up"></i> và đặt (miễn phí)
