@@ -131,14 +131,22 @@ class ManageDoctor extends Component {
                 nameClinic = doctorInforData.nameClinic;
                 note = doctorInforData.note;
                 paymentId = doctorInforData.paymentId;
-                // priceId = doctorInforData.priceId;
-                // provinceId = doctorInforData.provinceId;
+                priceId = doctorInforData.priceId;
+                provinceId = doctorInforData.provinceId;
 
-                let findItem = listPayment.find(item => {
+                let selectedPayment = listPayment.find(item => {
                     return item && item.value === paymentId;
                 });
 
-                console.log("Check findItem Payment: ", findItem, listPayment, paymentId);
+                let selectedProvince = listProvince.find(item => {
+                    return item && item.value === provinceId;
+                });
+
+                let selectedPrice = listPrice.find(item => {
+                    return item && item.value === priceId;
+                });
+
+                console.log("Check findItem Payment: ", selectedPayment, listPayment, paymentId);
             }
 
             this.setState({
