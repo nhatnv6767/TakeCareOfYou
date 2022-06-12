@@ -98,10 +98,8 @@ class ManageDoctor extends Component {
         });
     };
 
-    handleChangeSelect = async (selectedOption, name) => {
+    handleChangeSelect = async (selectedOption) => {
         this.setState({selectedOption});
-
-        console.log(`Check name handleChangeSelect: `, name)
 
         let res = await getDetailInforDoctorService(selectedOption.value);
         if (res && res.errCode === 0 && res.data && res.data.Markdown) {
@@ -121,6 +119,10 @@ class ManageDoctor extends Component {
             });
         }
         console.log(`getDetailInforDoctorService:`, res);
+    };
+    // selectedOption, name : thư viện trả về
+    handleChangeSelectDoctorInfor = async (selectedOption, name) => {
+
     };
 
     handleOnChangeDesc = (event) => {
@@ -181,9 +183,10 @@ class ManageDoctor extends Component {
                         <label><FormattedMessage id="admin.manage-doctor.price"/></label>
                         <Select
                             // value={this.state.selectedOption}
-                            // onChange={this.handleChangeSelect}
+                            onChange={this.handleChangeSelectDoctorInfor}
                             options={this.state.listPrice}
                             placeholder={<FormattedMessage id="admin.manage-doctor.price"/>}
+                            name="selectedPrice"
                         />
                     </div>
 
@@ -191,9 +194,10 @@ class ManageDoctor extends Component {
                         <label><FormattedMessage id="admin.manage-doctor.payment"/></label>
                         <Select
                             // value={this.state.selectedOption}
-                            // onChange={this.handleChangeSelect}
+                            onChange={this.handleChangeSelectDoctorInfor}
                             options={this.state.listPayment}
                             placeholder={<FormattedMessage id="admin.manage-doctor.payment"/>}
+                            name="selectedPayment"
                         />
                     </div>
 
@@ -201,9 +205,10 @@ class ManageDoctor extends Component {
                         <label><FormattedMessage id="admin.manage-doctor.province"/></label>
                         <Select
                             // value={this.state.selectedOption}
-                            // onChange={this.handleChangeSelect}
+                            onChange={this.handleChangeSelectDoctorInfor}
                             options={this.state.listProvince}
                             placeholder={<FormattedMessage id="admin.manage-doctor.province"/>}
+                            name="selectedProvince"
                         />
                     </div>
 
