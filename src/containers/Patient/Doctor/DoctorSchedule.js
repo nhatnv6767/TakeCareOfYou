@@ -144,6 +144,7 @@ class DoctorSchedule extends Component {
                     </div>
                     <div className="time-content">
                         {allAvailableTimes && allAvailableTimes.length > 0 ?
+                            <>
                             allAvailableTimes.map((item, index) => {
                                 let timeDisplay = language === LANGUAGES.VI ? item.timeTypeData.valueVi : item.timeTypeData.valueEn;
                                 return (
@@ -155,10 +156,13 @@ class DoctorSchedule extends Component {
                                     </button>
                                 );
                             })
+                            </>
                             :
                             <div className="no-schedule">
                                 <FormattedMessage id="patient.detail-doctor.no-plan"/>
                             </div>
+
+
                         }
 
                     </div>
