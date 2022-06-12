@@ -157,6 +157,22 @@ class ManageDoctor extends Component {
                         <label>Chọn tỉnh thành</label>
                         <input className="form-control"/>
                     </div>
+
+
+                    <div className="col-4 form-group">
+                        <label>Tên phòng khám</label>
+                        <input className="form-control"/>
+                    </div>
+
+                    <div className="col-4 form-group">
+                        <label>Địa chỉ phòng khám</label>
+                        <input className="form-control"/>
+                    </div>
+
+                    <div className="col-4 form-group">
+                        <label>Note</label>
+                        <input className="form-control"/>
+                    </div>
                 </div>
 
                 <div className="manage-doctor-editor">
