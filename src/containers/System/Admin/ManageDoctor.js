@@ -122,7 +122,10 @@ class ManageDoctor extends Component {
     };
     // selectedOption, name : thư viện trả về
     handleChangeSelectDoctorInfor = async (selectedOption, name) => {
-        console.log("Check handleChangeSelectDoctorInfor: ", selectedOption, name);
+        let stateName = name.name;
+        let stateCopy = {...this.state};
+        stateCopy[stateName] = selectedOption;
+        console.log("Check handleChangeSelectDoctorInfor: ", selectedOption, stateName);
     };
 
     handleOnChangeDesc = (event) => {
