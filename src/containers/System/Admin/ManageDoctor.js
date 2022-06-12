@@ -125,11 +125,6 @@ class ManageDoctor extends Component {
             let addressClinic = "", nameClinic = "", note = "",
                 paymentId = "", priceId = "", provinceId = "";
 
-            let findItem = listPayment.find(item => {
-                return item && item.value === paymentId;
-            });
-
-            console.log("Check findItem Payment: ", findItem, listPayment);
 
             if (doctorInforData) {
                 addressClinic = doctorInforData.addressClinic;
@@ -138,6 +133,12 @@ class ManageDoctor extends Component {
                 // paymentId = doctorInforData.paymentId;
                 // priceId = doctorInforData.priceId;
                 // provinceId = doctorInforData.provinceId;
+
+                let findItem = listPayment.find(item => {
+                    return item && item.value === paymentId;
+                });
+
+                console.log("Check findItem Payment: ", findItem, listPayment);
             }
 
             this.setState({
