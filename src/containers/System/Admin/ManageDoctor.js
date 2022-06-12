@@ -138,9 +138,27 @@ class ManageDoctor extends Component {
                             value={this.state.description}
                         >
 
-            </textarea>
+                        </textarea>
                     </div>
                 </div>
+
+                <div className="more-infor-extra row">
+                    <div className="col-4 form-group">
+                        <label>Chọn giá</label>
+                        <input className="form-control"/>
+                    </div>
+
+                    <div className="col-4 form-group">
+                        <label>Chọn phương thức thanh toán</label>
+                        <input className="form-control"/>
+                    </div>
+
+                    <div className="col-4 form-group">
+                        <label>Chọn tỉnh thành</label>
+                        <input className="form-control"/>
+                    </div>
+                </div>
+
                 <div className="manage-doctor-editor">
                     <MdEditor
                         style={{height: "500px"}}
