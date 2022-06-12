@@ -77,15 +77,17 @@ class DetailDoctor extends Component {
                     <div className="schedule-doctor">
                         <div className="content-left">
                             <DoctorSchedule
-                                // nếu đúng điều kiện thì trả về id,
-                                // không đúng thì trả về 1 giá trị đặc biệt <không có>
                                 doctorIdFromParent={
                                     this.state.currentDoctorId
                                 }
                             />
                         </div>
                         <div className="content-right">
-                            <DoctorExtraInfor/>
+                            <DoctorExtraInfor
+                                doctorIdFromParent={
+                                    this.state.currentDoctorId
+                                }
+                            />
                         </div>
                     </div>
                     <div className="detail-infor-doctor">
