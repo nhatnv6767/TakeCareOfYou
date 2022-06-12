@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import "./DoctorExtraInfor.scss";
 import {LANGUAGES} from "../../../utils";
-import {getScheduleDoctorByDate} from "../../../services/userService";
+import {getExtraInforDoctorById} from "../../../services/userService";
 import {FormattedMessage} from 'react-intl';
 
 class DoctorExtraInfor extends Component {
@@ -20,6 +20,11 @@ class DoctorExtraInfor extends Component {
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
 
+        }
+        // nó so sánh với giá trị của thằng cha, nếu có sự thay đổi sẽ chạy vào đây
+        if (prevProps.doctorIdFromParent !== this.props.doctorIdFromParent) {
+            let data = await getExtraInforDoctorById(this.props.doctorIdFromParent);
+            console.log("EXTRA DATA: ", data);
         }
     }
 
