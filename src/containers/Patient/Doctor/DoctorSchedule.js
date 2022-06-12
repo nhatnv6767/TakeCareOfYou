@@ -5,6 +5,7 @@ import moment from "moment";
 import localization from "moment/locale/vi";
 import {LANGUAGES} from "../../../utils";
 import {getScheduleDoctorByDate} from "../../../services/userService";
+import {FormattedMessage} from 'react-intl';
 
 class DoctorSchedule extends Component {
     constructor(props) {
@@ -121,7 +122,11 @@ class DoctorSchedule extends Component {
                 </div>
                 <div className="all-available-times">
                     <div className="text-calendar">
-                        <i className="fas fa-calendar-alt"><span>Lịch khám</span></i>
+                        <i className="fas fa-calendar-alt">
+                            <span>
+                                <FormattedMessage id="patient.detail-doctor.schedule"/>
+                            </span>
+                        </i>
                     </div>
                     <div className="time-content">
                         {allAvailableTimes && allAvailableTimes.length > 0 ?

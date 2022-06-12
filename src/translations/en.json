@@ -63,5 +63,10 @@
     "choose-doctor": "Choose doctor",
     "choose-date": "Choose date",
     "save-schedule": "Save information"
+  },
+  "patient": {
+    "detail-doctor": {
+      "schedule": "Examination schedule"
+    }
   }
 }
