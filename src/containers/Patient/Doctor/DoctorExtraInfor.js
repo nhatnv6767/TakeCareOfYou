@@ -24,7 +24,17 @@ class DoctorExtraInfor extends Component {
     render() {
         return (
             <div className="doctor-extra-infor-container">
-                Doctor Extra Information
+                <div className="content-up">
+                    <div>ĐỊA CHỈ KHÁM</div>
+                    <div>Phòng khám Bệnh viện Đại học Y Dược 1</div>
+                    <div>20-22 Dương Quang Trung, Phường 12, Quận 10, Tp. HCM</div>
+                </div>
+
+                <div className="content-down">
+
+                </div>
+
+
             </div>
         );
     }
