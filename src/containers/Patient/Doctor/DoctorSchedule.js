@@ -138,7 +138,7 @@ class DoctorSchedule extends Component {
                             })
                             :
                             <div>
-                                Không có lịch hẹn trong thời gian này, vui lòng chọn khoảng thời gian khác!
+                                <FormattedMessage id="patient.detail-doctor.no-plan"/>
                             </div>
                         }
 
