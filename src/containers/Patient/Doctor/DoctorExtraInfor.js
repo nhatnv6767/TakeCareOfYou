@@ -9,7 +9,7 @@ class DoctorExtraInfor extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isShowDetailInfor: true,
+            isShowDetailInfor: false,
         };
     }
 
@@ -48,7 +48,7 @@ class DoctorExtraInfor extends Component {
                 <div className="content-down">
                     {!isShowDetailInfor &&
 
-                        <div>
+                        <div className="short-infor">
                             GIÁ KHÁM: 300.000đ.
                             <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
                                 Xem chi tiết
