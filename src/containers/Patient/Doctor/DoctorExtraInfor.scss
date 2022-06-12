@@ -29,8 +29,11 @@
     .detail-infor {
       border: 1px solid #ddd;
       padding: 5px;
+      background-color: #f8f8f8;
 
       .price {
+        padding-bottom: 5px;
+
         .left {
 
         }
@@ -48,10 +51,16 @@
     .payment {
       border: 1px solid #ddd;
       padding: 5px;
+      background-color: #eeeeee;
     }
 
     .hide-price {
-      
+      margin-top: 10px;
+
+      span {
+        cursor: pointer;
+        color: rgb(38, 160, 231)
+      }
     }
 
   }
