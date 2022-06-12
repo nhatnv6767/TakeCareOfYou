@@ -24,12 +24,12 @@ class DoctorExtraInfor extends Component {
         }
         // nó so sánh với giá trị của thằng cha, nếu có sự thay đổi sẽ chạy vào đây
         if (prevProps.doctorIdFromParent !== this.props.doctorIdFromParent) {
-            let data = await getExtraInforDoctorById(this.props.doctorIdFromParent);
-            if (data && data.errCode === 0) {
+            let res = await getExtraInforDoctorById(this.props.doctorIdFromParent);
+            if (res && res.errCode === 0) {
                 this.setState({
-                    extraInfor: data,
-                })
-                console.log("EXTRA DATA: ", data);
+                    extraInfor: res.data,
+                });
+                console.log("EXTRA DATA: ", res);
             }
 
         }
