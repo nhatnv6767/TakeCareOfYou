@@ -63,7 +63,7 @@ class ManageDoctor extends Component {
         if (prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor) {
 
             let {resPrice, resPayment, resProvince} = this.props.allRequiredDoctorInfor;
-            let dataSelectPrice = this.buildDataInputSelect(resPrice);
+            let dataSelectPrice = this.buildDataInputSelect(resPrice, "PRICE");
             let dataSelectPayment = this.buildDataInputSelect(resPayment);
             let dataSelectProvince = this.buildDataInputSelect(resProvince);
 
@@ -141,14 +141,21 @@ class ManageDoctor extends Component {
         let result = [];
         let {language} = this.props;
         if (inputData && inputData.length > 0) {
-            inputData.map((item, index) => {
-                let object = {};
-                let labelVi = type === 'USERS' ? `${item.lastName} ${item.firstName}` : item.valueVi;
-                let labelEn = type === 'USERS' ? `${item.firstName} ${item.lastName}` : item.valueEn;
-                object.label = language === LANGUAGES.VI ? labelVi : labelEn;
-                object.value = item.id;
-                result.push(object);
-            });
+            if (type === 'USERS') {
+                inputData.map((item, index) => {
+                    let object = {};
+                    let labelVi = `${item.lastName} ${item.firstName}`;
+                    let labelEn = `${item.firstName} ${item.lastName}`;
+                    object.label = language === LANGUAGES.VI ? labelVi : labelEn;
+                    object.value = item.id;
+                    result.push(object);
+                });
+            }
+
+            if (type === 'PRICE') {
+                console.log("CHECK INPUT DATA PRICE: ", inputData);
+            }
+
         }
 
         return result;
