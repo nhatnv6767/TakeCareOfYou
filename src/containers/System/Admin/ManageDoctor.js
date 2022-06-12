@@ -126,10 +126,10 @@ class ManageDoctor extends Component {
                 paymentId = "", priceId = "", provinceId = "";
 
             let findItem = listPayment.find(item => {
-                if (item.value === paymentId) return item
-            })
+                return item && item.value === paymentId;
+            });
 
-            console.log("Check findItem Payment: ", findItem, listPayment)
+            console.log("Check findItem Payment: ", findItem, listPayment);
 
             if (doctorInforData) {
                 addressClinic = doctorInforData.addressClinic;
