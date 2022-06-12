@@ -178,17 +178,32 @@ class ManageDoctor extends Component {
                 <div className="more-infor-extra row">
                     <div className="col-4 form-group">
                         <label>Chọn giá</label>
-                        <input className="form-control"/>
+                        <Select
+                            // value={this.state.selectedOption}
+                            onChange={this.handleChangeSelect}
+                            options={this.state.listDoctors}
+                            placeholder={"Chọn giá"}
+                        />
                     </div>
 
                     <div className="col-4 form-group">
                         <label>Chọn phương thức thanh toán</label>
-                        <input className="form-control"/>
+                        <Select
+                            // value={this.state.selectedOption}
+                            onChange={this.handleChangeSelect}
+                            options={this.state.listDoctors}
+                            placeholder={"Chọn phương thức thanh toán"}
+                        />
                     </div>
 
                     <div className="col-4 form-group">
                         <label>Chọn tỉnh thành</label>
-                        <input className="form-control"/>
+                        <Select
+                            // value={this.state.selectedOption}
+                            onChange={this.handleChangeSelect}
+                            options={this.state.listDoctors}
+                            placeholder={"Chọn tỉnh thành"}
+                        />
                     </div>
 
 
