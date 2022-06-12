@@ -25,18 +25,31 @@ class DoctorExtraInfor extends Component {
         return (
             <div className="doctor-extra-infor-container">
                 <div className="content-up">
-                    <div>ĐỊA CHỈ KHÁM</div>
-                    <div>Phòng khám Bệnh viện Đại học Y Dược 1</div>
-                    <div>20-22 Dương Quang Trung, Phường 12, Quận 10, Tp. HCM</div>
+                    <div className="text-address">
+                        Địa chỉ khám
+                    </div>
+                    <div className="name-clinic">
+                        Phòng khám Bệnh viện Đại học Y Dược 1
+                    </div>
+                    <div className="detail-address">
+                        20-22 Dương Quang Trung, Phường 12, Quận 10, Tp. HCM
+                    </div>
                 </div>
 
                 <div className="content-down">
-                    <div>Giá khám</div>
-                    <div>Giá khám
+                    <div>
+                        Giá khám
+                    </div>
+                    <div>
+                        Giá khám
                         Được ưu tiên khám trước khi đật khám qua BookingCare. Giá khám cho người nước ngoài là 30 USD
                     </div>
-                    <div>Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ</div>
-                    <div>Ẩn bảng giá</div>
+                    <div>
+                        Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ
+                    </div>
+                    <div>
+                        Ẩn bảng giá
+                    </div>
                 </div>
 
 
