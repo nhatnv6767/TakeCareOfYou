@@ -388,3 +388,33 @@ export const fetchAllScheduleTimeSuccess = (data) => ({
 export const fetchAllScheduleTimeFailed = () => ({
     // type: actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_FAILED,
 });
+
+// get Doctor Price
+export const fetchDoctorPriceStart = () => {
+    return async (dispatch, getState) => {
+        try {
+            dispatch({
+                type: actionTypes.FETCH_DOCTOR_PRICE_START,
+            });
+
+            let res = await getAllCodeService("GENDER");
+            if (res && res.errCode === 0) {
+                dispatch(fetchDoctorPriceSuccess(res.data));
+            } else {
+                dispatch(fetchDoctorPriceFailed());
+            }
+        } catch (e) {
+            dispatch(fetchDoctorPriceFailed());
+            console.log("fetchDoctorPriceFailed error: ", e);
+        }
+    };
+};
+
+export const fetchDoctorPriceSuccess = (genderData) => ({
+    type: actionTypes.FETCH_DOCTOR_PRICE_SUCCESS,
+    data: genderData,
+});
+
+export const fetchDoctorPriceFailed = () => ({
+    type: actionTypes.FETCH_DOCTOR_PRICE_FAILED,
+});
