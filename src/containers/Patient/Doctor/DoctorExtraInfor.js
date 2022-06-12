@@ -8,7 +8,9 @@ import {FormattedMessage} from 'react-intl';
 class DoctorExtraInfor extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            isShowDetailInfor: false,
+        };
     }
 
     async componentDidMount() {
@@ -22,6 +24,7 @@ class DoctorExtraInfor extends Component {
     }
 
     render() {
+        let {isShowDetailInfor} = this.state;
         return (
             <div className="doctor-extra-infor-container">
                 <div className="content-up">
@@ -37,26 +40,31 @@ class DoctorExtraInfor extends Component {
                 </div>
 
                 <div className="content-down">
+                    {!isShowDetailInfor &&
 
-                    <div>
-                        GIÁ KHÁM: 300.000đ. Xem chi tiết
-                    </div>
+                        <div>
+                            GIÁ KHÁM: 300.000đ. Xem chi tiết
+                        </div>
+                    }
 
-
-                    <div>
-                        Giá khám
-                    </div>
-                    <div>
-                        Giá khám
-                        Được ưu tiên khám trước khi đật khám qua BookingCare. Giá khám cho người nước ngoài là 30 USD
-                    </div>
-                    <div>
-                        Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ
-                    </div>
-                    <div>
-                        Ẩn bảng giá
-                    </div>
-
+                    {isShowDetailInfor &&
+                        <>
+                            <div>
+                                Giá khám
+                            </div>
+                            <div>
+                                Giá khám
+                                Được ưu tiên khám trước khi đật khám qua BookingCare. Giá khám cho người nước ngoài là
+                                30 USD
+                            </div>
+                            <div>
+                                Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ
+                            </div>
+                            <div>
+                                Ẩn bảng giá
+                            </div>
+                        </>
+                    }
 
                 </div>
 
