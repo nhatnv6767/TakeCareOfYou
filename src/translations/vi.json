@@ -74,7 +74,11 @@
   },
   "admin": {
     "manage-doctor": {
-      "title": "Tạo thêm thông tin cho bác sĩ"
+      "title": "Tạo thêm thông tin cho bác sĩ",
+      "choose-doctor": "Chọn bác sĩ",
+      "introduce": "Thông tin giới thiệu:",
+      "save-infor": "Lưu thông tin",
+      "create-infor": "Tạo thông tin"
     }
   }
 }

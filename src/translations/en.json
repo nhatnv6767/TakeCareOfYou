@@ -74,7 +74,11 @@
   },
   "admin": {
     "manage-doctor": {
-      "title": "Create more information for doctors"
+      "title": "Create more information for doctors",
+      "choose-doctor": "Choose a doctor",
+      "introduce": "Introduction Information:",
+      "save-infor": "Save information",
+      "create-infor": "Create information"
     }
   }
 }
