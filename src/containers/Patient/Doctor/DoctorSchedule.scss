@@ -42,7 +42,6 @@
         border: none;
         outline: none;
         background-color: #fff04b;
-        min-width: 120px;
         border-radius: 3px;
         font-weight: 550;
         color: #333;
@@ -51,6 +50,14 @@
           background-color: #45c3d2;
           color: white;
         }
+      }
+
+      .btn-vie {
+        min-width: 120px;
+      }
+
+      .btn-en {
+        min-width: 150px;
       }
     }
   }
