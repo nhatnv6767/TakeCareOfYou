@@ -98,10 +98,10 @@ class ManageDoctor extends Component {
         });
     };
 
-    handleChangeSelect = async (selectedOption) => {
-        this.setState({selectedOption}, () =>
-            console.log(`Option selected:`, this.state.selectedOption)
-        );
+    handleChangeSelect = async (selectedOption, name) => {
+        this.setState({selectedOption});
+
+        console.log(`Check name handleChangeSelect: `, name)
 
         let res = await getDetailInforDoctorService(selectedOption.value);
         if (res && res.errCode === 0 && res.data && res.data.Markdown) {
@@ -161,6 +161,7 @@ class ManageDoctor extends Component {
                             onChange={this.handleChangeSelect}
                             options={this.state.listDoctors}
                             placeholder={<FormattedMessage id="admin.manage-doctor.choose-doctor"/>}
+                            name={"selectedOption"}
                         />
                     </div>
                     <div className="content-right form-group">
