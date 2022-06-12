@@ -50,7 +50,9 @@ class DoctorExtraInfor extends Component {
                         Địa chỉ khám
                     </div>
                     <div className="name-clinic">
-                        Phòng khám Bệnh viện Đại học Y Dược 1
+                        {extraInfor && extraInfor.nameClinic ?
+                            extraInfor.nameClinic : ""
+                        }
                     </div>
                     <div className="detail-address">
                         20-22 Dương Quang Trung, Phường 12, Quận 10, Tp. HCM
