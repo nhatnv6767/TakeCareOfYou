@@ -16,14 +16,14 @@ class DoctorExtraInfor extends Component {
 
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.language !== this.props.language) {
 
+        }
     }
 
-
     render() {
-
         return (
-            <div>
+            <div className="doctor-extra-infor-container">
                 Doctor Extra Information
             </div>
         );
