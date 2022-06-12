@@ -122,7 +122,7 @@ class ManageDoctor extends Component {
     };
     // selectedOption, name : thư viện trả về
     handleChangeSelectDoctorInfor = async (selectedOption, name) => {
-
+        console.log("Check handleChangeSelectDoctorInfor: ", selectedOption, name);
     };
 
     handleOnChangeDesc = (event) => {
