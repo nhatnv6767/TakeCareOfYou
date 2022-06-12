@@ -62,7 +62,7 @@ class ManageDoctor extends Component {
 
         if (prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor) {
 
-            let {resPayment, resPrice, resProvince} = this.props.allRequiredDoctorInfor;
+            let {resPrice, resPayment, resProvince} = this.props.allRequiredDoctorInfor;
             let dataSelectPrice = this.buildDataInputSelect(resPrice);
             let dataSelectPayment = this.buildDataInputSelect(resPayment);
             let dataSelectProvince = this.buildDataInputSelect(resProvince);
@@ -70,7 +70,7 @@ class ManageDoctor extends Component {
             console.log(`DATA: Price`, dataSelectPrice, "----------------");
             console.log(`DATA: Payment`, dataSelectPayment, "----------------");
             console.log(`DATA: Provider`, dataSelectProvince, "----------------");
-            
+
             this.setState({
                 listPrice: dataSelectPrice,
                 listProvince: dataSelectProvince,
