@@ -80,7 +80,7 @@ class DoctorExtraInfor extends Component {
                             <div className="payment">
                                 Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ
                             </div>
-                            <div>
+                            <div className="hide-price">
                                 <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
                                 Ẩn bảng giá
                             </span>

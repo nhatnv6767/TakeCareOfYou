@@ -23,10 +23,13 @@
 
   .content-down {
     .title-price {
-
+      margin-bottom: 10px;
     }
 
     .detail-infor {
+      border: 1px solid #ddd;
+      padding: 5px;
+
       .price {
         .left {
 
@@ -43,7 +46,12 @@
     }
 
     .payment {
+      border: 1px solid #ddd;
+      padding: 5px;
+    }
 
+    .hide-price {
+      
     }
 
   }
