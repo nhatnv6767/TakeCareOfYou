@@ -59,6 +59,10 @@ class ManageDoctor extends Component {
                 listDoctors: dataSelect,
             });
         }
+
+        if (prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor) {
+            console.log("Get data from redux: ", this.props.allRequiredDoctorInfor)
+        }
     }
 
     // Finish!
