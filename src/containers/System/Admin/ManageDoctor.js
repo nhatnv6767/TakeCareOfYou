@@ -119,11 +119,27 @@ class ManageDoctor extends Component {
         let res = await getDetailInforDoctorService(selectedOption.value);
         if (res && res.errCode === 0 && res.data && res.data.Markdown) {
             let mardown = res.data.Markdown;
+            let doctorInforData = res.data.Doctor_Infor;
+            let addressClinic = "", nameClinic = "", note = "",
+                paymentId = "", priceId = "", provinceId = "";
+
+            if (doctorInforData) {
+                addressClinic = doctorInforData.addressClinic;
+                nameClinic = doctorInforData.nameClinic;
+                note = doctorInforData.note;
+                // addressClinic = doctorInforData.addressClinic;
+                // addressClinic = doctorInforData.addressClinic;
+                // addressClinic = doctorInforData.addressClinic;
+            }
+
             this.setState({
                 contentHTML: mardown.contentHTML,
                 contentMarkdown: mardown.contentMarkdown,
                 description: mardown.description,
                 hasOldData: true,
+                addressClinic: addressClinic,
+                nameClinic: nameClinic,
+                note: note
             });
         } else {
             this.setState({
