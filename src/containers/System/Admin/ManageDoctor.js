@@ -125,6 +125,9 @@ class ManageDoctor extends Component {
         let stateName = name.name;
         let stateCopy = {...this.state};
         stateCopy[stateName] = selectedOption;
+        this.setState({
+            ...stateCopy
+        });
         console.log("Check handleChangeSelectDoctorInfor: ", selectedOption, stateName);
     };
 
