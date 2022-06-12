@@ -49,7 +49,7 @@ class DoctorExtraInfor extends Component {
                     {!isShowDetailInfor &&
 
                         <div className="short-infor">
-                            GIÁ KHÁM: 300.000đ.
+                            GIÁ KHÁM: 250.000đ.
                             <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
                                 Xem chi tiết
                             </span>
@@ -59,7 +59,7 @@ class DoctorExtraInfor extends Component {
                     {isShowDetailInfor &&
                         <>
                             <div className="title-price">
-                                Giá khám: .
+                                Giá khám:
                             </div>
                             <div className="detail-infor">
                                 <div className="price">
