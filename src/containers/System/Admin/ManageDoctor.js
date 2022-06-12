@@ -19,12 +19,24 @@ class ManageDoctor extends Component {
         super(props);
 
         this.state = {
+            // save to markdown table
             contentMarkdown: "",
             contentHTML: "",
             selectedOption: "",
             description: "",
             listDoctors: [],
             hasOldData: false,
+
+            // save to doctor_infor table
+            listPrice: [],
+            listPayment: [],
+            listProvince: [],
+            selectedPrice: "",
+            selectedPayment: "",
+            selectedProvince: "",
+            nameClinic: "",
+            addressClinic: "",
+            note: ""
         };
     }
 
@@ -128,6 +140,7 @@ class ManageDoctor extends Component {
                             value={this.state.selectedOption}
                             onChange={this.handleChangeSelect}
                             options={this.state.listDoctors}
+                            placeholder={"Chọn bác sĩ"}
                         />
                     </div>
                     <div className="content-right form-group">
