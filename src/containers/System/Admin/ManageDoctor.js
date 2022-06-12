@@ -180,7 +180,7 @@ class ManageDoctor extends Component {
                         <label>Chọn giá</label>
                         <Select
                             // value={this.state.selectedOption}
-                            onChange={this.handleChangeSelect}
+                            // onChange={this.handleChangeSelect}
                             options={this.state.listPrice}
                             placeholder={"Chọn giá"}
                         />
@@ -190,7 +190,7 @@ class ManageDoctor extends Component {
                         <label>Chọn phương thức thanh toán</label>
                         <Select
                             // value={this.state.selectedOption}
-                            onChange={this.handleChangeSelect}
+                            // onChange={this.handleChangeSelect}
                             options={this.state.listPayment}
                             placeholder={"Chọn phương thức thanh toán"}
                         />
@@ -200,7 +200,7 @@ class ManageDoctor extends Component {
                         <label>Chọn tỉnh thành</label>
                         <Select
                             // value={this.state.selectedOption}
-                            onChange={this.handleChangeSelect}
+                            // onChange={this.handleChangeSelect}
                             options={this.state.listProvince}
                             placeholder={"Chọn tỉnh thành"}
                         />
