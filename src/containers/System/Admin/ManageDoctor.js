@@ -182,7 +182,7 @@ class ManageDoctor extends Component {
                     <div className="col-4 form-group">
                         <label><FormattedMessage id="admin.manage-doctor.price"/></label>
                         <Select
-                            // value={this.state.selectedOption}
+                            value={this.state.selectedPrice}
                             onChange={this.handleChangeSelectDoctorInfor}
                             options={this.state.listPrice}
                             placeholder={<FormattedMessage id="admin.manage-doctor.price"/>}
@@ -193,7 +193,7 @@ class ManageDoctor extends Component {
                     <div className="col-4 form-group">
                         <label><FormattedMessage id="admin.manage-doctor.payment"/></label>
                         <Select
-                            // value={this.state.selectedOption}
+                            value={this.state.selectedPayment}
                             onChange={this.handleChangeSelectDoctorInfor}
                             options={this.state.listPayment}
                             placeholder={<FormattedMessage id="admin.manage-doctor.payment"/>}
@@ -204,7 +204,7 @@ class ManageDoctor extends Component {
                     <div className="col-4 form-group">
                         <label><FormattedMessage id="admin.manage-doctor.province"/></label>
                         <Select
-                            // value={this.state.selectedOption}
+                            value={this.state.selectedProvince}
                             onChange={this.handleChangeSelectDoctorInfor}
                             options={this.state.listProvince}
                             placeholder={<FormattedMessage id="admin.manage-doctor.province"/>}
