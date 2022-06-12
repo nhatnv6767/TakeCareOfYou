@@ -23,6 +23,12 @@ class DoctorExtraInfor extends Component {
         }
     }
 
+    showHideDetailInfor = (status) => {
+        this.setState({
+            isShowDetailInfor: status
+        });
+    };
+
     render() {
         let {isShowDetailInfor} = this.state;
         return (
@@ -43,7 +49,10 @@ class DoctorExtraInfor extends Component {
                     {!isShowDetailInfor &&
 
                         <div>
-                            GIÁ KHÁM: 300.000đ. Xem chi tiết
+                            GIÁ KHÁM: 300.000đ.
+                            <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
+                                Xem chi tiết
+                            </span>
                         </div>
                     }
 
@@ -61,7 +70,9 @@ class DoctorExtraInfor extends Component {
                                 Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ
                             </div>
                             <div>
+                                <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
                                 Ẩn bảng giá
+                            </span>
                             </div>
                         </>
                     }
