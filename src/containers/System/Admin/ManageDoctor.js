@@ -177,7 +177,7 @@ class ManageDoctor extends Component {
 
                 <div className="more-infor-extra row">
                     <div className="col-4 form-group">
-                        <label>Chọn giá</label>
+                        <label><FormattedMessage id="admin.manage-doctor.price"/></label>
                         <Select
                             // value={this.state.selectedOption}
                             // onChange={this.handleChangeSelect}
@@ -187,7 +187,7 @@ class ManageDoctor extends Component {
                     </div>
 
                     <div className="col-4 form-group">
-                        <label>Chọn phương thức thanh toán</label>
+                        <label><FormattedMessage id="admin.manage-doctor.payment"/></label>
                         <Select
                             // value={this.state.selectedOption}
                             // onChange={this.handleChangeSelect}
@@ -197,7 +197,7 @@ class ManageDoctor extends Component {
                     </div>
 
                     <div className="col-4 form-group">
-                        <label>Chọn tỉnh thành</label>
+                        <label><FormattedMessage id="admin.manage-doctor.province"/></label>
                         <Select
                             // value={this.state.selectedOption}
                             // onChange={this.handleChangeSelect}
@@ -208,17 +208,17 @@ class ManageDoctor extends Component {
 
 
                     <div className="col-4 form-group">
-                        <label>Tên phòng khám</label>
+                        <label><FormattedMessage id="admin.manage-doctor.clinic-name"/></label>
                         <input className="form-control"/>
                     </div>
 
                     <div className="col-4 form-group">
-                        <label>Địa chỉ phòng khám</label>
+                        <label><FormattedMessage id="admin.manage-doctor.clinic-address"/></label>
                         <input className="form-control"/>
                     </div>
 
                     <div className="col-4 form-group">
-                        <label>Note</label>
+                        <label><FormattedMessage id="admin.manage-doctor.note"/></label>
                         <input className="form-control"/>
                     </div>
                 </div>
