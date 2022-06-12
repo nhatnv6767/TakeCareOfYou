@@ -421,9 +421,9 @@ export const fetchRequiredDoctorInforStart = () => {
     };
 };
 
-export const fetchRequiredDoctorInforSuccess = (genderData) => ({
+export const fetchRequiredDoctorInforSuccess = (allRequiredData) => ({
     type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS,
-    data: genderData,
+    dataRequired: allRequiredData,
 });
 
 export const fetchRequiredDoctorInforFailed = () => ({
