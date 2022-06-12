@@ -151,8 +151,19 @@ class ManageDoctor extends Component {
                     result.push(object);
                 });
             }
+            // cần phải format giá tiền nên phải viết riêng
+            if (type === 'PRICE') {
+                inputData.map((item, index) => {
+                    let object = {};
+                    let labelVi = `${item.valueVi}`;
+                    let labelEn = `${item.valueEn}`;
+                    object.label = language === LANGUAGES.VI ? labelVi : labelEn;
+                    object.value = item.keyMap;
+                    result.push(object);
+                });
+            }
 
-            if (type === 'PRICE' || type === 'PAYMENT' || type === 'PROVINCE') {
+            if (type === 'PAYMENT' || type === 'PROVINCE') {
                 inputData.map((item, index) => {
                     let object = {};
                     let labelVi = `${item.valueVi}`;
