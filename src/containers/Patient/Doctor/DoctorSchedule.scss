@@ -32,32 +32,35 @@
     }
 
     .time-content {
-      display: flex;
-      gap: 15px;
-      //Khi không đủ không gian, tự động xuống hàng
-      flex-wrap: wrap;
+      .time-content-btns {
+        display: flex;
+        gap: 15px;
+        //Khi không đủ không gian, tự động xuống hàng
+        flex-wrap: wrap;
 
-      button {
-        padding: 8px 10px;
-        border: none;
-        outline: none;
-        background-color: #fff04b;
-        border-radius: 3px;
-        font-weight: 550;
-        color: #333;
 
-        &:hover {
-          background-color: #45c3d2;
-          color: white;
+        button {
+          padding: 8px 10px;
+          border: none;
+          outline: none;
+          background-color: #fff04b;
+          border-radius: 3px;
+          font-weight: 550;
+          color: #333;
+
+          &:hover {
+            background-color: #45c3d2;
+            color: white;
+          }
         }
-      }
 
-      .btn-vie {
-        min-width: 120px;
-      }
+        .btn-vie {
+          min-width: 120px;
+        }
 
-      .btn-en {
-        min-width: 170px;
+        .btn-en {
+          min-width: 170px;
+        }
       }
 
       .no-schedule {
