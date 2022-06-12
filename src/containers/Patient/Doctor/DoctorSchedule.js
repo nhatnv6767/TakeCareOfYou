@@ -163,7 +163,9 @@ class DoctorSchedule extends Component {
 
                                 <div className="book-free">
                                     <span>
-                                        Chọn <i className="far fa-hand-point-up"></i> và đặt (miễn phí)
+                                        <FormattedMessage id="patient.detail-doctor.choose"/>
+                                        <i className="far fa-hand-point-up"></i>
+                                        <FormattedMessage id="patient.detail-doctor.and-set-free"/>
                                     </span>
                                 </div>
                             </>

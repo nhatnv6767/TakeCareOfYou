@@ -67,7 +67,9 @@
   "patient": {
     "detail-doctor": {
       "schedule": "Schedules",
-      "no-plan": "No appointment available during this moment, please choose another time!"
+      "no-plan": "No appointment available during this moment, please choose another time!",
+      "choose": "Choose ",
+      "and-set-free": " and booking (free)"
     }
   }
 }

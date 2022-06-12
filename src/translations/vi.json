@@ -67,7 +67,9 @@
   "patient": {
     "detail-doctor": {
       "schedule": "Lịch khám",
-      "no-plan": "Không có lịch hẹn trong thời gian này, vui lòng chọn khoảng thời gian khác!"
+      "no-plan": "Không có lịch hẹn trong thời gian này, vui lòng chọn khoảng thời gian khác!",
+      "choose": "Chọn ",
+      "and-set-free": " và đặt (miễn phí)"
     }
   }
 }
