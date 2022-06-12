@@ -389,32 +389,43 @@ export const fetchAllScheduleTimeFailed = () => ({
     // type: actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_FAILED,
 });
 
-// get Doctor Price
-export const fetchDoctorPriceStart = () => {
+// fetch Doctor Required Infor
+export const fetchRequiredDoctorInforStart = () => {
     return async (dispatch, getState) => {
         try {
             dispatch({
-                type: actionTypes.FETCH_DOCTOR_PRICE_START,
+                type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_START,
             });
 
-            let res = await getAllCodeService("GENDER");
-            if (res && res.errCode === 0) {
-                dispatch(fetchDoctorPriceSuccess(res.data));
+            let resPrice = await getAllCodeService("PRICE");
+            let resPayment = await getAllCodeService("PAYMENT");
+            let resProvince = await getAllCodeService("PROVINCE");
+            if (
+                resPrice && resPrice.errCode === 0 &&
+                resPayment && resPayment.errCode === 0 &&
+                resProvince && resProvince.errCode === 0
+            ) {
+                let data = {
+                    resPrice: resPrice.data,
+                    resPayment: resPayment.data,
+                    resProvince: resProvince.data,
+                };
+                dispatch(fetchRequiredDoctorInforSuccess(data));
             } else {
-                dispatch(fetchDoctorPriceFailed());
+                dispatch(fetchRequiredDoctorInforFailed());
             }
         } catch (e) {
-            dispatch(fetchDoctorPriceFailed());
-            console.log("fetchDoctorPriceFailed error: ", e);
+            dispatch(fetchRequiredDoctorInforFailed());
+            console.log("fetchRequiredDoctorInforFailed error: ", e);
         }
     };
 };
 
-export const fetchDoctorPriceSuccess = (genderData) => ({
-    type: actionTypes.FETCH_DOCTOR_PRICE_SUCCESS,
+export const fetchRequiredDoctorInforSuccess = (genderData) => ({
+    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS,
     data: genderData,
 });
 
-export const fetchDoctorPriceFailed = () => ({
-    type: actionTypes.FETCH_DOCTOR_PRICE_FAILED,
+export const fetchRequiredDoctorInforFailed = () => ({
+    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_FAILED,
 });
