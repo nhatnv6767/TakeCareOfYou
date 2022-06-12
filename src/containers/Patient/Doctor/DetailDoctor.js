@@ -10,7 +10,9 @@ class DetailDoctor extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            detailDoctor: {}
+            detailDoctor: {},
+            // khởi tạo với giá trị là 1 số đặc biệt
+            currentDoctorId: -1,
         };
     }
 
@@ -21,9 +23,14 @@ class DetailDoctor extends Component {
             this.props.match.params.id
         ) {
             let id = this.props.match.params.id;
+            this.setState({
+                currentDoctorId: id,
+            });
             let res = await getDetailInforDoctorService(id);
             if (res && res.errCode === 0) {
-                this.setState({detailDoctor: res.data});
+                this.setState({
+                    detailDoctor: res.data,
+                });
             }
         }
     }
@@ -71,8 +78,8 @@ class DetailDoctor extends Component {
                             <DoctorSchedule
                                 // nếu đúng điều kiện thì trả về id,
                                 // không đúng thì trả về 1 giá trị đặc biệt <không có>
-                                doctorIdFromParent={detailDoctor && detailDoctor.id ?
-                                    detailDoctor.id : -1
+                                doctorIdFromParent={
+                                    this.state.currentDoctorId
                                 }
                             />
                         </div>
