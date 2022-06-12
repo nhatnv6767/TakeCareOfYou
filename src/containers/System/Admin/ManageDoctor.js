@@ -130,7 +130,7 @@ class ManageDoctor extends Component {
                 addressClinic = doctorInforData.addressClinic;
                 nameClinic = doctorInforData.nameClinic;
                 note = doctorInforData.note;
-                // paymentId = doctorInforData.paymentId;
+                paymentId = doctorInforData.paymentId;
                 // priceId = doctorInforData.priceId;
                 // provinceId = doctorInforData.provinceId;
 
@@ -138,7 +138,7 @@ class ManageDoctor extends Component {
                     return item && item.value === paymentId;
                 });
 
-                console.log("Check findItem Payment: ", findItem, listPayment);
+                console.log("Check findItem Payment: ", findItem, listPayment, paymentId);
             }
 
             this.setState({
