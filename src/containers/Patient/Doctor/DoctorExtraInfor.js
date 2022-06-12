@@ -10,6 +10,7 @@ class DoctorExtraInfor extends Component {
         super(props);
         this.state = {
             isShowDetailInfor: false,
+            extraInfor: {}
         };
     }
 
@@ -24,7 +25,13 @@ class DoctorExtraInfor extends Component {
         // nó so sánh với giá trị của thằng cha, nếu có sự thay đổi sẽ chạy vào đây
         if (prevProps.doctorIdFromParent !== this.props.doctorIdFromParent) {
             let data = await getExtraInforDoctorById(this.props.doctorIdFromParent);
-            console.log("EXTRA DATA: ", data);
+            if (data && data.errCode === 0) {
+                this.setState({
+                    extraInfor: data,
+                })
+                console.log("EXTRA DATA: ", data);
+            }
+
         }
     }
 
