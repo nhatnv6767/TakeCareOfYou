@@ -133,7 +133,12 @@ class DoctorSchedule extends Component {
                             allAvailableTimes.map((item, index) => {
                                 let timeDisplay = language === LANGUAGES.VI ? item.timeTypeData.valueVi : item.timeTypeData.valueEn;
                                 return (
-                                    <button key={index}>{timeDisplay}</button>
+                                    <button
+                                        key={index}
+                                        className={language === LANGUAGES.VI ? "btn-vie" : "btn-en"}
+                                    >
+                                        {timeDisplay}
+                                    </button>
                                 );
                             })
                             :
