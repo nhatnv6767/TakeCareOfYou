@@ -127,9 +127,9 @@ class ManageDoctor extends Component {
                 addressClinic = doctorInforData.addressClinic;
                 nameClinic = doctorInforData.nameClinic;
                 note = doctorInforData.note;
-                // addressClinic = doctorInforData.addressClinic;
-                // addressClinic = doctorInforData.addressClinic;
-                // addressClinic = doctorInforData.addressClinic;
+                // paymentId = doctorInforData.paymentId;
+                // priceId = doctorInforData.priceId;
+                // provinceId = doctorInforData.provinceId;
             }
 
             this.setState({
@@ -139,7 +139,10 @@ class ManageDoctor extends Component {
                 hasOldData: true,
                 addressClinic: addressClinic,
                 nameClinic: nameClinic,
-                note: note
+                note: note,
+                // paymentId: paymentId,
+                // priceId: priceId,
+                // provinceId: provinceId,
             });
         } else {
             this.setState({
@@ -147,6 +150,13 @@ class ManageDoctor extends Component {
                 contentMarkdown: "",
                 description: "",
                 hasOldData: false,
+
+                addressClinic: "",
+                nameClinic: "",
+                note: "",
+                // paymentId: "",
+                // priceId: "",
+                // provinceId: "",
             });
         }
         console.log(`getDetailInforDoctorService:`, res);
