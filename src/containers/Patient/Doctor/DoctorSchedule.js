@@ -47,19 +47,26 @@ class DoctorSchedule extends Component {
         for (let i = 0; i < 7; i++) {
             let object = {};
             if (language === LANGUAGES.VI) {
-
+                // Language VietNam with the current day: Hôm nay
                 if (i === 0) {
-                    let labelViTempt = moment(new Date()).format('DD/MM');
-                    let today = `Hôm nay - ${labelViTempt}`;
-                    console.log(today);
+                    let ddMM = moment(new Date()).format('DD/MM');
+                    let today = `Hôm nay - ${ddMM}`;
+                    object.label = today;
+                } else {
+                    let labelVi = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
+                    object.label = this.titleCase(labelVi);
                 }
 
-                let labelVi = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
-                object.label = this.titleCase(labelVi);
             } else {
-                object.label = moment(new Date()).add(i, 'days').locale('en').format('ddd - DD/MM');
+                // Language English with the current day: today
+                if (i === 0) {
+                    let ddMM = moment(new Date()).format('DD/MM');
+                    let today = `Today - ${ddMM}`;
+                    object.label = today;
+                } else {
+                    object.label = moment(new Date()).add(i, 'days').locale('en').format('ddd - DD/MM');
+                }
             }
-
             object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
 
             allDays.push(object);
