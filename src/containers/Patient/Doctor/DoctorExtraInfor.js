@@ -37,6 +37,12 @@ class DoctorExtraInfor extends Component {
                 </div>
 
                 <div className="content-down">
+
+                    <div>
+                        GIÁ KHÁM: 300.000đ. Xem chi tiết
+                    </div>
+
+
                     <div>
                         Giá khám
                     </div>
@@ -50,6 +56,8 @@ class DoctorExtraInfor extends Component {
                     <div>
                         Ẩn bảng giá
                     </div>
+
+
                 </div>
 
 
