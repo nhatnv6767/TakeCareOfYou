@@ -42,7 +42,7 @@ class DoctorExtraInfor extends Component {
 
     render() {
         let {isShowDetailInfor, extraInfor} = this.state;
-        console.log("EXTRA DATA RENDER: ", this.state);
+        console.log("EXTRA DATA RENDER: ", extraInfor);
         return (
             <div className="doctor-extra-infor-container">
                 <div className="content-up">
@@ -55,7 +55,9 @@ class DoctorExtraInfor extends Component {
                         }
                     </div>
                     <div className="detail-address">
-                        20-22 Dương Quang Trung, Phường 12, Quận 10, Tp. HCM
+                        {extraInfor && extraInfor.addressClinic ?
+                            extraInfor.addressClinic : ""
+                        }
                     </div>
                 </div>
 
@@ -63,7 +65,10 @@ class DoctorExtraInfor extends Component {
                     {!isShowDetailInfor &&
 
                         <div className="short-infor">
-                            GIÁ KHÁM: 250.000đ.
+                            GIÁ KHÁM: <span></span>
+                            {extraInfor && extraInfor.priceData ?
+                                extraInfor.priceData.valueVi : ""
+                            } VND <span></span>
                             <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
                                 Xem chi tiết
                             </span>
@@ -81,13 +86,19 @@ class DoctorExtraInfor extends Component {
                                         Giá khám
                                     </span>
                                     <span className="right">
-                                        250.000đ
+                                        <span></span>
+                                        {extraInfor && extraInfor.priceData ?
+                                            extraInfor.priceData.valueVi : ""
+                                        } VND <span></span>
                                     </span>
                                 </div>
                                 <div className="note">
                                     Được ưu tiên khám trước khi đật khám qua BookingCare. Giá khám cho người nước ngoài
                                     là
-                                    30 USD
+                                    <span> </span>
+                                    {extraInfor && extraInfor.priceData ?
+                                        extraInfor.priceData.valueEn : ""
+                                    } USD <span></span>
                                 </div>
 
                             </div>
