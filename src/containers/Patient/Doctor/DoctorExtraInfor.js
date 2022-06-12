@@ -59,10 +59,14 @@ class DoctorExtraInfor extends Component {
                     {isShowDetailInfor &&
                         <>
                             <div>
-                                Giá khám
+                                Giá khám: .
                             </div>
                             <div>
-                                Giá khám
+                                <div>
+                                    <span>Giá khám</span>
+                                    <span>250.000đ</span>
+                                </div>
+
                                 Được ưu tiên khám trước khi đật khám qua BookingCare. Giá khám cho người nước ngoài là
                                 30 USD
                             </div>
