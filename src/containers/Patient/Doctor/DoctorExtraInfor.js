@@ -63,6 +63,12 @@ class DoctorExtraInfor extends Component {
                 </div>
 
                 <div className="content-down">
+                    <NumberFormat
+                        value={2456981}
+                        displayType={'text'}
+                        thousandSeparator={true}
+                        suffix={' $'}
+                    />;
                     {isShowDetailInfor ?
                         <>
                             <div className="title-price">
