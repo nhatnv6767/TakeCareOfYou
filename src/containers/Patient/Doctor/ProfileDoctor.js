@@ -81,7 +81,7 @@ class ProfileDoctor extends Component {
 
                 </div>
                 <div className="price">
-                    Giá khám:
+                    Giá khám:<span> </span>
                     {dataProfile && dataProfile.Doctor_Infor && dataProfile.Doctor_Infor.priceData && language === LANGUAGES.VI &&
                         <NumberFormat
                             className="currency"
