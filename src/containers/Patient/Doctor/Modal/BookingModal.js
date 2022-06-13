@@ -86,7 +86,16 @@ class BookingModal extends Component {
                     </div>
 
                     <div className="booking-modal-footer">
-
+                        <button
+                            className="btn-booking-confirm"
+                        >
+                            Xác nhận
+                        </button>
+                        <button
+                            className="btn-booking-cancel"
+                        >
+                            Huỷ bỏ
+                        </button>
                     </div>
                 </div>
 
