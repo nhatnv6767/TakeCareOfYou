@@ -74,14 +74,7 @@ class BookingModal extends Component {
                             dignissimos eos impedit mollitia neque nesciunt praesentium rem. Consectetur doloremque ex
                             iste pariatur qui, quibusdam quo tempora.
                         </div>
-                        <div>Aliquid architecto autem blanditiis dolore enim error esse et facere facilis in incidunt
-                            inventore ipsum magnam minima modi numquam odio officia omnis, quam ratione reiciendis
-                            similique voluptates! Consequuntur, minima vel.
-                        </div>
-                        <div>Aperiam at enim eveniet ipsa magni maiores quos sit tempora vel veritatis! Assumenda at
-                            beatae consectetur cupiditate deserunt dolorum iusto mollitia natus, nihil odio odit
-                            perferendis quia sapiente unde voluptatibus!
-                        </div>
+                        
 
                     </div>
 
