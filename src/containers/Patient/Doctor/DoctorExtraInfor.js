@@ -44,7 +44,7 @@ class DoctorExtraInfor extends Component {
     render() {
         let {isShowDetailInfor, extraInfor} = this.state;
         let {language} = this.props;
-        console.log("EXTRA DATA RENDER: ", extraInfor);
+        // console.log("EXTRA DATA RENDER: ", extraInfor);
         return (
             <div className="doctor-extra-infor-container">
                 <div className="content-up">
