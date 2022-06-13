@@ -43,30 +43,30 @@ class ProfileDoctor extends Component {
     }
 
     render() {
-        let {dataProfile} = this.state
+        let {dataProfile} = this.state;
         console.log("Check state at Profile Doctor", this.state);
         return (
             <div className="intro-doctor">
-                {/*<div*/}
-                {/*    className="content-left"*/}
-                {/*    style={{*/}
-                {/*        backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ""})`*/}
-                {/*    }}*/}
-                {/*>*/}
+                <div
+                    className="content-left"
+                    style={{
+                        backgroundImage: `url(${dataProfile && dataProfile.image ? dataProfile.image : ""})`
+                    }}
+                >
 
-                {/*</div>*/}
-                {/*<div className="content-right">*/}
-                {/*    <div className="up">*/}
-                {/*        {language === LANGUAGES.VI ? nameVi : nameEn}*/}
-                {/*    </div>*/}
-                {/*    <div className="down">*/}
-                {/*        {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.description &&*/}
-                {/*            <span>*/}
-                {/*                        {detailDoctor.Markdown.description}*/}
-                {/*                    </span>*/}
-                {/*        }*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+                </div>
+                <div className="content-right">
+                    <div className="up">
+                        {/*{language === LANGUAGES.VI ? nameVi : nameEn}*/}
+                    </div>
+                    {/*<div className="down">*/}
+                    {/*    {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.description &&*/}
+                    {/*        <span>*/}
+                    {/*                    {detailDoctor.Markdown.description}*/}
+                    {/*                </span>*/}
+                    {/*    }*/}
+                    {/*</div>*/}
+                </div>
             </div>
         );
     }
