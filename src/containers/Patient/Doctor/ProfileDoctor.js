@@ -52,28 +52,30 @@ class ProfileDoctor extends Component {
         }
         console.log("Check state at Profile Doctor", this.state);
         return (
-            <div className="intro-doctor">
-                <div
-                    className="content-left"
-                    style={{
-                        backgroundImage: `url(${dataProfile && dataProfile.image ? dataProfile.image : ""})`
-                    }}
-                >
+            <div className="profile-doctor-container">
+                <div className="intro-doctor">
+                    <div
+                        className="content-left"
+                        style={{
+                            backgroundImage: `url(${dataProfile && dataProfile.image ? dataProfile.image : ""})`
+                        }}
+                    >
 
-                </div>
-                <div className="content-right">
-                    <div className="up">
-                        {language === LANGUAGES.VI ? nameVi : nameEn}
                     </div>
-                    <div className="down">
-                        {
-                            dataProfile &&
-                            dataProfile.Markdown &&
-                            dataProfile.Markdown.description &&
-                            <span>
+                    <div className="content-right">
+                        <div className="up">
+                            {language === LANGUAGES.VI ? nameVi : nameEn}
+                        </div>
+                        <div className="down">
+                            {
+                                dataProfile &&
+                                dataProfile.Markdown &&
+                                dataProfile.Markdown.description &&
+                                <span>
                                 {dataProfile.Markdown.description}
                             </span>
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
