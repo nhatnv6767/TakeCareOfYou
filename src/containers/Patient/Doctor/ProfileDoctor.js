@@ -2,11 +2,15 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./ProfileDoctor.scss";
+import {getProfileDoctorById} from "../../../services/userService";
+
 
 class ProfileDoctor extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            dataProfile: {}
+        };
     }
 
     async componentDidMount() {
