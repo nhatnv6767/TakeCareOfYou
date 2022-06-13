@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./BookingModal.scss";
+import {Button, Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
+
 
 class BookingModal extends Component {
     constructor(props) {

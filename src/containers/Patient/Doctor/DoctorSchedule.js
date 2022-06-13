@@ -182,7 +182,9 @@ class DoctorSchedule extends Component {
                         </div>
                     </div>
                 </div>
-                <BookingModal/>
+                <BookingModal
+                
+                />
             </>
         );
     }
