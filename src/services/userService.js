@@ -76,4 +76,5 @@ export {
     saveBulkScheduleDoctor,
     getScheduleDoctorByDate,
     getExtraInforDoctorById,
+    getProfileDoctorById
 };
