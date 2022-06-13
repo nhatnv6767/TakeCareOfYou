@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./BookingModal.scss";
-import {Button, Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
+import {Modal} from "reactstrap";
 
 
 class BookingModal extends Component {
@@ -23,9 +23,9 @@ class BookingModal extends Component {
 
     render() {
         return (
-            <div>
-                BookingModal
-            </div>
+            <Modal isOpen={modal} toggle={toggle} className={className}>
+
+            </Modal>
         );
     }
 }
