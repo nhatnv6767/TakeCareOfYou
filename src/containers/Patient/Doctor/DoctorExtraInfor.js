@@ -43,6 +43,7 @@ class DoctorExtraInfor extends Component {
 
     render() {
         let {isShowDetailInfor, extraInfor} = this.state;
+        let {language} = this.props;
         console.log("EXTRA DATA RENDER: ", extraInfor);
         return (
             <div className="doctor-extra-infor-container">
@@ -63,12 +64,7 @@ class DoctorExtraInfor extends Component {
                 </div>
 
                 <div className="content-down">
-                    <NumberFormat
-                        value={2456981}
-                        displayType={'text'}
-                        thousandSeparator={true}
-                        suffix={' $'}
-                    />;
+
                     {isShowDetailInfor ?
                         <>
                             <div className="title-price">
@@ -109,10 +105,16 @@ class DoctorExtraInfor extends Component {
                         :
 
                         <div className="short-infor">
-                            GIÁ KHÁM: <span></span>
-                            {extraInfor && extraInfor.priceData ?
-                                extraInfor.priceData.valueVi : ""
-                            } VND <span></span>
+                            GIÁ KHÁM:
+                            {extraInfor && extraInfor.priceData && language === LANGUAGES.VI &&
+
+                                <NumberFormat
+                                    value={2456981}
+                                    displayType={'text'}
+                                    thousandSeparator={true}
+                                    suffix={' VND'}
+                                />;
+                            }
                             <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
                                 Xem chi tiết
                             </span>
