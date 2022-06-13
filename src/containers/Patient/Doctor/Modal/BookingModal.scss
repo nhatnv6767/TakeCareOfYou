@@ -3,8 +3,17 @@
     height: 500px;
 
     .booking-modal-header {
-      height: 30px;
-      border: 1px solid red;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+
+      .left {
+
+      }
+
+      .right {
+        float: right;
+      }
+
     }
 
     .booking-modal-body {

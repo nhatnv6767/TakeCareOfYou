@@ -32,7 +32,12 @@ class BookingModal extends Component {
             >
                 <div className="booking-modal-content">
                     <div className="booking-modal-header">
-
+                        <span className="left">
+                            Thông tin đặt lịch khám bệnh
+                        </span>
+                        <span className="right">
+                            <i className="fas fa-times"></i>
+                        </span>
                     </div>
 
                     <div className="booking-modal-body">
