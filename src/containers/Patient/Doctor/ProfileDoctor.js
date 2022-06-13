@@ -4,6 +4,7 @@ import {FormattedMessage} from 'react-intl';
 import "./ProfileDoctor.scss";
 import {getProfileDoctorById} from "../../../services/userService";
 import {LANGUAGES} from "../../../utils";
+import NumberFormat from 'react-number-format';
 
 
 class ProfileDoctor extends Component {
@@ -80,9 +81,24 @@ class ProfileDoctor extends Component {
 
                 </div>
                 <div className="price">
-                    {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.VI ?
-                        dataProfile.Doctor_Infor.priceData.valueVi :
-                        dataProfile.Doctor_Infor.priceData.valueEn
+                    Giá khám:
+                    {dataProfile && dataProfile.Doctor_Infor && dataProfile.Doctor_Infor.priceData && language === LANGUAGES.VI &&
+                        <NumberFormat
+                            className="currency"
+                            value={dataProfile.Doctor_Infor.priceData.valueVi}
+                            displayType={'text'}
+                            thousandSeparator={true}
+                            suffix={' VND'}
+                        />
+                    }
+                    {dataProfile && dataProfile.Doctor_Infor && dataProfile.Doctor_Infor.priceData && language === LANGUAGES.EN &&
+                        <NumberFormat
+                            className="currency"
+                            value={dataProfile.Doctor_Infor.priceData.valueEn}
+                            displayType={'text'}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                        />
                     }
 
                 </div>
