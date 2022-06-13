@@ -36,12 +36,13 @@ class ProfileDoctor extends Component {
         if (prevProps.language !== this.props.language) {
 
         }
-        // if (prevProps.doctorId !== this.props.doctorId) {
-        //     this.getInforDoctor(this.props.doctorId);
-        // }
+        if (prevProps.doctorId !== this.props.doctorId) {
+            // this.getInforDoctor(this.props.doctorId);
+        }
     }
 
     render() {
+        console.log("Check state at Profile Doctor", this.state);
         return (
             <div>
                 Profile Doctor
