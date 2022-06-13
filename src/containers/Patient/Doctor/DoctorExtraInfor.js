@@ -107,25 +107,24 @@ class DoctorExtraInfor extends Component {
                         <div className="short-infor">
                             GIÁ KHÁM:
                             {extraInfor && extraInfor.priceData && language === LANGUAGES.VI &&
-
                                 <NumberFormat
+                                    className="currency"
                                     value={extraInfor.priceData.valueVi}
                                     displayType={'text'}
                                     thousandSeparator={true}
                                     suffix={' VND'}
                                 />
                             }
-
                             {extraInfor && extraInfor.priceData && language === LANGUAGES.EN &&
-
                                 <NumberFormat
+                                    className="currency"
                                     value={extraInfor.priceData.valueEn}
                                     displayType={'text'}
                                     thousandSeparator={true}
                                     prefix={'$'}
                                 />
                             }
-                            <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
+                            <span className="detail" onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
                                 Xem chi tiết
                             </span>
                         </div>
