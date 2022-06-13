@@ -119,6 +119,12 @@ class DoctorSchedule extends Component {
         console.log("DoctorSchedule Click Schedule Time", time);
     };
 
+    closeBookingModal = () => {
+        this.setState({
+            isOpenModalBooking: false,
+        });
+    }
+
     render() {
         let {allDays, allAvailableTimes, isOpenModalBooking} = this.state;
         let {language} = this.props;
@@ -193,6 +199,7 @@ class DoctorSchedule extends Component {
                 </div>
                 <BookingModal
                     isOpenModal={isOpenModalBooking}
+                    closeBookingModal={this.closeBookingModal}
                 />
             </>
         );

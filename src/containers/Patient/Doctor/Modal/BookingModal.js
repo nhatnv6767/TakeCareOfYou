@@ -22,7 +22,7 @@ class BookingModal extends Component {
     }
 
     render() {
-        let {isOpenModal} = this.props;
+        let {isOpenModal, closeBookingModal} = this.props;
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -36,7 +36,10 @@ class BookingModal extends Component {
                         <span className="left">
                             Thông tin đặt lịch khám bệnh
                         </span>
-                        <span className="right">
+                        <span
+                            className="right"
+                            onClick={closeBookingModal}
+                        >
                             <i className="fas fa-times"></i>
                         </span>
                     </div>
