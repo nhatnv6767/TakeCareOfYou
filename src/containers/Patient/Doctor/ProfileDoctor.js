@@ -14,6 +14,12 @@ class ProfileDoctor extends Component {
     }
 
     async componentDidMount() {
+        let id = this.props.doctorId;
+
+        if (id) {
+            let res = await getProfileDoctorById(id);
+            console.log("Check getProfileDoctorById_res", res);
+        }
     }
 
 
