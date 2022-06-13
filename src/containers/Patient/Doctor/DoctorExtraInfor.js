@@ -4,6 +4,7 @@ import "./DoctorExtraInfor.scss";
 import {LANGUAGES} from "../../../utils";
 import {getExtraInforDoctorById} from "../../../services/userService";
 import {FormattedMessage} from 'react-intl';
+import NumberFormat from 'react-number-format';
 
 class DoctorExtraInfor extends Component {
     constructor(props) {
@@ -62,20 +63,7 @@ class DoctorExtraInfor extends Component {
                 </div>
 
                 <div className="content-down">
-                    {!isShowDetailInfor &&
-
-                        <div className="short-infor">
-                            GIÁ KHÁM: <span></span>
-                            {extraInfor && extraInfor.priceData ?
-                                extraInfor.priceData.valueVi : ""
-                            } VND <span></span>
-                            <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
-                                Xem chi tiết
-                            </span>
-                        </div>
-                    }
-
-                    {isShowDetailInfor &&
+                    {isShowDetailInfor ?
                         <>
                             <div className="title-price">
                                 Giá khám:
@@ -111,10 +99,23 @@ class DoctorExtraInfor extends Component {
                             </span>
                             </div>
                         </>
+
+                        :
+
+                        <div className="short-infor">
+                            GIÁ KHÁM: <span></span>
+                            {extraInfor && extraInfor.priceData ?
+                                extraInfor.priceData.valueVi : ""
+                            } VND <span></span>
+                            <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
+                                Xem chi tiết
+                            </span>
+                        </div>
+
+
                     }
 
                 </div>
-
 
             </div>
         );
