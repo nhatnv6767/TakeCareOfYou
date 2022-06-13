@@ -99,13 +99,13 @@ class DoctorExtraInfor extends Component {
                                     </span>
                                 </div>
                                 <div className="note">
-                                    Được ưu tiên khám trước khi đật khám qua BookingCare. Giá khám cho người nước ngoài
-                                    là 1SOL
+                                    {extraInfor && extraInfor.note ? extraInfor.note : ""}
                                 </div>
 
                             </div>
                             <div className="payment">
-                                Người bệnh có thể thanh toán chi phí bằng hình thức tiền mặt và quẹt thẻ
+                                Người bệnh có thể thanh toán chi phí bằng hình thức:
+                                {extraInfor && extraInfor.paymentData ? extraInfor.paymentData.valueVi : ""}
                             </div>
                             <div className="hide-price">
                                 <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
