@@ -70,6 +70,13 @@
       "no-plan": "No appointment available during this moment, please choose another time!",
       "choose": "Choose ",
       "and-set-free": " and booking (free)"
+    },
+    "extra-infor-doctor": {
+      "text-address": "Address",
+      "price": "Price",
+      "payment": "The patient can pay the cost in the form of",
+      "hide-price": "Hide price",
+      "detail": "Details"
     }
   },
   "admin": {
