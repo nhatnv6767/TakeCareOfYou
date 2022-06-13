@@ -23,8 +23,8 @@ class BookingModal extends Component {
 
     render() {
         return (
-            <Modal isOpen={modal} toggle={toggle} className={className}>
-
+            <Modal isOpen={true} toggle={} className={'booking-modal-container'}>
+                Hello world inside modal
             </Modal>
         );
     }
