@@ -28,7 +28,21 @@ class BookingModal extends Component {
                 className={'booking-modal-container'}
                 size="lg"
                 centered
+                // backdrop={true}
             >
+                <div className="booking-modal-content">
+                    <div className="booking-modal-header">
+
+                    </div>
+
+                    <div className="booking-modal-body">
+
+                    </div>
+
+                    <div className="booking-modal-footer">
+
+                    </div>
+                </div>
                 <div style={{height: '140px'}}>
                     Hello world inside modal
                 </div>
