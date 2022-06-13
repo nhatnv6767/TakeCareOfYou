@@ -77,6 +77,14 @@ class ProfileDoctor extends Component {
                             }
                         </div>
                     </div>
+
+                </div>
+                <div className="price">
+                    {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.VI ?
+                        dataProfile.Doctor_Infor.priceData.valueVi :
+                        dataProfile.Doctor_Infor.priceData.valueEn
+                    }
+
                 </div>
             </div>
         );

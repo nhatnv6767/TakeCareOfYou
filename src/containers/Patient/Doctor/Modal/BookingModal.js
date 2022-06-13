@@ -26,6 +26,7 @@ class BookingModal extends Component {
         let {isOpenModal, closeBookingModal, dataTime} = this.props;
         let doctorId = dataTime && !_.isEmpty(dataTime) ? dataTime.doctorId : "";
 
+        console.log("BookingModal, dataTime", dataTime);
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -54,10 +55,6 @@ class BookingModal extends Component {
                             <ProfileDoctor
                                 doctorId={doctorId}
                             />
-                        </div>
-
-                        <div className="price">
-                            Giá khám 500.000 VND
                         </div>
 
                         <div className="row">
