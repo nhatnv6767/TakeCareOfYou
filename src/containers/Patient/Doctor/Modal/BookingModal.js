@@ -49,7 +49,7 @@ class BookingModal extends Component {
                         {/*{JSON.stringify(dataTime)}*/}
                         <div className="doctor-infor">
                             <ProfileDoctor
-                            
+                                // Go To NODE -> Create new API
                             />
                         </div>
 
