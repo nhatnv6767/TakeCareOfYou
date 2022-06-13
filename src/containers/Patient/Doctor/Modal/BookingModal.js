@@ -4,6 +4,7 @@ import {FormattedMessage} from 'react-intl';
 import "./BookingModal.scss";
 import {Modal} from "reactstrap";
 import ProfileDoctor from "../ProfileDoctor";
+import _ from "lodash";
 
 class BookingModal extends Component {
     constructor(props) {
@@ -23,6 +24,10 @@ class BookingModal extends Component {
 
     render() {
         let {isOpenModal, closeBookingModal, dataTime} = this.props;
+        let doctorId = "";
+        if (dataTime && !_.isEmpty(dataTime)) {
+            doctorId = dataTime.doctorId;
+        }
         console.log("BookingModal_Props: ", this.props);
         return (
             <Modal
