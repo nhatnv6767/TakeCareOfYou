@@ -27,8 +27,9 @@ class BookingModal extends Component {
                 isOpen={true}
                 className={'booking-modal-container'}
                 size="lg"
+                centered
             >
-                <div style={{height: '40px'}}>
+                <div style={{height: '140px'}}>
                     Hello world inside modal
                 </div>
             </Modal>
