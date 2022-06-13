@@ -35,6 +35,16 @@
       button {
         border: none;
         outline: none;
+        padding: 5px 8px;
+        border-radius: 3px;
+      }
+
+      .btn-booking-confirm {
+        background-color: orange;
+      }
+
+      .btn-booking-cancel {
+        background-color: gray;
       }
     }
   }
