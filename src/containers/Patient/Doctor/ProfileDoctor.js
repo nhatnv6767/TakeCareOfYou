@@ -6,7 +6,7 @@ import {getProfileDoctorById} from "../../../services/userService";
 import {LANGUAGES} from "../../../utils";
 import NumberFormat from 'react-number-format';
 
-
+// Delete Markdown in node
 class ProfileDoctor extends Component {
     constructor(props) {
         super(props);
