@@ -22,9 +22,10 @@ class BookingModal extends Component {
     }
 
     render() {
+        let {isOpenModal} = this.props;
         return (
             <Modal
-                isOpen={false}
+                isOpen={isOpenModal}
                 className={'booking-modal-container'}
                 size="lg"
                 centered
