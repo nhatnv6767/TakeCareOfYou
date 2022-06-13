@@ -14,7 +14,7 @@ class ProfileDoctor extends Component {
     }
 
     async componentDidMount() {
-        let data = this.getInforDoctor(this.props.doctorId);
+        let data = await this.getInforDoctor(this.props.doctorId);
         this.setState({
             dataProfile: data,
         });
