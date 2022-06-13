@@ -23,6 +23,7 @@ class BookingModal extends Component {
 
     render() {
         let {isOpenModal, closeBookingModal, dataTime} = this.props;
+        console.log("BookingModal_Props: ", this.props);
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -49,7 +50,7 @@ class BookingModal extends Component {
                         {/*{JSON.stringify(dataTime)}*/}
                         <div className="doctor-infor">
                             <ProfileDoctor
-                                
+
                             />
                         </div>
 
