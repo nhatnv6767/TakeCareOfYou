@@ -24,7 +24,7 @@ class BookingModal extends Component {
     render() {
         return (
             <Modal
-                isOpen={true}
+                isOpen={false}
                 className={'booking-modal-container'}
                 size="lg"
                 centered
@@ -74,7 +74,7 @@ class BookingModal extends Component {
                             dignissimos eos impedit mollitia neque nesciunt praesentium rem. Consectetur doloremque ex
                             iste pariatur qui, quibusdam quo tempora.
                         </div>
-                        
+
 
                     </div>
 

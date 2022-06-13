@@ -111,6 +111,10 @@ class DoctorSchedule extends Component {
         }
     };
 
+    handleClickScheduleTime = (time) => {
+        console.log("DoctorSchedule Click Schedule Time", time);
+    };
+
     render() {
         let {allDays, allAvailableTimes} = this.state;
         let {language} = this.props;
