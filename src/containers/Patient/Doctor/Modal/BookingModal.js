@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./BookingModal.scss";
 import {Modal} from "reactstrap";
-
+import ProfileDoctor from "../ProfileDoctor";
 
 class BookingModal extends Component {
     constructor(props) {
@@ -48,7 +48,9 @@ class BookingModal extends Component {
 
                         {/*{JSON.stringify(dataTime)}*/}
                         <div className="doctor-infor">
-
+                            <ProfileDoctor
+                            
+                            />
                         </div>
 
                         <div className="price">

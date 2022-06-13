@@ -22,7 +22,7 @@ class ProfileDoctor extends Component {
     render() {
         return (
             <div>
-                DefaultClass
+                Profile Doctor
             </div>
         );
     }
