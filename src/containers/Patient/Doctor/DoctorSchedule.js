@@ -155,6 +155,7 @@ class DoctorSchedule extends Component {
                                                     <button
                                                         key={index}
                                                         className={language === LANGUAGES.VI ? "btn-vie" : "btn-en"}
+                                                        onClick={() => this.handleClickScheduleTime(item)}
                                                     >
                                                         {timeDisplay}
                                                     </button>
@@ -183,7 +184,7 @@ class DoctorSchedule extends Component {
                     </div>
                 </div>
                 <BookingModal
-                
+
                 />
             </>
         );
