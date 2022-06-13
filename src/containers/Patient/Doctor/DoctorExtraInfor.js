@@ -109,11 +109,21 @@ class DoctorExtraInfor extends Component {
                             {extraInfor && extraInfor.priceData && language === LANGUAGES.VI &&
 
                                 <NumberFormat
-                                    value={2456981}
+                                    value={extraInfor.priceData.valueVi}
                                     displayType={'text'}
                                     thousandSeparator={true}
                                     suffix={' VND'}
-                                />;
+                                />
+                            }
+
+                            {extraInfor && extraInfor.priceData && language === LANGUAGES.EN &&
+
+                                <NumberFormat
+                                    value={extraInfor.priceData.valueEn}
+                                    displayType={'text'}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                />
                             }
                             <span onClick={() => this.showHideDetailInfor(!isShowDetailInfor)}>
                                 Xem chi tiết
