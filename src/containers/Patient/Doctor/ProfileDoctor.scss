@@ -3,7 +3,6 @@
     display: flex;
 
     .content-left {
-      width: 20%;
       background-size: cover;
       background-position: top center;
       width: 85px;
@@ -12,7 +11,7 @@
     }
 
     .content-right {
-      width: 80%;
+      width: calc(100% - 85px);
       display: flex;
       flex-direction: column;
       padding-left: 10px;
@@ -23,6 +22,7 @@
       }
 
       .down {
+        text-align: justify;
       }
     }
   }
