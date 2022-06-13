@@ -7,11 +7,14 @@
       padding: 10px;
 
       .left {
-
+        font-size: 15px;
+        font-weight: 600;
+        color: #333;
       }
 
       .right {
         float: right;
+        cursor: pointer;
       }
 
     }
