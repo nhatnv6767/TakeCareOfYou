@@ -15,6 +15,7 @@ class DoctorSchedule extends Component {
             allDays: [],
             allAvailableTimes: [],
             isOpenModalBooking: false,
+            dataScheduleTimeModal: {},
         };
     }
 
@@ -115,6 +116,7 @@ class DoctorSchedule extends Component {
     handleClickScheduleTime = (time) => {
         this.setState({
             isOpenModalBooking: true,
+            dataScheduleTimeModal: time,
         });
         console.log("DoctorSchedule Click Schedule Time", time);
     };
@@ -123,10 +125,10 @@ class DoctorSchedule extends Component {
         this.setState({
             isOpenModalBooking: false,
         });
-    }
+    };
 
     render() {
-        let {allDays, allAvailableTimes, isOpenModalBooking} = this.state;
+        let {allDays, allAvailableTimes, isOpenModalBooking, dataScheduleTimeModal} = this.state;
         let {language} = this.props;
         return (
             <>
@@ -200,6 +202,7 @@ class DoctorSchedule extends Component {
                 <BookingModal
                     isOpenModal={isOpenModalBooking}
                     closeBookingModal={this.closeBookingModal}
+                    dataTime={dataScheduleTimeModal}
                 />
             </>
         );

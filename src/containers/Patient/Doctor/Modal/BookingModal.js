@@ -22,7 +22,7 @@ class BookingModal extends Component {
     }
 
     render() {
-        let {isOpenModal, closeBookingModal} = this.props;
+        let {isOpenModal, closeBookingModal, dataTime} = this.props;
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -46,38 +46,7 @@ class BookingModal extends Component {
 
                     <div className="booking-modal-body">
 
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolores dolorum exercitationem
-                            explicabo libero minus natus non quas recusandae tempora, vel veniam? Labore magnam nihil
-                            porro possimus, quia vel voluptatibus?
-                        </div>
-                        <div>Adipisci asperiores eius provident repudiandae sequi! Accusamus amet at eos magni minima
-                            mollitia suscipit! A amet aperiam consequuntur culpa ea expedita explicabo fugit maxime
-                            neque nisi, quidem quo recusandae veritatis.
-                        </div>
-                        <div>Commodi ea eaque explicabo quia ratione sint tempore totam voluptate! Ab doloribus eaque,
-                            enim incidunt, itaque iure labore libero modi nemo perferendis placeat, qui quod reiciendis
-                            repudiandae unde veniam voluptas!
-                        </div>
-                        <div>Alias aliquam animi aspernatur cum eius eveniet fugiat fugit, harum illum nemo nihil
-                            perferendis, qui repellat repudiandae soluta tempora tempore vel veritatis. Consequuntur ex
-                            hic id ipsum iste possimus voluptates.
-                        </div>
-                        <div>At cum ea est incidunt itaque, modi mollitia necessitatibus nihil sunt. Ad architecto at
-                            consectetur delectus fugit hic illum, libero mollitia natus officia quae repellat sed, ut
-                            velit veritatis voluptate!
-                        </div>
-                        <div>Alias beatae consectetur culpa dolorum eaque earum esse exercitationem fugit, molestiae
-                            nulla odit omnis quae quidem quisquam recusandae reprehenderit sunt voluptate voluptatem
-                            voluptates, voluptatibus? Atque id inventore non tempora voluptates?
-                        </div>
-                        <div>A accusamus, aliquam aliquid assumenda, dicta eum harum itaque iusto, quae qui sunt veniam
-                            voluptate. Accusantium animi aut consequatur, eligendi fugiat, obcaecati omnis placeat quos
-                            sit soluta suscipit tempora voluptate.
-                        </div>
-                        <div>Ex facere odit qui soluta ullam? Accusantium animi aperiam, aut consequuntur corporis cum
-                            dignissimos eos impedit mollitia neque nesciunt praesentium rem. Consectetur doloremque ex
-                            iste pariatur qui, quibusdam quo tempora.
-                        </div>
+                        {JSON.stringify(dataTime)}
 
 
                     </div>
