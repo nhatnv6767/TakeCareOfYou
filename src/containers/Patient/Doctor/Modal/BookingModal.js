@@ -19,7 +19,8 @@ class BookingModal extends Component {
             address: "",
             reason: "",
             birthday: "",
-            gender: "",
+            selectedGender: "",
+            genders: "",
             doctorId: "",
         };
     }
@@ -28,10 +29,27 @@ class BookingModal extends Component {
         this.props.getGenderStart();
     }
 
+    
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
 
+        }
+
+        if (prevProps.genders !== this.props.genders) {
+            if(this.props.genders.length > 0) {
+                let data = this.props.genders
+                let language = this.props.language
+                data.map((item) => {
+
+                    return (
+
+                    )
+                })
+            }
+            this.setState({
+                genders: this.props.genders
+            });
         }
     }
 
@@ -178,6 +196,7 @@ class BookingModal extends Component {
 const mapStateToProps = (state) => {
     return {
         language: state.app.language,
+        genders: state.admin.genders,
     };
 };
 
