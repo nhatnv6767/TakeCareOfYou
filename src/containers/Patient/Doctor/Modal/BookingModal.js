@@ -76,6 +76,10 @@ class BookingModal extends Component {
         });
     };
 
+    handleChangeSelect = (selectedOption) => {
+        this.setState({selectedGender: selectedOption});
+    };
+
     render() {
         let {isOpenModal, closeBookingModal, dataTime} = this.props;
         let doctorId = dataTime && !_.isEmpty(dataTime) ? dataTime.doctorId : "";
