@@ -9,6 +9,7 @@ import DatePicker from "../../../../components/Input/DatePicker";
 import * as actions from "../../../../store/actions";
 import {fetchGenderStart} from "../../../../store/actions";
 import {LANGUAGES} from "../../../../utils";
+import Select from "react-select";
 
 class BookingModal extends Component {
     constructor(props) {
@@ -167,10 +168,10 @@ class BookingModal extends Component {
                             </div>
                             <div className="col-6 form-group">
                                 <label>Giới tính</label>
-                                <input
-                                    className="form-control"
-                                    value={this.state.gender}
-                                    onChange={(event) => this.handleOnChangeInput(event, 'gender')}
+                                <Select
+                                    value={this.state.selectedGender}
+                                    options={this.state.genders}
+                                    onChange={this.handleChangeSelect}
                                 />
                             </div>
 
