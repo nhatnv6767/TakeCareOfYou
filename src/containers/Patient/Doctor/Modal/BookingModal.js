@@ -6,6 +6,8 @@ import {Modal} from "reactstrap";
 import ProfileDoctor from "../ProfileDoctor";
 import _ from "lodash";
 import DatePicker from "../../../../components/Input/DatePicker";
+import * as actions from "../../../../store/actions";
+import {fetchGenderStart} from "../../../../store/actions";
 
 class BookingModal extends Component {
     constructor(props) {
@@ -23,6 +25,7 @@ class BookingModal extends Component {
     }
 
     async componentDidMount() {
+        this.props.getGenderStart();
     }
 
 
@@ -179,7 +182,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {};
+    return {
+        getGenderStart: () => dispatch(actions.fetchGenderStart()),
+    };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookingModal);
