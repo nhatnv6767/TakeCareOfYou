@@ -31,6 +31,16 @@ class BookingModal extends Component {
         }
     }
 
+    handleOnChangeInput = (event, id) => {
+        let valueInput = event.target.value;
+        let stateCopy = {...this.state};
+        // key:value
+        stateCopy[id] = valueInput;
+        this.setState({
+            ...stateCopy
+        });
+    };
+
     render() {
         let {isOpenModal, closeBookingModal, dataTime} = this.props;
         let doctorId = dataTime && !_.isEmpty(dataTime) ? dataTime.doctorId : "";
