@@ -5,6 +5,8 @@ import "./ProfileDoctor.scss";
 import {getProfileDoctorById} from "../../../services/userService";
 import {LANGUAGES} from "../../../utils";
 import NumberFormat from 'react-number-format';
+import _ from "lodash";
+import moment from "moment";
 
 class ProfileDoctor extends Component {
     constructor(props) {
@@ -43,11 +45,18 @@ class ProfileDoctor extends Component {
     }
 
     renderTimeBooking = (dataTime) => {
+        let {language} = this.props;
+        console.log("renderTimeBooking: ", dataTime);
         if (dataTime && !_.isEmpty(dataTime)) {
+            // convert timestamp to Date
+            let date = language === LANGUAGES.VI ?
+                moment(new Date(dataTime.date)).format('dddd - DD/MM/YYYY')
+                :
+                moment(new Date(dataTime.date)).format('ddd - MM/DD/YYYY')
             return (
                 <>
                     <div>
-                        16:30 - 17:00 - Thứ 7 - 18/06/2022
+                        16:30 - 17:00 - {date}
                     </div>
                     <div>
                         Miễn phí đặt lịch
