@@ -44,15 +44,27 @@ class ProfileDoctor extends Component {
         }
     }
 
+    titleCase = (str) => {
+        var splitStr = str.toLowerCase().split(' ');
+        for (var i = 0; i < splitStr.length; i++) {
+            // You do not need to check if i is larger than splitStr length, as your for does that for you
+            // Assign it back to the array
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+        }
+        // Directly return the joined string
+        return splitStr.join(' ');
+    };
+
     renderTimeBooking = (dataTime) => {
         let {language} = this.props;
         console.log("renderTimeBooking: ", dataTime);
         if (dataTime && !_.isEmpty(dataTime)) {
             // convert timestamp to Date
             let date = language === LANGUAGES.VI ?
+                // milisecond -> second
                 moment.unix(+dataTime.date / 1000).format('dddd - DD/MM/YYYY')
                 :
-                moment.unix(+dataTime.date / 1000).format('ddd - MM/DD/YYYY');
+                moment.unix(+dataTime.date / 1000).locale("en").format('ddd - MM/DD/YYYY');
             return (
                 <>
                     <div>
