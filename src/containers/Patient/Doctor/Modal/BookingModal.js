@@ -8,6 +8,7 @@ import _ from "lodash";
 import DatePicker from "../../../../components/Input/DatePicker";
 import * as actions from "../../../../store/actions";
 import {fetchGenderStart} from "../../../../store/actions";
+import {LANGUAGES} from "../../../../utils";
 
 class BookingModal extends Component {
     constructor(props) {
@@ -29,26 +30,31 @@ class BookingModal extends Component {
         this.props.getGenderStart();
     }
 
-    
+    buildDataGender = (data) => {
+        let result = [];
+        let language = this.props.language;
+
+        if (data && data.length > 0) {
+            data.map((item) => {
+                let object = {};
+                object.label = language === LANGUAGES.VI ? item.valueVi : item.valueEn;
+                object.value = item.keyMap;
+                result.push(object);
+            });
+        }
+        return result;
+    };
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
-
+            this.setState({
+                genders: this.buildDataGender(this.props.genders)
+            });
         }
 
         if (prevProps.genders !== this.props.genders) {
-            if(this.props.genders.length > 0) {
-                let data = this.props.genders
-                let language = this.props.language
-                data.map((item) => {
-
-                    return (
-
-                    )
-                })
-            }
             this.setState({
-                genders: this.props.genders
+                genders: this.buildDataGender(this.props.genders)
             });
         }
     }
