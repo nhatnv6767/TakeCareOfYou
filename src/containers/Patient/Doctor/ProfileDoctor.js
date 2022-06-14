@@ -58,6 +58,7 @@ class ProfileDoctor extends Component {
     renderTimeBooking = (dataTime) => {
         let {language} = this.props;
         console.log("renderTimeBooking: ", dataTime);
+        let time = language === LANGUAGES.VI ? dataTime.timeTypeData.valueVi : dataTime.timeTypeData.valueEn;
         if (dataTime && !_.isEmpty(dataTime)) {
             // convert timestamp to Date
             let date = language === LANGUAGES.VI ?
@@ -68,7 +69,7 @@ class ProfileDoctor extends Component {
             return (
                 <>
                     <div>
-                        16:30 - 17:00 - {date}
+                        {time} - {date}
                     </div>
                     <div>
                         Miễn phí đặt lịch
