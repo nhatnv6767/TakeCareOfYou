@@ -43,16 +43,19 @@ class ProfileDoctor extends Component {
     }
 
     renderTimeBooking = (dataTime) => {
-        return (
-            <>
-                <div>
-                    16:30 - 17:00 - Thứ 7 - 18/06/2022
-                </div>
-                <div>
-                    Miễn phí đặt lịch
-                </div>
-            </>
-        );
+        if (dataTime && !_.isEmpty(dataTime)) {
+            return (
+                <>
+                    <div>
+                        16:30 - 17:00 - Thứ 7 - 18/06/2022
+                    </div>
+                    <div>
+                        Miễn phí đặt lịch
+                    </div>
+                </>
+            );
+        }
+        return <></>;
     };
 
     render() {
