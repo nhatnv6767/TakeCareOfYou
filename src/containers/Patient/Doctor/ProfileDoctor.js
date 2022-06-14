@@ -50,9 +50,9 @@ class ProfileDoctor extends Component {
         if (dataTime && !_.isEmpty(dataTime)) {
             // convert timestamp to Date
             let date = language === LANGUAGES.VI ?
-                moment(new Date(dataTime.date)).format('dddd - DD/MM/YYYY')
+                moment.unix(dataTime.date).format('dddd - DD/MM/YYYY')
                 :
-                moment(new Date(dataTime.date)).format('ddd - MM/DD/YYYY')
+                moment.unix(dataTime.date).format('ddd - MM/DD/YYYY');
             return (
                 <>
                     <div>
