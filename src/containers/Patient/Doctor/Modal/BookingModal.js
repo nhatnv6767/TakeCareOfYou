@@ -5,6 +5,7 @@ import "./BookingModal.scss";
 import {Modal} from "reactstrap";
 import ProfileDoctor from "../ProfileDoctor";
 import _ from "lodash";
+import DatePicker from "../../../../components/Input/DatePicker";
 
 class BookingModal extends Component {
     constructor(props) {
@@ -41,11 +42,17 @@ class BookingModal extends Component {
         });
     };
 
+    handleOnChangeDatePicker = (date) => {
+        this.setState({
+            birthday: date[0]
+        });
+    };
+
     render() {
         let {isOpenModal, closeBookingModal, dataTime} = this.props;
         let doctorId = dataTime && !_.isEmpty(dataTime) ? dataTime.doctorId : "";
 
-        console.log("BookingModal, dataTime", dataTime);
+        console.log("Check state: ", this.state);
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -123,10 +130,12 @@ class BookingModal extends Component {
 
                             <div className="col-6 form-group">
                                 <label>Ngày sinh</label>
-                                <input
+                                <DatePicker
+                                    onChange={this.handleOnChangeDatePicker}
                                     className="form-control"
                                     value={this.state.birthday}
-                                    onChange={(event) => this.handleOnChangeInput(event, 'birthday')}
+                                    // get current date
+                                    // minDate={yesterday}
                                 />
                             </div>
                             <div className="col-6 form-group">
