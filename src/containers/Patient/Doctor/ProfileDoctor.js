@@ -42,15 +42,19 @@ class ProfileDoctor extends Component {
         }
     }
 
+    renderTimeBooking = (dataTime) => {
+        
+    }
+
     render() {
         let {dataProfile} = this.state;
-        let {language, isShowDescriptionDoctor} = this.props;
+        let {language, isShowDescriptionDoctor, dataTime} = this.props;
         let nameVi = '', nameEn = '';
         if (dataProfile && dataProfile.positionData) {
             nameVi = `${dataProfile.positionData.valueVi}, ${dataProfile.lastName} ${dataProfile.firstName}`;
             nameEn = `${dataProfile.positionData.valueEn}, ${dataProfile.firstName} ${dataProfile.lastName}`;
         }
-        console.log("Check state at Profile Doctor", this.state);
+        console.log("Check props at Profile Doctor", dataTime);
         return (
             <div className="profile-doctor-container">
                 <div className="intro-doctor">
