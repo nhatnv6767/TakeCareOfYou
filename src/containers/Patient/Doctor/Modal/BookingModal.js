@@ -98,15 +98,18 @@ class BookingModal extends Component {
     handleConfirmBooking = async () => {
         // validate input
 
+
+        let date = new Date(this.state.birthday).getTime();
         let res = await postPatientBookAppointment({
             fullName: this.state.fullName,
             phoneNumber: this.state.phoneNumber,
             email: this.state.email,
             address: this.state.address,
             reason: this.state.reason,
-            birthday: this.state.birthday,
+            date: date,
             selectedGender: this.state.selectedGender,
             doctorId: this.state.doctorId,
+            timeType: this.state.timeType,
         });
 
         if (res && res.errCode === 0) {
