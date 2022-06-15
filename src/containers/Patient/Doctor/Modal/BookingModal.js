@@ -131,6 +131,7 @@ class BookingModal extends Component {
             timeType: this.state.timeType,
             language: this.props.language,
             timeString: timeString,
+            // testing on NODE JS
         });
 
         if (res && res.errCode === 0) {
