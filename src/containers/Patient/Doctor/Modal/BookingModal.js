@@ -26,6 +26,7 @@ class BookingModal extends Component {
             selectedGender: "",
             genders: "",
             doctorId: "",
+            timeType: "",
         };
     }
 
@@ -63,9 +64,12 @@ class BookingModal extends Component {
 
         if (prevProps.dataTime !== this.props.dataTime) {
             if (this.props.dataTime && !_.isEmpty(this.props.dataTime)) {
+                console.log("Check dataTime: ", this.props.dataTime);
                 let doctorId = this.props.dataTime.doctorId;
+                let timeType = this.props.dataTime.timeType;
                 this.setState({
-                    doctorId: doctorId
+                    doctorId: doctorId,
+                    timeType: timeType,
                 });
             }
         }
