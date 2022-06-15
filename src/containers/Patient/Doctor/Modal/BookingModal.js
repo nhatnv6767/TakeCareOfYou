@@ -58,6 +58,15 @@ class BookingModal extends Component {
                 genders: this.buildDataGender(this.props.genders)
             });
         }
+
+        if (prevProps.dataTime !== this.props.dataTime) {
+            if (this.props.dataTime && !_.isEmpty(this.props.dataTime)) {
+                let doctorId = this.props.dataTime.doctorId;
+                this.setState({
+                    doctorId: doctorId
+                });
+            }
+        }
     }
 
     handleOnChangeInput = (event, id) => {
@@ -190,7 +199,7 @@ class BookingModal extends Component {
                     <div className="booking-modal-footer">
                         <button
                             className="btn-booking-confirm"
-                            onClick={this.handleConfirmBooking()}
+                            onClick={() => this.handleConfirmBooking()}
                         >
                             Xác nhận
                         </button>
