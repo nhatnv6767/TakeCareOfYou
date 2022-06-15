@@ -80,11 +80,15 @@ class BookingModal extends Component {
         this.setState({selectedGender: selectedOption});
     };
 
+    handleConfirmBooking = () => {
+        console.log("Check handleConfirmBooking", this.state);
+    };
+
     render() {
         let {isOpenModal, closeBookingModal, dataTime} = this.props;
         let doctorId = dataTime && !_.isEmpty(dataTime) ? dataTime.doctorId : "";
 
-        console.log("Check state: ", this.state);
+        // console.log("Check state: ", this.state);
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -186,7 +190,7 @@ class BookingModal extends Component {
                     <div className="booking-modal-footer">
                         <button
                             className="btn-booking-confirm"
-                            onClick={closeBookingModal}
+                            onClick={this.handleConfirmBooking()}
                         >
                             Xác nhận
                         </button>
