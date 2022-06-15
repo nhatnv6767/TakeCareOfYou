@@ -10,6 +10,8 @@ import * as actions from "../../../../store/actions";
 import {fetchGenderStart} from "../../../../store/actions";
 import {LANGUAGES} from "../../../../utils";
 import Select from "react-select";
+import {postPatientBookAppointment} from "../../../../services/userService";
+import {toast} from "react-toastify";
 
 class BookingModal extends Component {
     constructor(props) {
@@ -89,7 +91,25 @@ class BookingModal extends Component {
         this.setState({selectedGender: selectedOption});
     };
 
-    handleConfirmBooking = () => {
+    handleConfirmBooking = async () => {
+        // validate input
+
+        let res = await postPatientBookAppointment({
+            fullName: this.state.fullName,
+            phoneNumber: this.state.phoneNumber,
+            email: this.state.email,
+            address: this.state.address,
+            reason: this.state.reason,
+            birthday: this.state.birthday,
+            selectedGender: this.state.selectedGender,
+            doctorId: this.state.doctorId,
+        });
+
+        if (res && res.errCode === 0) {
+            toast.success("Booking a new appointment succeed");
+        } else {
+            toast.error("Booking a new appointment error");
+        }
         console.log("Check handleConfirmBooking", this.state);
     };
 
