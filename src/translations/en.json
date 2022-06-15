@@ -80,7 +80,7 @@
     },
     "booking-modal": {
       "information": "Information to book a medical appointment",
-      "name": "Name",
+      "name": "Fullname",
       "telephone": "Telephone number",
       "email": "Email address",
       "address": "Address",
@@ -88,7 +88,9 @@
       "birthday": "Birthday",
       "gender": "Gender",
       "accept": "Accept",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "price-booking": "Free booking",
+      "price": "Price:"
     }
   },
   "admin": {
