@@ -147,7 +147,6 @@ class BookingModal extends Component {
             language: this.props.language,
             timeString: timeString,
             doctorName: doctorName,
-            // testing on NODE JS
         });
 
         if (res && res.errCode === 0) {
