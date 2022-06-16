@@ -9,6 +9,12 @@ class VerifyEmail extends Component {
     }
 
     async componentDidMount() {
+        if (
+            this.props.match &&
+            this.props.match.params
+        ) {
+
+        }
     }
 
 
