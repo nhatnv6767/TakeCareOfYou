@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
+import {postVerifyBookAppointment} from "../../services/userService"
 
 class VerifyEmail extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class VerifyEmail extends Component {
             let urlParams = new URLSearchParams(this.props.location.search);
             let token = urlParams.get('token');
             let doctorId = urlParams.get('doctorId');
-            
+
         }
 
     }
