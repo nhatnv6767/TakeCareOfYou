@@ -9,17 +9,14 @@ class VerifyEmail extends Component {
     }
 
     async componentDidMount() {
-        console.log("VerifyEmail check props", this.props);
-        const urlParams = new URLSearchParams(this.props.location.search);
-        const token = urlParams.get('token');
-        const doctorId = urlParams.get('doctorId');
-        console.log(token, doctorId);
-        if (
-            this.props.match &&
-            this.props.match.params
-        ) {
-
+        if (this.props.location && this.props.location.search) {
+            console.log("VerifyEmail check props", this.props);
+            let urlParams = new URLSearchParams(this.props.location.search);
+            let token = urlParams.get('token');
+            let doctorId = urlParams.get('doctorId');
+            
         }
+
     }
 
 
