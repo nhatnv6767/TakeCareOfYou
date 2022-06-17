@@ -34,11 +34,11 @@ class ManageSpecialty extends Component {
                 <div className="add-new-specialty row">
                     <div className="col-6 form-group">
                         <label>Tên chuyên khoa</label>
-                        <input className="form-control"/>
+                        <input className="form-control" type="text"/>
                     </div>
                     <div className="col-6 form-group">
-                        <label>Tên chuyên khoa</label>
-                        <input className="form-control"/>
+                        <label>Ảnh chuyên khoa</label>
+                        <input className="form-control" type="file"/>
                     </div>
                     <div className="col-12">
                         <MdEditor
