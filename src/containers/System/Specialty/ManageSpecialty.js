@@ -38,7 +38,7 @@ class ManageSpecialty extends Component {
                     </div>
                     <div className="col-6 form-group">
                         <label>Ảnh chuyên khoa</label>
-                        <input className="form-control" type="file"/>
+                        <input className="form-control-file" type="file"/>
                     </div>
                     <div className="col-12">
                         <MdEditor
