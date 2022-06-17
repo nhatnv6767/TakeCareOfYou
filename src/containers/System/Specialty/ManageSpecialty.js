@@ -57,8 +57,9 @@ class ManageSpecialty extends Component {
     };
 
     handleSaveNewSpecialty = () => {
-        console.log("Check state ManageSpecialty", this.state)
-    }
+        console.log("Check state ManageSpecialty", this.state);
+        // go to Node js
+    };
 
     render() {
         return (
