@@ -11,7 +11,12 @@ const mdParser = new MarkdownIt(/* Markdown-it options */);
 class ManageSpecialty extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            name: "",
+            imageBase64: "",
+            descriptionHTML: "",
+            descriptionMarkdown: "",
+        };
     }
 
     async componentDidMount() {
@@ -24,6 +29,10 @@ class ManageSpecialty extends Component {
         }
     }
 
+    handleOnChangeInput = (event) => {
+        
+    };
+
     render() {
         return (
             <div className="manage-specialty-container">
@@ -34,7 +43,11 @@ class ManageSpecialty extends Component {
                 <div className="add-new-specialty row">
                     <div className="col-6 form-group">
                         <label>Tên chuyên khoa</label>
-                        <input className="form-control" type="text"/>
+                        <input
+                            className="form-control"
+                            type="text" value={this.state.name}
+                            onChange={(event) => this.handleOnChangeInput(event, 'name')}
+                        />
                     </div>
                     <div className="col-6 form-group">
                         <label>Ảnh chuyên khoa</label>
