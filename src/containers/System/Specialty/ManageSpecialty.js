@@ -50,13 +50,15 @@ class ManageSpecialty extends Component {
         let file = data[0];
         if (file) {
             let base64 = await CommonUtils.getBase64(file);
-            let objectUrl = URL.createObjectURL(file);
             this.setState({
-                previewImgURL: objectUrl,
-                avatar: base64,
+                imageBase64: base64,
             });
         }
     };
+
+    handleSaveNewSpecialty = () => {
+        console.log("Check state ManageSpecialty", this.state)
+    }
 
     render() {
         return (
@@ -91,7 +93,10 @@ class ManageSpecialty extends Component {
                         />
                     </div>
                     <div className="col-12">
-                        <button className="btn-save-specialty">
+                        <button
+                            className="btn-save-specialty"
+                            onClick={() => this.handleSaveNewSpecialty()}
+                        >
                             Save
                         </button>
                     </div>
