@@ -4,6 +4,7 @@ import {FormattedMessage} from 'react-intl';
 import "./ManageSpecialty.scss";
 import MarkdownIt from "markdown-it";
 import MdEditor from "react-markdown-editor-lite";
+import {CommonUtils} from "../../../utils";
 
 // Initialize a markdown parser
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -29,8 +30,12 @@ class ManageSpecialty extends Component {
         }
     }
 
-    handleOnChangeInput = (event) => {
-
+    handleOnChangeInput = (event, id) => {
+        let stateCopy = {...this.state};
+        stateCopy[id] = event.target.value;
+        this.setState({
+            ...stateCopy
+        });
     };
 
     handleEditorChange = ({html, text}) => {
@@ -38,6 +43,19 @@ class ManageSpecialty extends Component {
             descriptionHTML: html,
             descriptionMarkdown: text,
         });
+    };
+
+    handleOnChangeImage = async (event) => {
+        let data = event.target.files;
+        let file = data[0];
+        if (file) {
+            let base64 = await CommonUtils.getBase64(file);
+            let objectUrl = URL.createObjectURL(file);
+            this.setState({
+                previewImgURL: objectUrl,
+                avatar: base64,
+            });
+        }
     };
 
     render() {
@@ -58,7 +76,11 @@ class ManageSpecialty extends Component {
                     </div>
                     <div className="col-6 form-group">
                         <label>Ảnh chuyên khoa</label>
-                        <input className="form-control-file" type="file"/>
+                        <input
+                            className="form-control-file"
+                            type="file"
+                            onChange={(event) => this.handleOnChangeImage(event)}
+                        />
                     </div>
                     <div className="col-12">
                         <MdEditor
