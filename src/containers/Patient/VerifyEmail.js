@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import {postVerifyBookAppointment} from "../../services/userService";
 import HomeHeader from "../HomePage/HomeHeader";
+import "./VerifyEmail.scss";
 
 class VerifyEmail extends Component {
     constructor(props) {
@@ -51,17 +52,22 @@ class VerifyEmail extends Component {
         return (
             <>
                 <HomeHeader/>
-                {!statusVerify ?
-                    <div>
-                        Loading Data
-                    </div>
-                    :
-                    <div>
-                        {+errCode === 0 ?
-                            <div>Success</div> : <div>Failed</div>
-                        }
-                    </div>
-                }
+                <div className="verify-email-container">
+                    {!statusVerify ?
+                        <div>
+                            Loading Data
+                        </div>
+                        :
+                        <div>
+                            {+errCode === 0 ?
+                                <div className="infor-booking">Xác nhận lịch hẹn thành công.</div>
+                                :
+                                <div className="infor-booking">Lịch hẹn không tồn tại hoặc đã được xác nhận.</div>
+                            }
+                        </div>
+                    }
+                </div>
+
 
             </>
         );
