@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import {postVerifyBookAppointment} from "../../services/userService";
+import HomeHeader from "../HomePage/HomeHeader";
 
 class VerifyEmail extends Component {
     constructor(props) {
@@ -40,9 +41,12 @@ class VerifyEmail extends Component {
 
     render() {
         return (
-            <div>
-                VerifyEmail
-            </div>
+            <>
+                <HomeHeader/>
+                <div>
+                    VerifyEmail
+                </div>
+            </>
         );
     }
 }
