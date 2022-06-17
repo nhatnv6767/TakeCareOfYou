@@ -48,6 +48,11 @@ class ManageSpecialty extends Component {
                             // value={this.state.contentMarkdown}
                         />
                     </div>
+                    <div className="col-12">
+                        <button className="btn-save-specialty">
+                            Save
+                        </button>
+                    </div>
 
                 </div>
 
