@@ -29,6 +29,11 @@ class VerifyEmail extends Component {
                     statusVerify: true,
                     errCode: res.errCode,
                 });
+            } else {
+                this.setState({
+                    statusVerify: false,
+                    errCode: res && res.errCode ? res.errCode : -1
+                })
             }
         }
 
@@ -57,7 +62,7 @@ class VerifyEmail extends Component {
                         }
                     </div>
                 }
-                
+
             </>
         );
     }
