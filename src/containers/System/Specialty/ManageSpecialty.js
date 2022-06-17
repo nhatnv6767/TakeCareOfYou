@@ -2,6 +2,11 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./ManageSpecialty.scss";
+import MarkdownIt from "markdown-it";
+import MdEditor from "react-markdown-editor-lite";
+
+// Initialize a markdown parser
+const mdParser = new MarkdownIt(/* Markdown-it options */);
 
 class ManageSpecialty extends Component {
     constructor(props) {
@@ -32,6 +37,13 @@ class ManageSpecialty extends Component {
                 <div className="all-specialty">
 
                 </div>
+
+                <MdEditor
+                    style={{height: "500px"}}
+                    renderHTML={(text) => mdParser.render(text)}
+                    // onChange={this.handleEditorChange}
+                    // value={this.state.contentMarkdown}
+                />
             </div>
         );
     }

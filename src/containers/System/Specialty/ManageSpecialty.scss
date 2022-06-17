@@ -1,9 +1,12 @@
 .manage-specialty-container {
+  padding: 0 15px;
 
   .ms-title {
     text-align: center;
     margin: 10px 0;
     text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
   }
 
   .btn-add-new-specialty {
@@ -11,6 +14,6 @@
   }
 
   .all-specialty {
-    
+
   }
 }
