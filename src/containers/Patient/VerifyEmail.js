@@ -9,6 +9,7 @@ class VerifyEmail extends Component {
         super(props);
         this.state = {
             statusVerify: false,
+            errCode: 0,
         };
     }
 
@@ -26,6 +27,7 @@ class VerifyEmail extends Component {
             if (res && res.errCode === 0) {
                 this.setState({
                     statusVerify: true,
+                    errCode: res.errCode,
                 });
             }
         }
@@ -40,9 +42,19 @@ class VerifyEmail extends Component {
     }
 
     render() {
+        let {statusVerify, errCode} = this.state;
         return (
             <>
                 <HomeHeader/>
+                {!statusVerify ?
+                    <div>
+                        Loading Data
+                    </div>
+                    :
+                    <div>
+
+                    </div>
+                }
                 <div>
                     VerifyEmail
                 </div>
