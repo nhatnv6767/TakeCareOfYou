@@ -52,12 +52,12 @@ class VerifyEmail extends Component {
                     </div>
                     :
                     <div>
-
+                        {errCode === 0 ?
+                            <div>Success</div> : <div>Failed</div>
+                        }
                     </div>
                 }
-                <div>
-                    VerifyEmail
-                </div>
+                
             </>
         );
     }
