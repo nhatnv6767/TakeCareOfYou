@@ -30,7 +30,14 @@ class ManageSpecialty extends Component {
     }
 
     handleOnChangeInput = (event) => {
-        
+
+    };
+
+    handleEditorChange = ({html, text}) => {
+        this.setState({
+            descriptionHTML: html,
+            descriptionMarkdown: text,
+        });
     };
 
     render() {
@@ -57,8 +64,8 @@ class ManageSpecialty extends Component {
                         <MdEditor
                             style={{height: "300px"}}
                             renderHTML={(text) => mdParser.render(text)}
-                            // onChange={this.handleEditorChange}
-                            // value={this.state.contentMarkdown}
+                            onChange={this.handleEditorChange}
+                            value={this.state.descriptionMarkdown}
                         />
                     </div>
                     <div className="col-12">
