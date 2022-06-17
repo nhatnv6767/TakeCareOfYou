@@ -21,8 +21,17 @@ class ManageSpecialty extends Component {
 
     render() {
         return (
-            <div>
-                ManageSpecialty
+            <div className="manage-specialty-container">
+                <div className="ms-title">
+                    Quản lý chuyên khoa
+                </div>
+                <div className="btn-add-new-specialty">
+                    <button>Add new</button>
+                </div>
+
+                <div className="all-specialty">
+
+                </div>
             </div>
         );
     }
