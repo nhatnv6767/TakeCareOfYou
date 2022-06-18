@@ -65,6 +65,7 @@ class ManageSpecialty extends Component {
             toast.success("Save new specialty succeed");
         } else {
             toast.error("Some error occurred while saving");
+            console.log("handleSaveNewSpecialty check res: ", res);
         }
     };
 
