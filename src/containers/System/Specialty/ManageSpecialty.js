@@ -6,6 +6,7 @@ import MarkdownIt from "markdown-it";
 import MdEditor from "react-markdown-editor-lite";
 import {CommonUtils} from "../../../utils";
 import {createNewSpecialty} from "../../../services/userService";
+import {toast} from 'react-toastify';
 
 // Initialize a markdown parser
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -59,9 +60,12 @@ class ManageSpecialty extends Component {
 
     handleSaveNewSpecialty = async () => {
 
-        let res = await createNewSpecialty(this.state)
-        console.log("Check state ManageSpecialty", this.state);
-        // go to Node js
+        let res = await createNewSpecialty(this.state);
+        if (res && res.errCode === 0) {
+            toast.success("Save new specialty succeed");
+        } else {
+            toast.error("Some error occurred while saving");
+        }
     };
 
     render() {
