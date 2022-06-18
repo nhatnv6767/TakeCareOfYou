@@ -5,6 +5,7 @@ import "./ManageSpecialty.scss";
 import MarkdownIt from "markdown-it";
 import MdEditor from "react-markdown-editor-lite";
 import {CommonUtils} from "../../../utils";
+import {createNewSpecialty} from "../../../services/userService";
 
 // Initialize a markdown parser
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -56,7 +57,9 @@ class ManageSpecialty extends Component {
         }
     };
 
-    handleSaveNewSpecialty = () => {
+    handleSaveNewSpecialty = async () => {
+
+        let res = await createNewSpecialty(this.state)
         console.log("Check state ManageSpecialty", this.state);
         // go to Node js
     };
