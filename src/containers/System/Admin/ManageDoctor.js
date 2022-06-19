@@ -250,7 +250,7 @@ class ManageDoctor extends Component {
                 inputData.map((item, index) => {
                     let object = {};
 
-                    object.label = item.name
+                    object.label = item.name;
                     object.value = item.id;
                     result.push(object);
                 });
@@ -262,7 +262,7 @@ class ManageDoctor extends Component {
     };
 
     render() {
-        let {hasOldData} = this.state;
+        let {hasOldData, listSpecialty} = this.state;
         console.log("Check state", this.state);
         return (
             <div className="manage-doctor-container">
@@ -357,7 +357,13 @@ class ManageDoctor extends Component {
                 <div className="row">
                     <div className="col-4 form-group">
                         <label>Chọn chuyên khoa</label>
-                        <input className="form-control"/>
+                        <Select
+                            // value={this.state.selectedOption}
+                            // onChange={this.handleChangeSelect}
+                            options={this.state.listSpecialty}
+                            placeholder={<FormattedMessage id="admin.manage-doctor.choose-doctor"/>}
+                            // name={"selectedOption"}
+                        />
                     </div>
 
                     <div className="col-4 form-group">
