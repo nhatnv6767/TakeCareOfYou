@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./DetailSpecialty.scss";
+import HomeHeader from "../../HomePage/HomeHeader";
 
 class DetailSpecialty extends Component {
     constructor(props) {
@@ -21,9 +22,12 @@ class DetailSpecialty extends Component {
 
     render() {
         return (
-            <div>
-                DetailSpecialty
-            </div>
+            <>
+                <HomeHeader isShowBanner={false}/>
+                <div>
+                    DetailSpecialty
+                </div>
+            </>
         );
     }
 }
