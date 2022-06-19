@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {FormattedMessage} from "react-intl";
 import Slider from "react-slick";
 import {getAllSpecialty} from "../../../services/userService";
+import "./Specialty.scss";
 
 class Specialty extends Component {
 
@@ -38,13 +39,13 @@ class Specialty extends Component {
                             {dataSpecialty && dataSpecialty.length > 0 &&
                                 dataSpecialty.map((item, index) => {
                                     return (
-                                        <div className="section-customize" key={index}>
+                                        <div className="section-customize specialty-child" key={index}>
                                             <div className="bg-image section-specialty"
                                                  style={{
                                                      backgroundImage: `url(${item.image})`,
                                                  }}
                                             />
-                                            <div>{item.name}</div>
+                                            <div className="specialty-name">{item.name}</div>
                                         </div>
                                     );
                                 })
