@@ -30,7 +30,7 @@ class Specialty extends Component {
             <div className="section-share section-specialty">
                 <div className="section-container">
                     <div className="section-header">
-                        <span className="title-section"><FormattedMessage id="homepage.specialty"/></span>
+                        <span className="title-section"><FormattedMessage id="homepage.popular-specialty"/></span>
                         <button className="btn-section"><FormattedMessage id="homepage.more-infor"/></button>
                     </div>
                     <div className="section-body">
