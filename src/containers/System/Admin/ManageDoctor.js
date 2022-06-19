@@ -336,6 +336,18 @@ class ManageDoctor extends Component {
                     </div>
                 </div>
 
+                <div className="row">
+                    <div className="col-4 form-group">
+                        <label>Chọn chuyên khoa</label>
+                        <input className="form-control"/>
+                    </div>
+
+                    <div className="col-4 form-group">
+                        <label>Chọn phòng khám</label>
+                        <input className="form-control"/>
+                    </div>
+                </div>
+
                 <div className="manage-doctor-editor">
                     <MdEditor
                         style={{height: "300px"}}
@@ -344,6 +356,7 @@ class ManageDoctor extends Component {
                         value={this.state.contentMarkdown}
                     />
                 </div>
+
                 <button
                     className={hasOldData ? "save-content-doctor" : "create-content-doctor"}
                     onClick={() => this.handleSaveContentMarkdown()}
