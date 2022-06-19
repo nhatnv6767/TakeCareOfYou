@@ -78,19 +78,17 @@ class ManageDoctor extends Component {
 
         if (prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor) {
 
-            let {resPrice, resPayment, resProvince} = this.props.allRequiredDoctorInfor;
+            let {resPrice, resPayment, resProvince, resSpecialty} = this.props.allRequiredDoctorInfor;
             let dataSelectPrice = this.buildDataInputSelect(resPrice, "PRICE");
             let dataSelectPayment = this.buildDataInputSelect(resPayment, "PAYMENT");
             let dataSelectProvince = this.buildDataInputSelect(resProvince, "PROVINCE");
-
-            console.log(`DATA: Price`, dataSelectPrice, "----------------");
-            console.log(`DATA: Payment`, dataSelectPayment, "----------------");
-            console.log(`DATA: Provider`, dataSelectProvince, "----------------");
+            let dataSelectSpecialty = this.buildDataInputSelect(resSpecialty, "SPECIALTY");
 
             this.setState({
                 listPrice: dataSelectPrice,
                 listProvince: dataSelectProvince,
                 listPayment: dataSelectPayment,
+                listSpecialty: dataSelectSpecialty
             });
         }
     }
