@@ -68,7 +68,6 @@ class ManageSpecialty extends Component {
                 imageBase64: "",
                 descriptionHTML: "",
                 descriptionMarkdown: "",
-                // go to NODE
             });
         } else {
             toast.error("Some error occurred while saving");
