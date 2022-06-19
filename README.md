@@ -84,4 +84,4 @@ https://docs.google.com/spreadsheets/d/175ts9y-bJGAwEUtVEFojJQ4nFCH_lIU0poA0wVjM
 // fix allcodes database
 https://www.dropbox.com/s/z1tpqrvfqc6580w/%2378.xlsx?dl=0
 
-NODEJS Detail Specialty
+NODEJS fix api
