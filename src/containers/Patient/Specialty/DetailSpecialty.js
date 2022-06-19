@@ -3,11 +3,14 @@ import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./DetailSpecialty.scss";
 import HomeHeader from "../../HomePage/HomeHeader";
+import DoctorSchedule from "../Doctor/DoctorSchedule";
 
 class DetailSpecialty extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            arrDoctorId: [32, 39]
+        };
     }
 
     async componentDidMount() {
@@ -27,6 +30,11 @@ class DetailSpecialty extends Component {
                 <div>
                     DetailSpecialty
                 </div>
+                <DoctorSchedule
+                    // doctorIdFromParent={
+                    //     this.state.currentDoctorId
+                    // }
+                />
             </>
         );
     }
