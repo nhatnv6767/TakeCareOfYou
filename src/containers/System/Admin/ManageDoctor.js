@@ -354,18 +354,18 @@ class ManageDoctor extends Component {
 
                 <div className="row">
                     <div className="col-4 form-group">
-                        <label>Chọn chuyên khoa</label>
+                        <label><FormattedMessage id="admin.manage-doctor.specialty"/></label>
                         <Select
                             // value={this.state.selectedOption}
                             // onChange={this.handleChangeSelect}
                             options={this.state.listSpecialty}
-                            placeholder={<FormattedMessage id="admin.manage-doctor.choose-doctor"/>}
+                            placeholder={<FormattedMessage id="admin.manage-doctor.specialty"/>}
                             // name={"selectedOption"}
                         />
                     </div>
 
                     <div className="col-4 form-group">
-                        <label>Chọn phòng khám</label>
+                        <label><FormattedMessage id="admin.manage-doctor.clinic"/></label>
                         <input className="form-control"/>
                     </div>
                 </div>
