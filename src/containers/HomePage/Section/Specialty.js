@@ -39,7 +39,11 @@ class Specialty extends Component {
                                 dataSpecialty.map((item, index) => {
                                     return (
                                         <div className="section-customize" key={index}>
-                                            <div className="bg-image section-specialty"/>
+                                            <div className="bg-image section-specialty"
+                                                 style={{
+                                                     backgroundImage: `url(${item.image})`,
+                                                 }}
+                                            />
                                             <div>{item.name}</div>
                                         </div>
                                     );
