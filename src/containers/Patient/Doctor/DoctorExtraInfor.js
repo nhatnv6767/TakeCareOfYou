@@ -17,11 +17,13 @@ class DoctorExtraInfor extends Component {
 
     async componentDidMount() {
 
-        let res = await getExtraInforDoctorById(this.props.doctorIdFromParent);
-        if (res && res.errCode === 0) {
-            this.setState({
-                extraInfor: res.data,
-            });
+        if (this.props.doctorIdFromParent) {
+            let res = await getExtraInforDoctorById(this.props.doctorIdFromParent);
+            if (res && res.errCode === 0) {
+                this.setState({
+                    extraInfor: res.data,
+                });
+            }
         }
     }
 
