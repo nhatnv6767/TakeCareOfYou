@@ -37,7 +37,7 @@ class DetailSpecialty extends Component {
                 {arrDoctorId && arrDoctorId.length > 0 &&
                     arrDoctorId.map((item, index) => {
                         return (
-                            <div className="each-doctor">
+                            <div className="each-doctor" key={index}>
                                 <div className="content-left">
 
                                 </div>
@@ -45,7 +45,6 @@ class DetailSpecialty extends Component {
                                 <div className="connect-right">
                                     <DoctorSchedule
                                         doctorIdFromParent={item}
-                                        key={index}
                                     />
                                 </div>
                             </div>
