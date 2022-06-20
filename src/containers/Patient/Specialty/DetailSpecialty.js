@@ -30,45 +30,47 @@ class DetailSpecialty extends Component {
         return (
             <div className="detail-specialty-container">
                 <HomeHeader isShowBanner={false}/>
-                <div className="description-specialty">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem earum molestiae ut vel! Atque culpa
-                    dolore eligendi explicabo fugit omnis quisquam sit totam? Earum eius explicabo, laudantium odit
-                    reprehenderit voluptas?
+                <div className="detail-specialty-body">
+                    <div className="description-specialty">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem earum molestiae ut vel! Atque
+                        culpa
+                        dolore eligendi explicabo fugit omnis quisquam sit totam? Earum eius explicabo, laudantium odit
+                        reprehenderit voluptas?
+                    </div>
+
+                    {arrDoctorId && arrDoctorId.length > 0 &&
+                        arrDoctorId.map((item, index) => {
+                            return (
+                                <div className="each-doctor" key={index}>
+                                    <div className="dt-content-left">
+                                        <div className="profile-doctor">
+                                            <ProfileDoctor
+                                                doctorId={item}
+                                                isShowDescriptionDoctor={true}
+                                                // dataTime={dataTime}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="dt-content-right">
+                                        <div className="doctor-schedule">
+                                            <DoctorSchedule
+                                                doctorIdFromParent={item}
+                                            />
+                                        </div>
+
+                                        <div className="doctor-extra-infor">
+                                            <DoctorExtraInfor
+                                                doctorIdFromParent={item}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            );
+                        })
+                    }
                 </div>
-
-                {arrDoctorId && arrDoctorId.length > 0 &&
-                    arrDoctorId.map((item, index) => {
-                        return (
-                            <div className="each-doctor" key={index}>
-                                <div className="dt-content-left">
-                                    <div className="profile-doctor">
-                                        <ProfileDoctor
-                                            doctorId={item}
-                                            isShowDescriptionDoctor={true}
-                                            // dataTime={dataTime}
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="dt-content-right">
-                                    <div className="doctor-schedule">
-                                        <DoctorSchedule
-                                            doctorIdFromParent={item}
-                                        />
-                                    </div>
-
-                                    <div className="doctor-extra-infor">
-                                        <DoctorExtraInfor
-                                            doctorIdFromParent={item}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-
-                        );
-                    })
-                }
-
             </div>
         );
     }
