@@ -62,6 +62,10 @@ class DetailSpecialty extends Component {
         }
     }
 
+    handleOnChangeSelect = (event) => {
+        console.log("Check on change", event.target.value);
+    };
+
     render() {
         let {arrDoctorId, dataDetailSpecialty, listProvince} = this.state;
         console.log("DetailSpecialty Check state: ", this.state);
