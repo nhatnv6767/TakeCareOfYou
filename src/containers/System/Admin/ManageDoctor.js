@@ -180,7 +180,7 @@ class ManageDoctor extends Component {
                 selectedPayment: selectedPayment,
                 selectedPrice: selectedPrice,
                 selectedProvince: selectedProvince,
-
+                selectedSpecialty: selectedSpecialty
             });
         } else {
             this.setState({
@@ -195,9 +195,10 @@ class ManageDoctor extends Component {
                 selectedPayment: "",
                 selectedPrice: "",
                 selectedProvince: "",
+                
+                selectedSpecialty: "",
             });
         }
-        console.log(`getDetailInforDoctorService:`, res);
     };
     // selectedOption, name : thư viện trả về
     handleChangeSelectDoctorInfor = async (selectedOption, name) => {
