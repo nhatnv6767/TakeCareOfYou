@@ -195,7 +195,7 @@ class ManageDoctor extends Component {
                 selectedPayment: "",
                 selectedPrice: "",
                 selectedProvince: "",
-                
+
                 selectedSpecialty: "",
             });
         }
