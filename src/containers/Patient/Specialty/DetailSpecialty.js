@@ -43,7 +43,7 @@ class DetailSpecialty extends Component {
 
                                 </div>
 
-                                <div className="connect-right">
+                                <div className="content-right">
                                     <div className="doctor-schedule">
                                         <DoctorSchedule
                                             doctorIdFromParent={item}
