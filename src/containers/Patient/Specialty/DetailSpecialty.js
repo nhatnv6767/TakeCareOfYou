@@ -6,7 +6,7 @@ import HomeHeader from "../../HomePage/HomeHeader";
 import DoctorSchedule from "../Doctor/DoctorSchedule";
 import DoctorExtraInfor from "../Doctor/DoctorExtraInfor";
 import ProfileDoctor from "../Doctor/ProfileDoctor";
-import {getDetailSpecialtyById} from "../../../services/userService";
+import {getDetailSpecialtyById, getAllCodeService} from "../../../services/userService";
 import _ from "lodash";
 
 class DetailSpecialty extends Component {
@@ -14,7 +14,8 @@ class DetailSpecialty extends Component {
         super(props);
         this.state = {
             arrDoctorId: [],
-            dataDetailSpecialty: {}
+            dataDetailSpecialty: {},
+            listProvince: [],
         };
     }
 
@@ -30,7 +31,10 @@ class DetailSpecialty extends Component {
                 id: id,
                 location: "ALL"
             });
-            if (res && res.errCode === 0) {
+
+            let resProvince = await getAllCodeService("PROVINCE")
+
+            if (res && res.errCode === 0 && resProvince.errCode === 0) {
                 let data = res.data;
                 let arrDoctorId = [];
                 if (data && !_.isEmpty(data)) {
@@ -44,6 +48,7 @@ class DetailSpecialty extends Component {
                 this.setState({
                     dataDetailSpecialty: res.data,
                     arrDoctorId: arrDoctorId,
+                    listProvince: resProvince.data
                 });
             }
         }
