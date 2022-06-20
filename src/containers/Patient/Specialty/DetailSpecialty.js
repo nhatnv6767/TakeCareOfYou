@@ -7,6 +7,7 @@ import DoctorSchedule from "../Doctor/DoctorSchedule";
 import DoctorExtraInfor from "../Doctor/DoctorExtraInfor";
 import ProfileDoctor from "../Doctor/ProfileDoctor";
 import {getDetailSpecialtyById} from "../../../services/userService";
+import _ from "lodash";
 
 class DetailSpecialty extends Component {
     constructor(props) {
@@ -53,10 +54,13 @@ class DetailSpecialty extends Component {
                 <HomeHeader isShowBanner={false}/>
                 <div className="detail-specialty-body">
                     <div className="description-specialty">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem earum molestiae ut vel! Atque
-                        culpa
-                        dolore eligendi explicabo fugit omnis quisquam sit totam? Earum eius explicabo, laudantium odit
-                        reprehenderit voluptas?
+                        {dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty)
+
+                            &&
+                            <div dangerouslySetInnerHTML={{__html: dataDetailSpecialty.descriptionHTML}}>
+                            </div>
+
+                        }
                     </div>
 
                     {arrDoctorId && arrDoctorId.length > 0 &&
