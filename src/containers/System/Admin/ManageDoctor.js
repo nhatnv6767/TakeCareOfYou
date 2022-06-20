@@ -128,7 +128,7 @@ class ManageDoctor extends Component {
 
     handleChangeSelect = async (selectedOption) => {
         this.setState({selectedOption});
-        let {listPayment, listPrice, listProvince} = this.state;
+        let {listPayment, listPrice, listProvince, listSpecialty} = this.state;
 
         let res = await getDetailInforDoctorService(selectedOption.value);
         if (res && res.errCode === 0 && res.data && res.data.Markdown) {
@@ -136,8 +136,9 @@ class ManageDoctor extends Component {
             let doctorInforData = res.data.Doctor_Infor;
             let addressClinic = "", nameClinic = "", note = "",
                 paymentId = "", priceId = "", provinceId = "",
+                specialtyId = "",
                 selectedPayment = "", selectedProvince = "",
-                selectedPrice = "";
+                selectedPrice = "", selectedSpecialty = "";
 
 
             if (doctorInforData) {
@@ -147,6 +148,7 @@ class ManageDoctor extends Component {
                 paymentId = doctorInforData.paymentId;
                 priceId = doctorInforData.priceId;
                 provinceId = doctorInforData.provinceId;
+                specialtyId = doctorInforData.specialtyId;
 
                 selectedPayment = listPayment.find(item => {
                     return item && item.value === paymentId;
@@ -158,6 +160,10 @@ class ManageDoctor extends Component {
 
                 selectedPrice = listPrice.find(item => {
                     return item && item.value === priceId;
+                });
+
+                selectedSpecialty = listSpecialty.find(item => {
+                    return item && item.value === specialtyId;
                 });
 
                 console.log("Check findItem Payment: ", selectedPayment, listPayment, paymentId);
