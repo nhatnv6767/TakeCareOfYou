@@ -29,7 +29,6 @@ class DetailSpecialty extends Component {
                 id: id,
                 location: "ALL"
             });
-            console.log("DetailSpecialty Check res: ", res);
             if (res && res.errCode === 0) {
                 this.setState({
                     dataDetailSpecialty: res.data,
@@ -46,7 +45,9 @@ class DetailSpecialty extends Component {
     }
 
     render() {
-        let {arrDoctorId} = this.state;
+        let {arrDoctorId, dataDetailSpecialty} = this.state;
+        console.log("DetailSpecialty Check state: ", this.state);
+
         return (
             <div className="detail-specialty-container">
                 <HomeHeader isShowBanner={false}/>
