@@ -44,7 +44,7 @@ class DetailSpecialty extends Component {
                                     <div className="profile-doctor">
                                         <ProfileDoctor
                                             doctorId={item}
-                                            isShowDescriptionDoctor={false}
+                                            isShowDescriptionDoctor={true}
                                             // dataTime={dataTime}
                                         />
                                     </div>
