@@ -100,5 +100,6 @@ export {
     postPatientBookAppointment,
     postVerifyBookAppointment,
     createNewSpecialty,
-    getAllSpecialty
+    getAllSpecialty,
+    getDetailSpecialtyById,
 };

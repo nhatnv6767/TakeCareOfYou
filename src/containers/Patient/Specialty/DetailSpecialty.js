@@ -6,33 +6,36 @@ import HomeHeader from "../../HomePage/HomeHeader";
 import DoctorSchedule from "../Doctor/DoctorSchedule";
 import DoctorExtraInfor from "../Doctor/DoctorExtraInfor";
 import ProfileDoctor from "../Doctor/ProfileDoctor";
-import {getDetailInforDoctorService} from "../../../services/userService";
+import {getDetailSpecialtyById} from "../../../services/userService";
 
 class DetailSpecialty extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            arrDoctorId: [32, 39, 37]
+            arrDoctorId: [32, 39, 37],
+            dataDetailSpecialty: {}
         };
     }
 
     async componentDidMount() {
-        // if (
-        //     this.props.match &&
-        //     this.props.match.params &&
-        //     this.props.match.params.id
-        // ) {
-        //     let id = this.props.match.params.id;
-        //     this.setState({
-        //         currentDoctorId: id,
-        //     });
-        //     let res = await getDetailInforDoctorService(id);
-        //     if (res && res.errCode === 0) {
-        //         this.setState({
-        //             detailDoctor: res.data,
-        //         });
-        //     }
-        // }
+        if (
+            this.props.match &&
+            this.props.match.params &&
+            this.props.match.params.id
+        ) {
+            let id = this.props.match.params.id;
+
+            let res = await getDetailSpecialtyById({
+                id: id,
+                location: "ALL"
+            });
+            console.log("DetailSpecialty Check res: ", res);
+            if (res && res.errCode === 0) {
+                this.setState({
+                    dataDetailSpecialty: res.data,
+                });
+            }
+        }
     }
 
 
