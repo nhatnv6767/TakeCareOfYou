@@ -26,10 +26,21 @@ class DetailSpecialty extends Component {
     render() {
         let {arrDoctorId} = this.state;
         return (
-            <>
+            <div className="detail-specialty-container">
                 <HomeHeader isShowBanner={false}/>
-                <div>
-                    DetailSpecialty
+                <div className="description-specialty">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem earum molestiae ut vel! Atque culpa
+                    dolore eligendi explicabo fugit omnis quisquam sit totam? Earum eius explicabo, laudantium odit
+                    reprehenderit voluptas?
+                </div>
+                <div className="each-doctor">
+                    <div className="content-left">
+
+                    </div>
+
+                    <div className="connect-right">
+
+                    </div>
                 </div>
                 {arrDoctorId && arrDoctorId.length > 0 &&
                     arrDoctorId.map((item, index) => {
@@ -42,7 +53,7 @@ class DetailSpecialty extends Component {
                     })
                 }
 
-            </>
+            </div>
         );
     }
 }
