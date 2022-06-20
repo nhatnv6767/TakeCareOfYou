@@ -6,6 +6,7 @@ import HomeHeader from "../../HomePage/HomeHeader";
 import DoctorSchedule from "../Doctor/DoctorSchedule";
 import DoctorExtraInfor from "../Doctor/DoctorExtraInfor";
 import ProfileDoctor from "../Doctor/ProfileDoctor";
+import {getDetailInforDoctorService} from "../../../services/userService";
 
 class DetailSpecialty extends Component {
     constructor(props) {
@@ -16,6 +17,22 @@ class DetailSpecialty extends Component {
     }
 
     async componentDidMount() {
+        // if (
+        //     this.props.match &&
+        //     this.props.match.params &&
+        //     this.props.match.params.id
+        // ) {
+        //     let id = this.props.match.params.id;
+        //     this.setState({
+        //         currentDoctorId: id,
+        //     });
+        //     let res = await getDetailInforDoctorService(id);
+        //     if (res && res.errCode === 0) {
+        //         this.setState({
+        //             detailDoctor: res.data,
+        //         });
+        //     }
+        // }
     }
 
 
