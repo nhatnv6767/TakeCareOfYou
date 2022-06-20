@@ -4,6 +4,7 @@ import {FormattedMessage} from 'react-intl';
 import "./DetailSpecialty.scss";
 import HomeHeader from "../../HomePage/HomeHeader";
 import DoctorSchedule from "../Doctor/DoctorSchedule";
+import DoctorExtraInfor from "../Doctor/DoctorExtraInfor";
 
 class DetailSpecialty extends Component {
     constructor(props) {
@@ -44,6 +45,10 @@ class DetailSpecialty extends Component {
 
                                 <div className="connect-right">
                                     <DoctorSchedule
+                                        doctorIdFromParent={item}
+                                    />
+
+                                    <DoctorExtraInfor
                                         doctorIdFromParent={item}
                                     />
                                 </div>
