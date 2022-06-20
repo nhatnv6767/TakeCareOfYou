@@ -5,6 +5,7 @@ import "./DetailSpecialty.scss";
 import HomeHeader from "../../HomePage/HomeHeader";
 import DoctorSchedule from "../Doctor/DoctorSchedule";
 import DoctorExtraInfor from "../Doctor/DoctorExtraInfor";
+import ProfileDoctor from "../Doctor/ProfileDoctor";
 
 class DetailSpecialty extends Component {
     constructor(props) {
@@ -40,7 +41,13 @@ class DetailSpecialty extends Component {
                         return (
                             <div className="each-doctor" key={index}>
                                 <div className="content-left">
-
+                                    <div className="profile-doctor">
+                                        <ProfileDoctor
+                                            doctorId={item}
+                                            isShowDescriptionDoctor={false}
+                                            // dataTime={dataTime}
+                                        />
+                                    </div>
                                 </div>
 
                                 <div className="content-right">
