@@ -8,6 +8,7 @@ import DoctorExtraInfor from "../Doctor/DoctorExtraInfor";
 import ProfileDoctor from "../Doctor/ProfileDoctor";
 import {getDetailSpecialtyById, getAllCodeService} from "../../../services/userService";
 import _ from "lodash";
+import {LANGUAGES} from "../../../utils";
 
 class DetailSpecialty extends Component {
     constructor(props) {
@@ -62,9 +63,9 @@ class DetailSpecialty extends Component {
     }
 
     render() {
-        let {arrDoctorId, dataDetailSpecialty} = this.state;
+        let {arrDoctorId, dataDetailSpecialty, listProvince} = this.state;
         console.log("DetailSpecialty Check state: ", this.state);
-
+        let {language} = this.props
         return (
             <div className="detail-specialty-container">
                 <HomeHeader isShowBanner={false}/>
@@ -81,9 +82,16 @@ class DetailSpecialty extends Component {
 
                     <div className="search-sp-doctor">
                         <select>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
+                            {listProvince && listProvince.length > 0 &&
+                                listProvince.map((item, index) => {
+                                    return (
+                                        <option>
+                                            {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
+                                        </option>
+                                    )
+                                })
+                            }
+
                         </select>
                     </div>
                     {arrDoctorId && arrDoctorId.length > 0 &&
