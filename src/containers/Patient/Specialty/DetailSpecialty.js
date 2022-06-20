@@ -33,22 +33,23 @@ class DetailSpecialty extends Component {
                     dolore eligendi explicabo fugit omnis quisquam sit totam? Earum eius explicabo, laudantium odit
                     reprehenderit voluptas?
                 </div>
-                <div className="each-doctor">
-                    <div className="content-left">
 
-                    </div>
-
-                    <div className="connect-right">
-
-                    </div>
-                </div>
                 {arrDoctorId && arrDoctorId.length > 0 &&
                     arrDoctorId.map((item, index) => {
                         return (
-                            <DoctorSchedule
-                                doctorIdFromParent={item}
-                                key={index}
-                            />
+                            <div className="each-doctor">
+                                <div className="content-left">
+
+                                </div>
+
+                                <div className="connect-right">
+                                    <DoctorSchedule
+                                        doctorIdFromParent={item}
+                                        key={index}
+                                    />
+                                </div>
+                            </div>
+
                         );
                     })
                 }
