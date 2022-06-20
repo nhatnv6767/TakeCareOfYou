@@ -33,7 +33,7 @@ class DetailSpecialty extends Component {
                 location: "ALL"
             });
 
-            let resProvince = await getAllCodeService("PROVINCE")
+            let resProvince = await getAllCodeService("PROVINCE");
 
             if (res && res.errCode === 0 && resProvince.errCode === 0) {
                 let data = res.data;
@@ -65,7 +65,7 @@ class DetailSpecialty extends Component {
     render() {
         let {arrDoctorId, dataDetailSpecialty, listProvince} = this.state;
         console.log("DetailSpecialty Check state: ", this.state);
-        let {language} = this.props
+        let {language} = this.props;
         return (
             <div className="detail-specialty-container">
                 <HomeHeader isShowBanner={false}/>
@@ -81,14 +81,14 @@ class DetailSpecialty extends Component {
                     </div>
 
                     <div className="search-sp-doctor">
-                        <select>
+                        <select onChange={(event) => this.handleOnChangeSelect(event)}>
                             {listProvince && listProvince.length > 0 &&
                                 listProvince.map((item, index) => {
                                     return (
-                                        <option>
+                                        <option key={index} value={item.keyMap}>
                                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
                                         </option>
-                                    )
+                                    );
                                 })
                             }
 
