@@ -74,6 +74,13 @@ class DetailSpecialty extends Component {
                         }
                     </div>
 
+                    <div className="search-sp-doctor">
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
                     {arrDoctorId && arrDoctorId.length > 0 &&
                         arrDoctorId.map((item, index) => {
                             return (
