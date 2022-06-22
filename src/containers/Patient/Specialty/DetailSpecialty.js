@@ -46,10 +46,21 @@ class DetailSpecialty extends Component {
                         });
                     }
                 }
+
+                let dataProvince = resProvince.data;
+                let result = [];
+                if (dataProvince && dataProvince.length > 0) {
+                    dataProvince.push({
+                        keyMap: "ALL",
+                        type: "PROVINCE",
+                        valueEn: "All",
+                        valueVi: "Toàn quốc",
+                    });
+                }
                 this.setState({
                     dataDetailSpecialty: res.data,
                     arrDoctorId: arrDoctorId,
-                    listProvince: resProvince.data
+                    listProvince: result
                 });
             }
         }
