@@ -80,7 +80,8 @@ class ProfileDoctor extends Component {
 
     render() {
         let {dataProfile} = this.state;
-        let {language, isShowDescriptionDoctor, dataTime} = this.props;
+        let {language, isShowDescriptionDoctor, dataTime, isShowPrice, isShowLinkDetail} = this.props;
+
         let nameVi = '', nameEn = '';
         if (dataProfile && dataProfile.positionData) {
             nameVi = `${dataProfile.positionData.valueVi}, ${dataProfile.lastName} ${dataProfile.firstName}`;
@@ -122,28 +123,34 @@ class ProfileDoctor extends Component {
                     </div>
 
                 </div>
-                <div className="price">
-                    <FormattedMessage id="patient.booking-modal.price"/><span> </span>
-                    {dataProfile && dataProfile.Doctor_Infor && dataProfile.Doctor_Infor.priceData && language === LANGUAGES.VI &&
-                        <NumberFormat
-                            className="currency"
-                            value={dataProfile.Doctor_Infor.priceData.valueVi}
-                            displayType={'text'}
-                            thousandSeparator={true}
-                            suffix={' VND'}
-                        />
-                    }
-                    {dataProfile && dataProfile.Doctor_Infor && dataProfile.Doctor_Infor.priceData && language === LANGUAGES.EN &&
-                        <NumberFormat
-                            className="currency"
-                            value={dataProfile.Doctor_Infor.priceData.valueEn}
-                            displayType={'text'}
-                            thousandSeparator={true}
-                            prefix={'$'}
-                        />
-                    }
 
-                </div>
+                {isShowLinkDetail &&
+                    <div>Xem thêm</div>
+                }
+                {!isShowPrice &&
+                    <div className="price">
+                        <FormattedMessage id="patient.booking-modal.price"/><span> </span>
+                        {dataProfile && dataProfile.Doctor_Infor && dataProfile.Doctor_Infor.priceData && language === LANGUAGES.VI &&
+                            <NumberFormat
+                                className="currency"
+                                value={dataProfile.Doctor_Infor.priceData.valueVi}
+                                displayType={'text'}
+                                thousandSeparator={true}
+                                suffix={' VND'}
+                            />
+                        }
+                        {dataProfile && dataProfile.Doctor_Infor && dataProfile.Doctor_Infor.priceData && language === LANGUAGES.EN &&
+                            <NumberFormat
+                                className="currency"
+                                value={dataProfile.Doctor_Infor.priceData.valueEn}
+                                displayType={'text'}
+                                thousandSeparator={true}
+                                prefix={'$'}
+                            />
+                        }
+
+                    </div>
+                }
             </div>
         );
     }

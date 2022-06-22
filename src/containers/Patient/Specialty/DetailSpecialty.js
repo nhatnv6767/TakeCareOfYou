@@ -86,7 +86,7 @@ class DetailSpecialty extends Component {
                 id: id,
                 location: location,
             });
-            
+
             if (res && res.errCode === 0) {
                 let data = res.data;
                 let arrDoctorId = [];
@@ -148,6 +148,8 @@ class DetailSpecialty extends Component {
                                             <ProfileDoctor
                                                 doctorId={item}
                                                 isShowDescriptionDoctor={true}
+                                                isShowLinkDetail={true}
+                                                isShowPrice={false}
                                                 // dataTime={dataTime}
                                             />
                                         </div>
