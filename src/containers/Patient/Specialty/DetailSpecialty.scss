@@ -46,6 +46,12 @@
 
         width: 50%;
         border-right: 1px solid #ddd;
+
+        .profile-doctor-container {
+          .down {
+            padding: 5px;
+          }
+        }
       }
 
       .dt-content-right {
