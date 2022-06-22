@@ -149,7 +149,7 @@ class DetailSpecialty extends Component {
                                                 doctorId={item}
                                                 isShowDescriptionDoctor={true}
                                                 isShowLinkDetail={true}
-                                                // isShowPrice={false}
+                                                isShowPrice={false}
                                                 // dataTime={dataTime}
                                             />
                                         </div>
