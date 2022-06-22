@@ -127,7 +127,7 @@ class ProfileDoctor extends Component {
                 {isShowLinkDetail &&
                     <div>Xem thêm</div>
                 }
-                {!isShowPrice &&
+                {isShowPrice &&
                     <div className="price">
                         <FormattedMessage id="patient.booking-modal.price"/><span> </span>
                         {dataProfile && dataProfile.Doctor_Infor && dataProfile.Doctor_Infor.priceData && language === LANGUAGES.VI &&
