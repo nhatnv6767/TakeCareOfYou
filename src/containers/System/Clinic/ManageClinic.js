@@ -16,6 +16,7 @@ class ManageClinic extends Component {
         super(props);
         this.state = {
             name: "",
+            address: "",
             imageBase64: "",
             descriptionHTML: "",
             descriptionMarkdown: "",
@@ -99,6 +100,16 @@ class ManageClinic extends Component {
                             onChange={(event) => this.handleOnChangeImage(event)}
                         />
                     </div>
+
+                    <div className="col-6 form-group">
+                        <label>Địa chỉ phòng khám</label>
+                        <input
+                            className="form-control"
+                            type="text" value={this.state.address}
+                            onChange={(event) => this.handleOnChangeInput(event, 'address')}
+                        />
+                    </div>
+
                     <div className="col-12">
                         <MdEditor
                             style={{height: "300px"}}
