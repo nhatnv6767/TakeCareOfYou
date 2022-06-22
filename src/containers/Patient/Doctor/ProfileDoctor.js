@@ -80,7 +80,14 @@ class ProfileDoctor extends Component {
 
     render() {
         let {dataProfile} = this.state;
-        let {language, isShowDescriptionDoctor, dataTime, isShowPrice, isShowLinkDetail} = this.props;
+        let {
+            language,
+            isShowDescriptionDoctor,
+            dataTime,
+            isShowPrice,
+            isShowLinkDetail,
+            doctorId,
+        } = this.props;
 
         let nameVi = '', nameEn = '';
         if (dataProfile && dataProfile.positionData) {
@@ -125,7 +132,11 @@ class ProfileDoctor extends Component {
                 </div>
 
                 {isShowLinkDetail &&
-                    <div>Xem thêm</div>
+                    <div
+                        className="view-detail-doctor"
+                    >
+                        <a href={`/detail-doctor/${doctorId}`}>Xem thêm</a>
+                    </div>
                 }
                 {isShowPrice &&
                     <div className="price">
