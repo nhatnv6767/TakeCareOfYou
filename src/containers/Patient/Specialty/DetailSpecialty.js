@@ -48,7 +48,6 @@ class DetailSpecialty extends Component {
                 }
 
                 let dataProvince = resProvince.data;
-                let result = [];
                 if (dataProvince && dataProvince.length > 0) {
                     dataProvince.push({
                         keyMap: "ALL",
@@ -60,7 +59,7 @@ class DetailSpecialty extends Component {
                 this.setState({
                     dataDetailSpecialty: res.data,
                     arrDoctorId: arrDoctorId,
-                    listProvince: result
+                    listProvince: dataProvince ? dataProvince : []
                 });
             }
         }
