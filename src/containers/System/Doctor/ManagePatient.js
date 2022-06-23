@@ -21,8 +21,10 @@ class ManagePatient extends Component {
 
     render() {
         return (
-            <div>
-                ManagePatient
+            <div className="manage-patient-container">
+                <div className="m-p-title">
+                    Quản lý bệnh nhân khám bệnh
+                </div>
             </div>
         );
     }
