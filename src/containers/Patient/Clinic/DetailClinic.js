@@ -60,7 +60,7 @@ class DetailClinic extends Component {
 
     render() {
         let {arrDoctorId, dataDetailClinic} = this.state;
-        console.log("DetailSpecialty Check state: ", this.state);
+        console.log("DetailSpecialty Check state: -> NODEJS FIX API", this.state);
         let {language} = this.props;
         return (
             <div className="detail-specialty-container">
