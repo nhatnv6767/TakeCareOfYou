@@ -31,10 +31,10 @@ class ManagePatient extends Component {
                         <input className="form-control"/>
                     </div>
                     <div className="col-12 table-manage-patient">
-                        <table style="width: 100%;">
+                        <table style={{width: "100%"}}>
                             <tr>
                                 <th>Name</th>
-                                <th colspan="2">Telephone</th>
+                                <th colSpan="2">Telephone</th>
 
                             </tr>
                             <tr>
