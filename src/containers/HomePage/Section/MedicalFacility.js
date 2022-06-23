@@ -4,6 +4,7 @@ import {FormattedMessage} from "react-intl";
 import Slider from "react-slick";
 import {getAllClinic} from "../../../services/userService";
 import {withRouter} from "react-router";
+import "./MedicalFacility.scss";
 
 class MedicalFacility extends Component {
 
@@ -45,7 +46,7 @@ class MedicalFacility extends Component {
                                 dataClinics.map((item, index) => {
                                     return (
                                         <div
-                                            className="section-customize"
+                                            className="section-customize clinic-child"
                                             key={index}
                                             onClick={() => this.handleViewDetailClinic(item)}
                                         >
@@ -55,7 +56,7 @@ class MedicalFacility extends Component {
                                                     backgroundImage: `url(${item.image})`,
                                                 }}
                                             />
-                                            <div>{item.name}</div>
+                                            <div className="clinic-name">{item.name}</div>
                                         </div>
                                     );
                                 })
