@@ -22,6 +22,10 @@ class MedicalFacility extends Component {
     }
   }
 
+  handleViewDetailClinic = (clinic) => {
+    alert("Click after:::")
+  }
+
   render() {
 
     let {dataClinics} = this.state;
@@ -37,7 +41,11 @@ class MedicalFacility extends Component {
                 {dataClinics && dataClinics.length > 0 &&
                     dataClinics.map((item, index) => {
                       return (
-                          <div className="section-customize" key={index}>
+                          <div
+                              className="section-customize"
+                              key={index}
+                              onClick={() => this.handleViewDetailClinic(item)}
+                          >
                             <div
                                 className="bg-image section-medical-facility"
                                 style={{
