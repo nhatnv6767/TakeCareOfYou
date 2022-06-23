@@ -38,26 +38,7 @@ class MedicalFacility extends Component {
                   <div className="bg-image section-medical-facility"/>
                   <div>Hệ thống Y tế Thu Cúc 1</div>
                 </div>
-                <div className="section-customize">
-                  <div className="bg-image section-medical-facility"/>
-                  <div>Hệ thống Y tế Thu Cúc 2</div>
-                </div>
-                <div className="section-customize">
-                  <div className="bg-image section-medical-facility"/>
-                  <div>Hệ thống Y tế Thu Cúc 3</div>
-                </div>
-                <div className="section-customize">
-                  <div className="bg-image section-medical-facility"/>
-                  <div>Hệ thống Y tế Thu Cúc 4</div>
-                </div>
-                <div className="section-customize">
-                  <div className="bg-image section-medical-facility"/>
-                  <div>Hệ thống Y tế Thu Cúc 5</div>
-                </div>
-                <div className="section-customize">
-                  <div className="bg-image section-medical-facility"/>
-                  <div>Hệ thống Y tế Thu Cúc 6</div>
-                </div>
+
               </Slider>
             </div>
           </div>
