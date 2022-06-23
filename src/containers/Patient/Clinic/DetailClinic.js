@@ -35,7 +35,7 @@ class DetailClinic extends Component {
                 let data = res.data;
                 let arrDoctorId = [];
                 if (data && !_.isEmpty(data)) {
-                    let arr = data.doctorSpecialty;
+                    let arr = data.doctorClinic;
                     if (arr && arr.length > 0) {
                         arr.map((item) => {
                             arrDoctorId.push(item.doctorId);
@@ -60,7 +60,7 @@ class DetailClinic extends Component {
 
     render() {
         let {arrDoctorId, dataDetailClinic} = this.state;
-        console.log("DetailSpecialty Check state:", this.state);
+        console.log("DetailClinic Check state:", this.state);
         let {language} = this.props;
         return (
             <div className="detail-specialty-container">
