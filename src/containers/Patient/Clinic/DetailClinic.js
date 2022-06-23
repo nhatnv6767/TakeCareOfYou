@@ -6,7 +6,7 @@ import HomeHeader from "../../HomePage/HomeHeader";
 import DoctorSchedule from "../Doctor/DoctorSchedule";
 import DoctorExtraInfor from "../Doctor/DoctorExtraInfor";
 import ProfileDoctor from "../Doctor/ProfileDoctor";
-import {getDetailSpecialtyById, getAllCodeService} from "../../../services/userService";
+import {getAllCodeService, getDetailClinicById} from "../../../services/userService";
 import _ from "lodash";
 import {LANGUAGES} from "../../../utils";
 
@@ -15,8 +15,7 @@ class DetailClinic extends Component {
         super(props);
         this.state = {
             arrDoctorId: [],
-            dataDetailSpecialty: {},
-            listProvince: [],
+            dataDetailClinic: {},
         };
     }
 
@@ -28,14 +27,11 @@ class DetailClinic extends Component {
         ) {
             let id = this.props.match.params.id;
 
-            let res = await getDetailSpecialtyById({
+            let res = await getDetailClinicById({
                 id: id,
-                location: "ALL"
             });
 
-            let resProvince = await getAllCodeService("PROVINCE");
-
-            if (res && res.errCode === 0 && resProvince.errCode === 0) {
+            if (res && res.errCode === 0) {
                 let data = res.data;
                 let arrDoctorId = [];
                 if (data && !_.isEmpty(data)) {
@@ -47,19 +43,9 @@ class DetailClinic extends Component {
                     }
                 }
 
-                let dataProvince = resProvince.data;
-                if (dataProvince && dataProvince.length > 0) {
-                    dataProvince.unshift({
-                        keyMap: "ALL",
-                        type: "PROVINCE",
-                        valueEn: "All",
-                        valueVi: "Toàn quốc",
-                    });
-                }
                 this.setState({
-                    dataDetailSpecialty: res.data,
+                    dataDetailClinic: res.data,
                     arrDoctorId: arrDoctorId,
-                    listProvince: dataProvince ? dataProvince : []
                 });
             }
         }
