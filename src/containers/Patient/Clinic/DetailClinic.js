@@ -60,7 +60,7 @@ class DetailClinic extends Component {
 
     render() {
         let {arrDoctorId, dataDetailClinic} = this.state;
-        console.log("DetailSpecialty Check state: -> NODEJS FIX API", this.state);
+        console.log("DetailSpecialty Check state:", this.state);
         let {language} = this.props;
         return (
             <div className="detail-specialty-container">
@@ -68,10 +68,12 @@ class DetailClinic extends Component {
                 <div className="detail-specialty-body">
                     <div className="description-specialty">
                         {dataDetailClinic && !_.isEmpty(dataDetailClinic)
-
                             &&
-                            <div dangerouslySetInnerHTML={{__html: dataDetailClinic.descriptionHTML}}>
-                            </div>
+                            <>
+                                <div>{dataDetailClinic.name}</div>
+                                <div dangerouslySetInnerHTML={{__html: dataDetailClinic.descriptionHTML}}>
+                                </div>
+                            </>
 
                         }
                     </div>
