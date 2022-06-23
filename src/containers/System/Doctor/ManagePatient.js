@@ -30,6 +30,21 @@ class ManagePatient extends Component {
                         <label>Chọn ngày khám</label>
                         <input className="form-control"/>
                     </div>
+                    <div className="col-12 table-manage-patient">
+                        <table style="width: 100%;">
+                            <tr>
+                                <th>Name</th>
+                                <th colspan="2">Telephone</th>
+
+                            </tr>
+                            <tr>
+                                <td>Alfreds Futterkiste</td>
+                                <td>Maria Anders</td>
+                                <td>Germany</td>
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
             </div>
         );
