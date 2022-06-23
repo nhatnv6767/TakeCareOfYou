@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 
-class DefaultClass extends Component {
+class ManagePatient extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -21,7 +21,7 @@ class DefaultClass extends Component {
     render() {
         return (
             <div>
-                DefaultClass
+                ManagePatient
             </div>
         );
     }
@@ -37,4 +37,4 @@ const mapDispatchToProps = (dispatch) => {
     return {};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DefaultClass);
+export default connect(mapStateToProps, mapDispatchToProps)(ManagePatient);
