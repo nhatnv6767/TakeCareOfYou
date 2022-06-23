@@ -25,6 +25,12 @@ class ManagePatient extends Component {
                 <div className="m-p-title">
                     Quản lý bệnh nhân khám bệnh
                 </div>
+                <div className="manage-patient-body row">
+                    <div className="col-6 form-group">
+                        <label>Chọn ngày khám</label>
+                        <input className="form-control"/>
+                    </div>
+                </div>
             </div>
         );
     }
