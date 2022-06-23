@@ -8,7 +8,7 @@ class ManagePatient extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentDate: ""
+            currentDate: new Date(),
         };
     }
 
