@@ -2,11 +2,14 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./ManagePatient.scss";
+import DatePicker from "../../../components/Input/DatePicker";
 
 class ManagePatient extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            currentDate: ""
+        };
     }
 
     async componentDidMount() {
@@ -19,6 +22,12 @@ class ManagePatient extends Component {
         }
     }
 
+    handleOnChangeDatePicker = (date) => {
+        this.setState({
+            birthday: date[0]
+        });
+    };
+
     render() {
         return (
             <div className="manage-patient-container">
@@ -28,7 +37,12 @@ class ManagePatient extends Component {
                 <div className="manage-patient-body row">
                     <div className="col-4 form-group">
                         <label>Chọn ngày khám</label>
-                        <input className="form-control"/>
+                        <DatePicker
+                            onChange={this.handleOnChangeDatePicker}
+                            className="form-control"
+                            value={this.state.currentDate}
+
+                        />
                     </div>
                     <div className="col-12 table-manage-patient">
                         <table style={{width: "100%"}}>
