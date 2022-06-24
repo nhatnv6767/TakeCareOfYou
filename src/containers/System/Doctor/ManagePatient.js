@@ -13,7 +13,6 @@ class ManagePatient extends Component {
     }
 
     async componentDidMount() {
-        // NODE 
     }
 
 
