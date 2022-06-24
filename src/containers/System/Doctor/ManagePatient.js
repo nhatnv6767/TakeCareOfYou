@@ -48,6 +48,7 @@ class ManagePatient extends Component {
                     </div>
                     <div className="col-12 table-manage-patient">
                         <table style={{width: "100%"}}>
+                            <tbody>
                             <tr>
                                 <th>Name</th>
                                 <th colSpan="2">Telephone</th>
@@ -58,6 +59,7 @@ class ManagePatient extends Component {
                                 <td>Maria Anders</td>
                                 <td>Germany</td>
                             </tr>
+                            </tbody>
 
                         </table>
                     </div>
