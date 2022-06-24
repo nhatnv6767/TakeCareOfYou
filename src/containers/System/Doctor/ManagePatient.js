@@ -17,6 +17,8 @@ class ManagePatient extends Component {
         // lấy thông qua redux
         let {user} = this.props;
         let {currentDate} = this.state;
+
+        console.log("Check state: ", this.state)
         let formatedDate = 1307458800000
         let res = await getAllPatientForDoctor({
             doctorId: user.id,
