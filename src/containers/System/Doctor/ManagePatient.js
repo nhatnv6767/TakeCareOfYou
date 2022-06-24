@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./ManagePatient.scss";
 import DatePicker from "../../../components/Input/DatePicker";
+import {getAllPatientForDoctor} from "../../../services/userService";
 
 class ManagePatient extends Component {
     constructor(props) {
@@ -29,6 +30,7 @@ class ManagePatient extends Component {
     };
 
     render() {
+        console.log("ManagePatient check user: ", this.props);
         return (
             <div className="manage-patient-container">
                 <div className="m-p-title">
@@ -68,6 +70,8 @@ class ManagePatient extends Component {
 const mapStateToProps = (state) => {
     return {
         language: state.app.language,
+        // user of userreducer
+        user: state.user.userInfo,
     };
 };
 
