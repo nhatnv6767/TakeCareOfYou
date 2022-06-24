@@ -18,14 +18,14 @@ class ManagePatient extends Component {
         let {user} = this.props;
         let {currentDate} = this.state;
 
-        console.log("Check state: ", this.state)
-        let formatedDate = 1307458800000
+        console.log("Check state: ", this.state);
+        let formatedDate = new Date(currentDate).getTime();
         let res = await getAllPatientForDoctor({
             doctorId: user.id,
             date: formatedDate
         });
 
-        console.log("ManagePatient check response", res)
+        console.log("ManagePatient check response", res);
     }
 
 
