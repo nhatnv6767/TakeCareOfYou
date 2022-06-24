@@ -14,6 +14,14 @@ class ManagePatient extends Component {
     }
 
     async componentDidMount() {
+        // lấy thông qua redux
+        let {user} = this.props;
+        let {currentDate} = this.state;
+        let formatedDate = "";
+        let res = await getAllPatientForDoctor({
+            doctorId: user.id,
+            date: formatedDate
+        });
     }
 
 
@@ -82,4 +90,3 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ManagePatient);
-// NODE API
