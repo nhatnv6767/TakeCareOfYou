@@ -4,12 +4,13 @@ import {FormattedMessage} from 'react-intl';
 import "./ManagePatient.scss";
 import DatePicker from "../../../components/Input/DatePicker";
 import {getAllPatientForDoctor} from "../../../services/userService";
+import moment from "moment";
 
 class ManagePatient extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentDate: new Date(),
+            currentDate: moment(new Date()).startOf("day").valueOf(),
         };
     }
 
