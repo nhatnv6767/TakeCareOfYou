@@ -20,6 +20,11 @@ class ManagePatient extends Component {
         let {user} = this.props;
         let {currentDate} = this.state;
         let formatedDate = new Date(currentDate).getTime();
+        this.getDataPatient(user, formatedDate);
+
+    }
+
+    getDataPatient = async (user, formatedDate) => {
         let res = await getAllPatientForDoctor({
             doctorId: user.id,
             date: formatedDate
@@ -28,14 +33,9 @@ class ManagePatient extends Component {
         if (res && res.errCode === 0) {
             this.setState({
                 dataPatient: res.data ? res.data : {}
-            })
+            });
         }
-
-    }
-
-    getDataPatient = () => {
-
-    }
+    };
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
@@ -45,12 +45,17 @@ class ManagePatient extends Component {
 
     handleOnChangeDatePicker = (date) => {
         this.setState({
-            birthday: date[0]
+            currentDate: date[0]
+        }, () => {
+            let {user} = this.props;
+            let {currentDate} = this.state;
+            let formatedDate = new Date(currentDate).getTime();
+            this.getDataPatient(user, formatedDate);
         });
     };
 
     render() {
-        console.log("ManagePatient check user: ", this.props);
+        console.log("ManagePatient check user: ", this.state);
         return (
             <div className="manage-patient-container">
                 <div className="m-p-title">
