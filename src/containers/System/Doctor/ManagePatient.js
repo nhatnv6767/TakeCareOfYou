@@ -11,6 +11,7 @@ class ManagePatient extends Component {
         super(props);
         this.state = {
             currentDate: moment(new Date()).startOf("day").valueOf(),
+            dataPatient: {}
         };
     }
 
@@ -18,17 +19,23 @@ class ManagePatient extends Component {
         // lấy thông qua redux
         let {user} = this.props;
         let {currentDate} = this.state;
-
-        console.log("Check state: ", this.state);
         let formatedDate = new Date(currentDate).getTime();
         let res = await getAllPatientForDoctor({
             doctorId: user.id,
             date: formatedDate
         });
 
-        console.log("ManagePatient check response", res);
+        if (res && res.errCode === 0) {
+            this.setState({
+                dataPatient: res.data ? res.data : {}
+            })
+        }
+
     }
 
+    getDataPatient = () => {
+
+    }
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
