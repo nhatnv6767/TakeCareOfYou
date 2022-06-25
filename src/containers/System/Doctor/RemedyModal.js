@@ -46,16 +46,19 @@ class RemedyModal extends Component {
                 <ModalBody>
                     <div className="row">
                         <div className="col-6 form-group">
-                            <div className="form-control">
-                                <label>Email bệnh nhân</label>
-                                <input type="email" value={dataModal.email}/>
-                            </div>
+                            <label>Email bệnh nhân</label>
+                            <input
+                                type="email"
+                                value={dataModal.email}
+                                className="form-control"
+                            />
                         </div>
                         <div className="col-6 form-group">
-                            <div className="form-control">
-                                <label>Chọn file đơn thuốc</label>
-                                <input type="file"/>
-                            </div>
+                            <label>Chọn file đơn thuốc</label>
+                            <input
+                                type="file"
+                                className="form-control"
+                            />
                         </div>
 
                     </div>
