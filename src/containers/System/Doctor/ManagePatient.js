@@ -78,6 +78,7 @@ class ManagePatient extends Component {
                             <tbody>
                             <tr>
                                 <th>STT</th>
+                                <th>Thời gian</th>
                                 <th>Họ và tên</th>
                                 <th>Giới tính</th>
                                 <th>Actions</th>
@@ -88,6 +89,7 @@ class ManagePatient extends Component {
                                     return (
                                         <tr key={index}>
                                             <td>{index + 1}</td>
+                                            <td>{item.timeTypeDataPatient.valueVi}</td>
                                             <td>{item.patientData.firstName}</td>
                                             <td>{item.patientData.genderData.valueVi}</td>
                                         </tr>
