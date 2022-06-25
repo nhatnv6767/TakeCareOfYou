@@ -83,7 +83,11 @@ class ManagePatient extends Component {
         });
     };
 
-    sendRemedyModal = (dataFromModal) => {
+    sendRemedyModal = async (dataFromModal) => {
+        
+        let res = await postSendRemedy({
+            ...dataFromModal,
+        });
         console.log("Parent check modal: NODE API ", dataFromModal);
     };
 
