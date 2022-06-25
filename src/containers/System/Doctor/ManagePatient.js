@@ -94,6 +94,10 @@ class ManagePatient extends Component {
                                             <td>{item.patientData.firstName}</td>
                                             <td>{item.patientData.address}</td>
                                             <td>{item.patientData.genderData.valueVi}</td>
+                                            <td>
+                                                <button>Xác nhận</button>
+                                                <button>Gửi hoá đơn</button>
+                                            </td>
                                         </tr>
                                     );
                                 })
