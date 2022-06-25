@@ -23,7 +23,7 @@ class ManagePatient extends Component {
     }
 
     async componentDidMount() {
-        this.getDataPatient();
+        await this.getDataPatient();
     }
 
     getDataPatient = async () => {
@@ -52,8 +52,8 @@ class ManagePatient extends Component {
     handleOnChangeDatePicker = (date) => {
         this.setState({
             currentDate: date[0]
-        }, () => {
-            this.getDataPatient();
+        }, async () => {
+            await this.getDataPatient();
         });
     };
 
@@ -92,6 +92,7 @@ class ManagePatient extends Component {
         });
         if (res && res.errCode === 0) {
             toast.success("Send Remedy Succeed");
+            await this.getDataPatient();
         } else {
             toast.error("Something went wrong");
             console.log("Error send remedy", res);
