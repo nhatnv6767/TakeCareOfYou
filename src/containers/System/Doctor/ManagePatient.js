@@ -84,7 +84,7 @@ class ManagePatient extends Component {
     };
 
     sendRemedyModal = (dataFromModal) => {
-        console.log("Parent check modal: ", dataFromModal);
+        console.log("Parent check modal: NODE API ", dataFromModal);
     };
 
     render() {
