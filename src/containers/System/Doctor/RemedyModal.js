@@ -37,7 +37,7 @@ class RemedyModal extends Component {
             >
                 <div className="modal-header">
                     <h5 className="modal-title">
-                        Gửi hoá đơn khám bệnh thành công
+                        Gửi hoá đơn khám bệnh
                     </h5>
                     <button type="button" className="close" aria-label="Close">
                         <span aria-hidden="true">×</span>
@@ -57,10 +57,11 @@ class RemedyModal extends Component {
                                 <input type="file"/>
                             </div>
                         </div>
+
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={closeRemedyModal}>Do Something</Button>{' '}
+                    <Button color="primary" onClick={closeRemedyModal}>Send</Button>{' '}
                     <Button color="secondary" onClick={closeRemedyModal}>Cancel</Button>
                 </ModalFooter>
             </Modal>
