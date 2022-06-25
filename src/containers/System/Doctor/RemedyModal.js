@@ -35,7 +35,14 @@ class RemedyModal extends Component {
                 centered
                 // backdrop={true}
             >
-                <ModalHeader toggle={closeRemedyModal}>Modal title</ModalHeader>
+                <div className="modal-header">
+                    <h5 className="modal-title">
+                        Modal title
+                    </h5>
+                    <button type="button" className="close" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
                 <ModalBody>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
