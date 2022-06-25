@@ -48,13 +48,15 @@ class RemedyModal extends Component {
         let file = data[0];
         if (file) {
             let base64 = await CommonUtils.getBase64(file);
-            let objectUrl = URL.createObjectURL(file);
             this.setState({
-                previewImgURL: objectUrl,
-                avatar: base64,
+                imgBase64: base64
             });
         }
     };
+
+    handleSendRemedy = () => {
+        console.log("Check state:", this.state);
+    }
 
     render() {
         let {isOpenModal, closeRemedyModal, dataModal, sendRemedyModal} = this.props;
@@ -102,7 +104,7 @@ class RemedyModal extends Component {
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={sendRemedyModal}>Send</Button>{' '}
+                    <Button color="primary" onClick={() => this.handleSendRemedy()}>Send</Button>{' '}
                     <Button color="secondary" onClick={closeRemedyModal}>Cancel</Button>
                 </ModalFooter>
             </Modal>
