@@ -55,8 +55,8 @@ class RemedyModal extends Component {
     };
 
     handleSendRemedy = () => {
-        console.log("Check state:", this.state);
-    }
+        this.props.sendRemedyModal(this.state);
+    };
 
     render() {
         let {isOpenModal, closeRemedyModal, dataModal, sendRemedyModal} = this.props;
