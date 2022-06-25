@@ -158,7 +158,7 @@ class ManagePatient extends Component {
                                     })
                                     :
                                     <tr>
-                                        <td>no Data</td>
+                                        <td colSpan="6" style={{textAlign: "center"}}>No Data</td>
                                     </tr>
                                 }
 
