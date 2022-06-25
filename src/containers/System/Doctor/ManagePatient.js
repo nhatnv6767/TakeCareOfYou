@@ -7,6 +7,7 @@ import {getAllPatientForDoctor, postSendRemedy} from "../../../services/userServ
 import moment from "moment";
 import {LANGUAGES} from "../../../utils";
 import RemedyModal from "./RemedyModal";
+import {toast} from 'react-toastify';
 
 
 class ManagePatient extends Component {
@@ -94,7 +95,11 @@ class ManagePatient extends Component {
             timeType: dataModal.timeType,
 
         });
-        console.log("Parent check res when send: ", res);
+        if (res && res.errCode === 0) {
+            toast.success("Send Remedy Succeed");
+        } else {
+            toast.error("Something went wrong");
+        }
     };
 
     render() {
