@@ -158,7 +158,7 @@ class ManagePatient extends Component {
                                     })
                                     :
                                     <tr>
-                                        no Data
+                                        <td>no Data</td>
                                     </tr>
                                 }
 
