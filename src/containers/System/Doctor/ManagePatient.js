@@ -18,7 +18,7 @@ class ManagePatient extends Component {
             dataPatient: [],
             isOpenRemedyModal: false,
             dataModal: {},
-            isShowLoading: true,
+            isShowLoading: false,
         };
 
     }
@@ -83,6 +83,9 @@ class ManagePatient extends Component {
 
     sendRemedyModal = async (dataChild) => {
         let {dataModal} = this.state;
+        this.setState({
+            isShowLoading: true,
+        });
         let res = await postSendRemedy({
             email: dataChild.email,
             imgBase64: dataChild.imgBase64,
@@ -94,10 +97,16 @@ class ManagePatient extends Component {
 
         });
         if (res && res.errCode === 0) {
+            this.setState({
+                isShowLoading: false,
+            });
             toast.success("Send Remedy Succeed");
             this.closeRemedyModal();
             await this.getDataPatient();
         } else {
+            this.setState({
+                isShowLoading: false,
+            });
             toast.error("Something went wrong");
             console.log("Error send remedy", res);
         }
@@ -112,7 +121,7 @@ class ManagePatient extends Component {
                 <LoadingOverlay
                     active={this.state.isShowLoading}
                     spinner
-                    text="Loading your content..."
+                    text="Loading ..."
                 >
                     <div className="manage-patient-container">
                         <div className="m-p-title">
@@ -183,8 +192,6 @@ class ManagePatient extends Component {
                         closeRemedyModal={this.closeRemedyModal}
                         sendRemedyModal={this.sendRemedyModal}
                     />
-
-                    <p>Some content or children or something.</p>
                 </LoadingOverlay>
             </>
         );
