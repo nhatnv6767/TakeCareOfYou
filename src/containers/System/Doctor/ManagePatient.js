@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./ManagePatient.scss";
 import DatePicker from "../../../components/Input/DatePicker";
-import {getAllPatientForDoctor} from "../../../services/userService";
+import {getAllPatientForDoctor, postSendRemedy} from "../../../services/userService";
 import moment from "moment";
 import {LANGUAGES} from "../../../utils";
 import RemedyModal from "./RemedyModal";
