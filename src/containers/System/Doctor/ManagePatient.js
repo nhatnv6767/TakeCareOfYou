@@ -6,6 +6,7 @@ import DatePicker from "../../../components/Input/DatePicker";
 import {getAllPatientForDoctor} from "../../../services/userService";
 import moment from "moment";
 import {LANGUAGES} from "../../../utils";
+import RemedyModal from "./RemedyModal";
 
 class ManagePatient extends Component {
     constructor(props) {
@@ -13,6 +14,8 @@ class ManagePatient extends Component {
         this.state = {
             currentDate: moment(new Date()).startOf("day").valueOf(),
             dataPatient: [],
+            isOpenRemedyModal: false,
+            dataModal: {}
         };
 
     }
@@ -63,6 +66,11 @@ class ManagePatient extends Component {
             email: item.patientData.email,
             name: item.patientData.firstName,
         };
+
+        this.setState({
+            isOpenRemedyModal: true,
+            dataModal: data
+        });
 
         console.log("Check data", data);
     };
