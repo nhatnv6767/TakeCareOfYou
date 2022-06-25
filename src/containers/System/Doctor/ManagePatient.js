@@ -92,6 +92,7 @@ class ManagePatient extends Component {
         });
         if (res && res.errCode === 0) {
             toast.success("Send Remedy Succeed");
+            this.closeRemedyModal();
             await this.getDataPatient();
         } else {
             toast.error("Something went wrong");
