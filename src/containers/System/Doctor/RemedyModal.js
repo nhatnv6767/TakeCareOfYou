@@ -11,16 +11,29 @@ import moment from "moment";
 class RemedyModal extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            email: "",
+            imgBase64: "",
+        };
     }
 
     async componentDidMount() {
+        if (this.props.dataModal) {
+            this.setState({
+                email: this.props.dataModal.email
+            });
+        }
     }
 
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
 
+        }
+        if (prevProps.dataModal !== this.props.dataModal) {
+            this.setState({
+                email: this.props.dataModal.email
+            });
         }
     }
 
