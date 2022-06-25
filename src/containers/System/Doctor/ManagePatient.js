@@ -11,8 +11,9 @@ class ManagePatient extends Component {
         super(props);
         this.state = {
             currentDate: moment(new Date()).startOf("day").valueOf(),
-            dataPatient: {}
-        };
+            dataPatient: [],
+        }
+
     }
 
     async componentDidMount() {
@@ -32,7 +33,7 @@ class ManagePatient extends Component {
 
         if (res && res.errCode === 0) {
             this.setState({
-                dataPatient: res.data ? res.data : {}
+                dataPatient: res.data ? res.data : []
             });
         }
     };
@@ -56,6 +57,7 @@ class ManagePatient extends Component {
 
     render() {
         console.log("ManagePatient check user: ", this.state);
+        let {dataPatient} = this.state;
         return (
             <div className="manage-patient-container">
                 <div className="m-p-title">
@@ -75,15 +77,24 @@ class ManagePatient extends Component {
                         <table style={{width: "100%"}}>
                             <tbody>
                             <tr>
-                                <th>Name</th>
-                                <th colSpan="2">Telephone</th>
+                                <th>STT</th>
+                                <th>Họ và tên</th>
+                                <th>Giới tính</th>
+                                <th>Actions</th>
 
                             </tr>
-                            <tr>
-                                <td>Alfreds Futterkiste</td>
-                                <td>Maria Anders</td>
-                                <td>Germany</td>
-                            </tr>
+                            {dataPatient && dataPatient.length > 0 &&
+                                dataPatient.map((item, index) => {
+                                    return (
+                                        <tr>
+                                            <td>Alfreds Futterkiste</td>
+                                            <td>Maria Anders</td>
+                                            <td>Germany</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+
                             </tbody>
 
                         </table>
