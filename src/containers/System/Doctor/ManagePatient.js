@@ -62,7 +62,7 @@ class ManagePatient extends Component {
             doctorId: item.doctorId,
             patientId: item.patientId,
             email: item.patientData.email,
-            name: item.patientData.firstName,
+            patientName: item.patientData.firstName,
             timeType: item.timeType,
         };
 
@@ -88,7 +88,8 @@ class ManagePatient extends Component {
             doctorId: dataModal.doctorId,
             patientId: dataModal.patientId,
             timeType: dataModal.timeType,
-            language: this.props.language
+            language: this.props.language,
+            patientName: dataModal.patientName,
 
         });
         if (res && res.errCode === 0) {
