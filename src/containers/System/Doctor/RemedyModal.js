@@ -4,7 +4,7 @@ import {FormattedMessage} from 'react-intl';
 import "./RemedyModal.scss";
 import {Modal} from "reactstrap";
 import _ from "lodash";
-import {LANGUAGES} from "../../../../utils";
+import {LANGUAGES} from "../../../utils";
 import {toast} from "react-toastify";
 import moment from "moment";
 

@@ -8,6 +8,7 @@ import moment from "moment";
 import {LANGUAGES} from "../../../utils";
 import RemedyModal from "./RemedyModal";
 
+
 class ManagePatient extends Component {
     constructor(props) {
         super(props);
@@ -145,7 +146,9 @@ class ManagePatient extends Component {
                         </div>
                     </div>
                 </div>
-                <RemedyModal/>
+                <RemedyModal
+
+                />
             </>
         );
     }
