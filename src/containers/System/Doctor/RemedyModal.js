@@ -37,6 +37,9 @@ class RemedyModal extends Component {
         }
     }
 
+    handleOnChangeEmail = (event) => {
+        
+    };
 
     render() {
         let {isOpenModal, closeRemedyModal, dataModal, sendRemedyModal} = this.props;
@@ -67,8 +70,9 @@ class RemedyModal extends Component {
                             <label>Email bệnh nhân</label>
                             <input
                                 type="email"
-                                value={dataModal.email}
+                                value={this.state.email}
                                 className="form-control"
+                                onChange={(event) => this.handleOnChangeEmail(event)}
                             />
                         </div>
                         <div className="col-6 form-group">
