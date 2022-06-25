@@ -61,11 +61,13 @@ class ManagePatient extends Component {
     };
 
     handleBtnConfirm = (item) => {
+        console.log("Check btn: ", item);
         let data = {
             doctorId: item.doctorId,
             patientId: item.patientId,
             email: item.patientData.email,
             name: item.patientData.firstName,
+            timeType: item.timeType,
         };
 
         this.setState({
@@ -89,10 +91,10 @@ class ManagePatient extends Component {
             imgBase64: dataChild.imgBase64,
             doctorId: dataModal.doctorId,
             patientId: dataModal.patientId,
-            timeType: ""
+            timeType: dataModal.timeType,
 
         });
-        console.log("Parent check modal: NODE API ", dataChild);
+        console.log("Parent check res when send: ", res);
     };
 
     render() {
