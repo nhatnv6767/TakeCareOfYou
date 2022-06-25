@@ -55,6 +55,14 @@ class ManagePatient extends Component {
         });
     };
 
+    handleBtnConfirm = () => {
+
+    }
+
+    handleBtnRemedy = () => {
+
+    }
+
     render() {
         console.log("ManagePatient check user: ", this.state);
         let {dataPatient} = this.state;
@@ -95,8 +103,18 @@ class ManagePatient extends Component {
                                             <td>{item.patientData.address}</td>
                                             <td>{item.patientData.genderData.valueVi}</td>
                                             <td>
-                                                <button>Xác nhận</button>
-                                                <button>Gửi hoá đơn</button>
+                                                <button
+                                                    className="mp-btn-confirm"
+                                                    onClick={() => this.handleBtnConfirm()}
+                                                >
+                                                    Xác nhận
+                                                </button>
+                                                <button
+                                                    className="mp-btn-remedy"
+                                                    onClick={() => this.handleBtnRemedy()}
+                                                >
+                                                    Gửi hoá đơn
+                                                </button>
                                             </td>
                                         </tr>
                                     );
