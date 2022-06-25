@@ -76,6 +76,12 @@ class ManagePatient extends Component {
         console.log("Check data", data);
     };
 
+    closeRemedyModal = () => {
+        this.setState({
+            isOpenRemedyModal: false,
+            dataModal: {}
+        });
+    };
 
     render() {
         // console.log("ManagePatient check user: ", this.state);
@@ -149,6 +155,7 @@ class ManagePatient extends Component {
                 <RemedyModal
                     isOpenModal={isOpenRemedyModal}
                     dataModal={dataModal}
+                    closeRemedyModal={this.closeRemedyModal}
                 />
             </>
         );

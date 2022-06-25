@@ -39,7 +39,12 @@ class RemedyModal extends Component {
                     <h5 className="modal-title">
                         Gửi hoá đơn khám bệnh
                     </h5>
-                    <button type="button" className="close" aria-label="Close">
+                    <button
+                        type="button"
+                        className="close"
+                        aria-label="Close"
+                        onClick={closeRemedyModal}
+                    >
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
@@ -57,7 +62,7 @@ class RemedyModal extends Component {
                             <label>Chọn file đơn thuốc</label>
                             <input
                                 type="file"
-                                className="form-control"
+                                className="form-control-file"
                             />
                         </div>
 
