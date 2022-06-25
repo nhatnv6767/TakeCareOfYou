@@ -5,6 +5,7 @@ import "./ManagePatient.scss";
 import DatePicker from "../../../components/Input/DatePicker";
 import {getAllPatientForDoctor} from "../../../services/userService";
 import moment from "moment";
+import {LANGUAGES} from "../../../utils";
 
 class ManagePatient extends Component {
     constructor(props) {
@@ -63,6 +64,7 @@ class ManagePatient extends Component {
     render() {
         console.log("ManagePatient check user: ", this.state);
         let {dataPatient} = this.state;
+        let {language} = this.props;
         return (
             <div className="manage-patient-container">
                 <div className="m-p-title">
@@ -92,13 +94,18 @@ class ManagePatient extends Component {
                             </tr>
                             {dataPatient && dataPatient.length > 0 ?
                                 dataPatient.map((item, index) => {
+                                    let time = language === LANGUAGES.VI ?
+                                        item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn
+
+                                    let gender = language === LANGUAGES.VI ?
+                                        item.patientData.genderData.valueVi : item.patientData.genderData.valueEn
                                     return (
                                         <tr key={index}>
                                             <td>{index + 1}</td>
-                                            <td>{item.timeTypeDataPatient.valueVi}</td>
+                                            <td>{time}</td>
                                             <td>{item.patientData.firstName}</td>
                                             <td>{item.patientData.address}</td>
-                                            <td>{item.patientData.genderData.valueVi}</td>
+                                            <td>{gender}</td>
                                             <td>
                                                 <button
                                                     className="mp-btn-confirm"
