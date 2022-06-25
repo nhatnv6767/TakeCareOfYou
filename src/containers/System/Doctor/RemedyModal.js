@@ -4,7 +4,7 @@ import {FormattedMessage} from 'react-intl';
 import "./RemedyModal.scss";
 import {Modal, ModalHeader, ModalBody, ModalFooter, Button} from "reactstrap";
 import _ from "lodash";
-import {LANGUAGES} from "../../../utils";
+import {CommonUtils, LANGUAGES} from "../../../utils";
 import {toast} from "react-toastify";
 import moment from "moment";
 
@@ -41,6 +41,19 @@ class RemedyModal extends Component {
         this.setState({
             email: event.target.value
         });
+    };
+
+    handleOnChangeImage = async (event) => {
+        let data = event.target.files;
+        let file = data[0];
+        if (file) {
+            let base64 = await CommonUtils.getBase64(file);
+            let objectUrl = URL.createObjectURL(file);
+            this.setState({
+                previewImgURL: objectUrl,
+                avatar: base64,
+            });
+        }
     };
 
     render() {
@@ -82,6 +95,7 @@ class RemedyModal extends Component {
                             <input
                                 type="file"
                                 className="form-control-file"
+                                onChange={(event) => this.handleOnChangeImage(event)}
                             />
                         </div>
 
