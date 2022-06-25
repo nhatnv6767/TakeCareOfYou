@@ -73,7 +73,6 @@ class ManagePatient extends Component {
             dataModal: data
         });
 
-        console.log("Check data", data);
     };
 
     closeRemedyModal = () => {
@@ -83,12 +82,17 @@ class ManagePatient extends Component {
         });
     };
 
-    sendRemedyModal = async (dataFromModal) => {
-        
+    sendRemedyModal = async (dataChild) => {
+        let {dataModal} = this.state;
         let res = await postSendRemedy({
-            ...dataFromModal,
+            email: dataChild.email,
+            imgBase64: dataChild.imgBase64,
+            doctorId: dataModal.doctorId,
+            patientId: dataModal.patientId,
+            timeType: ""
+
         });
-        console.log("Parent check modal: NODE API ", dataFromModal);
+        console.log("Parent check modal: NODE API ", dataChild);
     };
 
     render() {
