@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {FormattedMessage} from 'react-intl';
 import "./RemedyModal.scss";
-import {Modal} from "reactstrap";
+import {Modal, ModalHeader, ModalBody, ModalFooter, Button} from "reactstrap";
 import _ from "lodash";
 import {LANGUAGES} from "../../../utils";
 import {toast} from "react-toastify";
@@ -26,7 +26,7 @@ class RemedyModal extends Component {
 
 
     render() {
-        let {isOpenModal, closeBookingModal, dataModal} = this.props;
+        let {isOpenModal, closeRemedyModal, dataModal} = this.props;
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -35,7 +35,18 @@ class RemedyModal extends Component {
                 centered
                 // backdrop={true}
             >
-                <div>RemedyModal</div>
+                <ModalHeader toggle={closeRemedyModal}>Modal title</ModalHeader>
+                <ModalBody>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="primary" onClick={closeRemedyModal}>Do Something</Button>{' '}
+                    <Button color="secondary" onClick={closeRemedyModal}>Cancel</Button>
+                </ModalFooter>
             </Modal>
         );
     }
