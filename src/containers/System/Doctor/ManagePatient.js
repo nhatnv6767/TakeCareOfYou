@@ -86,6 +86,7 @@ class ManagePatient extends Component {
         this.setState({
             isShowLoading: true,
         });
+        return;
         let res = await postSendRemedy({
             email: dataChild.email,
             imgBase64: dataChild.imgBase64,
