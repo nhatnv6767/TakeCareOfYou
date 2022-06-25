@@ -85,7 +85,7 @@ class ManagePatient extends Component {
                                 <th>Actions</th>
 
                             </tr>
-                            {dataPatient && dataPatient.length > 0 &&
+                            {dataPatient && dataPatient.length > 0 ?
                                 dataPatient.map((item, index) => {
                                     return (
                                         <tr key={index}>
@@ -101,6 +101,10 @@ class ManagePatient extends Component {
                                         </tr>
                                     );
                                 })
+                                :
+                                <tr>
+                                    no Data
+                                </tr>
                             }
 
                             </tbody>
