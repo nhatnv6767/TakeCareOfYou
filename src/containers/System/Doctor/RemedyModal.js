@@ -26,10 +26,10 @@ class RemedyModal extends Component {
 
 
     render() {
-        let {isOpenModal, closeBookingModal, dataTime} = this.props;
+        let {isOpenModal, closeBookingModal, dataModal} = this.props;
         return (
             <Modal
-                isOpen={true}
+                isOpen={isOpenModal}
                 className={'booking-modal-container'}
                 size="lg"
                 centered
