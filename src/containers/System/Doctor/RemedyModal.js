@@ -37,18 +37,27 @@ class RemedyModal extends Component {
             >
                 <div className="modal-header">
                     <h5 className="modal-title">
-                        Modal title
+                        Gửi hoá đơn khám bệnh thành công
                     </h5>
                     <button type="button" className="close" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <ModalBody>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    <div className="row">
+                        <div className="col-6 form-group">
+                            <div className="form-control">
+                                <label>Email bệnh nhân</label>
+                                <input type="email" value={dataModal.email}/>
+                            </div>
+                        </div>
+                        <div className="col-6 form-group">
+                            <div className="form-control">
+                                <label>Chọn file đơn thuốc</label>
+                                <input type="file"/>
+                            </div>
+                        </div>
+                    </div>
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={closeRemedyModal}>Do Something</Button>{' '}
