@@ -55,13 +55,10 @@ class ManagePatient extends Component {
         });
     };
 
-    handleBtnConfirm = () => {
-
+    handleBtnConfirm = (item) => {
+        alert("Click me");
     };
 
-    handleBtnRemedy = () => {
-
-    };
 
     render() {
         console.log("ManagePatient check user: ", this.state);
@@ -105,7 +102,7 @@ class ManagePatient extends Component {
                                             <td>
                                                 <button
                                                     className="mp-btn-confirm"
-                                                    onClick={() => this.handleBtnConfirm()}
+                                                    onClick={() => this.handleBtnConfirm(item)}
                                                 >
                                                     Xác nhận
                                                 </button>
