@@ -57,12 +57,12 @@ class ManagePatient extends Component {
     };
 
     handleBtnConfirm = (item) => {
-        alert("Click me");
+        console.log("ManagePatient check item: ", item);
     };
 
 
     render() {
-        console.log("ManagePatient check user: ", this.state);
+        // console.log("ManagePatient check user: ", this.state);
         let {dataPatient} = this.state;
         let {language} = this.props;
         return (
@@ -95,10 +95,10 @@ class ManagePatient extends Component {
                             {dataPatient && dataPatient.length > 0 ?
                                 dataPatient.map((item, index) => {
                                     let time = language === LANGUAGES.VI ?
-                                        item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn
+                                        item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn;
 
                                     let gender = language === LANGUAGES.VI ?
-                                        item.patientData.genderData.valueVi : item.patientData.genderData.valueEn
+                                        item.patientData.genderData.valueVi : item.patientData.genderData.valueEn;
                                     return (
                                         <tr key={index}>
                                             <td>{index + 1}</td>
