@@ -8,7 +8,7 @@ import moment from "moment";
 import {LANGUAGES} from "../../../utils";
 import RemedyModal from "./RemedyModal";
 import {toast} from 'react-toastify';
-
+import LoadingOverlay from 'react-loading-overlay';
 
 class ManagePatient extends Component {
     constructor(props) {
@@ -17,7 +17,8 @@ class ManagePatient extends Component {
             currentDate: moment(new Date()).startOf("day").valueOf(),
             dataPatient: [],
             isOpenRemedyModal: false,
-            dataModal: {}
+            dataModal: {},
+            isShowLoading: true,
         };
 
     }
@@ -177,6 +178,14 @@ class ManagePatient extends Component {
                     closeRemedyModal={this.closeRemedyModal}
                     sendRemedyModal={this.sendRemedyModal}
                 />
+
+                <LoadingOverlay
+                    active={this.state.isShowLoading}
+                    spinner
+                    text="Loading your content..."
+                >
+                    <p>Some content or children or something.</p>
+                </LoadingOverlay>
             </>
         );
     }
