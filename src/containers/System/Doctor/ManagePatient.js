@@ -57,7 +57,14 @@ class ManagePatient extends Component {
     };
 
     handleBtnConfirm = (item) => {
-        console.log("ManagePatient check item: ", item);
+        let data = {
+            doctorId: item.doctorId,
+            patientId: item.patientId,
+            email: item.patientData.email,
+            name: item.patientData.firstName,
+        };
+
+        console.log("Check data", data);
     };
 
 
