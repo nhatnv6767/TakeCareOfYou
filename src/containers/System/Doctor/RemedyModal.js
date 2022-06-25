@@ -26,7 +26,7 @@ class RemedyModal extends Component {
 
 
     render() {
-        let {isOpenModal, closeRemedyModal, dataModal} = this.props;
+        let {isOpenModal, closeRemedyModal, dataModal, sendRemedyModal} = this.props;
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -69,7 +69,7 @@ class RemedyModal extends Component {
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={closeRemedyModal}>Send</Button>{' '}
+                    <Button color="primary" onClick={sendRemedyModal}>Send</Button>{' '}
                     <Button color="secondary" onClick={closeRemedyModal}>Cancel</Button>
                 </ModalFooter>
             </Modal>
