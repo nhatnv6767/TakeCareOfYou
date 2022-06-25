@@ -12,7 +12,7 @@ class ManagePatient extends Component {
         this.state = {
             currentDate: moment(new Date()).startOf("day").valueOf(),
             dataPatient: [],
-        }
+        };
 
     }
 
@@ -86,12 +86,12 @@ class ManagePatient extends Component {
                             {dataPatient && dataPatient.length > 0 &&
                                 dataPatient.map((item, index) => {
                                     return (
-                                        <tr>
-                                            <td>Alfreds Futterkiste</td>
-                                            <td>Maria Anders</td>
-                                            <td>Germany</td>
+                                        <tr key={index}>
+                                            <td>{index + 1}</td>
+                                            <td>{item.patientData.firstName}</td>
+                                            <td>{item.patientData.genderData.valueVi}</td>
                                         </tr>
-                                    )
+                                    );
                                 })
                             }
 
