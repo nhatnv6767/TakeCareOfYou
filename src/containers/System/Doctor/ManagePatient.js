@@ -23,15 +23,14 @@ class ManagePatient extends Component {
     }
 
     async componentDidMount() {
+        this.getDataPatient();
+    }
+
+    getDataPatient = async () => {
         // lấy thông qua redux
         let {user} = this.props;
         let {currentDate} = this.state;
         let formatedDate = new Date(currentDate).getTime();
-        this.getDataPatient(user, formatedDate);
-
-    }
-
-    getDataPatient = async (user, formatedDate) => {
         let res = await getAllPatientForDoctor({
             doctorId: user.id,
             date: formatedDate
@@ -54,15 +53,11 @@ class ManagePatient extends Component {
         this.setState({
             currentDate: date[0]
         }, () => {
-            let {user} = this.props;
-            let {currentDate} = this.state;
-            let formatedDate = new Date(currentDate).getTime();
-            this.getDataPatient(user, formatedDate);
+            this.getDataPatient();
         });
     };
 
     handleBtnConfirm = (item) => {
-        console.log("Check btn: ", item);
         let data = {
             doctorId: item.doctorId,
             patientId: item.patientId,
@@ -99,6 +94,7 @@ class ManagePatient extends Component {
             toast.success("Send Remedy Succeed");
         } else {
             toast.error("Something went wrong");
+            console.log("Error send remedy", res);
         }
     };
 
