@@ -38,7 +38,9 @@ class RemedyModal extends Component {
     }
 
     handleOnChangeEmail = (event) => {
-        
+        this.setState({
+            email: event.target.value
+        });
     };
 
     render() {
