@@ -14,7 +14,7 @@ import {postPatientBookAppointment} from "../../../../services/userService";
 import {toast} from "react-toastify";
 import moment from "moment";
 
-class BookingModal extends Component {
+class RemedyModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -152,7 +152,7 @@ class BookingModal extends Component {
 
         if (res && res.errCode === 0) {
             toast.success("Booking a new appointment succeed");
-            this.props.closeBookingModal();
+            this.props.closeRemedyModal();
         } else {
             toast.error("Booking a new appointment error");
         }
@@ -160,7 +160,7 @@ class BookingModal extends Component {
     };
 
     render() {
-        let {isOpenModal, closeBookingModal, dataTime} = this.props;
+        let {isOpenModal, closeRemedyModal, dataTime} = this.props;
         let doctorId = dataTime && !_.isEmpty(dataTime) ? dataTime.doctorId : "";
 
         // console.log("Check state BOOKING MODAL: ", dataTime);
@@ -179,7 +179,7 @@ class BookingModal extends Component {
                         </span>
                         <span
                             className="right"
-                            onClick={closeBookingModal}
+                            onClick={closeRemedyModal}
                         >
                             <i className="fas fa-times"></i>
                         </span>
@@ -287,7 +287,7 @@ class BookingModal extends Component {
                         </button>
                         <button
                             className="btn-booking-cancel"
-                            onClick={closeBookingModal}
+                            onClick={closeRemedyModal}
                         >
                             <FormattedMessage id="patient.booking-modal.cancel"/>
                         </button>
@@ -312,4 +312,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookingModal);
+export default connect(mapStateToProps, mapDispatchToProps)(RemedyModal);
