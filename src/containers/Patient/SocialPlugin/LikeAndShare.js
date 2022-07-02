@@ -16,7 +16,7 @@ class LikeAndShare extends Component {
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.language !== this.props.language) {
-
+            this.initFacebookSDK();
         }
     }
 
