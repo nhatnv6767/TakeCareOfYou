@@ -59,7 +59,7 @@ class Comment extends Component {
                      data-width={width ? width : ""}
                      data-numposts={numPost ? numPost : 5}
                 >
-                    
+
                 </div>
             </>
         );
