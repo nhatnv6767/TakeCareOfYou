@@ -44,9 +44,9 @@ class LikeAndShare extends Component {
             if (d.getElementById(id)) return;
             js = d.createElement(s);
             js.id = id;
-            js.src = `//connect.facebook.net/${locale}/all.js`;
-            fjs.parentNode.insertBefore(js, fjs)
-        }(document, 'script', 'facebook-jssdk'))
+            js.src = `//connect.facebook.net/${locale}/sdk.js`;
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
     }
 
