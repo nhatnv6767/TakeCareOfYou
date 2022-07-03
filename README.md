@@ -85,3 +85,8 @@ https://docs.google.com/spreadsheets/d/175ts9y-bJGAwEUtVEFojJQ4nFCH_lIU0poA0wVjM
 https://www.dropbox.com/s/z1tpqrvfqc6580w/%2378.xlsx?dl=0
 
 NODEJS fix api
+
+Chat plugin
+https://developers.facebook.com/docs/messenger-platform/discovery/facebook-chat-plugin/
+
+https://developers.facebook.com/docs/messenger-platform/discovery/customer-chat-plugin/sdk
